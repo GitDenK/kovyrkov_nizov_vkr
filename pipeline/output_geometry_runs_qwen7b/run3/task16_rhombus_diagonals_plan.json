@@ -1,0 +1,240 @@
+{
+  "title": "Ромб ABCD",
+  "points": {
+    "A": {
+      "x": -8,
+      "y": 0,
+      "z": 0,
+      "label_dx": -12,
+      "label_dy": 12
+    },
+    "B": {
+      "x": 0,
+      "y": 6,
+      "z": 0,
+      "label_dx": 8,
+      "label_dy": -12
+    },
+    "C": {
+      "x": 8,
+      "y": 0,
+      "z": 0,
+      "label_dx": 12,
+      "label_dy": 12
+    },
+    "D": {
+      "x": 0,
+      "y": -6,
+      "z": 0,
+      "label_dx": -8,
+      "label_dy": 12
+    },
+    "O": {
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "label_dx": 8,
+      "label_dy": 12
+    },
+    "M": {
+      "x": -3,
+      "y": 3,
+      "z": 0,
+      "label_dx": -8,
+      "label_dy": -12
+    },
+    "H": {
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "label_dx": 8,
+      "label_dy": 12
+    }
+  },
+  "faces": [
+    [
+      "A",
+      "B",
+      "C",
+      "D"
+    ]
+  ],
+  "steps": [
+    {
+      "text": "Ромб $ABCD$ с диагоналями $AC=16$ и $BD=12$. Точка $O$ — точка пересечения диагоналей.",
+      "objects": [
+        {
+          "type": "point",
+          "id": "A"
+        },
+        {
+          "type": "point",
+          "id": "B"
+        },
+        {
+          "type": "point",
+          "id": "C"
+        },
+        {
+          "type": "point",
+          "id": "D"
+        },
+        {
+          "type": "point",
+          "id": "O",
+          "style": {
+            "fill": "#e74c3c",
+            "stroke": "#e74c3c"
+          }
+        },
+        {
+          "type": "segment",
+          "id": "s_AC",
+          "from_point": "A",
+          "to_point": "C",
+          "style": {
+            "stroke": "#2980b9",
+            "stroke_width": 1.8
+          }
+        },
+        {
+          "type": "segment",
+          "id": "s_BD",
+          "from_point": "B",
+          "to_point": "D",
+          "style": {
+            "stroke": "#e74c3c",
+            "stroke_width": 1.8
+          }
+        },
+        {
+          "type": "segment",
+          "id": "s_AB",
+          "from_point": "A",
+          "to_point": "B",
+          "style": {
+            "stroke": "#2980b9",
+            "stroke_width": 1.8
+          }
+        },
+        {
+          "type": "segment",
+          "id": "s_BC",
+          "from_point": "B",
+          "to_point": "C",
+          "style": {
+            "stroke": "#2980b9",
+            "stroke_width": 1.8
+          }
+        },
+        {
+          "type": "segment",
+          "id": "s_CD",
+          "from_point": "C",
+          "to_point": "D",
+          "style": {
+            "stroke": "#2980b9",
+            "stroke_width": 1.8
+          }
+        },
+        {
+          "type": "segment",
+          "id": "s_DA",
+          "from_point": "D",
+          "to_point": "A",
+          "style": {
+            "stroke": "#2980b9",
+            "stroke_width": 1.8
+          }
+        }
+      ],
+      "annotations": [
+        {
+          "type": "label",
+          "id": "lbl_AC",
+          "text": "AC=16",
+          "anchor": "A",
+          "dx": -12,
+          "dy": 12,
+          "color": "#2980b9",
+          "font_size": 12
+        },
+        {
+          "type": "label",
+          "id": "lbl_BD",
+          "text": "BD=12",
+          "anchor": "B",
+          "dx": 8,
+          "dy": -12,
+          "color": "#e74c3c",
+          "font_size": 12
+        }
+      ],
+      "constraints": [],
+      "caption": "Ромб ABCD"
+    },
+    {
+      "text": "Точка $M$ на стороне $AB$ такая, что $AM=5$.",
+      "objects": [
+        {
+          "type": "point",
+          "id": "M",
+          "style": {
+            "fill": "#27ae60",
+            "stroke": "#27ae60"
+          }
+        }
+      ],
+      "annotations": [
+        {
+          "type": "label",
+          "id": "lbl_AM",
+          "text": "AM=5",
+          "anchor": "A",
+          "dx": -12,
+          "dy": 12,
+          "color": "#27ae60",
+          "font_size": 12
+        }
+      ],
+      "constraints": [],
+      "caption": "Точка M на AB"
+    },
+    {
+      "text": "Найдем координаты точки $M$. Так как $AM=5$ и $A=(-8,0,0)$, то $M=(-3,3,0)$.\n\nНайдем расстояние от точки $M$ до диагонали $BD$. Для этого проведем перпендикуляр из $M$ к $BD$.\n\nРасстояние от точки $M$ до диагонали $BD$ равно длине отрезка $MH$.",
+      "objects": [
+        {
+          "type": "point",
+          "id": "H",
+          "style": {
+            "fill": "#27ae60",
+            "stroke": "#27ae60"
+          }
+        }
+      ],
+      "annotations": [
+        {
+          "type": "label",
+          "id": "lbl_H",
+          "text": "H",
+          "anchor": "H",
+          "dx": 0,
+          "dy": 0,
+          "color": "#27ae60",
+          "font_size": 12
+        }
+      ],
+      "constraints": [
+        {
+          "type": "perpendicular",
+          "id": "perp_M",
+          "point": "M",
+          "line_point1": "B",
+          "line_point2": "D",
+          "foot_id": "H"
+        }
+      ],
+      "caption": "Перпендикуляр из M к BD"
+    }
+  ]
+}

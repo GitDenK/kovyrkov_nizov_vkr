@@ -1,0 +1,203 @@
+{
+  "started_at": "2026-05-08 21:14:18",
+  "model": "meta-llama/Llama-3.3-70B-Instruct-Turbo",
+  "mode": "run",
+  "llm_calls": [
+    {
+      "model": "meta-llama/Llama-3.3-70B-Instruct-Turbo",
+      "role": "plan",
+      "attempt": 1,
+      "tokens_in": 5083,
+      "tokens_out": 1613,
+      "duration_sec": 65.789,
+      "success": true
+    },
+    {
+      "model": "meta-llama/Llama-3.3-70B-Instruct-Turbo",
+      "role": "fix",
+      "attempt": 1,
+      "tokens_in": 6971,
+      "tokens_out": 1996,
+      "duration_sec": 22.232,
+      "success": true
+    }
+  ],
+  "phases": {
+    "extract_json": {
+      "count": 2,
+      "total_sec": 0.0053,
+      "last_sec": 0.0032,
+      "extra": [
+        {
+          "chars": 4046
+        },
+        {
+          "chars": 6253
+        }
+      ]
+    },
+    "postprocess_plan": {
+      "count": 2,
+      "total_sec": 0.0,
+      "last_sec": 0.0,
+      "extra": []
+    },
+    "validate_plan": {
+      "count": 2,
+      "total_sec": 0.0,
+      "last_sec": 0.0,
+      "extra": []
+    },
+    "validation_round": {
+      "count": 1,
+      "total_sec": 0.0,
+      "last_sec": 0.0,
+      "extra": [
+        {
+          "round_idx": 0,
+          "warnings": 0
+        }
+      ]
+    },
+    "validate_answer_vis": {
+      "count": 2,
+      "total_sec": 0.0005,
+      "last_sec": 0.0003,
+      "extra": []
+    },
+    "answer_vis_check": {
+      "count": 2,
+      "total_sec": 0.0,
+      "last_sec": 0.0,
+      "extra": [
+        {
+          "round_idx": 0,
+          "warnings": 1,
+          "expected_types": [
+            "angle",
+            "construction"
+          ]
+        },
+        {
+          "round_idx": 99,
+          "warnings": 0,
+          "expected_types": [
+            "angle",
+            "construction"
+          ]
+        }
+      ]
+    },
+    "answer_vis_fix_round": {
+      "count": 1,
+      "total_sec": 0.0,
+      "last_sec": 0.0,
+      "extra": [
+        {
+          "round_idx": 1,
+          "accepted": true,
+          "prev_warnings": 1,
+          "new_warnings": 0,
+          "structural_warnings": 0,
+          "reason": "accepted_improvement"
+        }
+      ]
+    },
+    "auto_mark_hidden_edges": {
+      "count": 1,
+      "total_sec": 0.0001,
+      "last_sec": 0.0001,
+      "extra": [
+        {
+          "n_points": 9,
+          "n_faces": 5
+        }
+      ]
+    },
+    "compute_canvas_3d": {
+      "count": 1,
+      "total_sec": 0.0,
+      "last_sec": 0.0,
+      "extra": [
+        {
+          "n_points": 9
+        }
+      ]
+    },
+    "execute_plan": {
+      "count": 1,
+      "total_sec": 0.002,
+      "last_sec": 0.002,
+      "extra": [
+        {
+          "n_points": 9,
+          "n_steps": 5,
+          "is_3d": true
+        }
+      ]
+    },
+    "html_render": {
+      "count": 1,
+      "total_sec": 0.0001,
+      "last_sec": 0.0001,
+      "extra": [
+        {
+          "animated": false
+        }
+      ]
+    }
+  },
+  "steps": [
+    {
+      "step_idx": 0,
+      "duration_sec": 0.0003,
+      "n_objects": 13,
+      "n_annotations": 0,
+      "n_constraints": 0,
+      "has_text": true
+    },
+    {
+      "step_idx": 1,
+      "duration_sec": 0.0003,
+      "n_objects": 2,
+      "n_annotations": 1,
+      "n_constraints": 0,
+      "has_text": true
+    },
+    {
+      "step_idx": 2,
+      "duration_sec": 0.0003,
+      "n_objects": 2,
+      "n_annotations": 1,
+      "n_constraints": 0,
+      "has_text": true
+    },
+    {
+      "step_idx": 3,
+      "duration_sec": 0.0004,
+      "n_objects": 3,
+      "n_annotations": 1,
+      "n_constraints": 1,
+      "has_text": true
+    },
+    {
+      "step_idx": 4,
+      "duration_sec": 0.0004,
+      "n_objects": 0,
+      "n_annotations": 1,
+      "n_constraints": 0,
+      "has_text": true
+    }
+  ],
+  "totals": {
+    "wall_sec": 88.033,
+    "llm_calls": 2,
+    "llm_calls_successful": 2,
+    "llm_tokens_in": 12054,
+    "llm_tokens_out": 3609,
+    "llm_sec": 88.021,
+    "phases_sec": 0.008,
+    "steps_count": 5,
+    "steps_sec": 0.0017
+  }
+}

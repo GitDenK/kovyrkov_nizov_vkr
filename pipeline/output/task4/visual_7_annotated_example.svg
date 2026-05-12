@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="2250">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
+    </marker>
+  </defs>
+  <rect width="500" height="2250" fill="white"/>
+  <text x="250" y="44" text-anchor="middle" font-size="17" font-weight="bold" fill="#333">Примеры решения вероятностных задач с пояснениями</text>
+  <line x1="250.0" y1="154.0" x2="250.0" y2="224.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="276.0" x2="250.0" y2="346.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="398.0" x2="250.0" y2="468.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="520.0" x2="250.0" y2="590.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="642.0" x2="250.0" y2="712.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="764.0" x2="250.0" y2="834.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="886.0" x2="250.0" y2="956.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="1008.0" x2="250.0" y2="1078.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="1142.0" x2="250.0" y2="1212.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="1264.0" x2="250.0" y2="1334.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="1386.0" x2="250.0" y2="1456.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="1508.0" x2="250.0" y2="1578.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="1630.0" x2="250.0" y2="1700.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="1752.0" x2="250.0" y2="1822.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="1874.0" x2="250.0" y2="1944.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="1996.0" x2="250.0" y2="2066.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <rect x="120.0" y="70.0" width="260" height="84.0" rx="6" fill="#fdebd0" stroke="#e67e22" stroke-width="1.5"/>
+  <text x="250.0" y="114.0" text-anchor="middle" font-size="13" fill="#333">Задача: Рассмотрим задачу о броса…</text>
+  <rect x="120.0" y="346.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="374.0" text-anchor="middle" font-size="13" fill="#333">Ошибка: нечестная монета, исходы …</text>
+  <rect x="120.0" y="590.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="618.0" text-anchor="middle" font-size="13" fill="#333">Ошибка: нечестная монета, вероятн…</text>
+  <rect x="120.0" y="834.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="862.0" text-anchor="middle" font-size="13" fill="#333">Правильный ответ: вероятность рав…</text>
+  <rect x="120.0" y="1078.0" width="260" height="64.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="1112.0" text-anchor="middle" font-size="13" fill="#333">Ошибка: перепутаны исходы (О, Р) …</text>
+  <rect x="120.0" y="1334.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="1362.0" text-anchor="middle" font-size="13" fill="#333">Правильный ответ: вероятность рав…</text>
+  <rect x="120.0" y="1578.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="1606.0" text-anchor="middle" font-size="13" fill="#333">Ошибка: ранняя округлённая вероят…</text>
+  <rect x="120.0" y="1822.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="1850.0" text-anchor="middle" font-size="13" fill="#333">Правильный ответ: вероятность рав…</text>
+  <rect x="120.0" y="2066.0" width="260" height="84.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="2110.0" text-anchor="middle" font-size="13" fill="#333">Правильный ответ: перечислены все…</text>
+  <rect x="120.0" y="224.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="252.0" text-anchor="middle" font-size="13" fill="#333">$P = m/n$</text>
+  <rect x="120.0" y="468.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="496.0" text-anchor="middle" font-size="13" fill="#333">$P = 1/2$</text>
+  <rect x="120.0" y="712.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="740.0" text-anchor="middle" font-size="13" fill="#333">$P = 1/2$</text>
+  <rect x="120.0" y="956.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="984.0" text-anchor="middle" font-size="13" fill="#333">$P = 1/4$</text>
+  <rect x="120.0" y="1212.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="1240.0" text-anchor="middle" font-size="13" fill="#333">$P = 1/2$</text>
+  <rect x="120.0" y="1456.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="1484.0" text-anchor="middle" font-size="13" fill="#333">$P = 0.5$</text>
+  <rect x="120.0" y="1700.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="1728.0" text-anchor="middle" font-size="13" fill="#333">$P = 0.5$</text>
+  <rect x="120.0" y="1944.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="1972.0" text-anchor="middle" font-size="13" fill="#333">$P = 1/4$</text>
+</svg>

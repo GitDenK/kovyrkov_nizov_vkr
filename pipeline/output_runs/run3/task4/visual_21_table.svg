@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="468">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
+    </marker>
+  </defs>
+  <rect width="500" height="468" fill="white"/>
+  <text x="250" y="44" text-anchor="middle" font-size="17" font-weight="bold" fill="#333">Ключевые моменты из секции «Темы для повторения»</text>
+  <line x1="250.0" y1="194.0" x2="250.0" y2="264.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <rect x="120.0" y="70.0" width="260" height="124.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="134.0" text-anchor="middle" font-size="13" fill="#333">{&#x27;title&#x27;: &#x27;Главное правило&#x27;, &#x27;con…</text>
+  <rect x="120.0" y="264.0" width="260" height="104.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="318.0" text-anchor="middle" font-size="13" fill="#333">{&#x27;title&#x27;: &#x27;Примеры&#x27;, &#x27;content&#x27;: &#x27;…</text>
+</svg>

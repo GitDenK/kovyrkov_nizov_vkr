@@ -1,0 +1,247 @@
+{
+  "title": "Расстояние от точки M до диагонали BD",
+  "canvas": {
+    "width": 560,
+    "height": 380,
+    "x_min": -1,
+    "x_max": 18,
+    "y_min": -1,
+    "y_max": 6
+  },
+  "points": {
+    "A": {
+      "x": 1,
+      "y": 0,
+      "label_dx": -12,
+      "label_dy": 12
+    },
+    "B": {
+      "x": 9,
+      "y": 0,
+      "label_dx": 8,
+      "label_dy": 12
+    },
+    "C": {
+      "x": 17,
+      "y": 0,
+      "label_dx": 10,
+      "label_dy": 12
+    },
+    "D": {
+      "x": 9,
+      "y": 0,
+      "label_dx": 8,
+      "label_dy": -12
+    },
+    "M": {
+      "x": 6,
+      "y": 0,
+      "label_dx": 8,
+      "label_dy": 12
+    },
+    "O": {
+      "x": 9,
+      "y": 2.5,
+      "label_dx": 8,
+      "label_dy": -12
+    },
+    "E": {
+      "x": 9,
+      "y": 0,
+      "label_dx": 8,
+      "label_dy": -12
+    }
+  },
+  "steps": [
+    {
+      "text": "Ромб ABCD с диагоналями AC и BD, AC = 16, BD = 12.",
+      "objects": [
+        {
+          "type": "point",
+          "id": "A"
+        },
+        {
+          "type": "point",
+          "id": "B"
+        },
+        {
+          "type": "point",
+          "id": "C"
+        },
+        {
+          "type": "point",
+          "id": "D"
+        },
+        {
+          "type": "segment",
+          "id": "s_AB",
+          "from_point": "A",
+          "to_point": "B",
+          "style": {
+            "stroke": "#2980b9",
+            "stroke_width": 1.8
+          }
+        },
+        {
+          "type": "segment",
+          "id": "s_BC",
+          "from_point": "B",
+          "to_point": "C",
+          "style": {
+            "stroke": "#2980b9",
+            "stroke_width": 1.8
+          }
+        },
+        {
+          "type": "segment",
+          "id": "s_CD",
+          "from_point": "C",
+          "to_point": "D",
+          "style": {
+            "stroke": "#2980b9",
+            "stroke_width": 1.8
+          }
+        },
+        {
+          "type": "segment",
+          "id": "s_DA",
+          "from_point": "D",
+          "to_point": "A",
+          "style": {
+            "stroke": "#2980b9",
+            "stroke_width": 1.8
+          }
+        },
+        {
+          "type": "segment",
+          "id": "s_AC",
+          "from_point": "A",
+          "to_point": "C",
+          "style": {
+            "stroke": "#e74c3c",
+            "stroke_width": 1.8,
+            "dash": "dashed"
+          }
+        },
+        {
+          "type": "segment",
+          "id": "s_BD",
+          "from_point": "B",
+          "to_point": "D",
+          "style": {
+            "stroke": "#e74c3c",
+            "stroke_width": 1.8,
+            "dash": "dashed"
+          }
+        }
+      ],
+      "annotations": [
+        {
+          "type": "label",
+          "id": "lbl_AC",
+          "text": "AC = 16",
+          "anchor": "A",
+          "dx": -0.3,
+          "dy": 0.8,
+          "color": "#e74c3c",
+          "font_size": 12
+        },
+        {
+          "type": "label",
+          "id": "lbl_BD",
+          "text": "BD = 12",
+          "anchor": "B",
+          "dx": -1.0,
+          "dy": 0.8,
+          "color": "#e74c3c",
+          "font_size": 12
+        }
+      ],
+      "constraints": [],
+      "caption": "Ромб ABCD"
+    },
+    {
+      "text": "Точка M на стороне AB, AM = 5.",
+      "objects": [
+        {
+          "type": "point",
+          "id": "M"
+        },
+        {
+          "type": "segment",
+          "id": "s_AM",
+          "from_point": "A",
+          "to_point": "M",
+          "style": {
+            "stroke": "#27ae60",
+            "stroke_width": 1.8
+          }
+        }
+      ],
+      "annotations": [
+        {
+          "type": "label",
+          "id": "lbl_AM",
+          "text": "AM = 5",
+          "anchor": "A",
+          "dx": -0.3,
+          "dy": 0.8,
+          "color": "#27ae60",
+          "font_size": 12
+        }
+      ],
+      "constraints": [],
+      "caption": "Точка M"
+    },
+    {
+      "text": "Перпендикуляр из M на BD пересекает BD в точке E.",
+      "objects": [
+        {
+          "type": "point",
+          "id": "E"
+        },
+        {
+          "type": "segment",
+          "id": "s_ME",
+          "from_point": "M",
+          "to_point": "E",
+          "style": {
+            "stroke": "#8e44ad",
+            "stroke_width": 1.8,
+            "dash": "dashed"
+          }
+        }
+      ],
+      "annotations": [],
+      "constraints": [
+        {
+          "type": "perpendicular",
+          "id": "perp_ME",
+          "point": "M",
+          "line_point1": "B",
+          "line_point2": "D",
+          "foot_id": "E"
+        }
+      ],
+      "caption": "Перпендикуляр из M на BD"
+    },
+    {
+      "text": "Расстояние от M до BD равно ME.",
+      "objects": [],
+      "annotations": [
+        {
+          "type": "label",
+          "id": "lbl_ME",
+          "text": "ME = 5",
+          "anchor": "M",
+          "dx": 0.5,
+          "dy": 0.3,
+          "color": "#8e44ad",
+          "font_size": 13
+        }
+      ],
+      "constraints": [],
+      "caption": "Ответ: ME = 5"
+    }
+  ]
+}

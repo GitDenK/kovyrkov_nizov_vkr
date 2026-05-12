@@ -1,0 +1,43 @@
+{
+  "scene_type": "function_plot",
+  "canvas": {
+    "width": 400,
+    "height": 400,
+    "x_min": -3,
+    "x_max": 3,
+    "y_min": -1,
+    "y_max": 9
+  },
+  "style": {
+    "theme": "light",
+    "stroke_color": "#333333",
+    "fill_color": "none",
+    "font_size": 12,
+    "font_family": "sans-serif"
+  },
+  "objects": [
+    {
+      "type": "function_curve",
+      "id": "parabola",
+      "expression": "x**2",
+      "x_min": -3,
+      "x_max": 3
+    },
+    {
+      "type": "point",
+      "id": "vertex",
+      "x": 0,
+      "y": 0,
+      "label": "O"
+    },
+    {
+      "type": "point",
+      "id": "highlight",
+      "x": 2,
+      "y": 4,
+      "label": "(2, 4)"
+    }
+  ],
+  "constraints": [],
+  "annotations": []
+}

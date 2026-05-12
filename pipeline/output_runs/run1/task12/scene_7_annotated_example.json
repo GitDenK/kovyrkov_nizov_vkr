@@ -1,0 +1,212 @@
+{
+  "scene_type": "diagram",
+  "canvas": {
+    "width": 500,
+    "height": 300,
+    "x_min": 0,
+    "x_max": 500,
+    "y_min": 0,
+    "y_max": 300
+  },
+  "style": {
+    "theme": "light",
+    "stroke_color": "#333333",
+    "fill_color": "#f5f5f5",
+    "font_size": 13,
+    "font_family": "sans-serif"
+  },
+  "objects": [
+    {
+      "type": "title",
+      "id": "title",
+      "text": "Пошаговое решение задачи нахождения точки минимума функции $f(x) = x^2 - 6x + 8$"
+    },
+    {
+      "type": "box",
+      "id": "problem",
+      "text": "Задача: Найти точку минимума функции $f(x) = x^2 - 6x + 8$",
+      "style": {
+        "fill": "#fdebd0",
+        "stroke": "#e67e22"
+      }
+    },
+    {
+      "type": "formula_block",
+      "id": "expr_0",
+      "formula": "$f(x) = x^2 - 6x + 8$"
+    },
+    {
+      "type": "arrow",
+      "id": "arr_e_0",
+      "from_point": "problem",
+      "to_point": "expr_0"
+    },
+    {
+      "type": "box",
+      "id": "ann_0",
+      "text": "Запишем функцию"
+    },
+    {
+      "type": "arrow",
+      "id": "arr_a_0",
+      "from_point": "expr_0",
+      "to_point": "ann_0"
+    },
+    {
+      "type": "formula_block",
+      "id": "expr_1",
+      "formula": "$f'(x) = 2x - 6$"
+    },
+    {
+      "type": "arrow",
+      "id": "arr_e_1",
+      "from_point": "ann_0",
+      "to_point": "expr_1"
+    },
+    {
+      "type": "box",
+      "id": "ann_1",
+      "text": "Найдем производную"
+    },
+    {
+      "type": "arrow",
+      "id": "arr_a_1",
+      "from_point": "expr_1",
+      "to_point": "ann_1"
+    },
+    {
+      "type": "formula_block",
+      "id": "expr_2",
+      "formula": "$2x - 6 = 0$"
+    },
+    {
+      "type": "arrow",
+      "id": "arr_e_2",
+      "from_point": "ann_1",
+      "to_point": "expr_2"
+    },
+    {
+      "type": "box",
+      "id": "ann_2",
+      "text": "Найдем критическую точку"
+    },
+    {
+      "type": "arrow",
+      "id": "arr_a_2",
+      "from_point": "expr_2",
+      "to_point": "ann_2"
+    },
+    {
+      "type": "formula_block",
+      "id": "expr_3",
+      "formula": "$2x = 6$"
+    },
+    {
+      "type": "arrow",
+      "id": "arr_e_3",
+      "from_point": "ann_2",
+      "to_point": "expr_3"
+    },
+    {
+      "type": "box",
+      "id": "ann_3",
+      "text": "Перенесем члены"
+    },
+    {
+      "type": "arrow",
+      "id": "arr_a_3",
+      "from_point": "expr_3",
+      "to_point": "ann_3"
+    },
+    {
+      "type": "formula_block",
+      "id": "expr_4",
+      "formula": "$x = 3$"
+    },
+    {
+      "type": "arrow",
+      "id": "arr_e_4",
+      "from_point": "ann_3",
+      "to_point": "expr_4"
+    },
+    {
+      "type": "box",
+      "id": "ann_4",
+      "text": "Решаем уравнение"
+    },
+    {
+      "type": "arrow",
+      "id": "arr_a_4",
+      "from_point": "expr_4",
+      "to_point": "ann_4"
+    },
+    {
+      "type": "formula_block",
+      "id": "expr_5",
+      "formula": "$f''(x) = 2$"
+    },
+    {
+      "type": "arrow",
+      "id": "arr_e_5",
+      "from_point": "ann_4",
+      "to_point": "expr_5"
+    },
+    {
+      "type": "box",
+      "id": "ann_5",
+      "text": "Найдем вторую производную"
+    },
+    {
+      "type": "arrow",
+      "id": "arr_a_5",
+      "from_point": "expr_5",
+      "to_point": "ann_5"
+    },
+    {
+      "type": "formula_block",
+      "id": "expr_6",
+      "formula": "$f''(3) = 2 > 0$"
+    },
+    {
+      "type": "arrow",
+      "id": "arr_e_6",
+      "from_point": "ann_5",
+      "to_point": "expr_6"
+    },
+    {
+      "type": "box",
+      "id": "ann_6",
+      "text": "Проверим знак второй производной"
+    },
+    {
+      "type": "arrow",
+      "id": "arr_a_6",
+      "from_point": "expr_6",
+      "to_point": "ann_6"
+    },
+    {
+      "type": "formula_block",
+      "id": "expr_7",
+      "formula": "$Точка минимума x = 3$"
+    },
+    {
+      "type": "arrow",
+      "id": "arr_e_7",
+      "from_point": "ann_6",
+      "to_point": "expr_7"
+    },
+    {
+      "type": "box",
+      "id": "ann_7",
+      "text": "Заключение"
+    },
+    {
+      "type": "arrow",
+      "id": "arr_a_7",
+      "from_point": "expr_7",
+      "to_point": "ann_7"
+    }
+  ],
+  "constraints": [],
+  "annotations": []
+}

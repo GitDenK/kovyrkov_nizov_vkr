@@ -1,0 +1,1056 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8"/>
+<title>Бэкенд: конспект по геометрии с пошаговыми визуалами</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+         background: #f0f2f5; color: #1a1a2e; line-height: 1.6; }
+  .header { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+             padding: 40px 20px; text-align: center; color: white; }
+  .header h1 { font-size: 26px; margin-bottom: 8px; }
+  .header p { opacity: 0.8; font-size: 14px; max-width: 700px; margin: 0 auto; }
+  .stats-bar { display: flex; justify-content: center; gap: 30px; margin-top: 20px; flex-wrap: wrap; }
+  .stat { background: rgba(255,255,255,0.15); padding: 10px 24px; border-radius: 8px; }
+  .stat-val { font-size: 22px; font-weight: bold; }
+  .stat-label { font-size: 11px; opacity: 0.7; text-transform: uppercase; }
+  .container { max-width: 1100px; margin: 0 auto; padding: 30px 20px; }
+
+  .pipeline-arrow { text-align: center; padding: 16px; font-size: 18px; color: #888; }
+
+  .section-block { background: white; border-radius: 12px; margin-bottom: 28px;
+                    box-shadow: 0 2px 12px rgba(0,0,0,0.08); overflow: hidden; }
+  .section-header { padding: 16px 20px; background: #f8f9fa; border-bottom: 1px solid #eee; }
+  .section-header h3 { font-size: 16px; color: #2c3e50; }
+  .section-num { display: inline-block; background: #0f3460; color: white;
+                  width: 26px; height: 26px; line-height: 26px; border-radius: 50%;
+                  text-align: center; font-size: 12px; font-weight: bold; margin-right: 8px; }
+
+  .conspect-text { padding: 16px 20px; font-size: 14px; color: #444;
+                    white-space: pre-wrap; border-bottom: 1px solid #f0f0f0; }
+  .conspect-text strong { color: #2c3e50; }
+
+  .backend-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0; }
+  .backend-col { padding: 16px 20px; }
+  .backend-col:first-child { border-right: 1px solid #f0f0f0; }
+  .backend-label { font-size: 11px; text-transform: uppercase; color: #999;
+                    margin-bottom: 8px; letter-spacing: 0.5px; }
+  .plan-json { background: #f8f9fa; border-radius: 8px; padding: 12px;
+                font-family: 'Fira Code', monospace; font-size: 11px; color: #555;
+                max-height: 200px; overflow-y: auto; white-space: pre-wrap; }
+  .scene-json { background: #f0f7ff; border-radius: 8px; padding: 12px;
+                 font-family: 'Fira Code', monospace; font-size: 11px; color: #555;
+                 max-height: 200px; overflow-y: auto; white-space: pre-wrap; }
+
+  .no-visual { padding: 16px 20px; color: #999; font-style: italic; font-size: 13px; }
+
+  .steps-section { padding: 16px 20px; }
+  .steps-title { font-size: 13px; text-transform: uppercase; color: #0f3460;
+                  margin-bottom: 12px; letter-spacing: 0.5px; font-weight: 600; }
+  .steps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 12px; }
+  .step-card { border: 1px solid #e8e8e8; border-radius: 8px; overflow: hidden; }
+  .step-head { padding: 8px 12px; background: #f8f9fa; border-bottom: 1px solid #eee;
+                font-size: 13px; font-weight: 600; color: #333; }
+  .step-head .num { display: inline-block; background: #e67e22; color: white;
+                     width: 22px; height: 22px; line-height: 22px; border-radius: 50%;
+                     text-align: center; font-size: 11px; margin-right: 6px; }
+  .step-desc { font-size: 11px; color: #888; font-weight: 400; margin-top: 2px; }
+  .step-svg { padding: 10px; text-align: center; background: #fefefe; }
+  .step-svg svg { max-width: 100%; height: auto; }
+
+  .badge { display: inline-block; padding: 2px 8px; border-radius: 8px;
+            font-size: 10px; color: white; }
+  .badge-plan { background: #2980b9; }
+  .badge-scene { background: #27ae60; }
+  .badge-render { background: #e67e22; }
+  .badge-none { background: #bbb; }
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>Бэкенд конспекта: геометрия с пошаговыми визуалами</h1>
+  <p>Полный пайплайн: текст конспекта → планировщик визуалов → Scene JSON (формат коллеги) → solver (constraints) → SVG рендерер → пошаговые построения</p>
+  <div class="stats-bar">
+    <div class="stat"><div class="stat-val">6</div><div class="stat-label">секций</div></div>
+    <div class="stat"><div class="stat-val">5</div><div class="stat-label">визуалов</div></div>
+    <div class="stat"><div class="stat-val">23</div><div class="stat-label">шагов</div></div>
+  </div>
+</div>
+
+<div class="container">
+<div class="pipeline-arrow">
+  📝 Конспект → 🔍 Планировщик → 📐 Scene JSON → ⚙️ Solver → 🎨 SVG Renderer
+</div>
+
+
+<div class="section-block">
+  <div class="section-header">
+    <span class="section-num">1</span>
+    <span style="font-size:16px; font-weight:600;">Что проверяет задание</span>
+    &nbsp;<span class="badge badge-none">без визуала</span>
+  </div>
+  <div class="conspect-text">Задание проверяет умение решать планиметрические задачи.
+Нужно уметь:
+- находить элементы треугольника (высоты, медианы, биссектрисы)
+- работать с вписанными и описанными окружностями
+- применять теорему Пифагора, теоремы синусов и косинусов
+- доказывать геометрические факты</div>
+
+  <div class="no-visual">Планировщик: визуал не требуется (нет геометрических построений)</div>
+</div>
+
+<div class="section-block">
+  <div class="section-header">
+    <span class="section-num">2</span>
+    <span style="font-size:16px; font-weight:600;">Высота треугольника</span>
+    &nbsp;<span class="badge badge-render">пошаговый визуал</span>
+  </div>
+  <div class="conspect-text">**Высота** — перпендикуляр, опущенный из вершины на противоположную сторону (или её продолжение).
+
+Свойства:
+- Три высоты пересекаются в одной точке (ортоцентр)
+- Основание высоты — проекция вершины на сторону
+- Площадь треугольника: S = ½ · a · h_a
+
+**Пример**: В треугольнике ABC: A(0,0), B(7,0), C(3,5.5).
+Найти высоту из C на AB и площадь треугольника.</div>
+
+
+  <div class="backend-row">
+    <div class="backend-col">
+      <div class="backend-label"><span class="badge badge-plan">1</span> Visual Plan (выход планировщика)</div>
+      <div class="plan-json">{
+  &quot;need_visual&quot;: true,
+  &quot;visual_type&quot;: &quot;geometry_stepbystep&quot;,
+  &quot;description&quot;: &quot;Пошаговое построение высоты и вычисление площади&quot;,
+  &quot;params&quot;: {
+    &quot;construction&quot;: &quot;altitude&quot;,
+    &quot;vertices&quot;: {
+      &quot;A&quot;: [
+        0,
+        0
+      ],
+      &quot;B&quot;: [
+        7,
+        0
+      ],
+      &quot;C&quot;: [
+        3,
+        5.5
+      ]
+    },
+    &quot;target_vertex&quot;: &quot;C&quot;
+  },
+  &quot;caption&quot;: &quot;Высота треугольника: построение и площадь&quot;,
+  &quot;priority&quot;: &quot;high&quot;
+}</div>
+    </div>
+    <div class="backend-col">
+      <div class="backend-label"><span class="badge badge-scene">2</span> Scene JSON (формат svg-generator)</div>
+      <div class="scene-json">{
+  &quot;need_visual&quot;: true,
+  &quot;visual_type&quot;: &quot;geometry_stepbystep&quot;,
+  &quot;description&quot;: &quot;Пошаговое построение высоты и вычисление площади&quot;,
+  &quot;params&quot;: {
+    &quot;construction&quot;: &quot;altitude&quot;,
+    &quot;vertices&quot;: {
+      &quot;A&quot;: [
+        0,
+        0
+      ],
+      &quot;B&quot;: [
+        7,
+        0
+      ],
+      &quot;C&quot;: [
+        3,
+        5.5
+      ]
+    },
+    &quot;target_vertex&quot;: &quot;C&quot;
+  },
+  &quot;caption&quot;: &quot;Высота треугольника: построение и площадь&quot;,
+  &quot;priority&quot;: &quot;high&quot;
+}</div>
+    </div>
+  </div>
+
+  <div class="steps-section">
+    <div class="steps-title"><span class="badge badge-render">3</span> Пошаговый рендеринг (5 шагов)</div>
+    <div class="steps-grid">
+
+
+      <div class="step-card">
+        <div class="step-head">
+          <span class="num">1</span> Строим треугольник ABC
+          <div class="step-desc">Дано: треугольник с вершинами A, B, C</div>
+        </div>
+        <div class="step-svg"><svg xmlns="http://www.w3.org/2000/svg" width="480" height="400" viewBox="0 0 480 400" style="background:white;font-family:sans-serif">
+  <polygon points="48.0,329.4 384.0,329.4 192.0,70.6" fill="rgba(52,152,219,0.06)" stroke="#333333" stroke-width="1.5"/>
+  <circle cx="48.0" cy="329.4" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="34.0" y="345.4" font-size="14" font-family="sans-serif" font-weight="bold" fill="#333333">A</text>
+  <circle cx="384.0" cy="329.4" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="396.0" y="345.4" font-size="14" font-family="sans-serif" font-weight="bold" fill="#333333">B</text>
+  <circle cx="192.0" cy="70.6" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="192.0" y="58.6" font-size="14" font-family="sans-serif" font-weight="bold" fill="#333333">C</text>
+</svg></div>
+      </div>
+
+
+      <div class="step-card">
+        <div class="step-head">
+          <span class="num">2</span> Определяем основание
+          <div class="step-desc">Выбираем AB как основание: a = 7</div>
+        </div>
+        <div class="step-svg"><svg xmlns="http://www.w3.org/2000/svg" width="480" height="400" viewBox="0 0 480 400" style="background:white;font-family:sans-serif">
+  <polygon points="48.0,329.4 384.0,329.4 192.0,70.6" fill="rgba(52,152,219,0.06)" stroke="#333333" stroke-width="1.5"/>
+  <circle cx="48.0" cy="329.4" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="34.0" y="345.4" font-size="14" font-family="sans-serif" font-weight="bold" fill="#333333">A</text>
+  <circle cx="384.0" cy="329.4" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="396.0" y="345.4" font-size="14" font-family="sans-serif" font-weight="bold" fill="#333333">B</text>
+  <circle cx="192.0" cy="70.6" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="192.0" y="58.6" font-size="14" font-family="sans-serif" font-weight="bold" fill="#333333">C</text>
+  <text x="120.0" y="345.9" font-size="12" font-family="sans-serif" fill="#2980b9">a = AB = 7</text>
+</svg></div>
+      </div>
+
+
+      <div class="step-card">
+        <div class="step-head">
+          <span class="num">3</span> Проводим высоту CH
+          <div class="step-desc">Опускаем перпендикуляр из C на прямую AB</div>
+        </div>
+        <div class="step-svg"><svg xmlns="http://www.w3.org/2000/svg" width="480" height="400" viewBox="0 0 480 400" style="background:white;font-family:sans-serif">
+  <polygon points="48.0,329.4 384.0,329.4 192.0,70.6" fill="rgba(52,152,219,0.06)" stroke="#333333" stroke-width="1.5"/>
+  <line x1="192.0" y1="70.6" x2="192.0" y2="329.4" stroke="#e74c3c" stroke-width="1.5" stroke-dasharray="8,4"/>
+  <circle cx="48.0" cy="329.4" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="34.0" y="345.4" font-size="14" font-family="sans-serif" font-weight="bold" fill="#333333">A</text>
+  <circle cx="384.0" cy="329.4" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="396.0" y="345.4" font-size="14" font-family="sans-serif" font-weight="bold" fill="#333333">B</text>
+  <circle cx="192.0" cy="70.6" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="192.0" y="58.6" font-size="14" font-family="sans-serif" font-weight="bold" fill="#333333">C</text>
+  <circle cx="192.0" cy="329.4" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="120.0" y="345.9" font-size="12" font-family="sans-serif" fill="#2980b9">a = AB = 7</text>
+</svg></div>
+      </div>
+
+
+      <div class="step-card">
+        <div class="step-head">
+          <span class="num">4</span> Отмечаем прямой угол и высоту
+          <div class="step-desc">CH ⊥ AB, высота h = 5.5</div>
+        </div>
+        <div class="step-svg"><svg xmlns="http://www.w3.org/2000/svg" width="480" height="400" viewBox="0 0 480 400" style="background:white;font-family:sans-serif">
+  <polygon points="48.0,329.4 384.0,329.4 192.0,70.6" fill="rgba(52,152,219,0.06)" stroke="#333333" stroke-width="1.5"/>
+  <line x1="192.0" y1="70.6" x2="192.0" y2="329.4" stroke="#e74c3c" stroke-width="1.5" stroke-dasharray="8,4"/>
+  <polyline points="180.0,329.4 180.0,317.4 192.0,317.4" fill="none" stroke="#333333" stroke-width="1.2"/>
+  <circle cx="48.0" cy="329.4" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="34.0" y="345.4" font-size="14" font-family="sans-serif" font-weight="bold" fill="#333333">A</text>
+  <circle cx="384.0" cy="329.4" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="396.0" y="345.4" font-size="14" font-family="sans-serif" font-weight="bold" fill="#333333">B</text>
+  <circle cx="192.0" cy="70.6" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="192.0" y="58.6" font-size="14" font-family="sans-serif" font-weight="bold" fill="#333333">C</text>
+  <circle cx="192.0" cy="329.4" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="120.0" y="345.9" font-size="12" font-family="sans-serif" fill="#2980b9">a = AB = 7</text>
+  <text x="199.2" y="343.5" font-size="12" font-family="sans-serif" fill="#e74c3c">H</text>
+  <text x="211.2" y="127.1" font-size="12" font-family="sans-serif" fill="#e74c3c">h = 5.5</text>
+</svg></div>
+      </div>
+
+
+      <div class="step-card">
+        <div class="step-head">
+          <span class="num">5</span> Вычисляем площадь
+          <div class="step-desc">S = ½ · a · h = 19.25</div>
+        </div>
+        <div class="step-svg"><svg xmlns="http://www.w3.org/2000/svg" width="480" height="400" viewBox="0 0 480 400" style="background:white;font-family:sans-serif">
+  <polygon points="48.0,329.4 384.0,329.4 192.0,70.6" fill="rgba(52,152,219,0.06)" stroke="#333333" stroke-width="1.5"/>
+  <line x1="192.0" y1="70.6" x2="192.0" y2="329.4" stroke="#e74c3c" stroke-width="1.5" stroke-dasharray="8,4"/>
+  <polyline points="180.0,329.4 180.0,317.4 192.0,317.4" fill="none" stroke="#333333" stroke-width="1.2"/>
+  <circle cx="48.0" cy="329.4" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="34.0" y="345.4" font-size="14" font-family="sans-serif" font-weight="bold" fill="#333333">A</text>
+  <circle cx="384.0" cy="329.4" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="396.0" y="345.4" font-size="14" font-family="sans-serif" font-weight="bold" fill="#333333">B</text>
+  <circle cx="192.0" cy="70.6" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="192.0" y="58.6" font-size="14" font-family="sans-serif" font-weight="bold" fill="#333333">C</text>
+  <circle cx="192.0" cy="329.4" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="120.0" y="345.9" font-size="12" font-family="sans-serif" fill="#2980b9">a = AB = 7</text>
+  <text x="199.2" y="343.5" font-size="12" font-family="sans-serif" fill="#e74c3c">H</text>
+  <text x="211.2" y="127.1" font-size="12" font-family="sans-serif" fill="#e74c3c">h = 5.5</text>
+  <text x="120.0" y="369.4" font-size="14" font-family="sans-serif" fill="#8e44ad">S = ½·7·5.5 = 19.25</text>
+</svg></div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="section-block">
+  <div class="section-header">
+    <span class="section-num">3</span>
+    <span style="font-size:16px; font-weight:600;">Медианы и центроид</span>
+    &nbsp;<span class="badge badge-render">пошаговый визуал</span>
+  </div>
+  <div class="conspect-text">**Медиана** — отрезок, соединяющий вершину с серединой противоположной стороны.
+
+Свойства:
+- Три медианы пересекаются в одной точке — **центроиде** (центре масс)
+- Центроид делит каждую медиану в отношении 2:1 от вершины
+- Медиана делит треугольник на два равновеликих
+
+**Пример**: Построить все три медианы треугольника ABC:
+A(0,0), B(8,0), C(3,7).</div>
+
+
+  <div class="backend-row">
+    <div class="backend-col">
+      <div class="backend-label"><span class="badge badge-plan">1</span> Visual Plan (выход планировщика)</div>
+      <div class="plan-json">{
+  &quot;need_visual&quot;: true,
+  &quot;visual_type&quot;: &quot;geometry_stepbystep&quot;,
+  &quot;description&quot;: &quot;Пошаговое построение медиан и нахождение центроида&quot;,
+  &quot;params&quot;: {
+    &quot;construction&quot;: &quot;medians&quot;,
+    &quot;vertices&quot;: {
+      &quot;A&quot;: [
+        0,
+        0
+      ],
+      &quot;B&quot;: [
+        8,
+        0
+      ],
+      &quot;C&quot;: [
+        3,
+        7
+      ]
+    }
+  },
+  &quot;caption&quot;: &quot;Три медианы пересекаются в центроиде&quot;,
+  &quot;priority&quot;: &quot;high&quot;
+}</div>
+    </div>
+    <div class="backend-col">
+      <div class="backend-label"><span class="badge badge-scene">2</span> Scene JSON (формат svg-generator)</div>
+      <div class="scene-json">{
+  &quot;need_visual&quot;: true,
+  &quot;visual_type&quot;: &quot;geometry_stepbystep&quot;,
+  &quot;description&quot;: &quot;Пошаговое построение медиан и нахождение центроида&quot;,
+  &quot;params&quot;: {
+    &quot;construction&quot;: &quot;medians&quot;,
+    &quot;vertices&quot;: {
+      &quot;A&quot;: [
+        0,
+        0
+      ],
+      &quot;B&quot;: [
+        8,
+        0
+      ],
+      &quot;C&quot;: [
+        3,
+        7
+      ]
+    }
+  },
+  &quot;caption&quot;: &quot;Три медианы пересекаются в центроиде&quot;,
+  &quot;priority&quot;: &quot;high&quot;
+}</div>
+    </div>
+  </div>
+
+  <div class="steps-section">
+    <div class="steps-title"><span class="badge badge-render">3</span> Пошаговый рендеринг (5 шагов)</div>
+    <div class="steps-grid">
+
+
+      <div class="step-card">
+        <div class="step-head">
+          <span class="num">1</span> Треугольник ABC
+          <div class="step-desc">Дано: треугольник ABC</div>
+        </div>
+        <div class="step-svg"><svg xmlns="http://www.w3.org/2000/svg" width="480" height="420" viewBox="0 0 480 420" style="background:white;font-family:sans-serif">
+  <polygon points="43.6,375.8 392.7,375.8 174.5,66.3" fill="rgba(46,204,113,0.06)" stroke="#333333" stroke-width="1.5"/>
+  <circle cx="43.6" cy="375.8" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="29.6" y="389.8" font-size="14" font-family="sans-serif" font-weight="bold" fill="#333333">A</text>
+  <circle cx="392.7" cy="375.8" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="404.7" y="389.8" font-size="14" font-family="sans-serif" font-weight="bold" fill="#333333">B</text>
+  <circle cx="174.5" cy="66.3" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="174.5" y="54.3" font-size="14" font-family="sans-serif" font-weight="bold" fill="#333333">C</text>
+</svg></div>
+      </div>
+
+
+      <div class="step-card">
+        <div class="step-head">
+          <span class="num">2</span> Медиана из A
+          <div class="step-desc">M₁ — середина BC = (6, 3.5)</div>
+        </div>
+        <div class="step-svg"><svg xmlns="http://www.w3.org/2000/svg" width="480" height="420" viewBox="0 0 480 420" style="background:white;font-family:sans-serif">
+  <polygon points="43.6,375.8 392.7,375.8 174.5,66.3" fill="rgba(46,204,113,0.06)" stroke="#333333" stroke-width="1.5"/>
+  <line x1="43.6" y1="375.8" x2="283.6" y2="221.1" stroke="#333333" stroke-width="1.5"/>
+  <circle cx="43.6" cy="375.8" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="29.6" y="389.8" font-size="14" font-family="sans-serif" font-weight="bold" fill="#333333">A</text>
+  <circle cx="392.7" cy="375.8" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="404.7" y="389.8" font-size="14" font-family="sans-serif" font-weight="bold" fill="#333333">B</text>
+  <circle cx="174.5" cy="66.3" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="174.5" y="54.3" font-size="14" font-family="sans-serif" font-weight="bold" fill="#333333">C</text>
+  <circle cx="283.6" cy="221.1" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="296.7" y="207.8" font-size="12" font-family="sans-serif" fill="#27ae60">M₁</text>
+</svg></div>
+      </div>
+
+
+      <div class="step-card">
+        <div class="step-head">
+          <span class="num">3</span> Медиана из B
+          <div class="step-desc">M₂ — середина AC = (1.5, 3.5)</div>
+        </div>
+        <div class="step-svg"><svg xmlns="http://www.w3.org/2000/svg" width="480" height="420" viewBox="0 0 480 420" style="background:white;font-family:sans-serif">
+  <polygon points="43.6,375.8 392.7,375.8 174.5,66.3" fill="rgba(46,204,113,0.06)" stroke="#333333" stroke-width="1.5"/>
+  <line x1="43.6" y1="375.8" x2="283.6" y2="221.1" stroke="#333333" stroke-width="1.5"/>
+  <line x1="392.7" y1="375.8" x2="109.1" y2="221.1" stroke="#333333" stroke-width="1.5"/>
+  <circle cx="43.6" cy="375.8" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="29.6" y="389.8" font-size="14" font-family="sans-serif" font-weight="bold" fill="#333333">A</text>
+  <circle cx="392.7" cy="375.8" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="404.7" y="389.8" font-size="14" font-family="sans-serif" font-weight="bold" fill="#333333">B</text>
+  <circle cx="174.5" cy="66.3" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="174.5" y="54.3" font-size="14" font-family="sans-serif" font-weight="bold" fill="#333333">C</text>
+  <circle cx="283.6" cy="221.1" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <circle cx="109.1" cy="221.1" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="296.7" y="207.8" font-size="12" font-family="sans-serif" fill="#27ae60">M₁</text>
+  <text x="91.6" y="212.2" font-size="12" font-family="sans-serif" fill="#27ae60">M₂</text>
+</svg></div>
+      </div>
+
+
+      <div class="step-card">
+        <div class="step-head">
+          <span class="num">4</span> Медиана из C
+          <div class="step-desc">M₃ — середина AB = (4, 0)</div>
+        </div>
+        <div class="step-svg"><svg xmlns="http://www.w3.org/2000/svg" width="480" height="420" viewBox="0 0 480 420" style="background:white;font-family:sans-serif">
+  <polygon points="43.6,375.8 392.7,375.8 174.5,66.3" fill="rgba(46,204,113,0.06)" stroke="#333333" stroke-width="1.5"/>
+  <line x1="43.6" y1="375.8" x2="283.6" y2="221.1" stroke="#333333" stroke-width="1.5"/>
+  <line x1="392.7" y1="375.8" x2="109.1" y2="221.1" stroke="#333333" stroke-width="1.5"/>
+  <line x1="174.5" y1="66.3" x2="218.2" y2="375.8" stroke="#333333" stroke-width="1.5"/>
+  <circle cx="43.6" cy="375.8" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="29.6" y="389.8" font-size="14" font-family="sans-serif" font-weight="bold" fill="#333333">A</text>
+  <circle cx="392.7" cy="375.8" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="404.7" y="389.8" font-size="14" font-family="sans-serif" font-weight="bold" fill="#333333">B</text>
+  <circle cx="174.5" cy="66.3" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="174.5" y="54.3" font-size="14" font-family="sans-serif" font-weight="bold" fill="#333333">C</text>
+  <circle cx="283.6" cy="221.1" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <circle cx="109.1" cy="221.1" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <circle cx="218.2" cy="375.8" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="296.7" y="207.8" font-size="12" font-family="sans-serif" fill="#27ae60">M₁</text>
+  <text x="91.6" y="212.2" font-size="12" font-family="sans-serif" fill="#27ae60">M₂</text>
+  <text x="218.2" y="360.3" font-size="12" font-family="sans-serif" fill="#27ae60">M₃</text>
+</svg></div>
+      </div>
+
+
+      <div class="step-card">
+        <div class="step-head">
+          <span class="num">5</span> Центроид
+          <div class="step-desc">Все медианы пересекаются в G(3.7, 2.3)</div>
+        </div>
+        <div class="step-svg"><svg xmlns="http://www.w3.org/2000/svg" width="480" height="420" viewBox="0 0 480 420" style="background:white;font-family:sans-serif">
+  <polygon points="43.6,375.8 392.7,375.8 174.5,66.3" fill="rgba(46,204,113,0.06)" stroke="#333333" stroke-width="1.5"/>
+  <line x1="43.6" y1="375.8" x2="283.6" y2="221.1" stroke="#333333" stroke-width="1.5"/>
+  <line x1="392.7" y1="375.8" x2="109.1" y2="221.1" stroke="#333333" stroke-width="1.5"/>
+  <line x1="174.5" y1="66.3" x2="218.2" y2="375.8" stroke="#333333" stroke-width="1.5"/>
+  <circle cx="43.6" cy="375.8" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="29.6" y="389.8" font-size="14" font-family="sans-serif" font-weight="bold" fill="#333333">A</text>
+  <circle cx="392.7" cy="375.8" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="404.7" y="389.8" font-size="14" font-family="sans-serif" font-weight="bold" fill="#333333">B</text>
+  <circle cx="174.5" cy="66.3" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="174.5" y="54.3" font-size="14" font-family="sans-serif" font-weight="bold" fill="#333333">C</text>
+  <circle cx="203.6" cy="272.6" r="4" stroke="#e74c3c" fill="#e74c3c" stroke-width="1"/>
+  <text x="213.6" y="266.6" font-size="14" font-family="sans-serif" font-weight="bold" fill="#333333">G</text>
+  <circle cx="283.6" cy="221.1" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <circle cx="109.1" cy="221.1" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <circle cx="218.2" cy="375.8" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="296.7" y="207.8" font-size="12" font-family="sans-serif" fill="#27ae60">M₁</text>
+  <text x="91.6" y="212.2" font-size="12" font-family="sans-serif" fill="#27ae60">M₂</text>
+  <text x="218.2" y="360.3" font-size="12" font-family="sans-serif" fill="#27ae60">M₃</text>
+  <text x="238.5" y="290.3" font-size="12" font-family="sans-serif" fill="#e74c3c">G(3.7, 2.3) — центроид</text>
+</svg></div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="section-block">
+  <div class="section-header">
+    <span class="section-num">4</span>
+    <span style="font-size:16px; font-weight:600;">Описанная окружность</span>
+    &nbsp;<span class="badge badge-render">пошаговый визуал</span>
+  </div>
+  <div class="conspect-text">**Описанная окружность** — проходит через все три вершины треугольника.
+
+Как построить:
+1. Найти середины двух сторон
+2. Провести серединные перпендикуляры
+3. Их пересечение — центр описанной окружности (O)
+4. R = OA = OB = OC
+
+Формула: R = abc / (4S), где a, b, c — стороны, S — площадь.
+
+**Пример**: Построить описанную окружность треугольника ABC:
+A(0,0), B(8,0), C(3,7).</div>
+
+
+  <div class="backend-row">
+    <div class="backend-col">
+      <div class="backend-label"><span class="badge badge-plan">1</span> Visual Plan (выход планировщика)</div>
+      <div class="plan-json">{
+  &quot;need_visual&quot;: true,
+  &quot;visual_type&quot;: &quot;geometry_stepbystep&quot;,
+  &quot;description&quot;: &quot;Пошаговое построение описанной окружности&quot;,
+  &quot;params&quot;: {
+    &quot;construction&quot;: &quot;circumscribed&quot;,
+    &quot;vertices&quot;: {
+      &quot;A&quot;: [
+        0,
+        0
+      ],
+      &quot;B&quot;: [
+        8,
+        0
+      ],
+      &quot;C&quot;: [
+        3,
+        7
+      ]
+    }
+  },
+  &quot;caption&quot;: &quot;Описанная окружность через серединные перпендикуляры&quot;,
+  &quot;priority&quot;: &quot;high&quot;
+}</div>
+    </div>
+    <div class="backend-col">
+      <div class="backend-label"><span class="badge badge-scene">2</span> Scene JSON (формат svg-generator)</div>
+      <div class="scene-json">{
+  &quot;need_visual&quot;: true,
+  &quot;visual_type&quot;: &quot;geometry_stepbystep&quot;,
+  &quot;description&quot;: &quot;Пошаговое построение описанной окружности&quot;,
+  &quot;params&quot;: {
+    &quot;construction&quot;: &quot;circumscribed&quot;,
+    &quot;vertices&quot;: {
+      &quot;A&quot;: [
+        0,
+        0
+      ],
+      &quot;B&quot;: [
+        8,
+        0
+      ],
+      &quot;C&quot;: [
+        3,
+        7
+      ]
+    }
+  },
+  &quot;caption&quot;: &quot;Описанная окружность через серединные перпендикуляры&quot;,
+  &quot;priority&quot;: &quot;high&quot;
+}</div>
+    </div>
+  </div>
+
+  <div class="steps-section">
+    <div class="steps-title"><span class="badge badge-render">3</span> Пошаговый рендеринг (4 шагов)</div>
+    <div class="steps-grid">
+
+
+      <div class="step-card">
+        <div class="step-head">
+          <span class="num">1</span> Треугольник ABC
+          <div class="step-desc">Дано: треугольник ABC</div>
+        </div>
+        <div class="step-svg"><svg xmlns="http://www.w3.org/2000/svg" width="480" height="460" viewBox="0 0 480 460" style="background:white;font-family:sans-serif">
+  <polygon points="80.0,376.4 400.0,376.4 200.0,83.6" fill="rgba(52,152,219,0.06)" stroke="#333333" stroke-width="1.5"/>
+  <circle cx="80.0" cy="376.4" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="66.0" y="390.4" font-size="14" font-family="sans-serif" font-weight="bold" fill="#333333">A</text>
+  <circle cx="400.0" cy="376.4" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="412.0" y="390.4" font-size="14" font-family="sans-serif" font-weight="bold" fill="#333333">B</text>
+  <circle cx="200.0" cy="83.6" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="200.0" y="71.6" font-size="14" font-family="sans-serif" font-weight="bold" fill="#333333">C</text>
+</svg></div>
+      </div>
+
+
+      <div class="step-card">
+        <div class="step-head">
+          <span class="num">2</span> Середины сторон
+          <div class="step-desc">M₁ — середина AB, M₂ — середина BC</div>
+        </div>
+        <div class="step-svg"><svg xmlns="http://www.w3.org/2000/svg" width="480" height="460" viewBox="0 0 480 460" style="background:white;font-family:sans-serif">
+  <polygon points="80.0,376.4 400.0,376.4 200.0,83.6" fill="rgba(52,152,219,0.06)" stroke="#333333" stroke-width="1.5"/>
+  <line x1="80.0" y1="376.4" x2="400.0" y2="376.4" stroke="#333333" stroke-width="1.5"/>
+  <line x1="400.0" y1="376.4" x2="200.0" y2="83.6" stroke="#333333" stroke-width="1.5"/>
+  <circle cx="80.0" cy="376.4" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="66.0" y="390.4" font-size="14" font-family="sans-serif" font-weight="bold" fill="#333333">A</text>
+  <circle cx="400.0" cy="376.4" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="412.0" y="390.4" font-size="14" font-family="sans-serif" font-weight="bold" fill="#333333">B</text>
+  <circle cx="200.0" cy="83.6" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="200.0" y="71.6" font-size="14" font-family="sans-serif" font-weight="bold" fill="#333333">C</text>
+  <circle cx="240.0" cy="376.4" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <circle cx="300.0" cy="230.0" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="240.0" y="391.0" font-size="12" font-family="sans-serif" fill="#555">M₁</text>
+  <text x="314.0" y="230.0" font-size="12" font-family="sans-serif" fill="#555">M₂</text>
+</svg></div>
+      </div>
+
+
+      <div class="step-card">
+        <div class="step-head">
+          <span class="num">3</span> Серединные перпендикуляры
+          <div class="step-desc">Проводим перпендикуляры к AB и BC через их середины</div>
+        </div>
+        <div class="step-svg"><svg xmlns="http://www.w3.org/2000/svg" width="480" height="460" viewBox="0 0 480 460" style="background:white;font-family:sans-serif">
+  <polygon points="80.0,376.4 400.0,376.4 200.0,83.6" fill="rgba(52,152,219,0.06)" stroke="#333333" stroke-width="1.5"/>
+  <line x1="80.0" y1="376.4" x2="400.0" y2="376.4" stroke="#333333" stroke-width="1.5"/>
+  <line x1="400.0" y1="376.4" x2="200.0" y2="83.6" stroke="#333333" stroke-width="1.5"/>
+  <line x1="240.0" y1="376.4" x2="240.0" y2="175.6" stroke="#3498db" stroke-width="1.5" stroke-dasharray="8,4"/>
+  <line x1="300.0" y1="230.0" x2="132.0" y2="355.5" stroke="#3498db" stroke-width="1.5" stroke-dasharray="8,4"/>
+  <circle cx="80.0" cy="376.4" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="66.0" y="390.4" font-size="14" font-family="sans-serif" font-weight="bold" fill="#333333">A</text>
+  <circle cx="400.0" cy="376.4" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="412.0" y="390.4" font-size="14" font-family="sans-serif" font-weight="bold" fill="#333333">B</text>
+  <circle cx="200.0" cy="83.6" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="200.0" y="71.6" font-size="14" font-family="sans-serif" font-weight="bold" fill="#333333">C</text>
+  <circle cx="240.0" cy="376.4" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <circle cx="300.0" cy="230.0" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="240.0" y="391.0" font-size="12" font-family="sans-serif" fill="#555">M₁</text>
+  <text x="314.0" y="230.0" font-size="12" font-family="sans-serif" fill="#555">M₂</text>
+</svg></div>
+      </div>
+
+
+      <div class="step-card">
+        <div class="step-head">
+          <span class="num">4</span> Описанная окружность
+          <div class="step-desc">O — центр, окружность проходит через A, B, C. OA = OB = OC = R</div>
+        </div>
+        <div class="step-svg"><svg xmlns="http://www.w3.org/2000/svg" width="480" height="460" viewBox="0 0 480 460" style="background:white;font-family:sans-serif">
+  <polygon points="80.0,376.4 400.0,376.4 200.0,83.6" fill="rgba(52,152,219,0.06)" stroke="#333333" stroke-width="1.5"/>
+  <circle cx="240.0" cy="274.8" r="187.2" stroke="#2980b9" fill="none" stroke-width="1.5" stroke-dasharray="8,4"/>
+  <line x1="80.0" y1="376.4" x2="400.0" y2="376.4" stroke="#333333" stroke-width="1.5"/>
+  <line x1="400.0" y1="376.4" x2="200.0" y2="83.6" stroke="#333333" stroke-width="1.5"/>
+  <line x1="240.0" y1="376.4" x2="240.0" y2="175.6" stroke="#3498db" stroke-width="1.5" stroke-dasharray="8,4"/>
+  <line x1="300.0" y1="230.0" x2="132.0" y2="355.5" stroke="#3498db" stroke-width="1.5" stroke-dasharray="8,4"/>
+  <circle cx="80.0" cy="376.4" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="66.0" y="390.4" font-size="14" font-family="sans-serif" font-weight="bold" fill="#333333">A</text>
+  <circle cx="400.0" cy="376.4" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="412.0" y="390.4" font-size="14" font-family="sans-serif" font-weight="bold" fill="#333333">B</text>
+  <circle cx="200.0" cy="83.6" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="200.0" y="71.6" font-size="14" font-family="sans-serif" font-weight="bold" fill="#333333">C</text>
+  <circle cx="240.0" cy="376.4" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <circle cx="300.0" cy="230.0" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <circle cx="240.0" cy="274.8" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="248.0" y="266.8" font-size="14" font-family="sans-serif" font-weight="bold" fill="#333333">O</text>
+  <text x="240.0" y="391.0" font-size="12" font-family="sans-serif" fill="#555">M₁</text>
+  <text x="314.0" y="230.0" font-size="12" font-family="sans-serif" fill="#555">M₂</text>
+  <text x="250.0" y="260.2" font-size="12" font-family="sans-serif" fill="#2980b9">O</text>
+</svg></div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="section-block">
+  <div class="section-header">
+    <span class="section-num">5</span>
+    <span style="font-size:16px; font-weight:600;">Вписанная окружность</span>
+    &nbsp;<span class="badge badge-render">пошаговый визуал</span>
+  </div>
+  <div class="conspect-text">**Вписанная окружность** — касается всех трёх сторон треугольника изнутри.
+
+Как построить:
+1. Провести биссектрисы углов
+2. Их пересечение — центр вписанной окружности (I — инцентр)
+3. Радиус = расстояние от I до любой стороны
+
+Формула: r = S / p, где p — полупериметр.
+
+**Пример**: Построить вписанную окружность треугольника ABC:
+A(0,0), B(9,0), C(4,7).</div>
+
+
+  <div class="backend-row">
+    <div class="backend-col">
+      <div class="backend-label"><span class="badge badge-plan">1</span> Visual Plan (выход планировщика)</div>
+      <div class="plan-json">{
+  &quot;need_visual&quot;: true,
+  &quot;visual_type&quot;: &quot;geometry_stepbystep&quot;,
+  &quot;description&quot;: &quot;Пошаговое построение вписанной окружности через биссектрисы&quot;,
+  &quot;params&quot;: {
+    &quot;construction&quot;: &quot;inscribed&quot;,
+    &quot;vertices&quot;: {
+      &quot;A&quot;: [
+        0,
+        0
+      ],
+      &quot;B&quot;: [
+        9,
+        0
+      ],
+      &quot;C&quot;: [
+        4,
+        7
+      ]
+    }
+  },
+  &quot;caption&quot;: &quot;Вписанная окружность через биссектрисы&quot;,
+  &quot;priority&quot;: &quot;high&quot;
+}</div>
+    </div>
+    <div class="backend-col">
+      <div class="backend-label"><span class="badge badge-scene">2</span> Scene JSON (формат svg-generator)</div>
+      <div class="scene-json">{
+  &quot;need_visual&quot;: true,
+  &quot;visual_type&quot;: &quot;geometry_stepbystep&quot;,
+  &quot;description&quot;: &quot;Пошаговое построение вписанной окружности через биссектрисы&quot;,
+  &quot;params&quot;: {
+    &quot;construction&quot;: &quot;inscribed&quot;,
+    &quot;vertices&quot;: {
+      &quot;A&quot;: [
+        0,
+        0
+      ],
+      &quot;B&quot;: [
+        9,
+        0
+      ],
+      &quot;C&quot;: [
+        4,
+        7
+      ]
+    }
+  },
+  &quot;caption&quot;: &quot;Вписанная окружность через биссектрисы&quot;,
+  &quot;priority&quot;: &quot;high&quot;
+}</div>
+    </div>
+  </div>
+
+  <div class="steps-section">
+    <div class="steps-title"><span class="badge badge-render">3</span> Пошаговый рендеринг (5 шагов)</div>
+    <div class="steps-grid">
+
+
+      <div class="step-card">
+        <div class="step-head">
+          <span class="num">1</span> Треугольник ABC
+          <div class="step-desc">Дано: треугольник ABC</div>
+        </div>
+        <div class="step-svg"><svg xmlns="http://www.w3.org/2000/svg" width="480" height="420" viewBox="0 0 480 420" style="background:white;font-family:sans-serif">
+  <polygon points="40.0,357.0 400.0,357.0 200.0,63.0" fill="rgba(230,126,34,0.06)" stroke="#333333" stroke-width="1.5"/>
+  <circle cx="40.0" cy="357.0" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="26.0" y="371.0" font-size="14" font-family="sans-serif" font-weight="bold" fill="#333333">A</text>
+  <circle cx="400.0" cy="357.0" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="412.0" y="371.0" font-size="14" font-family="sans-serif" font-weight="bold" fill="#333333">B</text>
+  <circle cx="200.0" cy="63.0" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="200.0" y="51.0" font-size="14" font-family="sans-serif" font-weight="bold" fill="#333333">C</text>
+</svg></div>
+      </div>
+
+
+      <div class="step-card">
+        <div class="step-head">
+          <span class="num">2</span> Биссектриса из A
+          <div class="step-desc">Биссектриса делит угол A пополам</div>
+        </div>
+        <div class="step-svg"><svg xmlns="http://www.w3.org/2000/svg" width="480" height="420" viewBox="0 0 480 420" style="background:white;font-family:sans-serif">
+  <polygon points="40.0,357.0 400.0,357.0 200.0,63.0" fill="rgba(230,126,34,0.06)" stroke="#333333" stroke-width="1.5"/>
+  <line x1="40.0" y1="357.0" x2="294.5" y2="201.9" stroke="#27ae60" stroke-width="1.5" stroke-dasharray="8,4"/>
+  <circle cx="40.0" cy="357.0" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="26.0" y="371.0" font-size="14" font-family="sans-serif" font-weight="bold" fill="#333333">A</text>
+  <circle cx="400.0" cy="357.0" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="412.0" y="371.0" font-size="14" font-family="sans-serif" font-weight="bold" fill="#333333">B</text>
+  <circle cx="200.0" cy="63.0" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="200.0" y="51.0" font-size="14" font-family="sans-serif" font-weight="bold" fill="#333333">C</text>
+  <circle cx="294.5" cy="201.9" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+</svg></div>
+      </div>
+
+
+      <div class="step-card">
+        <div class="step-head">
+          <span class="num">3</span> Биссектриса из B
+          <div class="step-desc">Пересечение двух биссектрис даёт инцентр I</div>
+        </div>
+        <div class="step-svg"><svg xmlns="http://www.w3.org/2000/svg" width="480" height="420" viewBox="0 0 480 420" style="background:white;font-family:sans-serif">
+  <polygon points="40.0,357.0 400.0,357.0 200.0,63.0" fill="rgba(230,126,34,0.06)" stroke="#333333" stroke-width="1.5"/>
+  <line x1="40.0" y1="357.0" x2="294.5" y2="201.9" stroke="#27ae60" stroke-width="1.5" stroke-dasharray="8,4"/>
+  <line x1="400.0" y1="357.0" x2="121.8" y2="206.7" stroke="#27ae60" stroke-width="1.5" stroke-dasharray="8,4"/>
+  <circle cx="40.0" cy="357.0" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="26.0" y="371.0" font-size="14" font-family="sans-serif" font-weight="bold" fill="#333333">A</text>
+  <circle cx="400.0" cy="357.0" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="412.0" y="371.0" font-size="14" font-family="sans-serif" font-weight="bold" fill="#333333">B</text>
+  <circle cx="200.0" cy="63.0" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="200.0" y="51.0" font-size="14" font-family="sans-serif" font-weight="bold" fill="#333333">C</text>
+  <circle cx="294.5" cy="201.9" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <circle cx="121.8" cy="206.7" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+</svg></div>
+      </div>
+
+
+      <div class="step-card">
+        <div class="step-head">
+          <span class="num">4</span> Все три биссектрисы
+          <div class="step-desc">Все три биссектрисы проходят через одну точку</div>
+        </div>
+        <div class="step-svg"><svg xmlns="http://www.w3.org/2000/svg" width="480" height="420" viewBox="0 0 480 420" style="background:white;font-family:sans-serif">
+  <polygon points="40.0,357.0 400.0,357.0 200.0,63.0" fill="rgba(230,126,34,0.06)" stroke="#333333" stroke-width="1.5"/>
+  <line x1="40.0" y1="357.0" x2="294.5" y2="201.9" stroke="#27ae60" stroke-width="1.5" stroke-dasharray="8,4"/>
+  <line x1="400.0" y1="357.0" x2="121.8" y2="206.7" stroke="#27ae60" stroke-width="1.5" stroke-dasharray="8,4"/>
+  <line x1="200.0" y1="63.0" x2="214.2" y2="357.0" stroke="#27ae60" stroke-width="1.5" stroke-dasharray="8,4"/>
+  <circle cx="40.0" cy="357.0" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="26.0" y="371.0" font-size="14" font-family="sans-serif" font-weight="bold" fill="#333333">A</text>
+  <circle cx="400.0" cy="357.0" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="412.0" y="371.0" font-size="14" font-family="sans-serif" font-weight="bold" fill="#333333">B</text>
+  <circle cx="200.0" cy="63.0" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="200.0" y="51.0" font-size="14" font-family="sans-serif" font-weight="bold" fill="#333333">C</text>
+  <circle cx="294.5" cy="201.9" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <circle cx="121.8" cy="206.7" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <circle cx="214.2" cy="357.0" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+</svg></div>
+      </div>
+
+
+      <div class="step-card">
+        <div class="step-head">
+          <span class="num">5</span> Вписанная окружность
+          <div class="step-desc">Окружность с центром I касается всех трёх сторон</div>
+        </div>
+        <div class="step-svg"><svg xmlns="http://www.w3.org/2000/svg" width="480" height="420" viewBox="0 0 480 420" style="background:white;font-family:sans-serif">
+  <polygon points="40.0,357.0 400.0,357.0 200.0,63.0" fill="rgba(230,126,34,0.06)" stroke="#333333" stroke-width="1.5"/>
+  <circle cx="209.2" cy="253.9" r="98.2" stroke="#e67e22" fill="none" stroke-width="1.5" stroke-dasharray="8,4"/>
+  <line x1="40.0" y1="357.0" x2="294.5" y2="201.9" stroke="#27ae60" stroke-width="1.5" stroke-dasharray="8,4"/>
+  <line x1="400.0" y1="357.0" x2="121.8" y2="206.7" stroke="#27ae60" stroke-width="1.5" stroke-dasharray="8,4"/>
+  <line x1="200.0" y1="63.0" x2="214.2" y2="357.0" stroke="#27ae60" stroke-width="1.5" stroke-dasharray="8,4"/>
+  <circle cx="40.0" cy="357.0" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="26.0" y="371.0" font-size="14" font-family="sans-serif" font-weight="bold" fill="#333333">A</text>
+  <circle cx="400.0" cy="357.0" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="412.0" y="371.0" font-size="14" font-family="sans-serif" font-weight="bold" fill="#333333">B</text>
+  <circle cx="200.0" cy="63.0" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="200.0" y="51.0" font-size="14" font-family="sans-serif" font-weight="bold" fill="#333333">C</text>
+  <circle cx="294.5" cy="201.9" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <circle cx="121.8" cy="206.7" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <circle cx="214.2" cy="357.0" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <circle cx="209.2" cy="253.9" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="217.2" y="245.9" font-size="14" font-family="sans-serif" font-weight="bold" fill="#333333">I</text>
+  <text x="221.2" y="241.3" font-size="12" font-family="sans-serif" fill="#e67e22">I</text>
+</svg></div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="section-block">
+  <div class="section-header">
+    <span class="section-num">6</span>
+    <span style="font-size:16px; font-weight:600;">Теорема Пифагора</span>
+    &nbsp;<span class="badge badge-render">пошаговый визуал</span>
+  </div>
+  <div class="conspect-text">В прямоугольном треугольнике квадрат гипотенузы равен сумме квадратов катетов:
+c² = a² + b²
+
+Применение:
+- Нахождение третьей стороны по двум известным
+- Проверка, является ли треугольник прямоугольным (обратная теорема)
+
+**Пример**: Прямоугольный треугольник с катетами a=5, b=4.
+Найти гипотенузу c.</div>
+
+
+  <div class="backend-row">
+    <div class="backend-col">
+      <div class="backend-label"><span class="badge badge-plan">1</span> Visual Plan (выход планировщика)</div>
+      <div class="plan-json">{
+  &quot;need_visual&quot;: true,
+  &quot;visual_type&quot;: &quot;geometry_static&quot;,
+  &quot;description&quot;: &quot;Прямоугольный треугольник с подписями сторон&quot;,
+  &quot;params&quot;: {
+    &quot;construction&quot;: &quot;pythagorean&quot;,
+    &quot;vertices&quot;: {
+      &quot;A&quot;: [
+        0,
+        0
+      ],
+      &quot;B&quot;: [
+        5,
+        0
+      ],
+      &quot;C&quot;: [
+        0,
+        4
+      ]
+    }
+  },
+  &quot;caption&quot;: &quot;Теорема Пифагора: c² = a² + b²&quot;,
+  &quot;priority&quot;: &quot;high&quot;
+}</div>
+    </div>
+    <div class="backend-col">
+      <div class="backend-label"><span class="badge badge-scene">2</span> Scene JSON (формат svg-generator)</div>
+      <div class="scene-json">{
+  &quot;need_visual&quot;: true,
+  &quot;visual_type&quot;: &quot;geometry_static&quot;,
+  &quot;description&quot;: &quot;Прямоугольный треугольник с подписями сторон&quot;,
+  &quot;params&quot;: {
+    &quot;construction&quot;: &quot;pythagorean&quot;,
+    &quot;vertices&quot;: {
+      &quot;A&quot;: [
+        0,
+        0
+      ],
+      &quot;B&quot;: [
+        5,
+        0
+      ],
+      &quot;C&quot;: [
+        0,
+        4
+      ]
+    }
+  },
+  &quot;caption&quot;: &quot;Теорема Пифагора: c² = a² + b²&quot;,
+  &quot;priority&quot;: &quot;high&quot;
+}</div>
+    </div>
+  </div>
+
+  <div class="steps-section">
+    <div class="steps-title"><span class="badge badge-render">3</span> Пошаговый рендеринг (4 шагов)</div>
+    <div class="steps-grid">
+
+
+      <div class="step-card">
+        <div class="step-head">
+          <span class="num">1</span> Прямоугольный треугольник
+          <div class="step-desc">Дано: прямоугольный треугольник ABC, ∠A = 90°</div>
+        </div>
+        <div class="step-svg"><svg xmlns="http://www.w3.org/2000/svg" width="450" height="380" viewBox="0 0 450 380" style="background:white;font-family:sans-serif">
+  <polygon points="56.2,304.0 337.5,304.0 56.2,101.3" fill="rgba(155,89,182,0.06)" stroke="#333333" stroke-width="1.5"/>
+  <circle cx="56.2" cy="304.0" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="42.2" y="318.0" font-size="14" font-family="sans-serif" font-weight="bold" fill="#333333">A</text>
+  <circle cx="337.5" cy="304.0" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="349.5" y="318.0" font-size="14" font-family="sans-serif" font-weight="bold" fill="#333333">B</text>
+  <circle cx="56.2" cy="101.3" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="42.2" y="93.3" font-size="14" font-family="sans-serif" font-weight="bold" fill="#333333">C</text>
+</svg></div>
+      </div>
+
+
+      <div class="step-card">
+        <div class="step-head">
+          <span class="num">2</span> Прямой угол в A
+          <div class="step-desc">Отмечаем ∠A = 90°</div>
+        </div>
+        <div class="step-svg"><svg xmlns="http://www.w3.org/2000/svg" width="450" height="380" viewBox="0 0 450 380" style="background:white;font-family:sans-serif">
+  <polygon points="56.2,304.0 337.5,304.0 56.2,101.3" fill="rgba(155,89,182,0.06)" stroke="#333333" stroke-width="1.5"/>
+  <polyline points="68.2,304.0 68.2,292.0 56.2,292.0" fill="none" stroke="#333333" stroke-width="1.2"/>
+  <circle cx="56.2" cy="304.0" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="42.2" y="318.0" font-size="14" font-family="sans-serif" font-weight="bold" fill="#333333">A</text>
+  <circle cx="337.5" cy="304.0" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="349.5" y="318.0" font-size="14" font-family="sans-serif" font-weight="bold" fill="#333333">B</text>
+  <circle cx="56.2" cy="101.3" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="42.2" y="93.3" font-size="14" font-family="sans-serif" font-weight="bold" fill="#333333">C</text>
+</svg></div>
+      </div>
+
+
+      <div class="step-card">
+        <div class="step-head">
+          <span class="num">3</span> Катеты
+          <div class="step-desc">a = AB = 5, b = AC = 4</div>
+        </div>
+        <div class="step-svg"><svg xmlns="http://www.w3.org/2000/svg" width="450" height="380" viewBox="0 0 450 380" style="background:white;font-family:sans-serif">
+  <polygon points="56.2,304.0 337.5,304.0 56.2,101.3" fill="rgba(155,89,182,0.06)" stroke="#333333" stroke-width="1.5"/>
+  <polyline points="68.2,304.0 68.2,292.0 56.2,292.0" fill="none" stroke="#333333" stroke-width="1.2"/>
+  <circle cx="56.2" cy="304.0" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="42.2" y="318.0" font-size="14" font-family="sans-serif" font-weight="bold" fill="#333333">A</text>
+  <circle cx="337.5" cy="304.0" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="349.5" y="318.0" font-size="14" font-family="sans-serif" font-weight="bold" fill="#333333">B</text>
+  <circle cx="56.2" cy="101.3" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="42.2" y="93.3" font-size="14" font-family="sans-serif" font-weight="bold" fill="#333333">C</text>
+  <text x="123.8" y="319.2" font-size="12" font-family="sans-serif" fill="#2980b9">a = 5</text>
+  <text x="28.1" y="258.4" font-size="12" font-family="sans-serif" fill="#27ae60">b = 4</text>
+</svg></div>
+      </div>
+
+
+      <div class="step-card">
+        <div class="step-head">
+          <span class="num">4</span> Гипотенуза
+          <div class="step-desc">c² = a² + b² = 25 + 16 = 41, c ≈ 6.40</div>
+        </div>
+        <div class="step-svg"><svg xmlns="http://www.w3.org/2000/svg" width="450" height="380" viewBox="0 0 450 380" style="background:white;font-family:sans-serif">
+  <polygon points="56.2,304.0 337.5,304.0 56.2,101.3" fill="rgba(155,89,182,0.06)" stroke="#333333" stroke-width="1.5"/>
+  <polyline points="68.2,304.0 68.2,292.0 56.2,292.0" fill="none" stroke="#333333" stroke-width="1.2"/>
+  <circle cx="56.2" cy="304.0" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="42.2" y="318.0" font-size="14" font-family="sans-serif" font-weight="bold" fill="#333333">A</text>
+  <circle cx="337.5" cy="304.0" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="349.5" y="318.0" font-size="14" font-family="sans-serif" font-weight="bold" fill="#333333">B</text>
+  <circle cx="56.2" cy="101.3" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="42.2" y="93.3" font-size="14" font-family="sans-serif" font-weight="bold" fill="#333333">C</text>
+  <text x="123.8" y="319.2" font-size="12" font-family="sans-serif" fill="#2980b9">a = 5</text>
+  <text x="28.1" y="258.4" font-size="12" font-family="sans-serif" fill="#27ae60">b = 4</text>
+  <text x="281.2" y="243.2" font-size="13" font-family="sans-serif" fill="#e74c3c">c = √(5²+4²) = √41 ≈ 6.40</text>
+</svg></div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div style="margin-top:30px; padding:20px; background:white; border-radius:12px;
+     box-shadow:0 2px 12px rgba(0,0,0,0.08);">
+  <h3 style="margin-bottom:12px; color:#2c3e50;">Архитектура бэкенда</h3>
+  <pre style="background:#f8f9fa; padding:16px; border-radius:8px; font-size:12px; overflow-x:auto; line-height:1.5;">
+Конспект (.md)
+     │
+     ▼
+┌──────────────────────┐
+│  Планировщик (LLM)   │  Qwen2.5-7B → VisualPlan JSON
+│  visual_planner_v2   │  Тип: geometry_stepbystep / geometry_static
+└──────────┬───────────┘
+           │  {visual_type, params: {construction, vertices, ...}}
+           ▼
+┌──────────────────────┐
+│  Конвертер            │  VisualPlan → Scene JSON
+│  converter.py        │  Формат svg-generator коллеги
+└──────────┬───────────┘
+           │  {scene_type: "geometry", objects: [...], constraints: [...]}
+           ▼
+┌──────────────────────┐
+│  Solver               │  Обрабатывает constraints:
+│  geometry_renderer.py │  altitude, median, bisector,
+│                       │  circumscribed_circle, inscribed_circle
+└──────────┬───────────┘
+           │  Добавляет вычисленные точки и отрезки
+           ▼
+┌──────────────────────┐
+│  SVG Renderer         │  point, segment, triangle,
+│  geometry_renderer.py │  circle, right_angle_marker
+└──────────┬───────────┘
+           │
+           ▼
+        SVG файл (один на шаг)
+
+Пошаговый режим (StepByStepGeo):
+  - Каждый шаг добавляет объекты к сцене
+  - После каждого добавления — snapshot → SVG
+  - Результат: серия SVG с прогрессивной дорисовкой
+  </pre>
+</div>
+</div>
+</body>
+</html>

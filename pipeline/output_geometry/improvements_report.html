@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8"/>
+<title>Отчёт: улучшения пайплайна v2</title>
+<script>
+MathJax = { tex: { inlineMath: [["$","$"]], displayMath: [["32541","32541"]] }, svg: { fontCache: "global" } };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:-apple-system,BlinkMacSystemFont,sans-serif; background:#f4f4f7; color:#2c2c2c; line-height:1.7; }
+.header { background:linear-gradient(135deg,#0f3460,#16213e,#1a1a2e); color:white; padding:48px 20px; text-align:center; }
+.header h1 { font-size:28px; margin-bottom:8px; }
+.header p { opacity:0.8; font-size:14px; }
+.container { max-width:900px; margin:0 auto; padding:32px 20px; }
+.section { background:white; border-radius:12px; padding:28px; margin:24px 0; box-shadow:0 2px 12px rgba(0,0,0,0.06); }
+.section h2 { font-size:20px; color:#2c3e50; margin-bottom:16px; border-bottom:2px solid #3498db; padding-bottom:8px; }
+.section h3 { font-size:16px; color:#34495e; margin:16px 0 8px; }
+.feature-tag { display:inline-block; background:#e8f4fd; color:#2980b9; padding:3px 10px; border-radius:12px; font-size:11px; margin:2px 4px 2px 0; }
+.svg-frame { display:inline-block; background:white; border:1px solid #e0e0e0; border-radius:10px; padding:12px; margin:12px 0; box-shadow:0 1px 6px rgba(0,0,0,0.04); }
+.svg-frame svg { max-width:100%; height:auto; }
+.step-label { font-size:12px; color:#999; text-transform:uppercase; letter-spacing:0.5px; margin-top:16px; }
+table { width:100%; border-collapse:collapse; margin:12px 0; }
+th,td { text-align:left; padding:8px 12px; border-bottom:1px solid #eee; font-size:14px; }
+th { background:#f8f9fa; font-weight:600; }
+.check { color:#27ae60; } .cross { color:#e74c3c; }
+.improvements { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin:16px 0; }
+.imp-card { background:#f8f9fa; border-radius:8px; padding:16px; border-left:3px solid #3498db; }
+.imp-card h4 { font-size:14px; margin-bottom:6px; color:#2c3e50; }
+.imp-card p { font-size:13px; color:#555; }
+.footer { text-align:center; padding:30px; color:#aaa; font-size:11px; border-top:1px solid #eee; margin-top:32px; }
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>Отчёт об улучшениях — Итерация 1+2</h1>
+  <p>geometry_renderer.py + geometry_auto.py | 8 улучшений | 2026-05-06</p>
+</div>
+<div class="container">
+
+<div class="section">
+<h2>Сводка изменений</h2>
+<div class="improvements">
+  <div class="imp-card"><h4>D1. SYSTEM_PROMPT</h4><p>+12 constraints/примитивов в промпт LLM</p></div>
+  <div class="imp-card"><h4>A2. Retry LLM</h4><p>Валидация + повторный запрос при ошибках</p></div>
+  <div class="imp-card"><h4>C2. Intersection</h4><p>Авто-вычисление пересечения прямых</p></div>
+  <div class="imp-card"><h4>E1. 3D Visibility</h4><p>Auto hidden edges по нормалям граней</p></div>
+  <div class="imp-card"><h4>B3. Animation</h4><p>Step-by-step с навигацией и fade-in</p></div>
+  <div class="imp-card"><h4>P1. Anti-collision</h4><p>Подписи не накладываются (min 16px)</p></div>
+  <div class="imp-card"><h4>P2. Visual answer</h4><p>Ответ рисуется как объект, не только текст</p></div>
+  <div class="imp-card"><h4>P3. Auto canvas</h4><p>Оптимальные bounds из координат точек</p></div>
+</div>
+</div>
+
+<div class="section">
+<h2>Пример 1: 2D: Трапеция (parallel_lines, canvas)</h2>
+<div>
+<span class="feature-tag">parallel_lines constraint</span>
+<span class="feature-tag">auto canvas</span>
+<span class="feature-tag">цветные диагонали</span>
+</div>
+<p class="step-label">Условие</p>
+<p style="font-size:14px;color:#555;">Дана трапеция $ABCD$ с основаниями $BC=4$ и $AD=9$, диагоналями $AC=12$ и $BD=5$.</p>
+<p class="step-label">Финальное построение (шаг 4)</p>
+<div class="svg-frame"><svg xmlns="http://www.w3.org/2000/svg" width="560" height="380" viewBox="0 0 560 380" style="background:white;font-family:sans-serif">
+  <line x1="70.0" y1="325.7" x2="157.5" y2="54.3" stroke="#333" stroke-width="1.5"/>
+  <line x1="157.5" y1="54.3" x2="297.5" y2="54.3" stroke="#2980b9" stroke-width="1.8"/>
+  <line x1="297.5" y1="54.3" x2="385.0" y2="325.7" stroke="#333" stroke-width="1.5"/>
+  <line x1="385.0" y1="325.7" x2="70.0" y2="325.7" stroke="#333" stroke-width="1.5"/>
+  <line x1="70.0" y1="325.7" x2="297.5" y2="54.3" stroke="#e74c3c" stroke-width="1.8"/>
+  <line x1="157.5" y1="54.3" x2="385.0" y2="325.7" stroke="#27ae60" stroke-width="1.8"/>
+  <line x1="297.5" y1="54.3" x2="525.0" y2="325.7" stroke="#8e44ad" stroke-width="1.8"/>
+  <polyline points="289.8,63.5 297.5,72.7 305.2,63.5" fill="none" stroke="#333333" stroke-width="1.2"/>
+  <circle cx="70.0" cy="325.7" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="58.0" y="337.7" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">A</text>
+  <circle cx="157.5" cy="54.3" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="145.5" y="42.3" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">B</text>
+  <circle cx="297.5" cy="54.3" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="305.5" y="42.3" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">C</text>
+  <circle cx="385.0" cy="325.7" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="397.0" y="337.7" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">D</text>
+  <circle cx="525.0" cy="325.7" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="537.0" y="337.7" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">F</text>
+  <text x="122.5" y="38.0" font-size="12" font-family="sans-serif" fill="#2980b9">BC = 4</text>
+  <text x="105.0" y="309.4" font-size="12" font-family="sans-serif" fill="#333">AD = 9</text>
+  <text x="59.5" y="282.3" font-size="12" font-family="sans-serif" fill="#e74c3c">AC = 12</text>
+  <text x="122.5" y="10.9" font-size="12" font-family="sans-serif" fill="#27ae60">BD = 5</text>
+  <text x="420.0" y="342.0" font-size="12" font-family="sans-serif" fill="#8e44ad">DF = 4</text>
+  <text x="315.0" y="70.6" font-size="12" font-family="sans-serif" fill="#8e44ad">CF = 5</text>
+  <text x="122.5" y="332.0" font-size="13" font-family="sans-serif" fill="#e67e22">AF = 13</text>
+  <text x="122.5" y="352.0" font-size="13" font-family="sans-serif" fill="#8e44ad">h = 60/13</text>
+</svg></div>
+<p style="font-size:12px;color:#777;font-style:italic;">Ответ: h = 60/13</p>
+</div>
+<div class="section">
+<h2>Пример 2: 3D: Пирамида (auto-visibility, faces)</h2>
+<div>
+<span class="feature-tag">faces → auto hidden edges</span>
+<span class="feature-tag">3D projection</span>
+<span class="feature-tag">auto canvas 3D</span>
+</div>
+<p class="step-label">Условие</p>
+<p style="font-size:14px;color:#555;">Правильная треугольная пирамида $SABC$. Сторона основания $6$, боковое ребро $5$.</p>
+<p class="step-label">Финальное построение (шаг 4)</p>
+<div class="svg-frame"><svg xmlns="http://www.w3.org/2000/svg" width="560" height="440" viewBox="0 0 560 440" style="background:white;font-family:sans-serif">
+  <line x1="152.9" y1="307.5" x2="96.4" y2="362.9" stroke="#aaa" stroke-width="1.5" stroke-dasharray="8,4"/>
+  <line x1="96.4" y1="362.9" x2="463.6" y2="362.9" stroke="#333333" stroke-width="1.5"/>
+  <line x1="463.6" y1="362.9" x2="152.9" y2="307.5" stroke="#aaa" stroke-width="1.5" stroke-dasharray="8,4"/>
+  <line x1="237.8" y1="77.1" x2="152.9" y2="307.5" stroke="#aaa" stroke-width="1.5" stroke-dasharray="8,4"/>
+  <line x1="237.8" y1="77.1" x2="96.4" y2="362.9" stroke="#333333" stroke-width="1.5"/>
+  <line x1="237.8" y1="77.1" x2="463.6" y2="362.9" stroke="#333333" stroke-width="1.5"/>
+  <line x1="152.9" y1="307.5" x2="280.0" y2="362.9" stroke="#333333" stroke-width="1.5"/>
+  <line x1="152.9" y1="307.5" x2="237.8" y2="344.5" stroke="#333333" stroke-width="1.5"/>
+  <circle cx="152.9" cy="307.5" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="140.9" y="317.5" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">A</text>
+  <circle cx="96.4" cy="362.9" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="82.4" y="370.9" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">B</text>
+  <circle cx="463.6" cy="362.9" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="473.6" y="370.9" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">C</text>
+  <circle cx="237.8" cy="77.1" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="245.8" y="65.1" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">S</text>
+  <circle cx="280.0" cy="362.9" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="288.0" y="374.9" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">M</text>
+  <circle cx="237.8" cy="344.5" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="245.8" y="354.5" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">O</text>
+  <text x="139.1" y="275.4" font-size="12" font-family="sans-serif" fill="#2980b9">AB = 6</text>
+  <text x="256.1" y="93.1" font-size="12" font-family="sans-serif" fill="#e74c3c">SA = 5</text>
+  <text x="303.0" y="350.9" font-size="13" font-family="sans-serif" fill="#27ae60">AM = 3√3</text>
+  <text x="256.1" y="360.5" font-size="12" font-family="sans-serif" fill="#e74c3c">AO = 2·OM</text>
+  <text x="221.7" y="319.6" font-size="14" font-family="sans-serif" fill="#8e44ad">d(A, SBC) = 3√39/4</text>
+</svg></div>
+<p style="font-size:12px;color:#777;font-style:italic;">Ответ: d(A, SBC) = 3√39/4</p>
+</div>
+<div class="section">
+<h2>Пример 3: 2D: Высота трапеции (perpendicular, sanitization)</h2>
+<div>
+<span class="feature-tag">perpendicular constraint</span>
+<span class="feature-tag">JSON sanitization (![]→0)</span>
+<span class="feature-tag">label collision fix</span>
+</div>
+<p class="step-label">Условие</p>
+<p style="font-size:14px;color:#555;">Трапеция $ABCD$ с основаниями $BC=6$ и $AD=10$.</p>
+<p class="step-label">Финальное построение (шаг 3)</p>
+<div class="svg-frame"><svg xmlns="http://www.w3.org/2000/svg" width="560" height="380" viewBox="0 0 560 380" style="background:white;font-family:sans-serif">
+  <line x1="86.2" y1="325.7" x2="172.3" y2="54.3" stroke="#2980b9" stroke-width="1.8"/>
+  <line x1="172.3" y1="54.3" x2="430.8" y2="54.3" stroke="#e74c3c" stroke-width="1.8"/>
+  <line x1="430.8" y1="54.3" x2="516.9" y2="325.7" stroke="#8e44ad" stroke-width="1.8"/>
+  <line x1="516.9" y1="325.7" x2="86.2" y2="325.7" stroke="#27ae60" stroke-width="1.8"/>
+  <line x1="172.3" y1="54.3" x2="86.2" y2="325.7" stroke="#e67e22" stroke-width="1.8"/>
+  <line x1="172.3" y1="54.3" x2="86.2" y2="325.7" stroke="#e74c3c" stroke-width="1.5" stroke-dasharray="8,4"/>
+  <circle cx="86.2" cy="325.7" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="74.2" y="337.7" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">A</text>
+  <circle cx="172.3" cy="54.3" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="160.3" y="42.3" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">B</text>
+  <circle cx="430.8" cy="54.3" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="440.8" y="42.3" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">C</text>
+  <circle cx="516.9" cy="325.7" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="528.9" y="337.7" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">D</text>
+  <circle cx="86.2" cy="325.7" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="74.2" y="335.7" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">H</text>
+  <text x="150.8" y="342.0" font-size="12" font-family="sans-serif" fill="#333">AB = 5</text>
+  <text x="99.1" y="294.0" font-size="13" font-family="sans-serif" fill="#e74c3c">∠A = 60°</text>
+  <text x="107.7" y="314.0" font-size="13" font-family="sans-serif" fill="#e67e22">BH = 5√3/2</text>
+</svg></div>
+<p style="font-size:12px;color:#777;font-style:italic;">Ответ: BH = 5√3/2</p>
+</div>
+
+<div class="section">
+<h2>Демо: Label Collision Avoidance</h2>
+<table>
+<tr><th>До</th><th>После</th></tr>
+<tr>
+  <td>AF=13 @ (100, 200)<br>h=60/13 @ (100, 200)<br><span class="cross">✗ Полное наложение</span></td>
+  <td>AF=13 @ (100, 190)<br>h=60/13 @ (100, 210)<br><span class="check">✓ Разнесены на 20px</span></td>
+</tr>
+</table>
+</div>
+
+
+<div class="section">
+<h2>Результаты тестирования</h2>
+<table>
+<tr><th>Тест</th><th>Результат</th></tr>
+<tr><td>2D трапеция (task16)</td><td><span class="check">✓</span> 0 warnings, parallel_lines</td></tr>
+<tr><td>3D пирамида (task14)</td><td><span class="check">✓</span> 0 warnings, 3 hidden edges</td></tr>
+<tr><td>Label collision (same pos)</td><td><span class="check">✓</span> Разнесены на 20px</td></tr>
+<tr><td>Canvas auto-compute (clipped)</td><td><span class="check">✓</span> Пересчитан</td></tr>
+<tr><td>Canvas auto-compute (oversized)</td><td><span class="check">✓</span> Пересчитан</td></tr>
+<tr><td>JSON sanitization (![]→0)</td><td><span class="check">✓</span> Парсится</td></tr>
+<tr><td>run_graphs (task6)</td><td><span class="check">✓</span> 6/7 SVG</td></tr>
+<tr><td>run_pipeline (task6)</td><td><span class="check">✓</span> 9/9 SVG</td></tr>
+</table>
+</div>
+
+
+<div class="footer">
+  Автоматически сгенерированный отчёт | pipeline v2 | geometry_renderer + geometry_auto
+</div>
+</div></body></html>

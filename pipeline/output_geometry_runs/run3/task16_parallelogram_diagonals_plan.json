@@ -1,0 +1,283 @@
+{
+  "title": "Параллелограмм ABCD",
+  "canvas": {
+    "width": 560,
+    "height": 380,
+    "x_min": -1,
+    "x_max": 11,
+    "y_min": -1,
+    "y_max": 6
+  },
+  "points": {
+    "A": {
+      "x": 1,
+      "y": 0,
+      "label_dx": -12,
+      "label_dy": 12
+    },
+    "B": {
+      "x": 6,
+      "y": 5,
+      "label_dx": 8,
+      "label_dy": 12
+    },
+    "C": {
+      "x": 10,
+      "y": 5,
+      "label_dx": 12,
+      "label_dy": 12
+    },
+    "D": {
+      "x": 5,
+      "y": 0,
+      "label_dx": 8,
+      "label_dy": 12
+    },
+    "O": {
+      "x": 5.5,
+      "y": 2.5,
+      "label_dx": 8,
+      "label_dy": -12
+    }
+  },
+  "steps": [
+    {
+      "text": "Параллелограмм $ABCD$ с основаниями $AB = 5$ и $AD = 8$. Диагонали пересекаются в точке $O$. Угол между диагоналями равен $60^\\circ$.",
+      "objects": [
+        {
+          "type": "point",
+          "id": "A"
+        },
+        {
+          "type": "point",
+          "id": "B"
+        },
+        {
+          "type": "point",
+          "id": "C"
+        },
+        {
+          "type": "point",
+          "id": "D"
+        },
+        {
+          "type": "segment",
+          "id": "s_AB",
+          "from_point": "A",
+          "to_point": "B",
+          "style": {
+            "stroke": "#2980b9",
+            "stroke_width": 1.8
+          },
+          "length_label": "5"
+        },
+        {
+          "type": "segment",
+          "id": "s_AD",
+          "from_point": "A",
+          "to_point": "D",
+          "style": {
+            "stroke": "#e74c3c",
+            "stroke_width": 1.8
+          },
+          "length_label": "8"
+        },
+        {
+          "type": "segment",
+          "id": "s_BC",
+          "from_point": "B",
+          "to_point": "C",
+          "style": {
+            "stroke": "#2980b9",
+            "stroke_width": 1.8
+          }
+        },
+        {
+          "type": "segment",
+          "id": "s_CD",
+          "from_point": "C",
+          "to_point": "D",
+          "style": {
+            "stroke": "#e74c3c",
+            "stroke_width": 1.8
+          }
+        }
+      ],
+      "annotations": [
+        {
+          "type": "label",
+          "id": "lbl_AB",
+          "text": "AB = 5",
+          "anchor": "A",
+          "dx": -1.0,
+          "dy": 0.8,
+          "color": "#2980b9",
+          "font_size": 12
+        },
+        {
+          "type": "label",
+          "id": "lbl_AD",
+          "text": "AD = 8",
+          "anchor": "A",
+          "dx": 2.0,
+          "dy": 0.8,
+          "color": "#e74c3c",
+          "font_size": 12
+        }
+      ],
+      "constraints": [],
+      "caption": "Параллелограмм ABCD"
+    },
+    {
+      "text": "Диагонали $AC$ и $BD$ пересекаются в точке $O$. Угол между диагоналями равен $60^\\circ$.",
+      "objects": [
+        {
+          "type": "point",
+          "id": "O"
+        },
+        {
+          "type": "segment",
+          "id": "s_AO",
+          "from_point": "A",
+          "to_point": "O",
+          "style": {
+            "stroke": "#27ae60",
+            "stroke_width": 1.8
+          }
+        },
+        {
+          "type": "segment",
+          "id": "s_CO",
+          "from_point": "C",
+          "to_point": "O",
+          "style": {
+            "stroke": "#27ae60",
+            "stroke_width": 1.8
+          }
+        },
+        {
+          "type": "segment",
+          "id": "s_BO",
+          "from_point": "B",
+          "to_point": "O",
+          "style": {
+            "stroke": "#8e44ad",
+            "stroke_width": 1.8
+          }
+        },
+        {
+          "type": "segment",
+          "id": "s_DO",
+          "from_point": "D",
+          "to_point": "O",
+          "style": {
+            "stroke": "#8e44ad",
+            "stroke_width": 1.8
+          }
+        }
+      ],
+      "annotations": [
+        {
+          "type": "label",
+          "id": "lbl_AO",
+          "text": "AO",
+          "anchor": "A",
+          "dx": 1.5,
+          "dy": 0.5,
+          "color": "#27ae60",
+          "font_size": 12
+        },
+        {
+          "type": "label",
+          "id": "lbl_CO",
+          "text": "CO",
+          "anchor": "C",
+          "dx": -1.5,
+          "dy": 0.5,
+          "color": "#27ae60",
+          "font_size": 12
+        },
+        {
+          "type": "label",
+          "id": "lbl_BO",
+          "text": "BO",
+          "anchor": "B",
+          "dx": 1.5,
+          "dy": -0.5,
+          "color": "#8e44ad",
+          "font_size": 12
+        },
+        {
+          "type": "label",
+          "id": "lbl_DO",
+          "text": "DO",
+          "anchor": "D",
+          "dx": -1.5,
+          "dy": -0.5,
+          "color": "#8e44ad",
+          "font_size": 12
+        }
+      ],
+      "constraints": [
+        {
+          "type": "angle_arc",
+          "id": "angle_AOB",
+          "vertex": "O",
+          "ray1": "A",
+          "ray2": "B",
+          "radius": 20,
+          "color": "#e74c3c",
+          "label": "60^\\circ"
+        }
+      ],
+      "caption": "Диагонали и угол между ними"
+    },
+    {
+      "text": "Поскольку $AO = OC$ и $BO = OD$, то $AC = 2 \\cdot AO$ и $BD = 2 \\cdot BO$. Используя закон косинусов, можно найти $AC$.",
+      "objects": [
+        {
+          "type": "segment",
+          "id": "s_AC",
+          "from_point": "A",
+          "to_point": "C",
+          "style": {
+            "stroke": "#27ae60",
+            "stroke_width": 2
+          }
+        }
+      ],
+      "annotations": [
+        {
+          "type": "label",
+          "id": "lbl_AC",
+          "text": "AC = 2 \\cdot AO",
+          "anchor": "A",
+          "dx": 2.0,
+          "dy": 0.5,
+          "color": "#27ae60",
+          "font_size": 12
+        }
+      ],
+      "constraints": [],
+      "caption": "Нахождение длины AC"
+    },
+    {
+      "text": "Применяя закон косинусов к треугольнику $AOB$, получаем $AB^2 = AO^2 + BO^2 - 2 \\cdot AO \\cdot BO \\cdot \\cos(60^\\circ)$. Подставляя известные значения, находим $AO$ и, следовательно, $AC$.",
+      "objects": [],
+      "annotations": [
+        {
+          "type": "label",
+          "id": "lbl_AC_value",
+          "text": "AC = \\sqrt{5^2 + 8^2 - 2 \\cdot 5 \\cdot 8 \\cdot \\cos(60^\\circ)} = \\sqrt{25 + 64 - 80 \\cdot 0.5} = \\sqrt{89 - 40} = \\sqrt{49} = 7",
+          "anchor": "A",
+          "dx": 2.0,
+          "dy": -1.0,
+          "color": "#27ae60",
+          "font_size": 12
+        }
+      ],
+      "constraints": [],
+      "caption": "Ответ: длина AC"
+    }
+  ]
+}

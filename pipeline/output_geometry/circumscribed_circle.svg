@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="450" height="450" viewBox="0 0 450 450" style="background:white;font-family:sans-serif">
+  <polygon points="81.8,360.0 368.2,360.0 163.6,90.0" fill="rgba(52,152,219,0.06)" stroke="#333333" stroke-width="1.5"/>
+  <circle cx="225.0" cy="262.5" r="168.4" stroke="#2980b9" fill="none" stroke-width="1.5" stroke-dasharray="8,4"/>
+  <circle cx="81.8" cy="360.0" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="67.8" y="376.0" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">A</text>
+  <circle cx="368.2" cy="360.0" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="380.2" y="376.0" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">B</text>
+  <circle cx="163.6" cy="90.0" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="157.6" y="78.0" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">C</text>
+  <circle cx="225.0" cy="262.5" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="233.0" y="254.5" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">O</text>
+  <text x="237.3" y="249.0" font-size="13" font-family="sans-serif" fill="#2980b9">R</text>
+</svg>

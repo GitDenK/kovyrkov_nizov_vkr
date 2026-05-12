@@ -1,0 +1,9 @@
+{
+  "model": "Qwen/Qwen2.5-7B-Instruct-Turbo",
+  "total_sections": 20,
+  "graphs_planned": 0,
+  "total_tokens_in": 3295,
+  "total_tokens_out": 745,
+  "total_time_sec": 6.15,
+  "plans": []
+}

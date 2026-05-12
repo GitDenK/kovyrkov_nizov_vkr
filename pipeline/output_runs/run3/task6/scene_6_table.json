@@ -1,0 +1,65 @@
+{
+  "scene_type": "diagram",
+  "canvas": {
+    "width": 500,
+    "height": 300,
+    "x_min": 0,
+    "x_max": 500,
+    "y_min": 0,
+    "y_max": 300
+  },
+  "style": {
+    "theme": "light",
+    "stroke_color": "#333333",
+    "fill_color": "#f5f5f5",
+    "font_size": 13,
+    "font_family": "sans-serif"
+  },
+  "objects": [
+    {
+      "type": "title",
+      "id": "title",
+      "text": "Типы задач и их особенности"
+    },
+    {
+      "type": "box",
+      "id": "row_0",
+      "text": "{'type': 'Показательное', 'description': 'Уравнение со степенями, например $2^x = 8$', 'features': 'Приводи к одинаковому основанию'}"
+    },
+    {
+      "type": "box",
+      "id": "row_1",
+      "text": "{'type': 'Логарифмическое', 'description': 'Уравнение с логарифмами, например $\\\\log_2(x) = 3$', 'features': 'Не забывай ОДЗ!'}"
+    },
+    {
+      "type": "box",
+      "id": "row_2",
+      "text": "{'type': 'Дробно-рациональное', 'description': 'Дробь равна нулю или другому числу, например $\\\\frac{x+1}{x-2} = 0$', 'features': 'Числитель = 0, знаменатель ≠ 0'}"
+    },
+    {
+      "type": "box",
+      "id": "row_3",
+      "text": "{'type': 'Иррациональное', 'description': 'Переменная под корнем, например $\\\\sqrt{x+1} = 2$', 'features': 'Возведи в квадрат, проверь ответ'}"
+    },
+    {
+      "type": "arrow",
+      "id": "arr_r_1",
+      "from_point": "row_0",
+      "to_point": "row_1"
+    },
+    {
+      "type": "arrow",
+      "id": "arr_r_2",
+      "from_point": "row_1",
+      "to_point": "row_2"
+    },
+    {
+      "type": "arrow",
+      "id": "arr_r_3",
+      "from_point": "row_2",
+      "to_point": "row_3"
+    }
+  ],
+  "constraints": [],
+  "annotations": []
+}

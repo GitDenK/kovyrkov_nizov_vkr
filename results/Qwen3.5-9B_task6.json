@@ -1,0 +1,319 @@
+{
+  "model": "Qwen/Qwen3.5-9B",
+  "total_sections": 14,
+  "sections_analyzed": 14,
+  "visuals_planned": 0,
+  "total_tokens_in": 17321,
+  "total_tokens_out": 28672,
+  "total_time_sec": 412.16,
+  "plans": [
+    {
+      "plan": {
+        "section_id": 0,
+        "section_title": "Вводная часть",
+        "section_text_preview": "**Оценка уровня ученика и приоритеты подготовки**\n\nПривет! Я внимательно изучил твой уровень подготовки по математическим компетенциям. У тебя есть базовые знания в упрощении выражений и решении линей",
+        "need_visual": false,
+        "visual_type": "none",
+        "pedagogical_goal": "",
+        "description": "",
+        "params": {},
+        "caption": "",
+        "placement": "after_section",
+        "priority": "medium"
+      },
+      "llm_meta": {
+        "model": "Qwen/Qwen3.5-9B",
+        "elapsed_sec": 22.06,
+        "tokens_in": 1380,
+        "tokens_out": 2048,
+        "raw_response": ""
+      }
+    },
+    {
+      "plan": {
+        "section_id": 1,
+        "section_title": "1. КРАТКОЕ ОПИСАНИЕ ЗАДАНИЯ",
+        "section_text_preview": "Это задание №6 из ЕГЭ по профильной математике — **уравнения**.  \nОно проверяет:\n\n- умение решать уравнения разных типов:  \n  — показательные,  \n  — логарифмические,  \n  — дробно-рациональные,  \n  — и",
+        "need_visual": false,
+        "visual_type": "none",
+        "pedagogical_goal": "",
+        "description": "",
+        "params": {},
+        "caption": "",
+        "placement": "after_section",
+        "priority": "medium"
+      },
+      "llm_meta": {
+        "model": "Qwen/Qwen3.5-9B",
+        "elapsed_sec": 27.37,
+        "tokens_in": 1238,
+        "tokens_out": 2048,
+        "raw_response": ""
+      }
+    },
+    {
+      "plan": {
+        "section_id": 2,
+        "section_title": "🔹 Показательные уравнения",
+        "section_text_preview": "Уравнение вида $ a^{f(x)} = a^{g(x)} $, где $ a > 0 $, $ a \\ne 1 $\n\n📌 **Правило**: если основания равны и $ a > 0 $, $ a \\ne 1 $, то  \n$ a^{f(x)} = a^{g(x)} \\Rightarrow f(x) = g(x) $\n\n📌 Пример: $ 2^{x",
+        "need_visual": false,
+        "visual_type": "none",
+        "pedagogical_goal": "",
+        "description": "",
+        "params": {},
+        "caption": "",
+        "placement": "after_section",
+        "priority": "medium"
+      },
+      "llm_meta": {
+        "model": "Qwen/Qwen3.5-9B",
+        "elapsed_sec": 24.73,
+        "tokens_in": 1193,
+        "tokens_out": 2048,
+        "raw_response": ""
+      }
+    },
+    {
+      "plan": {
+        "section_id": 3,
+        "section_title": "🔹 Логарифмические уравнения",
+        "section_text_preview": "Уравнение вида $ \\log_a(f(x)) = \\log_a(g(x)) $, где $ a > 0 $, $ a \\ne 1 $\n\n📌 **Правило**: если основания одинаковы, то  \n$ \\log_a(f(x)) = \\log_a(g(x)) \\Rightarrow f(x) = g(x) $, **при условии, что об",
+        "need_visual": false,
+        "visual_type": "none",
+        "pedagogical_goal": "",
+        "description": "",
+        "params": {},
+        "caption": "",
+        "placement": "after_section",
+        "priority": "medium"
+      },
+      "llm_meta": {
+        "model": "Qwen/Qwen3.5-9B",
+        "elapsed_sec": 27.21,
+        "tokens_in": 1228,
+        "tokens_out": 2048,
+        "raw_response": "{\n  \"need_visual\": true,\n  \"visual_type\": \"formula_card\",\n  \"pedagogical_goal\": \"To consolidate the main transformation rule for logarithmic equations and clearly highlight the domain constraints (ODZ) to prevent common student errors regarding positivity conditions.\",\n  \"description\": \"A visual card displaying the core equation rule $\\\\log_a(f(x)) = \\\\log_a(g(x))"
+      }
+    },
+    {
+      "plan": {
+        "section_id": 4,
+        "section_title": "🔹 Дробно-рациональные уравнения",
+        "section_text_preview": "Уравнение вида $ \\frac{P(x)}{Q(x)} = 0 $, где $ P(x) $, $ Q(x) $ — многочлены\n\n📌 Правило: дробь равна нулю, когда числитель равен нулю, а знаменатель — **не равен нулю**\n\n📌 То есть:  \n$ \\frac{P(x)}{Q(",
+        "need_visual": false,
+        "visual_type": "none",
+        "pedagogical_goal": "",
+        "description": "",
+        "params": {},
+        "caption": "",
+        "placement": "after_section",
+        "priority": "medium"
+      },
+      "llm_meta": {
+        "model": "Qwen/Qwen3.5-9B",
+        "elapsed_sec": 31.31,
+        "tokens_in": 1174,
+        "tokens_out": 2048,
+        "raw_response": ""
+      }
+    },
+    {
+      "plan": {
+        "section_id": 5,
+        "section_title": "🔹 Иррациональные уравнения",
+        "section_text_preview": "Уравнение, в котором переменная под корнем, например: $ \\sqrt{f(x)} = g(x) $\n\n📌 Правило: чтобы решить, **возведи обе части в квадрат**, но помни:\n\n- $ \\sqrt{f(x)} \\ge 0 $, значит правая часть тоже дол",
+        "need_visual": false,
+        "visual_type": "none",
+        "pedagogical_goal": "",
+        "description": "",
+        "params": {},
+        "caption": "",
+        "placement": "after_section",
+        "priority": "medium"
+      },
+      "llm_meta": {
+        "model": "Qwen/Qwen3.5-9B",
+        "elapsed_sec": 34.94,
+        "tokens_in": 1177,
+        "tokens_out": 2048,
+        "raw_response": ""
+      }
+    },
+    {
+      "plan": {
+        "section_id": 6,
+        "section_title": "3. ТИПЫ ЗАДАЧ КОТОРЫЕ МОГУТ ПОПАСТЬСЯ",
+        "section_text_preview": "| Тип | Описание | Особенности |\n|-----|---------|------------|\n| **Показательное** | Уравнение со степенями, например $ 2^x = 8 $ | Приводи к одинаковому основанию |\n| **Логарифмическое** | Уравнение",
+        "need_visual": false,
+        "visual_type": "none",
+        "pedagogical_goal": "",
+        "description": "",
+        "params": {},
+        "caption": "",
+        "placement": "after_section",
+        "priority": "medium"
+      },
+      "llm_meta": {
+        "model": "Qwen/Qwen3.5-9B",
+        "elapsed_sec": 35.84,
+        "tokens_in": 1245,
+        "tokens_out": 2048,
+        "raw_response": ""
+      }
+    },
+    {
+      "plan": {
+        "section_id": 7,
+        "section_title": "🔸 Для всех типов уравнений — общий план:",
+        "section_text_preview": "1. **Определи тип уравнения** — по наличию степени, логарифма, дроби, корня.\n2. **Найди ОДЗ** (особенно важно для логарифмов и корней).\n3. **Приведи уравнение к простому виду**:\n   - Для показательных",
+        "need_visual": false,
+        "visual_type": "none",
+        "pedagogical_goal": "",
+        "description": "",
+        "params": {},
+        "caption": "",
+        "placement": "after_section",
+        "priority": "medium"
+      },
+      "llm_meta": {
+        "model": "Qwen/Qwen3.5-9B",
+        "elapsed_sec": 27.79,
+        "tokens_in": 1318,
+        "tokens_out": 2048,
+        "raw_response": ""
+      }
+    },
+    {
+      "plan": {
+        "section_id": 8,
+        "section_title": "✏️ Пример 1: Показательное уравнение",
+        "section_text_preview": "**Задача**: Решите уравнение $ 4^{x+1} = 8 $\n\n**Шаг 1**: Определи тип — показательное.\n\n**Шаг 2**: Приведи к одинаковому основанию.  \nЗаметим: $ 4 = 2^2 $, $ 8 = 2^3 $  \nТогда:  \n$ (2^2)^{x+1} = 2^3 $",
+        "need_visual": false,
+        "visual_type": "none",
+        "pedagogical_goal": "",
+        "description": "",
+        "params": {},
+        "caption": "",
+        "placement": "after_section",
+        "priority": "medium"
+      },
+      "llm_meta": {
+        "model": "Qwen/Qwen3.5-9B",
+        "elapsed_sec": 32.25,
+        "tokens_in": 1261,
+        "tokens_out": 2048,
+        "raw_response": ""
+      }
+    },
+    {
+      "plan": {
+        "section_id": 9,
+        "section_title": "✏️ Пример 2: Логарифмическое уравнение",
+        "section_text_preview": "**Задача**: Решите уравнение $ \\log_3(x+2) = 2 $\n\n**Шаг 1**: Это логарифмическое уравнение.\n\n**Шаг 2**: Найдем ОДЗ:  \n- основание $ 3 > 0 $, $ 3 \\ne 1 $ — нормально  \n- подлогарифмическое выражение: $",
+        "need_visual": false,
+        "visual_type": "none",
+        "pedagogical_goal": "",
+        "description": "",
+        "params": {},
+        "caption": "",
+        "placement": "after_section",
+        "priority": "medium"
+      },
+      "llm_meta": {
+        "model": "Qwen/Qwen3.5-9B",
+        "elapsed_sec": 32.35,
+        "tokens_in": 1235,
+        "tokens_out": 2048,
+        "raw_response": ""
+      }
+    },
+    {
+      "plan": {
+        "section_id": 10,
+        "section_title": "✏️ Пример 3: Дробно-рациональное уравнение",
+        "section_text_preview": "**Задача**: Решите уравнение $ \\frac{x+1}{x-3} = 0 $\n\n**Шаг 1**: Это дробь, равна нулю.\n\n**Шаг 2**: Числитель = 0: $ x+1 = 0 \\Rightarrow x = -1 $\n\n**Шаг 3**: Знаменатель ≠ 0: $ x-3 \\ne 0 \\Rightarrow x",
+        "need_visual": false,
+        "visual_type": "none",
+        "pedagogical_goal": "",
+        "description": "",
+        "params": {},
+        "caption": "",
+        "placement": "after_section",
+        "priority": "medium"
+      },
+      "llm_meta": {
+        "model": "Qwen/Qwen3.5-9B",
+        "elapsed_sec": 27.68,
+        "tokens_in": 1180,
+        "tokens_out": 2048,
+        "raw_response": ""
+      }
+    },
+    {
+      "plan": {
+        "section_id": 11,
+        "section_title": "✏️ Пример 4: Иррациональное уравнение",
+        "section_text_preview": "**Задача**: Решите уравнение $ \\sqrt{x+3} = 2 $\n\n**Шаг 1**: Переменная под корнем — иррациональное уравнение.\n\n**Шаг 2**: ОДЗ: $ x+3 \\ge 0 \\Rightarrow x \\ge -3 $\n\n**Шаг 3**: Возведём обе части в квадр",
+        "need_visual": false,
+        "visual_type": "none",
+        "pedagogical_goal": "",
+        "description": "",
+        "params": {},
+        "caption": "",
+        "placement": "after_section",
+        "priority": "medium"
+      },
+      "llm_meta": {
+        "model": "Qwen/Qwen3.5-9B",
+        "elapsed_sec": 30.41,
+        "tokens_in": 1223,
+        "tokens_out": 2048,
+        "raw_response": ""
+      }
+    },
+    {
+      "plan": {
+        "section_id": 12,
+        "section_title": "6. ПРАКТИЧЕСКИЕ СОВЕТЫ",
+        "section_text_preview": "✅ **Как быстро решать**:\n- Всегда сначала определяй тип уравнения.\n- Ищи возможность привести к одинаковому основанию (для степеней).\n- Для логарифмов — сразу пиши ОДЗ.\n- Для дробей — помни: числитель",
+        "need_visual": false,
+        "visual_type": "none",
+        "pedagogical_goal": "",
+        "description": "",
+        "params": {},
+        "caption": "",
+        "placement": "after_section",
+        "priority": "medium"
+      },
+      "llm_meta": {
+        "model": "Qwen/Qwen3.5-9B",
+        "elapsed_sec": 30.0,
+        "tokens_in": 1291,
+        "tokens_out": 2048,
+        "raw_response": ""
+      }
+    },
+    {
+      "plan": {
+        "section_id": 13,
+        "section_title": "7. Что делать, если не получается?",
+        "section_text_preview": "1. Попробуй представить числа как степени (например, 8 = 2³, 9 = 3²).\n2. Если логарифм — используй определение: $ \\log_a(b) = c \\Rightarrow a^c = b $.\n3. Если дробь — приравнивай числитель к нулю.\n4. ",
+        "need_visual": false,
+        "visual_type": "none",
+        "pedagogical_goal": "",
+        "description": "",
+        "params": {},
+        "caption": "",
+        "placement": "after_section",
+        "priority": "medium"
+      },
+      "llm_meta": {
+        "model": "Qwen/Qwen3.5-9B",
+        "elapsed_sec": 28.22,
+        "tokens_in": 1178,
+        "tokens_out": 2048,
+        "raw_response": ""
+      }
+    }
+  ]
+}

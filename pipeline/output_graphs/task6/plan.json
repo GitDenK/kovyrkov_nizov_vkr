@@ -1,0 +1,192 @@
+{
+  "model": "Qwen/Qwen2.5-7B-Instruct-Turbo",
+  "total_sections": 14,
+  "graphs_planned": 7,
+  "total_tokens_in": 11974,
+  "total_tokens_out": 1636,
+  "total_time_sec": 26.47,
+  "plans": [
+    {
+      "section_id": 2,
+      "section_title": "🔹 Показательные уравнения",
+      "section_text_preview": "Уравнение вида $ a^{f(x)} = a^{g(x)} $, где $ a > 0 $, $ a \\ne 1 $\n\n📌 **Правило**: если основания равны и $ a > 0 $, $ a \\ne 1 $, то  \n$ a^{f(x)} = a^{g(x)} \\Rightarrow f(x) = g(x) $\n\n📌 Пример: $ 2^{x",
+      "need_visual": true,
+      "visual_type": "function_graph",
+      "description": "График показательных функций 2^(x+1) и 2^3",
+      "params": {
+        "equations": [
+          {
+            "expression": "2**(x+1)",
+            "label": "y = 2^(x+1)"
+          },
+          {
+            "expression": "2**3",
+            "label": "y = 2^3"
+          }
+        ],
+        "x_range": [
+          -5,
+          5
+        ],
+        "highlight_points": [
+          {
+            "x": 2,
+            "y": 8,
+            "label": "(2,8)"
+          }
+        ]
+      },
+      "caption": "Показательные функции 2^(x+1) и 2^3",
+      "priority": "high"
+    },
+    {
+      "section_id": 3,
+      "section_title": "🔹 Логарифмические уравнения",
+      "section_text_preview": "Уравнение вида $ \\log_a(f(x)) = \\log_a(g(x)) $, где $ a > 0 $, $ a \\ne 1 $\n\n📌 **Правило**: если основания одинаковы, то  \n$ \\log_a(f(x)) = \\log_a(g(x)) \\Rightarrow f(x) = g(x) $, **при условии, что об",
+      "need_visual": true,
+      "visual_type": "function_graph",
+      "description": "График логарифмических функций и их пересечения",
+      "params": {
+        "equations": [
+          {
+            "expression": "x",
+            "label": "f(x)"
+          },
+          {
+            "expression": "x**2 - 1",
+            "label": "g(x)"
+          }
+        ],
+        "x_range": [
+          0.1,
+          3
+        ],
+        "highlight_points": [
+          {
+            "x": 1,
+            "y": 1,
+            "label": "Пересечение f(x) и g(x)"
+          }
+        ]
+      },
+      "caption": "Графики логарифмических функций и их пересечение",
+      "priority": "high"
+    },
+    {
+      "section_id": 5,
+      "section_title": "🔹 Иррациональные уравнения",
+      "section_text_preview": "Уравнение, в котором переменная под корнем, например: $ \\sqrt{f(x)} = g(x) $\n\n📌 Правило: чтобы решить, **возведи обе части в квадрат**, но помни:\n\n- $ \\sqrt{f(x)} \\ge 0 $, значит правая часть тоже дол",
+      "need_visual": true,
+      "visual_type": "function_graph",
+      "description": "График иррационального уравнения",
+      "params": {
+        "equation": "x**0.5",
+        "x_range": [
+          0,
+          9
+        ],
+        "highlight_points": [
+          {
+            "x": 9,
+            "y": 3,
+            "label": "x=9"
+          }
+        ]
+      },
+      "caption": "График иррационального уравнения",
+      "priority": "high"
+    },
+    {
+      "section_id": 8,
+      "section_title": "✏️ Пример 1: Показательное уравнение",
+      "section_text_preview": "**Задача**: Решите уравнение $ 4^{x+1} = 8 $\n\n**Шаг 1**: Определи тип — показательное.\n\n**Шаг 2**: Приведи к одинаковому основанию.  \nЗаметим: $ 4 = 2^2 $, $ 8 = 2^3 $  \nТогда:  \n$ (2^2)^{x+1} = 2^3 $",
+      "need_visual": true,
+      "visual_type": "function_graph",
+      "description": "График показательной функции и прямой, соответствующий решению уравнения",
+      "params": {
+        "equations": [
+          {
+            "expression": "4**(x+1)",
+            "label": "y = 4^(x+1)"
+          },
+          {
+            "expression": "8",
+            "label": "y = 8"
+          }
+        ],
+        "x_range": [
+          -2,
+          2
+        ],
+        "highlight_points": [
+          {
+            "x": 0.5,
+            "y": 8,
+            "label": "x = 0.5"
+          }
+        ]
+      },
+      "caption": "Показательное уравнение 4^(x+1) = 8",
+      "priority": "high"
+    },
+    {
+      "section_id": 9,
+      "section_title": "✏️ Пример 2: Логарифмическое уравнение",
+      "section_text_preview": "**Задача**: Решите уравнение $ \\log_3(x+2) = 2 $\n\n**Шаг 1**: Это логарифмическое уравнение.\n\n**Шаг 2**: Найдем ОДЗ:  \n- основание $ 3 > 0 $, $ 3 \\ne 1 $ — нормально  \n- подлогарифмическое выражение: $",
+      "need_visual": true,
+      "visual_type": "function_graph",
+      "description": "График функции y = log_3(x+2)",
+      "params": {
+        "equation": "log(3, x + 2)",
+        "x_range": [
+          -1.5,
+          10
+        ],
+        "highlight_points": [
+          {
+            "x": 7,
+            "y": 2,
+            "label": "x=7"
+          }
+        ]
+      },
+      "caption": "График логарифмической функции y = log_3(x+2)",
+      "priority": "high"
+    },
+    {
+      "section_id": 10,
+      "section_title": "✏️ Пример 3: Дробно-рациональное уравнение",
+      "section_text_preview": "**Задача**: Решите уравнение $ \\frac{x+1}{x-3} = 0 $\n\n**Шаг 1**: Это дробь, равна нулю.\n\n**Шаг 2**: Числитель = 0: $ x+1 = 0 \\Rightarrow x = -1 $\n\n**Шаг 3**: Знаменатель ≠ 0: $ x-3 \\ne 0 \\Rightarrow x",
+      "need_visual": true,
+      "visual_type": "function_graph",
+      "description": "",
+      "params": {},
+      "caption": "",
+      "priority": "high"
+    },
+    {
+      "section_id": 11,
+      "section_title": "✏️ Пример 4: Иррациональное уравнение",
+      "section_text_preview": "**Задача**: Решите уравнение $ \\sqrt{x+3} = 2 $\n\n**Шаг 1**: Переменная под корнем — иррациональное уравнение.\n\n**Шаг 2**: ОДЗ: $ x+3 \\ge 0 \\Rightarrow x \\ge -3 $\n\n**Шаг 3**: Возведём обе части в квадр",
+      "need_visual": true,
+      "visual_type": "function_graph",
+      "description": "График функции y = sqrt(x+3) и прямая y = 2",
+      "params": {
+        "equation": "x**0.5 + 3**0.5",
+        "x_range": [
+          -2,
+          4
+        ],
+        "highlight_points": [
+          {
+            "x": 1,
+            "y": 2,
+            "label": "x=1"
+          }
+        ]
+      },
+      "caption": "График иррационального уравнения",
+      "priority": "high"
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+```json
+{
+  "title": "Параллелограмм ABCD",
+  "canvas": {"width": 560, "height": 380, "x_min": -1, "x_max": 12, "y_min": -1, "y_max": 6},
+  "points": {
+    "A": {"x": 1, "y": 0, "label_dx": -12, "label_dy": 12},
+    "B": {"x": 6, "y": 5, "label_dx": 8, "label_dy": 12},
+    "C": {"x": 10, "y": 5, "label_dx": 10, "label_dy": 12},
+    "D": {"x": 5, "y": 0, "label_dx": 8, "label_dy": 12},
+    "O": {"x": 7, "y": 2.5, "label_dx": 8, "label_dy": -12}
+  },
+  "steps": [
+    {
+      "text": "Параллелограмм $ABCD$ с основаниями $AB = 5$ и $AD = 8$. Диагонали пересекаются в точке $O$. Угол между диагоналями равен $60^\circ$.",
+      "objects": [
+        {"type": "point", "id": "A"},
+        {"type": "point", "id": "B"},
+        {"type": "point", "id": "C"},
+        {"type": "point", "id": "D"},
+        {"type": "segment", "id": "s_AB", "from_point": "A", "to_point": "B", "style": {"stroke": "#2980b9", "stroke_width": 1.8}, "length_label": "5"},
+        {"type": "segment", "id": "s_AD", "from_point": "A", "to_point": "D", "style": {"stroke": "#e74c3c", "stroke_width": 1.8}, "length_label": "8"},
+        {"type": "segment", "id": "s_BC", "from_point": "B", "to_point": "C", "style": {"stroke": "#2980b9", "stroke_width": 1.8}},
+        {"type": "segment", "id": "s_CD", "from_point": "C", "to_point": "D", "style": {"stroke": "#e74c3c", "stroke_width": 1.8}}
+      ],
+      "annotations": [
+        {"type": "label", "id": "lbl_AB", "text": "AB = 5", "anchor": "A", "dx": -0.5, "dy": 0.8, "color": "#2980b9", "font_size": 12},
+        {"type": "label", "id": "lbl_AD", "text": "AD = 8", "anchor": "A", "dx": 0.5, "dy": 0.8, "color": "#e74c3c", "font_size": 12}
+      ],
+      "constraints": [
+        {"type": "parallel_lines", "id": "par_1", "line1": ["A", "B"], "line2": ["C", "D"]}
+      ],
+      "caption": "Параллелограмм ABCD"
+    },
+    {
+      "text": "Диагонали $AC$ и $BD$ пересекаются в точке $O$. Угол между диагоналями равен $60^\circ$.",
+      "objects": [
+        {"type": "point", "id": "O"},
+        {"type": "segment", "id": "s_AC", "from_point": "A", "to_point": "C", "style": {"stroke": "#27ae60", "stroke_width": 1.8}},
+        {"type": "segment", "id": "s_BD", "from_point": "B", "to_point": "D", "style": {"stroke": "#8e44ad", "stroke_width": 1.8}}
+      ],
+      "annotations": [
+        {"type": "label", "id": "lbl_O", "text": "O", "anchor": "O", "dx": 0, "dy": -0.5, "color": "#333", "font_size": 12},
+        {"type": "label", "id": "lbl_angle", "text": "60$^\circ$", "anchor": "O", "dx": 0.5, "dy": 0.5, "color": "#e74c3c", "font_size": 13}
+      ],
+      "constraints": [
+        {"type": "angle_arc", "id": "aa_1", "vertex": "O", "ray1": "A", "ray2": "B", "radius": 20, "color": "#e74c3c", "label": "60$^\circ$"}
+      ],
+      "caption": "Диагонали и угол между ними"
+    },
+    {
+      "text": "Пусть $AO = x$, $OC = y$. Тогда $AC = x + y$. По закону косинусов в треугольнике $AOB$ имеем:\n$$AB^2 = AO^2 + BO^2 - 2 \cdot AO \cdot BO \cdot \cos(60^\circ)$$\n$$25 = x^2 + (8 - x)^2 - 2 \cdot x \cdot (8 - x) \cdot \frac{1}{2}$$\n$$0 = x^2 - 8x + 16$$\n$$0 = (x - 4)^2$$\n$$x = 4$$\nТогда $y = 8 - x = 4$. Следовательно, $AC = x + y = 4 + 4 = 8$.",
+      "objects": [],
+      "annotations": [
+        {"type": "label", "id": "lbl_AC", "text": "AC = 8", "anchor": "A", "dx": 1.5, "dy": -0.3, "color": "#8e44ad", "font_size": 14}
+      ],
+      "constraints": [],
+      "caption": "Ответ: AC = 8"
+    }
+  ]
+}
+```

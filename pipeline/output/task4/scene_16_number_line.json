@@ -1,0 +1,71 @@
+{
+  "scene_type": "function_plot",
+  "canvas": {
+    "width": 500,
+    "height": 200,
+    "x_min": -1.0,
+    "x_max": 8.0,
+    "y_min": -2,
+    "y_max": 2
+  },
+  "style": {
+    "theme": "light",
+    "stroke_color": "#333333",
+    "fill_color": "none",
+    "font_size": 13,
+    "font_family": "sans-serif"
+  },
+  "objects": [
+    {
+      "type": "function_curve",
+      "id": "axis_line",
+      "expression": "0",
+      "x_min": -1.0,
+      "x_max": 8.0
+    },
+    {
+      "type": "point",
+      "id": "nl_0",
+      "x": 1.0,
+      "y": 0,
+      "label": "(1, 6)"
+    },
+    {
+      "type": "point",
+      "id": "nl_1",
+      "x": 2.0,
+      "y": 0,
+      "label": "(2, 5)"
+    },
+    {
+      "type": "point",
+      "id": "nl_2",
+      "x": 3.0,
+      "y": 0,
+      "label": "(3, 4)"
+    },
+    {
+      "type": "point",
+      "id": "nl_3",
+      "x": 4.0,
+      "y": 0,
+      "label": "(4, 3)"
+    },
+    {
+      "type": "point",
+      "id": "nl_4",
+      "x": 5.0,
+      "y": 0,
+      "label": "(5, 2)"
+    },
+    {
+      "type": "point",
+      "id": "nl_5",
+      "x": 6.0,
+      "y": 0,
+      "label": "(6, 1)"
+    }
+  ],
+  "constraints": [],
+  "annotations": []
+}

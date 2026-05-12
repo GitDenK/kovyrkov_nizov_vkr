@@ -1,0 +1,247 @@
+
+######################################################################
+# RUN 1 / 3
+######################################################################
+[geometry_auto] Planning (meta-llama/Llama-3.3-70B-Instruct-Turbo)...
+  Done in 6.6s (5075+928 tok)
+  Raw length: 2527 chars
+[geometry_auto] Plan validated successfully
+[geometry_auto] Plan saved: /Users/alexandernizov/Desktop/ege_conspects/pipeline/output_geometry_runs/run1/task16_trapezoid_plan.json
+[geometry_auto] Report: /Users/alexandernizov/Desktop/ege_conspects/pipeline/output_geometry_runs/run1/task16_trapezoid.html
+[geometry_auto] 3 text blocks, 3 visuals
+[geometry_auto] Metrics: wall=6.591s, LLM=6.585s (1 calls, 5075+928 tok), steps=0.0008s (3)
+[geometry_auto] Metrics saved: /Users/alexandernizov/Desktop/ege_conspects/pipeline/output_geometry_runs/run1/task16_trapezoid_metrics.json
+[geometry_auto] Planning (meta-llama/Llama-3.3-70B-Instruct-Turbo)...
+  Done in 13.6s (5068+1301 tok)
+  Raw length: 3346 chars
+[geometry_auto] Plan validated successfully
+[geometry_auto] Plan saved: /Users/alexandernizov/Desktop/ege_conspects/pipeline/output_geometry_runs/run1/task16_rhombus_diagonals_plan.json
+[geometry_auto] Report: /Users/alexandernizov/Desktop/ege_conspects/pipeline/output_geometry_runs/run1/task16_rhombus_diagonals.html
+[geometry_auto] 4 text blocks, 4 visuals
+[geometry_auto] Metrics: wall=13.606s, LLM=13.602s (1 calls, 5068+1301 tok), steps=0.0012s (4)
+[geometry_auto] Metrics saved: /Users/alexandernizov/Desktop/ege_conspects/pipeline/output_geometry_runs/run1/task16_rhombus_diagonals_metrics.json
+[geometry_auto] Planning (meta-llama/Llama-3.3-70B-Instruct-Turbo)...
+  Done in 30.6s (5058+881 tok)
+  Raw length: 2181 chars
+[geometry_auto] Plan validated successfully
+[geometry_auto] Plan saved: /Users/alexandernizov/Desktop/ege_conspects/pipeline/output_geometry_runs/run1/task14_pyramid_apex_to_face_plan.json
+  [auto-visibility] Modified 3 edge(s) visibility
+  3D plan detected (5 points), auto-canvas: x=[-0.1..12.1] y=[-0.6..8.6]
+[geometry_auto] Report: /Users/alexandernizov/Desktop/ege_conspects/pipeline/output_geometry_runs/run1/task14_pyramid_apex_to_face.html
+[geometry_auto] 2 text blocks, 2 visuals
+[geometry_auto] Metrics: wall=30.654s, LLM=30.65s (1 calls, 5058+881 tok), steps=0.0009s (2)
+[geometry_auto] Metrics saved: /Users/alexandernizov/Desktop/ege_conspects/pipeline/output_geometry_runs/run1/task14_pyramid_apex_to_face_metrics.json
+[geometry_auto] Planning (meta-llama/Llama-3.3-70B-Instruct-Turbo)...
+  Done in 25.3s (5082+1336 tok)
+  Raw length: 3403 chars
+[geometry_auto] Plan validated successfully
+[geometry_auto] Plan saved: /Users/alexandernizov/Desktop/ege_conspects/pipeline/output_geometry_runs/run1/task14_prism_section_plan.json
+  [auto-visibility] Modified 7 edge(s) visibility
+  3D plan detected (7 points), auto-canvas: x=[-0.1..12.1] y=[-1.2..9.2]
+[geometry_auto] Report: /Users/alexandernizov/Desktop/ege_conspects/pipeline/output_geometry_runs/run1/task14_prism_section.html
+[geometry_auto] 4 text blocks, 4 visuals
+[geometry_auto] Metrics: wall=25.334s, LLM=25.329s (1 calls, 5082+1336 tok), steps=0.0014s (4)
+[geometry_auto] Metrics saved: /Users/alexandernizov/Desktop/ege_conspects/pipeline/output_geometry_runs/run1/task14_prism_section_metrics.json
+[geometry_auto] Planning (meta-llama/Llama-3.3-70B-Instruct-Turbo)...
+  Done in 12.7s (5080+1030 tok)
+  Raw length: 2597 chars
+[geometry_auto] Plan validated successfully
+[geometry_auto] Plan saved: /Users/alexandernizov/Desktop/ege_conspects/pipeline/output_geometry_runs/run1/task16_triangle_circumscribed_plan.json
+[geometry_auto] Report: /Users/alexandernizov/Desktop/ege_conspects/pipeline/output_geometry_runs/run1/task16_triangle_circumscribed.html
+[geometry_auto] 3 text blocks, 3 visuals
+[geometry_auto] Metrics: wall=12.723s, LLM=12.722s (1 calls, 5080+1030 tok), steps=0.0003s (3)
+[geometry_auto] Metrics saved: /Users/alexandernizov/Desktop/ege_conspects/pipeline/output_geometry_runs/run1/task16_triangle_circumscribed_metrics.json
+[geometry_auto] Planning (meta-llama/Llama-3.3-70B-Instruct-Turbo)...
+  Done in 16.5s (5066+1414 tok)
+  Raw length: 3444 chars
+  Full raw saved to: /Users/alexandernizov/Desktop/ege_conspects/pipeline/output_geometry_runs/run1/debug_raw.txt
+  [run1/task16_parallelogram_diagonals] FAILED: LLM returned invalid plan (no points or steps)
+[geometry_auto] Planning (meta-llama/Llama-3.3-70B-Instruct-Turbo)...
+  Done in 18.1s (5073+1638 tok)
+  Raw length: 4084 chars
+[geometry_auto] Plan validated successfully
+[geometry_auto] Plan saved: /Users/alexandernizov/Desktop/ege_conspects/pipeline/output_geometry_runs/run1/task14_cube_diagonal_section_plan.json
+  [auto-visibility] Modified 8 edge(s) visibility
+  3D plan detected (9 points), auto-canvas: x=[-0.1..12.1] y=[-1.3..9.3]
+[geometry_auto] Report: /Users/alexandernizov/Desktop/ege_conspects/pipeline/output_geometry_runs/run1/task14_cube_diagonal_section.html
+[geometry_auto] 4 text blocks, 4 visuals
+[geometry_auto] Metrics: wall=18.139s, LLM=18.133s (1 calls, 5073+1638 tok), steps=0.0017s (4)
+[geometry_auto] Metrics saved: /Users/alexandernizov/Desktop/ege_conspects/pipeline/output_geometry_runs/run1/task14_cube_diagonal_section_metrics.json
+[geometry_auto] Planning (meta-llama/Llama-3.3-70B-Instruct-Turbo)...
+  Done in 11.9s (5083+1476 tok)
+  Raw length: 3697 chars
+[geometry_auto] Plan validated successfully
+[geometry_auto] Plan saved: /Users/alexandernizov/Desktop/ege_conspects/pipeline/output_geometry_runs/run1/task14_pyramid_dihedral_angle_plan.json
+  [auto-visibility] Modified 5 edge(s) visibility
+  3D plan detected (11 points), auto-canvas: x=[-0.1..12.1] y=[0.4..7.6]
+[geometry_auto] Report: /Users/alexandernizov/Desktop/ege_conspects/pipeline/output_geometry_runs/run1/task14_pyramid_dihedral_angle.html
+[geometry_auto] 5 text blocks, 5 visuals
+[geometry_auto] Metrics: wall=11.924s, LLM=11.918s (1 calls, 5083+1476 tok), steps=0.0018s (5)
+[geometry_auto] Metrics saved: /Users/alexandernizov/Desktop/ege_conspects/pipeline/output_geometry_runs/run1/task14_pyramid_dihedral_angle_metrics.json
+
+######################################################################
+# RUN 2 / 3
+######################################################################
+[geometry_auto] Planning (meta-llama/Llama-3.3-70B-Instruct-Turbo)...
+  Done in 23.2s (5075+1000 tok)
+  Raw length: 2569 chars
+[geometry_auto] Plan validated successfully
+[geometry_auto] Plan saved: /Users/alexandernizov/Desktop/ege_conspects/pipeline/output_geometry_runs/run2/task16_trapezoid_plan.json
+[geometry_auto] Report: /Users/alexandernizov/Desktop/ege_conspects/pipeline/output_geometry_runs/run2/task16_trapezoid.html
+[geometry_auto] 3 text blocks, 3 visuals
+[geometry_auto] Metrics: wall=23.226s, LLM=23.221s (1 calls, 5075+1000 tok), steps=0.0009s (3)
+[geometry_auto] Metrics saved: /Users/alexandernizov/Desktop/ege_conspects/pipeline/output_geometry_runs/run2/task16_trapezoid_metrics.json
+[geometry_auto] Planning (meta-llama/Llama-3.3-70B-Instruct-Turbo)...
+  Done in 6.8s (5068+1314 tok)
+  Raw length: 3352 chars
+[geometry_auto] Plan validated successfully
+[geometry_auto] Plan saved: /Users/alexandernizov/Desktop/ege_conspects/pipeline/output_geometry_runs/run2/task16_rhombus_diagonals_plan.json
+[geometry_auto] Report: /Users/alexandernizov/Desktop/ege_conspects/pipeline/output_geometry_runs/run2/task16_rhombus_diagonals.html
+[geometry_auto] 4 text blocks, 4 visuals
+[geometry_auto] Metrics: wall=6.761s, LLM=6.756s (1 calls, 5068+1314 tok), steps=0.0012s (4)
+[geometry_auto] Metrics saved: /Users/alexandernizov/Desktop/ege_conspects/pipeline/output_geometry_runs/run2/task16_rhombus_diagonals_metrics.json
+[geometry_auto] Planning (meta-llama/Llama-3.3-70B-Instruct-Turbo)...
+  Done in 12.1s (5058+1069 tok)
+  Raw length: 2680 chars
+[geometry_auto] Plan validated successfully
+[geometry_auto] Plan saved: /Users/alexandernizov/Desktop/ege_conspects/pipeline/output_geometry_runs/run2/task14_pyramid_apex_to_face_plan.json
+  [auto-visibility] Modified 3 edge(s) visibility
+  3D plan detected (5 points), auto-canvas: x=[-0.1..12.1] y=[-0.6..8.6]
+[geometry_auto] Report: /Users/alexandernizov/Desktop/ege_conspects/pipeline/output_geometry_runs/run2/task14_pyramid_apex_to_face.html
+[geometry_auto] 3 text blocks, 3 visuals
+[geometry_auto] Metrics: wall=12.063s, LLM=12.061s (1 calls, 5058+1069 tok), steps=0.0004s (3)
+[geometry_auto] Metrics saved: /Users/alexandernizov/Desktop/ege_conspects/pipeline/output_geometry_runs/run2/task14_pyramid_apex_to_face_metrics.json
+[geometry_auto] Planning (meta-llama/Llama-3.3-70B-Instruct-Turbo)...
+  Done in 11.1s (5082+1404 tok)
+  Raw length: 3597 chars
+[geometry_auto] Plan validated successfully
+[geometry_auto] Plan saved: /Users/alexandernizov/Desktop/ege_conspects/pipeline/output_geometry_runs/run2/task14_prism_section_plan.json
+  [auto-visibility] Modified 7 edge(s) visibility
+  3D plan detected (7 points), auto-canvas: x=[-0.1..12.1] y=[-1.2..9.2]
+[geometry_auto] Report: /Users/alexandernizov/Desktop/ege_conspects/pipeline/output_geometry_runs/run2/task14_prism_section.html
+[geometry_auto] 5 text blocks, 5 visuals
+[geometry_auto] Metrics: wall=11.065s, LLM=11.06s (1 calls, 5082+1404 tok), steps=0.0017s (5)
+[geometry_auto] Metrics saved: /Users/alexandernizov/Desktop/ege_conspects/pipeline/output_geometry_runs/run2/task14_prism_section_metrics.json
+[geometry_auto] Planning (meta-llama/Llama-3.3-70B-Instruct-Turbo)...
+  Done in 8.7s (5080+1036 tok)
+  Raw length: 2600 chars
+[geometry_auto] Plan validated successfully
+[geometry_auto] Plan saved: /Users/alexandernizov/Desktop/ege_conspects/pipeline/output_geometry_runs/run2/task16_triangle_circumscribed_plan.json
+[geometry_auto] Report: /Users/alexandernizov/Desktop/ege_conspects/pipeline/output_geometry_runs/run2/task16_triangle_circumscribed.html
+[geometry_auto] 3 text blocks, 3 visuals
+[geometry_auto] Metrics: wall=8.685s, LLM=8.681s (1 calls, 5080+1036 tok), steps=0.0007s (3)
+[geometry_auto] Metrics saved: /Users/alexandernizov/Desktop/ege_conspects/pipeline/output_geometry_runs/run2/task16_triangle_circumscribed_metrics.json
+[geometry_auto] Planning (meta-llama/Llama-3.3-70B-Instruct-Turbo)...
+  Done in 14.2s (5066+1853 tok)
+  Raw length: 4719 chars
+  Full raw saved to: /Users/alexandernizov/Desktop/ege_conspects/pipeline/output_geometry_runs/run2/debug_raw.txt
+  [run2/task16_parallelogram_diagonals] FAILED: LLM returned invalid plan (no points or steps)
+[geometry_auto] Planning (meta-llama/Llama-3.3-70B-Instruct-Turbo)...
+  Done in 17.2s (5073+1456 tok)
+  Raw length: 3604 chars
+[geometry_auto] Plan validated successfully
+[geometry_auto] Plan saved: /Users/alexandernizov/Desktop/ege_conspects/pipeline/output_geometry_runs/run2/task14_cube_diagonal_section_plan.json
+  [auto-visibility] Modified 10 edge(s) visibility
+  3D plan detected (9 points), auto-canvas: x=[-0.1..12.1] y=[-1.3..9.3]
+[geometry_auto] Report: /Users/alexandernizov/Desktop/ege_conspects/pipeline/output_geometry_runs/run2/task14_cube_diagonal_section.html
+[geometry_auto] 4 text blocks, 4 visuals
+[geometry_auto] Metrics: wall=17.232s, LLM=17.225s (1 calls, 5073+1456 tok), steps=0.0019s (4)
+[geometry_auto] Metrics saved: /Users/alexandernizov/Desktop/ege_conspects/pipeline/output_geometry_runs/run2/task14_cube_diagonal_section_metrics.json
+[geometry_auto] Planning (meta-llama/Llama-3.3-70B-Instruct-Turbo)...
+  Done in 10.9s (5083+1414 tok)
+  Raw length: 3519 chars
+[geometry_auto] Plan validated successfully
+[geometry_auto] Plan saved: /Users/alexandernizov/Desktop/ege_conspects/pipeline/output_geometry_runs/run2/task14_pyramid_dihedral_angle_plan.json
+  [auto-visibility] Modified 6 edge(s) visibility
+  3D plan detected (12 points), auto-canvas: x=[-0.1..12.1] y=[0.0..8.0]
+[geometry_auto] Report: /Users/alexandernizov/Desktop/ege_conspects/pipeline/output_geometry_runs/run2/task14_pyramid_dihedral_angle.html
+[geometry_auto] 4 text blocks, 4 visuals
+[geometry_auto] Metrics: wall=10.935s, LLM=10.93s (1 calls, 5083+1414 tok), steps=0.0012s (4)
+[geometry_auto] Metrics saved: /Users/alexandernizov/Desktop/ege_conspects/pipeline/output_geometry_runs/run2/task14_pyramid_dihedral_angle_metrics.json
+
+######################################################################
+# RUN 3 / 3
+######################################################################
+[geometry_auto] Planning (meta-llama/Llama-3.3-70B-Instruct-Turbo)...
+  Done in 10.2s (5075+1370 tok)
+  Raw length: 3526 chars
+  [auto-canvas] Recomputed: x=[-1.6..16.6] y=[-1.0..6.0] (clipped)
+[geometry_auto] Plan validated successfully
+[geometry_auto] Plan saved: /Users/alexandernizov/Desktop/ege_conspects/pipeline/output_geometry_runs/run3/task16_trapezoid_plan.json
+[geometry_auto] Report: /Users/alexandernizov/Desktop/ege_conspects/pipeline/output_geometry_runs/run3/task16_trapezoid.html
+[geometry_auto] 5 text blocks, 5 visuals
+[geometry_auto] Metrics: wall=10.195s, LLM=10.191s (1 calls, 5075+1370 tok), steps=0.0011s (5)
+[geometry_auto] Metrics saved: /Users/alexandernizov/Desktop/ege_conspects/pipeline/output_geometry_runs/run3/task16_trapezoid_metrics.json
+[geometry_auto] Planning (meta-llama/Llama-3.3-70B-Instruct-Turbo)...
+  Done in 13.0s (5068+1208 tok)
+  Raw length: 3052 chars
+[geometry_auto] Plan validated successfully
+[geometry_auto] Plan saved: /Users/alexandernizov/Desktop/ege_conspects/pipeline/output_geometry_runs/run3/task16_rhombus_diagonals_plan.json
+[geometry_auto] Report: /Users/alexandernizov/Desktop/ege_conspects/pipeline/output_geometry_runs/run3/task16_rhombus_diagonals.html
+[geometry_auto] 3 text blocks, 3 visuals
+[geometry_auto] Metrics: wall=13.001s, LLM=12.996s (1 calls, 5068+1208 tok), steps=0.0009s (3)
+[geometry_auto] Metrics saved: /Users/alexandernizov/Desktop/ege_conspects/pipeline/output_geometry_runs/run3/task16_rhombus_diagonals_metrics.json
+[geometry_auto] Planning (meta-llama/Llama-3.3-70B-Instruct-Turbo)...
+  Done in 5.7s (5058+876 tok)
+  Raw length: 2171 chars
+[geometry_auto] Plan validated successfully
+[geometry_auto] Plan saved: /Users/alexandernizov/Desktop/ege_conspects/pipeline/output_geometry_runs/run3/task14_pyramid_apex_to_face_plan.json
+  [auto-visibility] Modified 3 edge(s) visibility
+  3D plan detected (5 points), auto-canvas: x=[-0.1..12.1] y=[-1.5..9.5]
+[geometry_auto] Report: /Users/alexandernizov/Desktop/ege_conspects/pipeline/output_geometry_runs/run3/task14_pyramid_apex_to_face.html
+[geometry_auto] 2 text blocks, 2 visuals
+[geometry_auto] Metrics: wall=5.704s, LLM=5.7s (1 calls, 5058+876 tok), steps=0.0006s (2)
+[geometry_auto] Metrics saved: /Users/alexandernizov/Desktop/ege_conspects/pipeline/output_geometry_runs/run3/task14_pyramid_apex_to_face_metrics.json
+[geometry_auto] Planning (meta-llama/Llama-3.3-70B-Instruct-Turbo)...
+  Done in 10.9s (5082+1396 tok)
+  Raw length: 3483 chars
+[geometry_auto] Plan validated successfully
+[geometry_auto] Plan saved: /Users/alexandernizov/Desktop/ege_conspects/pipeline/output_geometry_runs/run3/task14_prism_section_plan.json
+  [auto-visibility] Modified 7 edge(s) visibility
+  3D plan detected (7 points), auto-canvas: x=[-0.1..12.1] y=[-1.2..9.2]
+[geometry_auto] Report: /Users/alexandernizov/Desktop/ege_conspects/pipeline/output_geometry_runs/run3/task14_prism_section.html
+[geometry_auto] 4 text blocks, 4 visuals
+[geometry_auto] Metrics: wall=10.922s, LLM=10.917s (1 calls, 5082+1396 tok), steps=0.0013s (4)
+[geometry_auto] Metrics saved: /Users/alexandernizov/Desktop/ege_conspects/pipeline/output_geometry_runs/run3/task14_prism_section_metrics.json
+[geometry_auto] Planning (meta-llama/Llama-3.3-70B-Instruct-Turbo)...
+  Done in 10.5s (5080+816 tok)
+  Raw length: 2062 chars
+[geometry_auto] Plan validated successfully
+[geometry_auto] Plan saved: /Users/alexandernizov/Desktop/ege_conspects/pipeline/output_geometry_runs/run3/task16_triangle_circumscribed_plan.json
+[geometry_auto] Report: /Users/alexandernizov/Desktop/ege_conspects/pipeline/output_geometry_runs/run3/task16_triangle_circumscribed.html
+[geometry_auto] 3 text blocks, 3 visuals
+[geometry_auto] Metrics: wall=10.539s, LLM=10.535s (1 calls, 5080+816 tok), steps=0.0007s (3)
+[geometry_auto] Metrics saved: /Users/alexandernizov/Desktop/ege_conspects/pipeline/output_geometry_runs/run3/task16_triangle_circumscribed_metrics.json
+[geometry_auto] Planning (meta-llama/Llama-3.3-70B-Instruct-Turbo)...
+  Done in 14.2s (5066+1910 tok)
+  Raw length: 4875 chars
+  Full raw saved to: /Users/alexandernizov/Desktop/ege_conspects/pipeline/output_geometry_runs/run3/debug_raw.txt
+  [run3/task16_parallelogram_diagonals] FAILED: LLM returned invalid plan (no points or steps)
+[geometry_auto] Planning (meta-llama/Llama-3.3-70B-Instruct-Turbo)...
+  Done in 34.5s (5073+1636 tok)
+  Raw length: 4099 chars
+[geometry_auto] Plan validated successfully
+[geometry_auto] Plan saved: /Users/alexandernizov/Desktop/ege_conspects/pipeline/output_geometry_runs/run3/task14_cube_diagonal_section_plan.json
+  [auto-visibility] Modified 8 edge(s) visibility
+  3D plan detected (9 points), auto-canvas: x=[-0.1..12.1] y=[-1.3..9.3]
+[geometry_auto] Report: /Users/alexandernizov/Desktop/ege_conspects/pipeline/output_geometry_runs/run3/task14_cube_diagonal_section.html
+[geometry_auto] 4 text blocks, 4 visuals
+[geometry_auto] Metrics: wall=34.462s, LLM=34.457s (1 calls, 5073+1636 tok), steps=0.0017s (4)
+[geometry_auto] Metrics saved: /Users/alexandernizov/Desktop/ege_conspects/pipeline/output_geometry_runs/run3/task14_cube_diagonal_section_metrics.json
+[geometry_auto] Planning (meta-llama/Llama-3.3-70B-Instruct-Turbo)...
+  Done in 22.3s (5083+1680 tok)
+  Raw length: 4295 chars
+[geometry_auto] Plan validated successfully
+[geometry_auto] Plan saved: /Users/alexandernizov/Desktop/ege_conspects/pipeline/output_geometry_runs/run3/task14_pyramid_dihedral_angle_plan.json
+  [auto-visibility] Modified 5 edge(s) visibility
+  3D plan detected (9 points), auto-canvas: x=[-0.1..12.1] y=[0.4..7.6]
+[geometry_auto] Report: /Users/alexandernizov/Desktop/ege_conspects/pipeline/output_geometry_runs/run3/task14_pyramid_dihedral_angle.html
+[geometry_auto] 5 text blocks, 5 visuals
+[geometry_auto] Metrics: wall=22.342s, LLM=22.336s (1 calls, 5083+1680 tok), steps=0.0018s (5)
+[geometry_auto] Metrics saved: /Users/alexandernizov/Desktop/ege_conspects/pipeline/output_geometry_runs/run3/task14_pyramid_dihedral_angle_metrics.json
+
+======================================================================
+Done. Total wall time: 361.0 s
+Aggregated summary:    /Users/alexandernizov/Desktop/ege_conspects/pipeline/output_geometry_runs/geometry_variance_summary.json
+Markdown report:       /Users/alexandernizov/Desktop/ege_conspects/pipeline/output_geometry_runs/geometry_variance_summary.md
+======================================================================

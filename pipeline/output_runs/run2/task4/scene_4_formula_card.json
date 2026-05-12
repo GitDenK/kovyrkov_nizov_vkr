@@ -1,0 +1,65 @@
+{
+  "scene_type": "diagram",
+  "canvas": {
+    "width": 500,
+    "height": 300,
+    "x_min": 0,
+    "x_max": 500,
+    "y_min": 0,
+    "y_max": 300
+  },
+  "style": {
+    "theme": "light",
+    "stroke_color": "#333333",
+    "fill_color": "#f5f5f5",
+    "font_size": 13,
+    "font_family": "sans-serif"
+  },
+  "objects": [
+    {
+      "type": "title",
+      "id": "title",
+      "text": "Формула классической вероятности"
+    },
+    {
+      "type": "formula_block",
+      "id": "formula_main",
+      "formula": "$P = \\frac{m}{n}$"
+    },
+    {
+      "type": "box",
+      "id": "comp_0",
+      "text": "P — вероятность события (от 0 до 1)"
+    },
+    {
+      "type": "box",
+      "id": "comp_1",
+      "text": "m — число благоприятных исходов"
+    },
+    {
+      "type": "box",
+      "id": "comp_2",
+      "text": "n — число всех возможных исходов"
+    },
+    {
+      "type": "arrow",
+      "id": "arr_comp_0",
+      "from_point": "formula_main",
+      "to_point": "comp_0"
+    },
+    {
+      "type": "arrow",
+      "id": "arr_comp_1",
+      "from_point": "formula_main",
+      "to_point": "comp_1"
+    },
+    {
+      "type": "arrow",
+      "id": "arr_comp_2",
+      "from_point": "formula_main",
+      "to_point": "comp_2"
+    }
+  ],
+  "constraints": [],
+  "annotations": []
+}

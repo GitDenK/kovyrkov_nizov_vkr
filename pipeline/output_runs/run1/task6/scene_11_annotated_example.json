@@ -1,0 +1,146 @@
+{
+  "scene_type": "diagram",
+  "canvas": {
+    "width": 500,
+    "height": 300,
+    "x_min": 0,
+    "x_max": 500,
+    "y_min": 0,
+    "y_max": 300
+  },
+  "style": {
+    "theme": "light",
+    "stroke_color": "#333333",
+    "fill_color": "#f5f5f5",
+    "font_size": 13,
+    "font_family": "sans-serif"
+  },
+  "objects": [
+    {
+      "type": "title",
+      "id": "title",
+      "text": "Решение иррационального уравнения \\( \\sqrt{x+3} = 2 \\)"
+    },
+    {
+      "type": "box",
+      "id": "problem",
+      "text": "Задача: Решите уравнение \\( \\sqrt{x+3} = 2 \\)",
+      "style": {
+        "fill": "#fdebd0",
+        "stroke": "#e67e22"
+      }
+    },
+    {
+      "type": "formula_block",
+      "id": "expr_0",
+      "formula": "$\\( \\sqrt{x+3} = 2 \\)$"
+    },
+    {
+      "type": "arrow",
+      "id": "arr_e_0",
+      "from_point": "problem",
+      "to_point": "expr_0"
+    },
+    {
+      "type": "box",
+      "id": "ann_0",
+      "text": "Исходное уравнение"
+    },
+    {
+      "type": "arrow",
+      "id": "arr_a_0",
+      "from_point": "expr_0",
+      "to_point": "ann_0"
+    },
+    {
+      "type": "formula_block",
+      "id": "expr_1",
+      "formula": "$\\( x+3 \\ge 0 \\Rightarrow x \\ge -3 \\)$"
+    },
+    {
+      "type": "arrow",
+      "id": "arr_e_1",
+      "from_point": "ann_0",
+      "to_point": "expr_1"
+    },
+    {
+      "type": "box",
+      "id": "ann_1",
+      "text": "Определение области допустимых значений"
+    },
+    {
+      "type": "arrow",
+      "id": "arr_a_1",
+      "from_point": "expr_1",
+      "to_point": "ann_1"
+    },
+    {
+      "type": "formula_block",
+      "id": "expr_2",
+      "formula": "$\\( (\\sqrt{x+3})^2 = 2^2 \\Rightarrow x+3 = 4 \\Rightarrow x = 1 \\)$"
+    },
+    {
+      "type": "arrow",
+      "id": "arr_e_2",
+      "from_point": "ann_1",
+      "to_point": "expr_2"
+    },
+    {
+      "type": "box",
+      "id": "ann_2",
+      "text": "Возведение обеих частей уравнения в квадрат"
+    },
+    {
+      "type": "arrow",
+      "id": "arr_a_2",
+      "from_point": "expr_2",
+      "to_point": "ann_2"
+    },
+    {
+      "type": "formula_block",
+      "id": "expr_3",
+      "formula": "$\\( x = 1 \\ge -3 \\)$"
+    },
+    {
+      "type": "arrow",
+      "id": "arr_e_3",
+      "from_point": "ann_2",
+      "to_point": "expr_3"
+    },
+    {
+      "type": "box",
+      "id": "ann_3",
+      "text": "Проверка ОДЗ"
+    },
+    {
+      "type": "arrow",
+      "id": "arr_a_3",
+      "from_point": "expr_3",
+      "to_point": "ann_3"
+    },
+    {
+      "type": "formula_block",
+      "id": "expr_4",
+      "formula": "$\\( \\sqrt{1+3} = \\sqrt{4} = 2 \\)$"
+    },
+    {
+      "type": "arrow",
+      "id": "arr_e_4",
+      "from_point": "ann_3",
+      "to_point": "expr_4"
+    },
+    {
+      "type": "box",
+      "id": "ann_4",
+      "text": "Проверка в исходном уравнении"
+    },
+    {
+      "type": "arrow",
+      "id": "arr_a_4",
+      "from_point": "expr_4",
+      "to_point": "ann_4"
+    }
+  ],
+  "constraints": [],
+  "annotations": []
+}

@@ -1,0 +1,51 @@
+{
+  "scene_type": "function_plot",
+  "canvas": {
+    "width": 400,
+    "height": 400,
+    "x_min": -3.0,
+    "x_max": 5.0,
+    "y_min": 1,
+    "y_max": 5
+  },
+  "style": {
+    "theme": "light",
+    "stroke_color": "#333333",
+    "fill_color": "none",
+    "font_size": 13,
+    "font_family": "sans-serif"
+  },
+  "objects": [
+    {
+      "type": "function_curve",
+      "id": "func_main",
+      "expression": "x**0.5 + 3**0.5",
+      "x_min": -2.0,
+      "x_max": 4.0
+    },
+    {
+      "type": "point",
+      "id": "hl_0",
+      "x": 1.0,
+      "y": 2.0,
+      "label": "x=1"
+    },
+    {
+      "type": "point",
+      "id": "ann_anchor",
+      "x": 2.8,
+      "y": 3.4053708606370283
+    }
+  ],
+  "constraints": [],
+  "annotations": [
+    {
+      "type": "label",
+      "id": "ann_eq",
+      "text": "y = x**0.5 + 3**0.5",
+      "anchor": "ann_anchor",
+      "dx": 0.3,
+      "dy": 0.5
+    }
+  ]
+}

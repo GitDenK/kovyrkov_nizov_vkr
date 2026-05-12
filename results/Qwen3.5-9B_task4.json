@@ -1,0 +1,458 @@
+{
+  "model": "Qwen/Qwen3.5-9B",
+  "total_sections": 22,
+  "sections_analyzed": 20,
+  "visuals_planned": 1,
+  "total_tokens_in": 22979,
+  "total_tokens_out": 40484,
+  "total_time_sec": 525.94,
+  "plans": [
+    {
+      "plan": {
+        "section_id": 0,
+        "section_title": "Вводная часть",
+        "section_text_preview": "Оценка уровня ученика:\n\nНа основе анализа компетенций видно, что уровень знаний по теме «Классическая вероятность» у ученика **очень низкий** — большинство ключевых навыков отсутствуют (вероятность вл",
+        "need_visual": false,
+        "visual_type": "none",
+        "pedagogical_goal": "",
+        "description": "",
+        "params": {},
+        "caption": "",
+        "placement": "after_section",
+        "priority": "medium"
+      },
+      "llm_meta": {
+        "model": "Qwen/Qwen3.5-9B",
+        "elapsed_sec": 25.94,
+        "tokens_in": 1400,
+        "tokens_out": 2048,
+        "raw_response": ""
+      }
+    },
+    {
+      "plan": {
+        "section_id": 1,
+        "section_title": "1. КРАТКОЕ ОПИСАНИЕ ЗАДАНИЯ",
+        "section_text_preview": "Задание №4 ЕГЭ по профильной математике проверяет **умение считать вероятность простого события** по формуле классической вероятности.\n\n- Что проверяет: **понимание равновозможных исходов**, умение сч",
+        "need_visual": false,
+        "visual_type": "none",
+        "pedagogical_goal": "",
+        "description": "",
+        "params": {},
+        "caption": "",
+        "placement": "after_section",
+        "priority": "medium"
+      },
+      "llm_meta": {
+        "model": "Qwen/Qwen3.5-9B",
+        "elapsed_sec": 44.22,
+        "tokens_in": 1186,
+        "tokens_out": 2048,
+        "raw_response": ""
+      }
+    },
+    {
+      "plan": {
+        "section_id": 2,
+        "section_title": "Что такое классическая вероятность?",
+        "section_text_preview": "Классическая вероятность используется, когда **все исходы равновероятны** — то есть **каждый исход одинаково возможен**.\n\nПример: бросок честной монеты — «орёл» и «решка» одинаково вероятны.",
+        "need_visual": false,
+        "visual_type": "none",
+        "pedagogical_goal": "",
+        "description": "",
+        "params": {},
+        "caption": "",
+        "placement": "after_section",
+        "priority": "medium"
+      },
+      "llm_meta": {
+        "model": "Qwen/Qwen3.5-9B",
+        "elapsed_sec": 30.41,
+        "tokens_in": 1095,
+        "tokens_out": 2048,
+        "raw_response": ""
+      }
+    },
+    {
+      "plan": {
+        "section_id": 3,
+        "section_title": "Основные понятия",
+        "section_text_preview": "- **Исход** — один из возможных результатов опыта.\n- **Благоприятный исход** — исход, при котором событие происходит.\n- **Пространство исходов** — полный список всех возможных исходов.",
+        "need_visual": false,
+        "visual_type": "none",
+        "pedagogical_goal": "",
+        "description": "",
+        "params": {},
+        "caption": "",
+        "placement": "after_section",
+        "priority": "medium"
+      },
+      "llm_meta": {
+        "model": "Qwen/Qwen3.5-9B",
+        "elapsed_sec": 39.73,
+        "tokens_in": 1081,
+        "tokens_out": 2048,
+        "raw_response": ""
+      }
+    },
+    {
+      "plan": {
+        "section_id": 4,
+        "section_title": "Формула классической вероятности:",
+        "section_text_preview": "$P = \\frac{m}{n}$\n\nгде:\n- $m$ — число **благоприятных** исходов,\n- $n$ — число **всех возможных** исходов,\n- $P$ — вероятность события (всегда от 0 до 1).\n\n---",
+        "need_visual": true,
+        "visual_type": "formula_card",
+        "pedagogical_goal": "Помочь ученику запомнить структуру формулы классической вероятности и четко связать переменные m, n, P с их определениями.",
+        "description": "Визуальная карточка с формулой P = m/n, где компоненты m, n и P выделены и снабжены пояснениями, соответствующими тексту секции.",
+        "params": {
+          "formula_latex": "P = \\frac{m}{n}",
+          "components": {
+            "m": "число благоприятных исходов",
+            "n": "число всех возможных исходов",
+            "P": "вероятность события"
+          }
+        },
+        "caption": "Формула классической вероятности",
+        "placement": "inline",
+        "priority": "high"
+      },
+      "llm_meta": {
+        "model": "Qwen/Qwen3.5-9B",
+        "elapsed_sec": 26.23,
+        "tokens_in": 1104,
+        "tokens_out": 1572,
+        "raw_response": "{\n  \"need_visual\": true,\n  \"visual_type\": \"formula_card\",\n  \"pedagogical_goal\": \"Помочь ученику запомнить структуру формулы классической вероятности и четко связать переменные m, n, P с их определениями.\",\n  \"description\": \"Визуальная карточка с формулой P = m/n, где компоненты m, n и P выделены и снабжены пояснениями, соответствующими тексту секции.\",\n  \"params\": {\n    \"formula_latex\": \"P = \\\\frac{m}{n}\",\n    \"components\": {\n      \"m\": \"число благоприятных исходов\",\n      \"n\": \"число всех возможных исходов\",\n      \"P\": \"вероятность события\"\n    }\n  },\n  \"caption\": \"Формула классической вероятности\",\n  \"placement\": \"inline\",\n  \"priority\": \"high\"\n}"
+      }
+    },
+    {
+      "plan": {
+        "section_id": 5,
+        "section_title": "3. ТИПЫ ЗАДАЧ, КОТОРЫЕ МОГУТ ПОПАСТЬСЯ",
+        "section_text_preview": "| Тип задачи | Описание | Особенности |\n|-----------|--------|------------|\n| **Броски монет/кубиков** | Например: «бросили две монеты, найдите вероятность, что выпало два орла». | Малое число исходов",
+        "need_visual": false,
+        "visual_type": "none",
+        "pedagogical_goal": "",
+        "description": "",
+        "params": {},
+        "caption": "",
+        "placement": "after_section",
+        "priority": "medium"
+      },
+      "llm_meta": {
+        "model": "Qwen/Qwen3.5-9B",
+        "elapsed_sec": 33.88,
+        "tokens_in": 1281,
+        "tokens_out": 2048,
+        "raw_response": ""
+      }
+    },
+    {
+      "plan": {
+        "section_id": 6,
+        "section_title": "Пошаговый план:",
+        "section_text_preview": "1. **Определи, что такое \"один исход\"**  \n   Пример: один бросок монеты — исход: «орёл» или «решка». Два броска — исход: пара: (орёл, орёл), (орёл, решка) и т.д.\n\n2. **Найди $n$ — число всех возможных",
+        "need_visual": false,
+        "visual_type": "none",
+        "pedagogical_goal": "",
+        "description": "",
+        "params": {},
+        "caption": "",
+        "placement": "after_section",
+        "priority": "medium"
+      },
+      "llm_meta": {
+        "model": "Qwen/Qwen3.5-9B",
+        "elapsed_sec": 35.13,
+        "tokens_in": 1330,
+        "tokens_out": 2048,
+        "raw_response": ""
+      }
+    },
+    {
+      "plan": {
+        "section_id": 7,
+        "section_title": "Как избежать ошибок:",
+        "section_text_preview": "- ❌ Не пиши $P = m/n$, если исходы **не равновозможны** (например, если монета нечестная).\n- ❌ Не забывай, что (О, Р) и (Р, О) — **разные исходы**, если порядок важен.\n- ❌ Не округляй слишком рано — д",
+        "need_visual": false,
+        "visual_type": "none",
+        "pedagogical_goal": "",
+        "description": "",
+        "params": {},
+        "caption": "",
+        "placement": "after_section",
+        "priority": "medium"
+      },
+      "llm_meta": {
+        "model": "Qwen/Qwen3.5-9B",
+        "elapsed_sec": 29.39,
+        "tokens_in": 1145,
+        "tokens_out": 2048,
+        "raw_response": ""
+      }
+    },
+    {
+      "plan": {
+        "section_id": 8,
+        "section_title": "Пример 1: Бросок двух монет",
+        "section_text_preview": "**Задача:** Бросили две симметричные монеты. Найдите вероятность того, что выпало **ровно один орёл**.",
+        "need_visual": false,
+        "visual_type": "none",
+        "pedagogical_goal": "",
+        "description": "",
+        "params": {},
+        "caption": "",
+        "placement": "after_section",
+        "priority": "medium"
+      },
+      "llm_meta": {
+        "model": "Qwen/Qwen3.5-9B",
+        "elapsed_sec": 30.0,
+        "tokens_in": 1071,
+        "tokens_out": 2048,
+        "raw_response": ""
+      }
+    },
+    {
+      "plan": {
+        "section_id": 9,
+        "section_title": "Шаг 1: Определим исход",
+        "section_text_preview": "Один исход — результат двух бросков: пара: (первая монета, вторая монета)",
+        "need_visual": false,
+        "visual_type": "none",
+        "pedagogical_goal": "",
+        "description": "",
+        "params": {},
+        "caption": "",
+        "placement": "after_section",
+        "priority": "medium"
+      },
+      "llm_meta": {
+        "model": "Qwen/Qwen3.5-9B",
+        "elapsed_sec": 20.86,
+        "tokens_in": 1062,
+        "tokens_out": 2048,
+        "raw_response": ""
+      }
+    },
+    {
+      "plan": {
+        "section_id": 10,
+        "section_title": "Шаг 2: Найдём $n$ — все исходы",
+        "section_text_preview": "Перечислим:\n1. (О, О)\n2. (О, Р)\n3. (Р, О)\n4. (Р, Р)\n\n→ $n = 4$",
+        "need_visual": false,
+        "visual_type": "none",
+        "pedagogical_goal": "",
+        "description": "",
+        "params": {},
+        "caption": "",
+        "placement": "after_section",
+        "priority": "medium"
+      },
+      "llm_meta": {
+        "model": "Qwen/Qwen3.5-9B",
+        "elapsed_sec": 18.07,
+        "tokens_in": 1090,
+        "tokens_out": 2048,
+        "raw_response": ""
+      }
+    },
+    {
+      "plan": {
+        "section_id": 11,
+        "section_title": "Шаг 3: Найдём $m$ — благоприятные исходы",
+        "section_text_preview": "Нам нужно **ровно один орёл** — то есть один орёл, один решка.\n\nПодходят:\n- (О, Р) — один орёл\n- (Р, О) — один орёл\n\n(О, О) — два орла → не подходит  \n(Р, Р) — нет орлов → не подходит\n\n→ $m = 2$",
+        "need_visual": false,
+        "visual_type": "none",
+        "pedagogical_goal": "",
+        "description": "",
+        "params": {},
+        "caption": "",
+        "placement": "after_section",
+        "priority": "medium"
+      },
+      "llm_meta": {
+        "model": "Qwen/Qwen3.5-9B",
+        "elapsed_sec": 25.52,
+        "tokens_in": 1127,
+        "tokens_out": 2048,
+        "raw_response": ""
+      }
+    },
+    {
+      "plan": {
+        "section_id": 12,
+        "section_title": "Шаг 4: Подставим в формулу",
+        "section_text_preview": "$P = \\frac{m}{n} = \\frac{2}{4} = 0.5$",
+        "need_visual": false,
+        "visual_type": "none",
+        "pedagogical_goal": "",
+        "description": "",
+        "params": {},
+        "caption": "",
+        "placement": "after_section",
+        "priority": "medium"
+      },
+      "llm_meta": {
+        "model": "Qwen/Qwen3.5-9B",
+        "elapsed_sec": 20.85,
+        "tokens_in": 1065,
+        "tokens_out": 2048,
+        "raw_response": ""
+      }
+    },
+    {
+      "plan": {
+        "section_id": 14,
+        "section_title": "Пример 2: Бросок двух кубиков",
+        "section_text_preview": "**Задача:** Бросили два игральных кубика. Найдите вероятность того, что **сумма выпавших чисел равна 7**.",
+        "need_visual": false,
+        "visual_type": "none",
+        "pedagogical_goal": "",
+        "description": "",
+        "params": {},
+        "caption": "",
+        "placement": "after_section",
+        "priority": "medium"
+      },
+      "llm_meta": {
+        "model": "Qwen/Qwen3.5-9B",
+        "elapsed_sec": 21.81,
+        "tokens_in": 1075,
+        "tokens_out": 2048,
+        "raw_response": ""
+      }
+    },
+    {
+      "plan": {
+        "section_id": 15,
+        "section_title": "Шаг 2: Найдём $n$ — все исходы",
+        "section_text_preview": "Каждый кубик — от 1 до 6 → $n = 6 \\times 6 = 36$",
+        "need_visual": false,
+        "visual_type": "none",
+        "pedagogical_goal": "",
+        "description": "",
+        "params": {},
+        "caption": "",
+        "placement": "after_section",
+        "priority": "medium"
+      },
+      "llm_meta": {
+        "model": "Qwen/Qwen3.5-9B",
+        "elapsed_sec": 19.35,
+        "tokens_in": 1072,
+        "tokens_out": 2048,
+        "raw_response": ""
+      }
+    },
+    {
+      "plan": {
+        "section_id": 16,
+        "section_title": "Шаг 3: Найдём $m$ — пары, где $a + b = 7$",
+        "section_text_preview": "Переберём:\n- (1, 6) → 1+6=7\n- (2, 5) → 2+5=7\n- (3, 4) → 3+4=7\n- (4, 3) → 4+3=7\n- (5, 2) → 5+2=7\n- (6, 1) → 6+1=7\n\n→ $m = 6$",
+        "need_visual": false,
+        "visual_type": "none",
+        "pedagogical_goal": "",
+        "description": "",
+        "params": {},
+        "caption": "",
+        "placement": "after_section",
+        "priority": "medium"
+      },
+      "llm_meta": {
+        "model": "Qwen/Qwen3.5-9B",
+        "elapsed_sec": 20.16,
+        "tokens_in": 1155,
+        "tokens_out": 2048,
+        "raw_response": ""
+      }
+    },
+    {
+      "plan": {
+        "section_id": 17,
+        "section_title": "Шаг 4: Подставим",
+        "section_text_preview": "$P = \\frac{6}{36} = 0.166...$\n\nОкруглим до **тысячных**: $0.167$",
+        "need_visual": false,
+        "visual_type": "none",
+        "pedagogical_goal": "",
+        "description": "",
+        "params": {},
+        "caption": "",
+        "placement": "after_section",
+        "priority": "medium"
+      },
+      "llm_meta": {
+        "model": "Qwen/Qwen3.5-9B",
+        "elapsed_sec": 19.98,
+        "tokens_in": 1075,
+        "tokens_out": 2048,
+        "raw_response": ""
+      }
+    },
+    {
+      "plan": {
+        "section_id": 19,
+        "section_title": "6. ПРАКТИЧЕСКИЕ СОВЕТЫ",
+        "section_text_preview": "✅ **Если исходов мало — перечисляй!**  \nНе пытайся сразу считать по формуле. Перебери — так меньше ошибок.\n\n✅ **Используй таблицу или список**  \nДля двух кубиков — удобно составить таблицу 6×6.\n\n✅ **О",
+        "need_visual": false,
+        "visual_type": "none",
+        "pedagogical_goal": "",
+        "description": "",
+        "params": {},
+        "caption": "",
+        "placement": "after_section",
+        "priority": "medium"
+      },
+      "llm_meta": {
+        "model": "Qwen/Qwen3.5-9B",
+        "elapsed_sec": 21.41,
+        "tokens_in": 1231,
+        "tokens_out": 2048,
+        "raw_response": ""
+      }
+    },
+    {
+      "plan": {
+        "section_id": 20,
+        "section_title": "Что делать:",
+        "section_text_preview": "1. **Научись делить числа** — например, $3/4 = 0.75$, $1/3 ≈ 0.333$.\n2. **Решай задачи с перебором** — начни с 2 монет, 2 кубиков.\n3. **Запоминай: $P = m/n$ — только если исходы равновозможны.**\n4. **",
+        "need_visual": false,
+        "visual_type": "none",
+        "pedagogical_goal": "",
+        "description": "",
+        "params": {},
+        "caption": "",
+        "placement": "after_section",
+        "priority": "medium"
+      },
+      "llm_meta": {
+        "model": "Qwen/Qwen3.5-9B",
+        "elapsed_sec": 22.34,
+        "tokens_in": 1200,
+        "tokens_out": 2048,
+        "raw_response": ""
+      }
+    },
+    {
+      "plan": {
+        "section_id": 21,
+        "section_title": "Темы для повторения:",
+        "section_text_preview": "- Перебор исходов\n- Дроби и деление\n- Округление до тысячных\n- Простейшие условия: «ровно», «хотя бы»\n\n---\n\n💡 **Главное правило**:  \n> Не бойся писать всё на бумаге. Даже если кажется, что «это очевид",
+        "need_visual": false,
+        "visual_type": "none",
+        "pedagogical_goal": "",
+        "description": "",
+        "params": {},
+        "caption": "",
+        "placement": "after_section",
+        "priority": "medium"
+      },
+      "llm_meta": {
+        "model": "Qwen/Qwen3.5-9B",
+        "elapsed_sec": 20.66,
+        "tokens_in": 1134,
+        "tokens_out": 2048,
+        "raw_response": ""
+      }
+    }
+  ]
+}

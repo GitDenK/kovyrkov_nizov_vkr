@@ -1,0 +1,150 @@
+{
+  "model": "Qwen/Qwen2.5-7B-Instruct-Turbo",
+  "total_sections": 13,
+  "graphs_planned": 4,
+  "total_tokens_in": 8516,
+  "total_tokens_out": 1141,
+  "total_time_sec": 11.47,
+  "plans": [
+    {
+      "section_id": 5,
+      "section_title": "Тип 1: Найти значение производной по наклону касательной",
+      "section_text_preview": "**Шаг 1:** Найди на графике точку, где проведена касательная.  \n**Шаг 2:** От этой точки проведи в сторону касательной два отрезка:  \n- один — по горизонтали (на 1–2–3 клетки вправо),  \n- второй — по ",
+      "need_visual": true,
+      "visual_type": "function_graph",
+      "description": "График функции с касательной в точке, где найдена производная",
+      "params": {
+        "equation": "x**2",
+        "x_range": [
+          -2,
+          2
+        ],
+        "highlight_points": [
+          {
+            "x": 1,
+            "y": 1,
+            "label": "точка касания (1,1)"
+          }
+        ]
+      },
+      "caption": "Найти значение производной по наклону касательной",
+      "priority": "high"
+    },
+    {
+      "section_id": 6,
+      "section_title": "Тип 2: По графику производной найти, где функция возрастает/убывает",
+      "section_text_preview": "**Шаг 1:** Найди на графике $f'(x)$ участки, где она **выше оси $x$** ($f'(x) > 0$).  \n→ На этих участках функция $f(x)$ **возрастает**.  \n**Шаг 2:** Найди участки, где $f'(x) < 0$ (ниже оси).  \n→ Там",
+      "need_visual": true,
+      "visual_type": "function_graph",
+      "description": "График функции и её производной для определения интервалов возрастания и убывания",
+      "params": {
+        "equation": "f(x)",
+        "derivative": "f'(x)",
+        "x_range": [
+          -3,
+          3
+        ],
+        "highlight_points": [
+          {
+            "x": -1,
+            "y": 0,
+            "label": "нуль производной"
+          },
+          {
+            "x": 1,
+            "y": 0,
+            "label": "нуль производной"
+          }
+        ],
+        "increasing_intervals": [
+          {
+            "start": -3,
+            "end": -1
+          },
+          {
+            "start": 1,
+            "end": 3
+          }
+        ],
+        "decreasing_intervals": [
+          {
+            "start": -1,
+            "end": 1
+          }
+        ]
+      },
+      "caption": "График функции и её производной",
+      "priority": "high"
+    },
+    {
+      "section_id": 7,
+      "section_title": "Пример 1: Найти значение производной по наклону касательной",
+      "section_text_preview": "**Задача:** На графике функции $y = f(x)$ проведена касательная в точке $x = 2$. Найдите $f'(2)$.\n\n**График:** В точке $x = 2$, $y = 3$. Касательная идёт из точки $(2, 3)$ в точку $(4, 7)$.\n\n**Решение",
+      "need_visual": true,
+      "visual_type": "function_graph",
+      "description": "График функции y = f(x) с касательной в точке x = 2",
+      "params": {
+        "equation": "f(x)",
+        "x_range": [
+          0,
+          5
+        ],
+        "highlight_points": [
+          {
+            "x": 2,
+            "y": 3,
+            "label": "(2,3)"
+          },
+          {
+            "x": 4,
+            "y": 7,
+            "label": "(4,7)"
+          }
+        ],
+        "tangent_equation": "2*x - 1"
+      },
+      "caption": "График функции и касательная в точке x=2",
+      "priority": "high"
+    },
+    {
+      "section_id": 8,
+      "section_title": "Пример 2: По графику производной найти, где функция возрастает",
+      "section_text_preview": "**Задача:** На рисунке изображён график производной функции $y = f(x)$, определённой на отрезке $[-5; 5]$. Найдите количество целых точек, в которых функция $f(x)$ возрастает.\n\n**График:**  \n- От $x =",
+      "need_visual": true,
+      "visual_type": "function_graph",
+      "description": "График производной функции y = f(x) на отрезке [-5; 5]",
+      "params": {
+        "equations": [
+          {
+            "expression": "f'(x)",
+            "label": "График производной функции y = f(x)"
+          }
+        ],
+        "x_range": [
+          -5,
+          5
+        ],
+        "highlight_points": [
+          {
+            "x": -2,
+            "y": 0,
+            "label": "x=-2"
+          },
+          {
+            "x": 1,
+            "y": 0,
+            "label": "x=1"
+          }
+        ],
+        "increasing_intervals": [
+          {
+            "start": -2,
+            "end": 1
+          }
+        ]
+      },
+      "caption": "График производной функции y = f(x) на отрезке [-5; 5]",
+      "priority": "high"
+    }
+  ]
+}

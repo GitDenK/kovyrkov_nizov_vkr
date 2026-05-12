@@ -1,0 +1,129 @@
+```json
+{
+  "title": "x⁴ − 5x² + 4 = a — ровно 6 решений",
+  "canvas": {
+    "width": 560,
+    "height": 440,
+    "x_min": -3,
+    "x_max": 3,
+    "y_min": -3,
+    "y_max": 6,
+    "x_label": "x",
+    "y_label": "y"
+  },
+  "steps": [
+    {
+      "text": "Строим график $y = x^4 - 5x^2 + 4$.",
+      "objects": [
+        {
+          "type": "function_curve",
+          "id": "f1",
+          "expression": "x**4 - 5*x**2 + 4",
+          "label": "y = x⁴ − 5x² + 4",
+          "style": {
+            "stroke": "#2980b9",
+            "stroke_width": 2.5
+          }
+        }
+      ]
+    },
+    {
+      "text": "Определяем критические значения параметра $a$.",
+      "objects": [
+        {
+          "type": "hline",
+          "id": "h1",
+          "y": -9/4,
+          "label": "a = −9/4",
+          "style": {
+            "stroke": "#e74c3c",
+            "dash": "dashed"
+          }
+        },
+        {
+          "type": "hline",
+          "id": "h2",
+          "y": 0,
+          "label": "a = 0",
+          "style": {
+            "stroke": "#8e44ad",
+            "dash": "dashed"
+          }
+        },
+        {
+          "type": "hline",
+          "id": "h3",
+          "y": 4,
+          "label": "a = 4",
+          "style": {
+            "stroke": "#27ae60",
+            "dash": "dashed"
+          }
+        }
+      ]
+    },
+    {
+      "text": "Анализируем количество решений для каждого критического значения $a$.",
+      "objects": [
+        {
+          "type": "region_label",
+          "id": "rl1",
+          "x": -2,
+          "y": 5,
+          "text": "4 решения",
+          "style": {
+            "color": "#27ae60",
+            "font_size": 13,
+            "background": "rgba(255,255,255,0.9)"
+          }
+        },
+        {
+          "type": "region_label",
+          "id": "rl2",
+          "x": 0,
+          "y": -2,
+          "text": "6 решений",
+          "style": {
+            "color": "#e74c3c",
+            "font_size": 13,
+            "background": "rgba(255,255,255,0.9)"
+          }
+        }
+      ]
+    },
+    {
+      "text": "Определяем диапазон значений $a$ для ровно 6 решений.",
+      "objects": [
+        {
+          "type": "filled_between",
+          "id": "fb1",
+          "upper": "-9/4",
+          "lower": "0",
+          "x_min": -3,
+          "x_max": 3,
+          "style": {
+            "fill": "rgba(41,128,185,0.18)"
+          }
+        }
+      ]
+    },
+    {
+      "text": "Ответ: $-\\frac{9}{4} < a < 0$.",
+      "objects": [
+        {
+          "type": "region_label",
+          "id": "rl3",
+          "x": 0,
+          "y": -1,
+          "text": "Ответ",
+          "style": {
+            "color": "#2980b9",
+            "font_size": 14,
+            "background": "rgba(255,255,255,0.85)"
+          }
+        }
+      ]
+    }
+  ]
+}
+```

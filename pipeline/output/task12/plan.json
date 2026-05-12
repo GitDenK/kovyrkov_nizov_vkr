@@ -1,0 +1,481 @@
+{
+  "model": "Qwen/Qwen2.5-7B-Instruct-Turbo",
+  "version": "v2",
+  "total_sections": 16,
+  "sections_analyzed": 13,
+  "visuals_planned": 8,
+  "total_tokens_in": 21723,
+  "total_tokens_out": 4166,
+  "total_time_sec": 39.35,
+  "plans": [
+    {
+      "plan": {
+        "section_id": 0,
+        "section_title": "Оценка уровня владения учеником темой",
+        "section_text_preview": "На основе анализа компетенций я делаю вывод:  \nУченик **очень слабо владеет** темой исследования функций с помощью производной. Уровень владения большинством ключевых навыков — **менее 10%**, а по мно",
+        "need_visual": false,
+        "visual_type": "none",
+        "pedagogical_goal": "",
+        "description": "",
+        "params": {},
+        "caption": "",
+        "placement": "after_section",
+        "priority": "medium"
+      },
+      "llm_meta": {
+        "model": "Qwen/Qwen2.5-7B-Instruct-Turbo",
+        "pass1_decision": {
+          "section_id": 0,
+          "need_visual": false,
+          "visual_type": "none",
+          "reason": "мотивационный блок"
+        }
+      }
+    },
+    {
+      "plan": {
+        "section_id": 1,
+        "section_title": "1. КРАТКОЕ ОПИСАНИЕ ЗАДАНИЯ",
+        "section_text_preview": "Задание №12 ЕГЭ по профильной математике проверяет умение **исследовать функцию с помощью производной**.\n\nЧто проверяется:\n- Умение находить производную.\n- Умение находить точки экстремума.\n- Умение о",
+        "need_visual": false,
+        "visual_type": "none",
+        "pedagogical_goal": "",
+        "description": "",
+        "params": {},
+        "caption": "",
+        "placement": "after_section",
+        "priority": "medium"
+      },
+      "llm_meta": {
+        "model": "Qwen/Qwen2.5-7B-Instruct-Turbo",
+        "pass1_decision": {
+          "section_id": 1,
+          "need_visual": false,
+          "visual_type": "none",
+          "reason": "краткое описание задания"
+        }
+      }
+    },
+    {
+      "plan": {
+        "section_id": 2,
+        "section_title": "Что такое производная?",
+        "section_text_preview": "Производная функции $f(x)$ в точке $x$ — это скорость изменения функции в этой точке.  \nОна показывает, **возрастает** или **убывает** функция.",
+        "need_visual": true,
+        "visual_type": "definition",
+        "pedagogical_goal": "Определить, что производная функции показывает скорость изменения функции в точке и как это влияет на возрастание или убывание функции",
+        "description": "Определение производной функции с примером и пояснениями",
+        "params": {
+          "definition_text": "Производная функции $f(x)$ в точке $x$ — это скорость изменения функции в этой точке.",
+          "impact_on_function": [
+            "возрастает",
+            "убывает"
+          ]
+        },
+        "caption": "Определение производной функции",
+        "placement": "after_section",
+        "priority": "high"
+      },
+      "llm_meta": {
+        "model": "Qwen/Qwen2.5-7B-Instruct-Turbo",
+        "pass1_decision": {
+          "section_id": 2,
+          "need_visual": true,
+          "visual_type": "definition",
+          "reason": "определение производной"
+        }
+      }
+    },
+    {
+      "plan": {
+        "section_id": 3,
+        "section_title": "Как производная помогает находить экстремумы?",
+        "section_text_preview": "- Если $f'(x) > 0$ — функция **возрастает**.\n- Если $f'(x) < 0$ — функция **убывает**.\n- Если $f'(x) = 0$ — **возможно**, в этой точке **экстремум** (максимум или минимум).",
+        "need_visual": true,
+        "visual_type": "derivative_sign_chart",
+        "pedagogical_goal": "Увидеть где функция возрастает и убывает, найти точку экстремума",
+        "description": "Числовая прямая с критической точкой x=2, знаки производной слева и справа",
+        "params": {
+          "function": "f(x)",
+          "derivative": "f'(x)",
+          "critical_points": [
+            2
+          ],
+          "intervals": [
+            {
+              "range": "(-inf, 2)",
+              "sign": "-",
+              "behavior": "убывает"
+            },
+            {
+              "range": "(2, +inf)",
+              "sign": "+",
+              "behavior": "возрастает"
+            }
+          ],
+          "extrema": [
+            {
+              "x": 2,
+              "type": "минимум"
+            }
+          ]
+        },
+        "caption": "Знаки производной f'(x) = 0 при x=2",
+        "placement": "after_section",
+        "priority": "high"
+      },
+      "llm_meta": {
+        "model": "Qwen/Qwen2.5-7B-Instruct-Turbo",
+        "pass1_decision": {
+          "section_id": 3,
+          "need_visual": true,
+          "visual_type": "derivative_sign_chart",
+          "reason": "диаграмма знаков производной"
+        }
+      }
+    },
+    {
+      "plan": {
+        "section_id": 4,
+        "section_title": "Что такое экстремум?",
+        "section_text_preview": "- **Точка максимума**: функция сначала возрастает, потом убывает → производная меняет знак с **+ на –**.\n- **Точка минимума**: функция сначала убывает, потом возрастает → производная меняет знак с **–",
+        "need_visual": true,
+        "visual_type": "definition",
+        "pedagogical_goal": "Определить и различить понятия точки максимума и точки минимума",
+        "description": "Определение точек максимума и минимума с указанием условий изменения знака производной",
+        "params": {
+          "definition_max": "Функция сначала возрастает, потом убывает → производная меняет знак с + на –",
+          "definition_min": "Функция сначала убывает, потом возрастает → производная меняет знак с – на +"
+        },
+        "caption": "Определение экстремумов функции",
+        "placement": "after_section",
+        "priority": "high"
+      },
+      "llm_meta": {
+        "model": "Qwen/Qwen2.5-7B-Instruct-Turbo",
+        "pass1_decision": {
+          "section_id": 4,
+          "need_visual": true,
+          "visual_type": "definition",
+          "reason": "определение экстремума"
+        }
+      }
+    },
+    {
+      "plan": {
+        "section_id": 5,
+        "section_title": "Важные формулы производных (запоминаем!):",
+        "section_text_preview": "| Функция | Производная |\n|--------|-------------|\n| $x^n$ | $n \\cdot x^{n-1}$ |\n| $c$ (константа) | $0$ |\n| $kx$ | $k$ |\n\n> Пример: $(x^2)' = 2x$, $(x^3)' = 3x^2$, $(5x)' = 5$\n\n---",
+        "need_visual": true,
+        "visual_type": "formula_card",
+        "pedagogical_goal": "Запомнить основные формулы производных и применить их к примерам",
+        "description": "Карточка с формулами производных и примерами их применения",
+        "params": {
+          "formulas": [
+            {
+              "function": "x^n",
+              "derivative": "n \\cdot x^{n-1}"
+            },
+            {
+              "function": "c",
+              "derivative": "0"
+            },
+            {
+              "function": "kx",
+              "derivative": "k"
+            }
+          ],
+          "examples": [
+            {
+              "function": "x^2",
+              "derivative": "2x"
+            },
+            {
+              "function": "x^3",
+              "derivative": "3x^2"
+            },
+            {
+              "function": "5x",
+              "derivative": "5"
+            }
+          ]
+        },
+        "caption": "Основные формулы производных и примеры их применения",
+        "placement": "after_section",
+        "priority": "high"
+      },
+      "llm_meta": {
+        "model": "Qwen/Qwen2.5-7B-Instruct-Turbo",
+        "pass1_decision": {
+          "section_id": 5,
+          "need_visual": true,
+          "visual_type": "formula_card",
+          "reason": "список важных формул производных"
+        }
+      }
+    },
+    {
+      "plan": {
+        "section_id": 6,
+        "section_title": "Тип 1: Найти **наибольшее или наименьшее значение функции на отрезке**",
+        "section_text_preview": "Пример:  \nНайти наибольшее значение функции $f(x) = x^2 - 4x + 5$ на отрезке $[0; 3]$.",
+        "need_visual": true,
+        "visual_type": "annotated_example",
+        "pedagogical_goal": "Показать процесс нахождения наибольшего значения функции на отрезке с пояснениями к каждому шагу",
+        "description": "Пошаговое решение задачи с выделением ключевых преобразований и объяснениями",
+        "params": {
+          "problem": "Найти наибольшее значение функции $f(x) = x^2 - 4x + 5$ на отрезке $[0; 3]$",
+          "steps": [
+            {
+              "expression": "f(x) = x^2 - 4x + 5",
+              "annotation": "Запишем функцию"
+            },
+            {
+              "expression": "f'(x) = 2x - 4",
+              "annotation": "Найдем производную функции"
+            },
+            {
+              "expression": "2x - 4 = 0",
+              "annotation": "Найдем критические точки"
+            },
+            {
+              "expression": "2x = 4",
+              "annotation": "Решаем уравнение"
+            },
+            {
+              "expression": "x = 2",
+              "annotation": "Критическая точка"
+            },
+            {
+              "expression": "f(0) = 0^2 - 4*0 + 5 = 5",
+              "annotation": "Вычислим значение функции в точке 0"
+            },
+            {
+              "expression": "f(2) = 2^2 - 4*2 + 5 = 1",
+              "annotation": "Вычислим значение функции в точке 2"
+            },
+            {
+              "expression": "f(3) = 3^2 - 4*3 + 5 = 2",
+              "annotation": "Вычислим значение функции в точке 3"
+            },
+            {
+              "expression": "Наибольшее значение функции на отрезке $[0; 3]$ равно 5",
+              "annotation": "Сравним значения и найдем наибольшее"
+            }
+          ]
+        },
+        "caption": "Пошаговое решение задачи нахождения наибольшего значения функции $f(x) = x^2 - 4x + 5$ на отрезке $[0; 3]$",
+        "placement": "after_section",
+        "priority": "high"
+      },
+      "llm_meta": {
+        "model": "Qwen/Qwen2.5-7B-Instruct-Turbo",
+        "pass1_decision": {
+          "section_id": 6,
+          "need_visual": true,
+          "visual_type": "annotated_example",
+          "reason": "пример нахождения наибольшего значения на отрезке"
+        }
+      }
+    },
+    {
+      "plan": {
+        "section_id": 7,
+        "section_title": "Тип 2: Найти **точку максимума или минимума**",
+        "section_text_preview": "Пример:  \nНайти точку минимума функции $f(x) = x^2 - 6x + 8$.",
+        "need_visual": true,
+        "visual_type": "annotated_example",
+        "pedagogical_goal": "Показать пошаговый процесс нахождения точки минимума функции",
+        "description": "Пошаговое решение задачи нахождения точки минимума функции с выделением ключевых шагов",
+        "params": {
+          "problem": "Найти точку минимума функции $f(x) = x^2 - 6x + 8$",
+          "steps": [
+            {
+              "expression": "f(x) = x^2 - 6x + 8",
+              "annotation": "Запишем исходную функцию"
+            },
+            {
+              "expression": "f'(x) = 2x - 6",
+              "annotation": "Найдем первую производную"
+            },
+            {
+              "expression": "2x - 6 = 0",
+              "annotation": "Решим уравнение f'(x) = 0"
+            },
+            {
+              "expression": "x = 3",
+              "annotation": "Решаем линейное уравнение"
+            },
+            {
+              "expression": "f(3) = 3^2 - 6*3 + 8",
+              "annotation": "Подставим x = 3 в исходную функцию"
+            },
+            {
+              "expression": "f(3) = 9 - 18 + 8",
+              "annotation": "Вычислим значение функции"
+            },
+            {
+              "expression": "f(3) = -1",
+              "annotation": "Получаем значение функции"
+            }
+          ]
+        },
+        "caption": "Пошаговое решение задачи нахождения точки минимума функции $f(x) = x^2 - 6x + 8$",
+        "placement": "after_section",
+        "priority": "high"
+      },
+      "llm_meta": {
+        "model": "Qwen/Qwen2.5-7B-Instruct-Turbo",
+        "pass1_decision": {
+          "section_id": 7,
+          "need_visual": true,
+          "visual_type": "annotated_example",
+          "reason": "пример нахождения точки минимума"
+        }
+      }
+    },
+    {
+      "plan": {
+        "section_id": 8,
+        "section_title": "Тип 3: Найти **значение функции в точке экстремума**",
+        "section_text_preview": "Пример:  \nНайти значение функции $f(x) = x^2 - 4x + 3$ в её точке минимума.\n\n---",
+        "need_visual": true,
+        "visual_type": "annotated_example",
+        "pedagogical_goal": "",
+        "description": "",
+        "params": {},
+        "caption": "",
+        "placement": "after_section",
+        "priority": "high"
+      },
+      "llm_meta": {
+        "model": "Qwen/Qwen2.5-7B-Instruct-Turbo",
+        "pass1_decision": {
+          "section_id": 8,
+          "need_visual": true,
+          "visual_type": "annotated_example",
+          "reason": "пример нахождения значения функции в точке экстремума"
+        }
+      }
+    },
+    {
+      "plan": {
+        "section_id": 9,
+        "section_title": "Для задачи: найти наибольшее/наименьшее значение на отрезке",
+        "section_text_preview": "**Шаг 1: Найди производную $f'(x)$**  \nИспользуй правило: $(x^n)' = n \\cdot x^{n-1}$.\n\n**Шаг 2: Найди критические точки**  \nРеши уравнение: $f'(x) = 0$.  \n(Критические точки — это точки, где производн",
+        "need_visual": true,
+        "visual_type": "step_by_step_diagram",
+        "pedagogical_goal": "Запомнить последовательность шагов для нахождения наибольшего/наименьшего значения функции на отрезке",
+        "description": "Вертикальная цепочка шагов с стрелками между ними",
+        "params": {
+          "steps": [
+            {
+              "label": "Найди производную $f'(x)$",
+              "detail": "Используй правило: $(x^n)' = n \\cdot x^{n-1}$"
+            },
+            {
+              "label": "Найди критические точки",
+              "detail": "Реши уравнение: $f'(x) = 0$"
+            },
+            {
+              "label": "Проверь, какие из критических точек лежат на отрезке",
+              "detail": "Если точка $x_0$ — решение уравнения, и она входит в отрезок, оставь её. Если не входит — отбрось."
+            },
+            {
+              "label": "Подставь в исходную функцию $f(x)$",
+              "detail": "Подставь: все критические точки, лежащие на отрезке, и оба конца отрезка."
+            },
+            {
+              "label": "Сравни значения",
+              "detail": "Выбери наибольшее или наименьшее — в зависимости от задания."
+            }
+          ]
+        },
+        "caption": "Алгоритм нахождения наибольшего/наименьшего значения функции на отрезке",
+        "placement": "after_section",
+        "priority": "high"
+      },
+      "llm_meta": {
+        "model": "Qwen/Qwen2.5-7B-Instruct-Turbo",
+        "pass1_decision": {
+          "section_id": 9,
+          "need_visual": true,
+          "visual_type": "step_by_step_diagram",
+          "reason": "шаги решения для нахождения наибольшего значения на отрезке"
+        }
+      }
+    },
+    {
+      "plan": {
+        "section_id": 11,
+        "section_title": "Частые ошибки и как их избежать",
+        "section_text_preview": "| Ошибка | Как исправить |\n|-------|----------------|\n| Забыть подставить концы отрезка | Всегда подставляй **все критические точки и оба конца** |\n| Решить $f'(x) = 0$, но не проверить, входит ли кор",
+        "need_visual": false,
+        "visual_type": "none",
+        "pedagogical_goal": "",
+        "description": "",
+        "params": {},
+        "caption": "",
+        "placement": "after_section",
+        "priority": "medium"
+      },
+      "llm_meta": {
+        "model": "Qwen/Qwen2.5-7B-Instruct-Turbo",
+        "pass1_decision": {
+          "section_id": 11,
+          "need_visual": false,
+          "visual_type": "none",
+          "reason": "список частых ошибок"
+        }
+      }
+    },
+    {
+      "plan": {
+        "section_id": 14,
+        "section_title": "6. Что делать дальше?",
+        "section_text_preview": "1. **Практикуйся на простых задачах** — только степенные функции.\n2. **Тренируй подстановку** — это самый частый промах.\n3. **Проверяй, входит ли корень в отрезок** — это легко упустить.\n4. **Не спеши",
+        "need_visual": false,
+        "visual_type": "none",
+        "pedagogical_goal": "",
+        "description": "",
+        "params": {},
+        "caption": "",
+        "placement": "after_section",
+        "priority": "medium"
+      },
+      "llm_meta": {
+        "model": "Qwen/Qwen2.5-7B-Instruct-Turbo",
+        "pass1_decision": {
+          "section_id": 14,
+          "need_visual": false,
+          "visual_type": "none",
+          "reason": "советы для дальнейшей практики"
+        }
+      }
+    },
+    {
+      "plan": {
+        "section_id": 15,
+        "section_title": "Полезные советы",
+        "section_text_preview": "✅ Всегда пиши:  \n- $f'(x) = \\dots$  \n- $f'(x) = 0$ → $x = \\dots$  \n- $f(0) = \\dots$, $f(2) = \\dots$, $f(3) = \\dots$  \n- Ответ: $\\dots$\n\n✅ Если не знаешь, как брать производную — начни с $(x^2)' = 2x$,",
+        "need_visual": false,
+        "visual_type": "none",
+        "pedagogical_goal": "",
+        "description": "",
+        "params": {},
+        "caption": "",
+        "placement": "after_section",
+        "priority": "medium"
+      },
+      "llm_meta": {
+        "model": "Qwen/Qwen2.5-7B-Instruct-Turbo",
+        "pass1_decision": {
+          "section_id": 15,
+          "need_visual": false,
+          "visual_type": "none",
+          "reason": "полезные советы"
+        }
+      }
+    }
+  ]
+}

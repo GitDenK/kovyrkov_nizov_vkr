@@ -1,0 +1,253 @@
+{
+  "title": "Параллелограмм ABCD",
+  "canvas": {
+    "width": 560,
+    "height": 380,
+    "x_min": -1,
+    "x_max": 11,
+    "y_min": -1,
+    "y_max": 6
+  },
+  "points": {
+    "A": {
+      "x": 1,
+      "y": 0,
+      "label_dx": -12,
+      "label_dy": 12
+    },
+    "B": {
+      "x": 6,
+      "y": 5,
+      "label_dx": 8,
+      "label_dy": 12
+    },
+    "C": {
+      "x": 10,
+      "y": 5,
+      "label_dx": 10,
+      "label_dy": 12
+    },
+    "D": {
+      "x": 5,
+      "y": 0,
+      "label_dx": 8,
+      "label_dy": 12
+    },
+    "O": {
+      "x": 5.5,
+      "y": 2.5,
+      "label_dx": 8,
+      "label_dy": -12
+    }
+  },
+  "steps": [
+    {
+      "text": "Параллелограмм $ABCD$ с $AB = 5$ и $AD = 8$. Диагонали пересекаются в точке $O$. Угол между диагоналями равен $60^\\circ$.",
+      "objects": [
+        {
+          "type": "point",
+          "id": "A"
+        },
+        {
+          "type": "point",
+          "id": "B"
+        },
+        {
+          "type": "point",
+          "id": "C"
+        },
+        {
+          "type": "point",
+          "id": "D"
+        },
+        {
+          "type": "segment",
+          "id": "s_AB",
+          "from_point": "A",
+          "to_point": "B",
+          "style": {
+            "stroke": "#2980b9",
+            "stroke_width": 1.8
+          }
+        },
+        {
+          "type": "segment",
+          "id": "s_AD",
+          "from_point": "A",
+          "to_point": "D",
+          "style": {
+            "stroke": "#e74c3c",
+            "stroke_width": 1.8
+          }
+        },
+        {
+          "type": "segment",
+          "id": "s_BC",
+          "from_point": "B",
+          "to_point": "C",
+          "style": {
+            "stroke": "#2980b9",
+            "stroke_width": 1.8
+          }
+        },
+        {
+          "type": "segment",
+          "id": "s_CD",
+          "from_point": "C",
+          "to_point": "D",
+          "style": {
+            "stroke": "#e74c3c",
+            "stroke_width": 1.8
+          }
+        }
+      ],
+      "annotations": [
+        {
+          "type": "label",
+          "id": "lbl_AB",
+          "text": "AB = 5",
+          "anchor": "A",
+          "dx": -0.5,
+          "dy": 2.5,
+          "color": "#2980b9",
+          "font_size": 12
+        },
+        {
+          "type": "label",
+          "id": "lbl_AD",
+          "text": "AD = 8",
+          "anchor": "A",
+          "dx": 3.5,
+          "dy": 0.5,
+          "color": "#e74c3c",
+          "font_size": 12
+        }
+      ],
+      "constraints": [
+        {
+          "type": "parallel_lines",
+          "id": "par_1",
+          "line1": [
+            "A",
+            "B"
+          ],
+          "line2": [
+            "C",
+            "D"
+          ]
+        }
+      ],
+      "caption": "Параллелограмм ABCD"
+    },
+    {
+      "text": "Диагонали $AC$ и $BD$ пересекаются в точке $O$. Угол между диагоналями равен $60^\\circ$.",
+      "objects": [
+        {
+          "type": "point",
+          "id": "O"
+        },
+        {
+          "type": "segment",
+          "id": "s_AC",
+          "from_point": "A",
+          "to_point": "C",
+          "style": {
+            "stroke": "#27ae60",
+            "stroke_width": 1.8
+          }
+        },
+        {
+          "type": "segment",
+          "id": "s_BD",
+          "from_point": "B",
+          "to_point": "D",
+          "style": {
+            "stroke": "#8e44ad",
+            "stroke_width": 1.8
+          }
+        }
+      ],
+      "annotations": [
+        {
+          "type": "label",
+          "id": "lbl_O",
+          "text": "O",
+          "anchor": "O",
+          "dx": 0.5,
+          "dy": -1.5,
+          "color": "#333",
+          "font_size": 12
+        },
+        {
+          "type": "label",
+          "id": "lbl_angle",
+          "text": "60°",
+          "anchor": "O",
+          "dx": 1.5,
+          "dy": 1.5,
+          "color": "#e74c3c",
+          "font_size": 12
+        }
+      ],
+      "constraints": [
+        {
+          "type": "angle_arc",
+          "id": "aa_1",
+          "vertex": "O",
+          "ray1": "A",
+          "ray2": "B",
+          "radius": 20,
+          "color": "#e74c3c",
+          "label": "60°"
+        }
+      ],
+      "caption": "Диагонали и угол между ними"
+    },
+    {
+      "text": "Пусть $AO = x$, $OC = y$. Тогда $BO = y$, $OD = x$. По теореме Пифагора в треугольнике $AOB$ имеем: $AB^2 = AO^2 + BO^2$. Подставив значения, получим: $5^2 = x^2 + y^2$.",
+      "objects": [],
+      "annotations": [
+        {
+          "type": "label",
+          "id": "lbl_x",
+          "text": "x",
+          "anchor": "O",
+          "dx": -1.5,
+          "dy": 0.5,
+          "color": "#27ae60",
+          "font_size": 12
+        },
+        {
+          "type": "label",
+          "id": "lbl_y",
+          "text": "y",
+          "anchor": "O",
+          "dx": 1.5,
+          "dy": 0.5,
+          "color": "#8e44ad",
+          "font_size": 12
+        }
+      ],
+      "constraints": [],
+      "caption": "Применение теоремы Пифагора"
+    },
+    {
+      "text": "Аналогично, в треугольнике $COD$ имеем: $CD^2 = CO^2 + OD^2$. Подставив значения, получим: $8^2 = y^2 + x^2$. Сложив два уравнения, получим: $25 + 64 = 2x^2 + 2y^2$. Отсюда $2x^2 + 2y^2 = 89$. Угол между диагоналями равен $60^\\circ$, поэтому по формуле косинуса имеем: $AC^2 = AO^2 + OC^2 - 2 \\cdot AO \\cdot OC \\cdot \\cos(60^\\circ)$. Подставив значения, получим: $AC^2 = x^2 + y^2 - 2xy \\cdot 0.5$. Отсюда $AC^2 = x^2 + y^2 - xy$. Подставив $x^2 + y^2 = 89/2$, получим: $AC^2 = 89/2 - xy$. Найдем $xy$. Для этого воспользуемся тем, что $AB^2 = AO^2 + BO^2$ и $CD^2 = CO^2 + OD^2$. Отсюда $25 = x^2 + y^2$ и $64 = y^2 + x^2$. Вычитая первое уравнение из второго, получим: $39 = 0$. Это означает, что $x = y$. Подставив это в уравнение $2x^2 + 2y^2 = 89$, получим: $4x^2 = 89$. Отсюда $x = \\sqrt{89/4}$. Подставив это в уравнение $AC^2 = 89/2 - xy$, получим: $AC^2 = 89/2 - (\\sqrt{89/4})^2$. Отсюда $AC = \\sqrt{89/2 - 89/4} = \\sqrt{89/4} = \\boxed{\\frac{\\sqrt{890}}{2}}$.",
+      "objects": [],
+      "annotations": [
+        {
+          "type": "label",
+          "id": "lbl_AC",
+          "text": "AC = √890/2",
+          "anchor": "A",
+          "dx": 2.5,
+          "dy": 2.5,
+          "color": "#27ae60",
+          "font_size": 14
+        }
+      ],
+      "constraints": [],
+      "caption": "Найдите длину диагонали AC"
+    }
+  ]
+}

@@ -1,0 +1,240 @@
+{
+  "title": "Правильная треугольная пирамида SABC",
+  "points": {
+    "A": {
+      "x": 0,
+      "y": 3.46,
+      "z": 0,
+      "label_dx": -12,
+      "label_dy": 10
+    },
+    "B": {
+      "x": -3,
+      "y": -1.73,
+      "z": 0,
+      "label_dx": -14,
+      "label_dy": 8
+    },
+    "C": {
+      "x": 3,
+      "y": -1.73,
+      "z": 0,
+      "label_dx": 10,
+      "label_dy": 8
+    },
+    "S": {
+      "x": 0,
+      "y": 0,
+      "z": 5,
+      "label_dx": 8,
+      "label_dy": -12
+    },
+    "O": {
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "label_dx": 8,
+      "label_dy": 10
+    },
+    "M": {
+      "x": 0,
+      "y": -1.73,
+      "z": 0,
+      "label_dx": 8,
+      "label_dy": 12
+    },
+    "H": {
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "label_dx": 8,
+      "label_dy": 10
+    }
+  },
+  "faces": [
+    [
+      "A",
+      "B",
+      "C"
+    ],
+    [
+      "S",
+      "B",
+      "A"
+    ],
+    [
+      "S",
+      "C",
+      "B"
+    ],
+    [
+      "S",
+      "A",
+      "C"
+    ]
+  ],
+  "steps": [
+    {
+      "text": "Правильная треугольная пирамида $SABC$ с основанием $ABC$ и боковым ребром $SA=5$.",
+      "objects": [
+        {
+          "type": "point",
+          "id": "A"
+        },
+        {
+          "type": "point",
+          "id": "B"
+        },
+        {
+          "type": "point",
+          "id": "C"
+        },
+        {
+          "type": "point",
+          "id": "S"
+        },
+        {
+          "type": "segment",
+          "id": "s_AB",
+          "from_point": "A",
+          "to_point": "B"
+        },
+        {
+          "type": "segment",
+          "id": "s_BC",
+          "from_point": "B",
+          "to_point": "C"
+        },
+        {
+          "type": "segment",
+          "id": "s_CA",
+          "from_point": "C",
+          "to_point": "A"
+        },
+        {
+          "type": "segment",
+          "id": "s_SA",
+          "from_point": "S",
+          "to_point": "A"
+        },
+        {
+          "type": "segment",
+          "id": "s_SB",
+          "from_point": "S",
+          "to_point": "B"
+        },
+        {
+          "type": "segment",
+          "id": "s_SC",
+          "from_point": "S",
+          "to_point": "C"
+        }
+      ],
+      "annotations": [],
+      "constraints": [],
+      "caption": "Пирамида SABC"
+    },
+    {
+      "text": "Высота $SO=5$, $O$ — центр основания.",
+      "objects": [
+        {
+          "type": "point",
+          "id": "O",
+          "style": {
+            "fill": "#e74c3c",
+            "stroke": "#e74c3c"
+          }
+        },
+        {
+          "type": "segment",
+          "id": "s_SO",
+          "from_point": "S",
+          "to_point": "O",
+          "style": {
+            "stroke": "#e74c3c",
+            "dash": "dashed"
+          }
+        }
+      ],
+      "annotations": [
+        {
+          "type": "label",
+          "id": "lbl_SO",
+          "text": "SO=5",
+          "anchor": "S",
+          "dx": 0.4,
+          "dy": -0.4,
+          "color": "#e74c3c",
+          "font_size": 12
+        }
+      ],
+      "constraints": [],
+      "caption": "Высота SO=5"
+    },
+    {
+      "text": "Найдем проекцию $A$ на плоскость $SBC$: точка $H$.",
+      "objects": [
+        {
+          "type": "point",
+          "id": "H",
+          "style": {
+            "fill": "#27ae60",
+            "stroke": "#27ae60"
+          }
+        }
+      ],
+      "annotations": [
+        {
+          "type": "label",
+          "id": "lbl_H",
+          "text": "H",
+          "anchor": "H",
+          "dx": 0.5,
+          "dy": 0.3,
+          "color": "#27ae60",
+          "font_size": 12
+        }
+      ],
+      "constraints": [
+        {
+          "type": "perpendicular",
+          "id": "perp_AH",
+          "point": "A",
+          "line_point1": "S",
+          "line_point2": "B",
+          "foot_id": "H"
+        }
+      ],
+      "caption": "Проекция A на плоскость SBC"
+    },
+    {
+      "text": "Расстояние от $A$ до плоскости $SBC$ равно $AH$.",
+      "objects": [
+        {
+          "type": "segment",
+          "id": "s_AH",
+          "from_point": "A",
+          "to_point": "H",
+          "style": {
+            "stroke": "#27ae60",
+            "stroke_width": 2
+          }
+        }
+      ],
+      "annotations": [
+        {
+          "type": "label",
+          "id": "lbl_AH",
+          "text": "AH",
+          "anchor": "A",
+          "dx": 1.5,
+          "dy": -0.3,
+          "color": "#27ae60",
+          "font_size": 14
+        }
+      ],
+      "constraints": [],
+      "caption": "Ответ: AH"
+    }
+  ]
+}

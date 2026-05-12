@@ -1,0 +1,65 @@
+{
+  "scene_type": "diagram",
+  "canvas": {
+    "width": 500,
+    "height": 300,
+    "x_min": 0,
+    "x_max": 500,
+    "y_min": 0,
+    "y_max": 300
+  },
+  "style": {
+    "theme": "light",
+    "stroke_color": "#333333",
+    "fill_color": "#f5f5f5",
+    "font_size": 13,
+    "font_family": "sans-serif"
+  },
+  "objects": [
+    {
+      "type": "title",
+      "id": "title",
+      "text": "Определение производной и её значения в разных ситуациях"
+    },
+    {
+      "type": "box",
+      "id": "p_0",
+      "text": "definition: Производная — это скорость изменения функции. На графике это наклон касательной к графику функции в данной точке."
+    },
+    {
+      "type": "box",
+      "id": "p_1_0",
+      "text": "description: Если функция быстро растёт, касательная почти вертикальная, производная большая положительная\nslope: близок к +∞\nderivative: большая положительная"
+    },
+    {
+      "type": "box",
+      "id": "p_1_1",
+      "text": "description: Если функция падает, касательная идёт вниз, производная отрицательная\nslope: отрицательная\nderivative: отрицательная"
+    },
+    {
+      "type": "box",
+      "id": "p_1_2",
+      "text": "description: Если функция \"стоит на месте\", горизонтальная касательная, производная равна нулю\nslope: 0\nderivative: 0"
+    },
+    {
+      "type": "arrow",
+      "id": "fb_arr_0",
+      "from_point": "p_0",
+      "to_point": "p_1_0"
+    },
+    {
+      "type": "arrow",
+      "id": "fb_arr_1",
+      "from_point": "p_1_0",
+      "to_point": "p_1_1"
+    },
+    {
+      "type": "arrow",
+      "id": "fb_arr_2",
+      "from_point": "p_1_1",
+      "to_point": "p_1_2"
+    }
+  ],
+  "constraints": [],
+  "annotations": []
+}

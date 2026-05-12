@@ -1,0 +1,139 @@
+{
+  "started_at": "2026-05-08 20:41:35",
+  "model": "Qwen/Qwen2.5-7B-Instruct-Turbo",
+  "mode": "run",
+  "llm_calls": [
+    {
+      "model": "Qwen/Qwen2.5-7B-Instruct-Turbo",
+      "role": "plan",
+      "attempt": 1,
+      "tokens_in": 5279,
+      "tokens_out": 1098,
+      "duration_sec": 10.23,
+      "success": true
+    }
+  ],
+  "phases": {
+    "extract_json": {
+      "count": 1,
+      "total_sec": 0.0014,
+      "last_sec": 0.0014,
+      "extra": [
+        {
+          "chars": 2686
+        }
+      ]
+    },
+    "postprocess_plan": {
+      "count": 1,
+      "total_sec": 0.0001,
+      "last_sec": 0.0001,
+      "extra": []
+    },
+    "validate_plan": {
+      "count": 1,
+      "total_sec": 0.0,
+      "last_sec": 0.0,
+      "extra": []
+    },
+    "validation_round": {
+      "count": 1,
+      "total_sec": 0.0,
+      "last_sec": 0.0,
+      "extra": [
+        {
+          "round_idx": 0,
+          "warnings": 0
+        }
+      ]
+    },
+    "auto_mark_hidden_edges": {
+      "count": 1,
+      "total_sec": 0.0,
+      "last_sec": 0.0,
+      "extra": [
+        {
+          "n_points": 7,
+          "n_faces": 0
+        }
+      ]
+    },
+    "compute_canvas_3d": {
+      "count": 1,
+      "total_sec": 0.0,
+      "last_sec": 0.0,
+      "extra": [
+        {
+          "n_points": 7
+        }
+      ]
+    },
+    "execute_plan": {
+      "count": 1,
+      "total_sec": 0.0011,
+      "last_sec": 0.0011,
+      "extra": [
+        {
+          "n_points": 7,
+          "n_steps": 4,
+          "is_3d": true
+        }
+      ]
+    },
+    "html_render": {
+      "count": 1,
+      "total_sec": 0.0001,
+      "last_sec": 0.0001,
+      "extra": [
+        {
+          "animated": false
+        }
+      ]
+    }
+  },
+  "steps": [
+    {
+      "step_idx": 0,
+      "duration_sec": 0.0003,
+      "n_objects": 7,
+      "n_annotations": 2,
+      "n_constraints": 0,
+      "has_text": true
+    },
+    {
+      "step_idx": 1,
+      "duration_sec": 0.0002,
+      "n_objects": 1,
+      "n_annotations": 1,
+      "n_constraints": 0,
+      "has_text": true
+    },
+    {
+      "step_idx": 2,
+      "duration_sec": 0.0002,
+      "n_objects": 1,
+      "n_annotations": 1,
+      "n_constraints": 1,
+      "has_text": true
+    },
+    {
+      "step_idx": 3,
+      "duration_sec": 0.0003,
+      "n_objects": 1,
+      "n_annotations": 1,
+      "n_constraints": 0,
+      "has_text": true
+    }
+  ],
+  "totals": {
+    "wall_sec": 10.234,
+    "llm_calls": 1,
+    "llm_calls_successful": 1,
+    "llm_tokens_in": 5279,
+    "llm_tokens_out": 1098,
+    "llm_sec": 10.23,
+    "phases_sec": 0.0027,
+    "steps_count": 4,
+    "steps_sec": 0.001
+  }
+}

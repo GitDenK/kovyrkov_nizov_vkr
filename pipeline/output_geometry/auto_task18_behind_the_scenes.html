@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8"/>
+<title>Task 18 — Behind the Scenes</title>
+<script>
+MathJax = { tex: { inlineMath: [['$','$']], displayMath: [['$$','$$']] }, svg: { fontCache: 'global' } };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; background:#f5f5f7; color:#1d1d1f; line-height:1.7; }
+  .header { background:linear-gradient(135deg,#0f3460,#16213e,#1a1a2e); padding:44px 20px; text-align:center; color:white; }
+  .header h1 { font-size:28px; margin-bottom:8px; }
+  .header p { opacity:0.7; font-size:14px; max-width:650px; margin:0 auto; }
+  .content { max-width:900px; margin:0 auto; padding:32px 24px 60px; }
+  .step-card { background:white; border-radius:14px; margin:28px 0; overflow:hidden; box-shadow:0 2px 16px rgba(0,0,0,0.06); }
+  .step-num { display:inline-block; background:#2980b9; color:white; border-radius:8px; padding:3px 12px; font-size:13px; font-weight:700; margin-right:8px; }
+  .step-header { padding:18px 24px; font-size:17px; font-weight:700; color:#2c3e50; border-bottom:1px solid #eee; background:#fafbfc; }
+  .step-body { padding:20px 24px; }
+  .code-block { background:#1e1e2e; color:#cdd6f4; border-radius:10px; padding:18px 20px; font-family:'SF Mono','Fira Code',monospace; font-size:13px; line-height:1.6; overflow-x:auto; white-space:pre-wrap; word-break:break-all; margin:14px 0; }
+  .code-block .comment { color:#6c7086; }
+  .code-block .key { color:#89b4fa; }
+  .code-block .string { color:#a6e3a1; }
+  .code-block .number { color:#fab387; }
+  .arrow { text-align:center; font-size:32px; color:#bbb; margin:16px 0; }
+  .label { display:inline-block; background:#e8f4fd; color:#2980b9; border-radius:6px; padding:2px 10px; font-size:12px; font-weight:600; margin:4px 2px; }
+  .label.llm { background:#fdf2e9; color:#e67e22; }
+  .label.code { background:#eafaf1; color:#27ae60; }
+  .label.result { background:#f4ecf7; color:#8e44ad; }
+  .highlight { background:#fffde7; border-left:3px solid #f9a825; padding:12px 16px; border-radius:0 8px 8px 0; margin:12px 0; font-size:14px; }
+  .footer { text-align:center; padding:30px 20px; color:#aaa; font-size:11px; border-top:1px solid #eee; }
+  table.meta { width:100%; border-collapse:collapse; margin:12px 0; }
+  table.meta td { padding:6px 12px; border-bottom:1px solid #f0f0f0; font-size:14px; }
+  table.meta td:first-child { font-weight:600; color:#555; width:200px; }
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>Behind the Scenes: автоматическая визуализация задачи 18</h1>
+  <p>Весь путь от текста задачи до HTML с пошаговыми графиками — что делает LLM, что делает код</p>
+</div>
+<div class="content">
+
+<!-- ============ STEP 1 ============ -->
+<div class="step-card">
+  <div class="step-header"><span class="step-num">1</span> Входные данные — текст задачи + решение</div>
+  <div class="step-body">
+    <p style="margin-bottom:8px">Это <strong>всё</strong>, что подаётся на вход. Обычный текстовый файл:</p>
+    <div class="code-block"><span class="comment"># файл: test_problem.txt</span>
+
+Задание 18 Профильного ЕГЭ по математике.
+
+Найдите все значения параметра a, при каждом из которых уравнение
+9^x − 4·3^x + a = 0
+имеет ровно два решения.
+
+Решение:
+Замена t = 3^x, t > 0. Тогда t² − 4t + a = 0, то есть a = −t² + 4t.
+Обозначим f(t) = −t² + 4t = −(t − 2)² + 4, t > 0.
+Это парабола ветвями вниз с вершиной (2; 4).
+f(t) → −∞ при t → +∞, f(0) = 0 (не включаем, t > 0).
+
+Каждому t > 0 соответствует ровно одно x = log₃(t).
+Значит, число решений по x = число корней t > 0 уравнения f(t) = a.
+
+Горизонтальная прямая y = a:
+- a &lt; 0: 1 пересечение (правая ветвь) → 1 решение
+- a = 0: 1 пересечение (при t = 4, т.к. t = 0 не входит) → 1 решение
+- 0 &lt; a &lt; 4: 2 пересечения → 2 решения ✓
+- a = 4: 1 пересечение (вершина, касание) → 1 решение
+- a > 4: 0 пересечений → 0 решений
+
+Ответ: 0 &lt; a &lt; 4.</div>
+    <div class="highlight">Человек пишет задачу + решение. Движок делает всё остальное.</div>
+  </div>
+</div>
+
+<div class="arrow">⬇</div>
+
+<!-- ============ STEP 2 ============ -->
+<div class="step-card">
+  <div class="step-header"><span class="step-num">2</span> Вызов LLM <span class="label llm">Llama 3.3 70B</span></div>
+  <div class="step-body">
+    <table class="meta">
+      <tr><td>Модель</td><td>meta-llama/Llama-3.3-70B-Instruct-Turbo</td></tr>
+      <tr><td>Провайдер</td><td>Together AI API</td></tr>
+      <tr><td>Токены (вход)</td><td>~2 400 (SYSTEM_PROMPT + задача)</td></tr>
+      <tr><td>Токены (выход)</td><td>~900 (JSON-план)</td></tr>
+      <tr><td>Время</td><td>7.4 секунды</td></tr>
+      <tr><td>Стоимость</td><td>~$0.001</td></tr>
+    </table>
+    <p style="margin-top:12px;">SYSTEM_PROMPT (~450 слов) объясняет LLM:</p>
+    <ul style="margin:8px 0 8px 20px; font-size:14px;">
+      <li>Какие типы объектов доступны (<code>function_curve</code>, <code>hline</code>, <code>filled_between</code>, ...)</li>
+      <li>JSON-формат ответа (<code>canvas</code> + <code>steps</code>)</li>
+      <li>Что expression — это Python-синтаксис (<code>x**2</code>, не <code>x²</code>)</li>
+      <li>Графический метод: y=f(x), горизонтальные прямые y=a</li>
+      <li>Полный пример с задачей x² − 2|x| = a</li>
+    </ul>
+    <p>LLM получает текст задачи и <strong>сама</strong> решает:</p>
+    <ul style="margin:8px 0 8px 20px; font-size:14px;">
+      <li>Какую функцию рисовать</li>
+      <li>Какой canvas (диапазоны осей)</li>
+      <li>Где критические значения a</li>
+      <li>Какие метки и подписи ставить</li>
+      <li>Какие области закрашивать</li>
+      <li>Какой текст писать на каждом шаге</li>
+    </ul>
+  </div>
+</div>
+
+<div class="arrow">⬇</div>
+
+<!-- ============ STEP 3 ============ -->
+<div class="step-card">
+  <div class="step-header"><span class="step-num">3</span> JSON-план от LLM <span class="label llm">100% сгенерирован LLM</span></div>
+  <div class="step-body">
+    <p style="margin-bottom:8px;">Вот <strong>дословный</strong> JSON, который вернула LLM (сохранён в <code>auto_task18_fresh_test_plan.json</code>):</p>
+    <div class="code-block">{
+  <span class="key">"title"</span>: <span class="string">"9^x − 4·3^x + a = 0 — ровно 2 решения"</span>,
+  <span class="key">"canvas"</span>: {
+    <span class="key">"x_min"</span>: <span class="number">-1</span>, <span class="key">"x_max"</span>: <span class="number">5</span>,
+    <span class="key">"y_min"</span>: <span class="number">-1</span>, <span class="key">"y_max"</span>: <span class="number">5</span>,
+    <span class="key">"x_label"</span>: <span class="string">"t"</span>, <span class="key">"y_label"</span>: <span class="string">"y или a"</span>
+  },
+  <span class="key">"steps"</span>: [
+    {
+      <span class="key">"text"</span>: <span class="string">"Замена $t = 3^x$, $t > 0$. Уравнение: $t^2 - 4t + a = 0$."</span>,
+      <span class="key">"objects"</span>: [{
+        <span class="key">"type"</span>: <span class="string">"function_curve"</span>,
+        <span class="key">"expression"</span>: <span class="string">"-(t - 2)**2 + 4"</span>,  <span class="comment">← Python-синтаксис!</span>
+        <span class="key">"label"</span>: <span class="string">"$y = -(t - 2)^2 + 4$"</span>
+      }]
+    },
+    {
+      <span class="key">"text"</span>: <span class="string">"Критические значения: $a = 0$ и $a = 4$."</span>,
+      <span class="key">"objects"</span>: [
+        { <span class="key">"type"</span>: <span class="string">"hline"</span>, <span class="key">"y"</span>: <span class="number">0</span>, <span class="key">"label"</span>: <span class="string">"$a = 0$"</span> },
+        { <span class="key">"type"</span>: <span class="string">"hline"</span>, <span class="key">"y"</span>: <span class="number">4</span>, <span class="key">"label"</span>: <span class="string">"$a = 4$"</span> }
+      ]
+    },
+    {
+      <span class="key">"text"</span>: <span class="string">"Анализ числа решений..."</span>,
+      <span class="key">"objects"</span>: [
+        { <span class="key">"type"</span>: <span class="string">"region_label"</span>, <span class="key">"text"</span>: <span class="string">"2 решения"</span>, <span class="key">"x"</span>: <span class="number">3</span>, <span class="key">"y"</span>: <span class="number">2</span> },
+        { <span class="key">"type"</span>: <span class="string">"region_label"</span>, <span class="key">"text"</span>: <span class="string">"1 решение"</span>, <span class="key">"x"</span>: <span class="number">1</span>, <span class="key">"y"</span>: <span class="number">0.5</span> }
+      ]
+    },
+    {
+      <span class="key">"text"</span>: <span class="string">"Закрашиваем область 2 решений."</span>,
+      <span class="key">"objects"</span>: [{
+        <span class="key">"type"</span>: <span class="string">"filled_between"</span>,
+        <span class="key">"upper"</span>: <span class="string">"-(t - 2)**2 + 4"</span>,
+        <span class="key">"lower"</span>: <span class="string">"0"</span>,
+        <span class="key">"x_min"</span>: <span class="number">0</span>, <span class="key">"x_max"</span>: <span class="number">4</span>
+      }]
+    },
+    {
+      <span class="key">"text"</span>: <span class="string">"Ответ: $0 &lt; a &lt; 4$."</span>,
+      <span class="key">"objects"</span>: [...]
+    }
+  ]
+}</div>
+    <div class="highlight">
+      LLM сама выбрала: функцию <code>-(t-2)**2+4</code>, диапазон осей, критические уровни <code>a=0</code> и <code>a=4</code>, текст каждого шага с LaTeX, позиции меток, область заливки. Человек не участвовал.
+    </div>
+  </div>
+</div>
+
+<div class="arrow">⬇</div>
+
+<!-- ============ STEP 4 ============ -->
+<div class="step-card">
+  <div class="step-header"><span class="step-num">4</span> Постобработка <span class="label code">код</span></div>
+  <div class="step-body">
+    <p>Код автоматически фиксит типичные проблемы LLM-вывода:</p>
+    <div class="code-block"><span class="comment"># _postprocess_plan()</span>
+
+<span class="comment"># 1. Замена переменных: t → x (наш evaluator знает только x)</span>
+"-(t - 2)**2 + 4"  →  "-(x - 2)**2 + 4"
+
+<span class="comment"># 2. Дроби в JSON: -9/4 → -2.25 (JSON не поддерживает /)</span>
+"y": -9/4  →  "y": -2.25
+
+<span class="comment"># 3. Синтаксис: ^ → **, ln → log</span>
+"x^2"  →  "x**2"
+
+<span class="comment"># 4. Merge: текстовые шаги без объектов склеиваются с соседями</span></div>
+  </div>
+</div>
+
+<div class="arrow">⬇</div>
+
+<!-- ============ STEP 5 ============ -->
+<div class="step-card">
+  <div class="step-header"><span class="step-num">5</span> StepByStepParameter + render_parameter_svg <span class="label code">код</span></div>
+  <div class="step-body">
+    <p>Движок проходит по шагам плана и <strong>пошагово наращивает</strong> визуализацию:</p>
+    <div class="code-block"><span class="comment"># execute_task18_plan()</span>
+
+for step in plan["steps"]:
+    blocks.append({"type": "text", "content": step["text"]})
+
+    for obj in step["objects"]:
+        sp.add(obj)        <span class="comment"># добавляет в сцену</span>
+
+    sp.snapshot()          <span class="comment"># рендерит текущее состояние → SVG</span>
+    blocks.append({"type": "visual", "svg": ...})</div>
+    <p style="margin-top:12px;">Каждый snapshot содержит <strong>все</strong> предыдущие объекты + новые:</p>
+    <ul style="margin:8px 0 8px 20px; font-size:14px;">
+      <li>SVG 1: только кривая</li>
+      <li>SVG 2: кривая + 2 горизонтальные прямые</li>
+      <li>SVG 3: + метки «2 решения», «1 решение»</li>
+      <li>SVG 4: + закрашенная область</li>
+      <li>SVG 5: + ответ</li>
+    </ul>
+    <p style="margin-top:8px;">Рендерер рисует: координатную сетку, оси со стрелками, подписи делений, кривые как polyline (400 точек), горизонтальные прямые, заливки, метки с фоном.</p>
+  </div>
+</div>
+
+<div class="arrow">⬇</div>
+
+<!-- ============ STEP 6 ============ -->
+<div class="step-card">
+  <div class="step-header"><span class="step-num">6</span> Результат — HTML с MathJax <span class="label result">выход</span></div>
+  <div class="step-body">
+    <p>Файл: <code>auto_task18_fresh_test.html</code></p>
+    <table class="meta">
+      <tr><td>Текстовых блоков</td><td>5 (с LaTeX-формулами)</td></tr>
+      <tr><td>SVG-визуализаций</td><td>5 (пошагово нарастающих)</td></tr>
+      <tr><td>Время генерации</td><td>7.4 сек (LLM) + 0.1 сек (рендер)</td></tr>
+      <tr><td>Ручная работа</td><td>0</td></tr>
+    </table>
+    <div class="highlight" style="border-left-color:#27ae60;">
+      <strong>Итого:</strong> текст задачи с решением → 7 секунд → HTML с 5 пошаговыми графиками, LaTeX-формулами и ответом.
+      Человек подаёт <strong>только текст</strong>. Всё остальное — LLM + движок.
+    </div>
+  </div>
+</div>
+
+</div>
+<div class="footer">
+  task18_parameter.py · Llama 3.3 70B Instruct Turbo · Together AI · ~$0.001 за запрос
+</div>
+</body>
+</html>

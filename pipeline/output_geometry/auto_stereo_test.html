@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8"/>
+<title>Задание 14 ЕГЭ — Стереометрия (3D-авто)</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$']], displayMath: [['$$','$$']] },
+  svg: { fontCache: 'global' }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Georgia','PT Serif',serif; background:#faf9f6; color:#2c2c2c; line-height:1.85; }
+  .page-header { background:linear-gradient(135deg,#1a1a2e 0%,#16213e 50%,#0f3460 100%); padding:36px 20px; text-align:center; color:white; }
+  .page-header h1 { font-size:24px; margin-bottom:6px; font-family:sans-serif; }
+  .page-header p { opacity:0.8; font-size:13px; font-family:sans-serif; }
+  .page-header a { color:#81d4fa; text-decoration:none; }
+  .conspect { max-width:740px; margin:0 auto; padding:32px 28px 60px; }
+  .text-block { margin:14px 0; font-size:16.5px; }
+  .text-block p { margin:5px 0; }
+  .text-block h2 { font-size:21px; color:#2c3e50; font-family:sans-serif; }
+  .text-block h3 { font-size:18px; color:#34495e; font-family:sans-serif; }
+  .text-block strong { color:#2c3e50; }
+  .formula { background:#f7f9fc; padding:14px 20px; border-radius:8px; margin:12px 0; text-align:center; border-left:3px solid #2980b9; }
+  .visual-block { margin:22px 0; text-align:center; }
+  .visual-frame { display:inline-block; background:white; border:1px solid #e0e0e0; border-radius:10px; padding:14px 18px; box-shadow:0 2px 10px rgba(0,0,0,0.06); }
+  .visual-frame svg { max-width:100%; height:auto; }
+  .visual-caption { font-family:-apple-system,sans-serif; font-size:13px; color:#777; margin-top:8px; font-style:italic; }
+  .footer { text-align:center; padding:30px 20px; color:#aaa; font-size:11px; font-family:sans-serif; border-top:1px solid #eee; }
+</style>
+</head>
+<body>
+<div class="page-header">
+  <h1>Задание 14 ЕГЭ — Стереометрия (3D-авто)</h1>
+  <p>Пошаговое решение с автоматически сгенерированными построениями (LLM → SVG)</p>
+  <p style="margin-top:6px;"><a href="https://ege-study.ru/45703-2/">Источник задачи</a></p>
+</div>
+<div class="conspect">
+
+<div class="text-block"><p>Правильная треугольная пирамида $SABC$ с основанием $ABC$.</p></div>
+
+<div class="visual-block">
+  <div class="visual-frame"><svg xmlns="http://www.w3.org/2000/svg" width="560" height="440" viewBox="0 0 560 440" style="background:white;font-family:sans-serif">
+  <line x1="152.9" y1="292.9" x2="96.4" y2="359.9" stroke="#2980b9" stroke-width="1.8"/>
+  <line x1="96.4" y1="359.9" x2="463.6" y2="359.9" stroke="#aaa" stroke-width="1.5" stroke-dasharray="8,4"/>
+  <line x1="463.6" y1="359.9" x2="152.9" y2="292.9" stroke="#2980b9" stroke-width="1.8"/>
+  <circle cx="152.9" cy="292.9" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="140.9" y="302.9" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">A</text>
+  <circle cx="96.4" cy="359.9" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="82.4" y="367.9" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">B</text>
+  <circle cx="463.6" cy="359.9" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="473.6" y="367.9" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">C</text>
+</svg></div>
+  <div class="visual-caption">Основание — правильный треугольник ABC</div>
+</div>
+<div class="text-block"><p>Вершина $S$ и боковые рёбра. Высота пирамиды $SO = 4$.</p></div>
+
+<div class="visual-block">
+  <div class="visual-frame"><svg xmlns="http://www.w3.org/2000/svg" width="560" height="440" viewBox="0 0 560 440" style="background:white;font-family:sans-serif">
+  <line x1="152.9" y1="292.9" x2="96.4" y2="359.9" stroke="#2980b9" stroke-width="1.8"/>
+  <line x1="96.4" y1="359.9" x2="463.6" y2="359.9" stroke="#aaa" stroke-width="1.5" stroke-dasharray="8,4"/>
+  <line x1="463.6" y1="359.9" x2="152.9" y2="292.9" stroke="#2980b9" stroke-width="1.8"/>
+  <line x1="237.8" y1="80.1" x2="152.9" y2="292.9" stroke="#333" stroke-width="1.5"/>
+  <line x1="237.8" y1="80.1" x2="96.4" y2="359.9" stroke="#333" stroke-width="1.5"/>
+  <line x1="237.8" y1="80.1" x2="463.6" y2="359.9" stroke="#333" stroke-width="1.5"/>
+  <line x1="237.8" y1="80.1" x2="237.8" y2="337.7" stroke="#e74c3c" stroke-width="1.5" stroke-dasharray="8,4"/>
+  <circle cx="152.9" cy="292.9" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="140.9" y="302.9" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">A</text>
+  <circle cx="96.4" cy="359.9" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="82.4" y="367.9" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">B</text>
+  <circle cx="463.6" cy="359.9" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="473.6" y="367.9" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">C</text>
+  <circle cx="237.8" cy="80.1" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="245.8" y="68.1" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">S</text>
+  <circle cx="237.8" cy="337.7" r="4" stroke="#e74c3c" fill="#e74c3c" stroke-width="1"/>
+  <text x="245.8" y="347.7" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">O</text>
+  <text x="260.7" y="104.2" font-size="12" font-family="sans-serif" fill="#e74c3c">SO = 4</text>
+</svg></div>
+  <div class="visual-caption">Пирамида SABC, SO = 4</div>
+</div>
+<div class="text-block"><p>$M$ — середина $BC$. Медиана $AM \perp BC$, медиана $SM \perp BC$.</p>
+<br/>
+<p>Угол $\angle AMS = 60°$ — двугранный угол между гранью $SBC$ и основанием.</p></div>
+
+<div class="visual-block">
+  <div class="visual-frame"><svg xmlns="http://www.w3.org/2000/svg" width="560" height="440" viewBox="0 0 560 440" style="background:white;font-family:sans-serif">
+  <line x1="152.9" y1="292.9" x2="96.4" y2="359.9" stroke="#2980b9" stroke-width="1.8"/>
+  <line x1="96.4" y1="359.9" x2="463.6" y2="359.9" stroke="#aaa" stroke-width="1.5" stroke-dasharray="8,4"/>
+  <line x1="463.6" y1="359.9" x2="152.9" y2="292.9" stroke="#2980b9" stroke-width="1.8"/>
+  <line x1="237.8" y1="80.1" x2="152.9" y2="292.9" stroke="#333" stroke-width="1.5"/>
+  <line x1="237.8" y1="80.1" x2="96.4" y2="359.9" stroke="#333" stroke-width="1.5"/>
+  <line x1="237.8" y1="80.1" x2="463.6" y2="359.9" stroke="#333" stroke-width="1.5"/>
+  <line x1="237.8" y1="80.1" x2="237.8" y2="337.7" stroke="#e74c3c" stroke-width="1.5" stroke-dasharray="8,4"/>
+  <line x1="152.9" y1="292.9" x2="280.0" y2="359.9" stroke="#27ae60" stroke-width="1.5" stroke-dasharray="8,4"/>
+  <line x1="237.8" y1="80.1" x2="280.0" y2="359.9" stroke="#8e44ad" stroke-width="1.8"/>
+  <circle cx="152.9" cy="292.9" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="140.9" y="302.9" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">A</text>
+  <circle cx="96.4" cy="359.9" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="82.4" y="367.9" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">B</text>
+  <circle cx="463.6" cy="359.9" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="473.6" y="367.9" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">C</text>
+  <circle cx="237.8" cy="80.1" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="245.8" y="68.1" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">S</text>
+  <circle cx="237.8" cy="337.7" r="4" stroke="#e74c3c" fill="#e74c3c" stroke-width="1"/>
+  <text x="245.8" y="347.7" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">O</text>
+  <circle cx="280.0" cy="359.9" r="4" stroke="#27ae60" fill="#27ae60" stroke-width="1"/>
+  <text x="288.0" y="371.9" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">M</text>
+  <text x="260.7" y="104.2" font-size="12" font-family="sans-serif" fill="#e74c3c">SO = 4</text>
+  <text x="257.0" y="340.6" font-size="13" font-family="sans-serif" fill="#e74c3c">60°</text>
+</svg></div>
+  <div class="visual-caption">∠AMS = 60°</div>
+</div>
+<div class="text-block"><p>Из прямоугольного $\triangle SOM$:</p>
+<br/>
+<div class="formula">$$\tan 60° = \frac{SO}{OM} \Rightarrow OM = \frac{4}{\sqrt{3}}, \quad SM = \frac{8}{\sqrt{3}}, \quad AM = 4\sqrt{3}$$</div></div>
+
+<div class="visual-block">
+  <div class="visual-frame"><svg xmlns="http://www.w3.org/2000/svg" width="560" height="440" viewBox="0 0 560 440" style="background:white;font-family:sans-serif">
+  <line x1="152.9" y1="292.9" x2="96.4" y2="359.9" stroke="#2980b9" stroke-width="1.8"/>
+  <line x1="96.4" y1="359.9" x2="463.6" y2="359.9" stroke="#aaa" stroke-width="1.5" stroke-dasharray="8,4"/>
+  <line x1="463.6" y1="359.9" x2="152.9" y2="292.9" stroke="#2980b9" stroke-width="1.8"/>
+  <line x1="237.8" y1="80.1" x2="152.9" y2="292.9" stroke="#333" stroke-width="1.5"/>
+  <line x1="237.8" y1="80.1" x2="96.4" y2="359.9" stroke="#333" stroke-width="1.5"/>
+  <line x1="237.8" y1="80.1" x2="463.6" y2="359.9" stroke="#333" stroke-width="1.5"/>
+  <line x1="237.8" y1="80.1" x2="237.8" y2="337.7" stroke="#e74c3c" stroke-width="1.5" stroke-dasharray="8,4"/>
+  <line x1="152.9" y1="292.9" x2="280.0" y2="359.9" stroke="#27ae60" stroke-width="1.5" stroke-dasharray="8,4"/>
+  <line x1="237.8" y1="80.1" x2="280.0" y2="359.9" stroke="#8e44ad" stroke-width="1.8"/>
+  <polyline points="237.8,325.7 248.4,331.3 248.4,343.3" fill="none" stroke="#333333" stroke-width="1.2"/>
+  <circle cx="152.9" cy="292.9" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="140.9" y="302.9" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">A</text>
+  <circle cx="96.4" cy="359.9" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="82.4" y="367.9" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">B</text>
+  <circle cx="463.6" cy="359.9" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="473.6" y="367.9" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">C</text>
+  <circle cx="237.8" cy="80.1" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="245.8" y="68.1" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">S</text>
+  <circle cx="237.8" cy="337.7" r="4" stroke="#e74c3c" fill="#e74c3c" stroke-width="1"/>
+  <text x="245.8" y="347.7" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">O</text>
+  <circle cx="280.0" cy="359.9" r="4" stroke="#27ae60" fill="#27ae60" stroke-width="1"/>
+  <text x="288.0" y="371.9" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">M</text>
+  <text x="260.7" y="104.2" font-size="12" font-family="sans-serif" fill="#e74c3c">SO = 4</text>
+  <text x="257.0" y="340.6" font-size="13" font-family="sans-serif" fill="#e74c3c">60°</text>
+  <text x="214.8" y="318.4" font-size="11" font-family="sans-serif" fill="#27ae60">OM = 4/√3</text>
+</svg></div>
+  <div class="visual-caption">Вычисления в △SOM</div>
+</div>
+<div class="text-block"><p>Проводим $AH \perp SM$. Так как $AH \perp SM$ и $AH \perp BC$, то $AH \perp (SBC)$.</p>
+<br/>
+<div class="formula">$$\frac{1}{2} \cdot AM \cdot SO = \frac{1}{2} \cdot SM \cdot AH$$</div>
+<br/>
+<div class="formula">$$AH = \frac{AM \cdot SO}{SM} = \frac{4\sqrt{3} \cdot 4}{8/\sqrt{3}} = 6$$</div>
+<br/>
+<div class="formula">$$\boxed{AH = 6}$$</div></div>
+
+<div class="visual-block">
+  <div class="visual-frame"><svg xmlns="http://www.w3.org/2000/svg" width="560" height="440" viewBox="0 0 560 440" style="background:white;font-family:sans-serif">
+  <line x1="152.9" y1="292.9" x2="96.4" y2="359.9" stroke="#2980b9" stroke-width="1.8"/>
+  <line x1="96.4" y1="359.9" x2="463.6" y2="359.9" stroke="#aaa" stroke-width="1.5" stroke-dasharray="8,4"/>
+  <line x1="463.6" y1="359.9" x2="152.9" y2="292.9" stroke="#2980b9" stroke-width="1.8"/>
+  <line x1="237.8" y1="80.1" x2="152.9" y2="292.9" stroke="#333" stroke-width="1.5"/>
+  <line x1="237.8" y1="80.1" x2="96.4" y2="359.9" stroke="#333" stroke-width="1.5"/>
+  <line x1="237.8" y1="80.1" x2="463.6" y2="359.9" stroke="#333" stroke-width="1.5"/>
+  <line x1="237.8" y1="80.1" x2="237.8" y2="337.7" stroke="#e74c3c" stroke-width="1.5" stroke-dasharray="8,4"/>
+  <line x1="152.9" y1="292.9" x2="280.0" y2="359.9" stroke="#27ae60" stroke-width="1.5" stroke-dasharray="8,4"/>
+  <line x1="237.8" y1="80.1" x2="280.0" y2="359.9" stroke="#8e44ad" stroke-width="1.8"/>
+  <line x1="152.9" y1="292.9" x2="251.1" y2="263.9" stroke="#e67e22" stroke-width="2" stroke-dasharray="8,4"/>
+  <polyline points="237.8,325.7 248.4,331.3 248.4,343.3" fill="none" stroke="#333333" stroke-width="1.2"/>
+  <polyline points="239.6,267.3 243.0,278.8 254.5,275.4" fill="none" stroke="#333333" stroke-width="1.2"/>
+  <circle cx="152.9" cy="292.9" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="140.9" y="302.9" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">A</text>
+  <circle cx="96.4" cy="359.9" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="82.4" y="367.9" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">B</text>
+  <circle cx="463.6" cy="359.9" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="473.6" y="367.9" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">C</text>
+  <circle cx="237.8" cy="80.1" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="245.8" y="68.1" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">S</text>
+  <circle cx="237.8" cy="337.7" r="4" stroke="#e74c3c" fill="#e74c3c" stroke-width="1"/>
+  <text x="245.8" y="347.7" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">O</text>
+  <circle cx="280.0" cy="359.9" r="4" stroke="#27ae60" fill="#27ae60" stroke-width="1"/>
+  <text x="288.0" y="371.9" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">M</text>
+  <circle cx="251.1" cy="263.9" r="4" stroke="#e67e22" fill="#e67e22" stroke-width="1"/>
+  <text x="237.1" y="255.9" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">H</text>
+  <text x="260.7" y="104.2" font-size="12" font-family="sans-serif" fill="#e74c3c">SO = 4</text>
+  <text x="257.0" y="340.6" font-size="13" font-family="sans-serif" fill="#e74c3c">60°</text>
+  <text x="214.8" y="318.4" font-size="11" font-family="sans-serif" fill="#27ae60">OM = 4/√3</text>
+  <text x="274.0" y="249.4" font-size="14" font-family="sans-serif" fill="#e67e22">AH = 6</text>
+</svg></div>
+  <div class="visual-caption">Ответ: AH = 6</div>
+</div>
+
+</div>
+<div class="footer">
+  Автоматическая генерация: LLM-планировщик → StepByStepGeo → Solver → SVG Renderer |
+  5 пошаговых построений
+</div>
+</body></html>

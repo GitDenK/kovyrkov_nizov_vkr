@@ -1,0 +1,52 @@
+{
+  "scene_type": "function_plot",
+  "canvas": {
+    "width": 400,
+    "height": 400,
+    "x_min": -6.3,
+    "x_max": 6.3,
+    "y_min": -1.5,
+    "y_max": 1.5
+  },
+  "style": {
+    "theme": "light",
+    "stroke_color": "#333333",
+    "fill_color": "none",
+    "font_size": 12,
+    "font_family": "sans-serif"
+  },
+  "objects": [
+    {
+      "type": "function_curve",
+      "id": "sine",
+      "expression": "sin(x)",
+      "x_min": -6.3,
+      "x_max": 6.3
+    },
+    {
+      "type": "point",
+      "id": "max_point",
+      "x": 1.5707963,
+      "y": 1,
+      "label": "max"
+    },
+    {
+      "type": "point",
+      "id": "min_point",
+      "x": -1.5707963,
+      "y": -1,
+      "label": "min"
+    }
+  ],
+  "constraints": [],
+  "annotations": [
+    {
+      "type": "label",
+      "id": "ann_expr",
+      "text": "y = sin(x)",
+      "anchor": "max_point",
+      "dx": 0.3,
+      "dy": 0.2
+    }
+  ]
+}

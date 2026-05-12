@@ -1,0 +1,422 @@
+{
+  "model": "meta-llama/Llama-3.3-70B-Instruct-Turbo",
+  "runs": 3,
+  "problems": [
+    "task14_pyramid_apex_to_face",
+    "task14_pyramid_dihedral_angle",
+    "task16_rhombus_diagonals"
+  ],
+  "generated_at": "2026-05-08 21:21:40",
+  "elapsed_overall_sec": 501.4,
+  "enforce_answer_vis": true,
+  "max_answer_vis_retries": 1,
+  "raw_per_run": {
+    "task14_pyramid_apex_to_face": [
+      {
+        "wall_sec": 59.344,
+        "llm_sec": 59.333,
+        "llm_calls_total": 2,
+        "llm_calls_plan": 1,
+        "llm_calls_fix": 1,
+        "tokens_in": 11392,
+        "tokens_out": 2442,
+        "steps_total": 3,
+        "objects_total": 12,
+        "annotations_total": 4,
+        "answer_vis_warnings": 0,
+        "run": 1,
+        "domain": "stereometry"
+      },
+      {
+        "wall_sec": 67.371,
+        "llm_sec": 67.364,
+        "llm_calls_total": 2,
+        "llm_calls_plan": 1,
+        "llm_calls_fix": 1,
+        "tokens_in": 11156,
+        "tokens_out": 1996,
+        "steps_total": 2,
+        "objects_total": 11,
+        "annotations_total": 3,
+        "answer_vis_warnings": 0,
+        "run": 2,
+        "domain": "stereometry"
+      },
+      {
+        "wall_sec": 48.591,
+        "llm_sec": 48.585,
+        "llm_calls_total": 2,
+        "llm_calls_plan": 1,
+        "llm_calls_fix": 1,
+        "tokens_in": 11154,
+        "tokens_out": 1982,
+        "steps_total": 2,
+        "objects_total": 11,
+        "annotations_total": 3,
+        "answer_vis_warnings": 0,
+        "run": 3,
+        "domain": "stereometry"
+      }
+    ],
+    "task14_pyramid_dihedral_angle": [
+      {
+        "wall_sec": 88.033,
+        "llm_sec": 88.021,
+        "llm_calls_total": 2,
+        "llm_calls_plan": 1,
+        "llm_calls_fix": 1,
+        "tokens_in": 12054,
+        "tokens_out": 3609,
+        "steps_total": 5,
+        "objects_total": 20,
+        "annotations_total": 4,
+        "answer_vis_warnings": 0,
+        "run": 1,
+        "domain": "stereometry"
+      },
+      {
+        "wall_sec": 29.818,
+        "llm_sec": 29.812,
+        "llm_calls_total": 1,
+        "llm_calls_plan": 1,
+        "llm_calls_fix": 0,
+        "tokens_in": 5083,
+        "tokens_out": 1592,
+        "steps_total": 5,
+        "objects_total": 19,
+        "annotations_total": 5,
+        "answer_vis_warnings": 0,
+        "run": 2,
+        "domain": "stereometry"
+      },
+      {
+        "wall_sec": 119.997,
+        "llm_sec": 119.986,
+        "llm_calls_total": 2,
+        "llm_calls_plan": 1,
+        "llm_calls_fix": 1,
+        "tokens_in": 11742,
+        "tokens_out": 3142,
+        "steps_total": 6,
+        "objects_total": 17,
+        "annotations_total": 3,
+        "answer_vis_warnings": 0,
+        "run": 3,
+        "domain": "stereometry"
+      }
+    ],
+    "task16_rhombus_diagonals": [
+      {
+        "wall_sec": 14.479,
+        "llm_sec": 14.473,
+        "llm_calls_total": 1,
+        "llm_calls_plan": 1,
+        "llm_calls_fix": 0,
+        "tokens_in": 5068,
+        "tokens_out": 1394,
+        "steps_total": 3,
+        "objects_total": 15,
+        "annotations_total": 5,
+        "answer_vis_warnings": 0,
+        "run": 1,
+        "domain": "planimetry"
+      },
+      {
+        "wall_sec": 61.345,
+        "llm_sec": 61.338,
+        "llm_calls_total": 1,
+        "llm_calls_plan": 1,
+        "llm_calls_fix": 0,
+        "tokens_in": 5068,
+        "tokens_out": 1492,
+        "steps_total": 4,
+        "objects_total": 15,
+        "annotations_total": 3,
+        "answer_vis_warnings": 0,
+        "run": 2,
+        "domain": "planimetry"
+      },
+      {
+        "wall_sec": 12.399,
+        "llm_sec": 12.392,
+        "llm_calls_total": 1,
+        "llm_calls_plan": 1,
+        "llm_calls_fix": 0,
+        "tokens_in": 5068,
+        "tokens_out": 1829,
+        "steps_total": 8,
+        "objects_total": 14,
+        "annotations_total": 8,
+        "answer_vis_warnings": 0,
+        "run": 3,
+        "domain": "planimetry"
+      }
+    ]
+  },
+  "per_problem": {
+    "task14_pyramid_apex_to_face": {
+      "wall_sec": {
+        "n": 3,
+        "mean": 58.44,
+        "stdev": 9.42,
+        "min": 48.59,
+        "max": 67.37
+      },
+      "llm_sec": {
+        "n": 3,
+        "mean": 58.43,
+        "stdev": 9.42,
+        "min": 48.59,
+        "max": 67.36
+      },
+      "llm_calls_total": {
+        "n": 3,
+        "mean": 2.0,
+        "stdev": 0.0,
+        "min": 2,
+        "max": 2
+      },
+      "llm_calls_plan": {
+        "n": 3,
+        "mean": 1.0,
+        "stdev": 0.0,
+        "min": 1,
+        "max": 1
+      },
+      "llm_calls_fix": {
+        "n": 3,
+        "mean": 1.0,
+        "stdev": 0.0,
+        "min": 1,
+        "max": 1
+      },
+      "tokens_in": {
+        "n": 3,
+        "mean": 11234.0,
+        "stdev": 136.84,
+        "min": 11154,
+        "max": 11392
+      },
+      "tokens_out": {
+        "n": 3,
+        "mean": 2140.0,
+        "stdev": 261.63,
+        "min": 1982,
+        "max": 2442
+      },
+      "steps_total": {
+        "n": 3,
+        "mean": 2.33,
+        "stdev": 0.58,
+        "min": 2,
+        "max": 3
+      },
+      "objects_total": {
+        "n": 3,
+        "mean": 11.33,
+        "stdev": 0.58,
+        "min": 11,
+        "max": 12
+      },
+      "annotations_total": {
+        "n": 3,
+        "mean": 3.33,
+        "stdev": 0.58,
+        "min": 3,
+        "max": 4
+      }
+    },
+    "task14_pyramid_dihedral_angle": {
+      "wall_sec": {
+        "n": 3,
+        "mean": 79.28,
+        "stdev": 45.72,
+        "min": 29.82,
+        "max": 120.0
+      },
+      "llm_sec": {
+        "n": 3,
+        "mean": 79.27,
+        "stdev": 45.72,
+        "min": 29.81,
+        "max": 119.99
+      },
+      "llm_calls_total": {
+        "n": 3,
+        "mean": 1.67,
+        "stdev": 0.58,
+        "min": 1,
+        "max": 2
+      },
+      "llm_calls_plan": {
+        "n": 3,
+        "mean": 1.0,
+        "stdev": 0.0,
+        "min": 1,
+        "max": 1
+      },
+      "llm_calls_fix": {
+        "n": 3,
+        "mean": 0.67,
+        "stdev": 0.58,
+        "min": 0,
+        "max": 1
+      },
+      "tokens_in": {
+        "n": 3,
+        "mean": 9626.33,
+        "stdev": 3937.73,
+        "min": 5083,
+        "max": 12054
+      },
+      "tokens_out": {
+        "n": 3,
+        "mean": 2781.0,
+        "stdev": 1055.85,
+        "min": 1592,
+        "max": 3609
+      },
+      "steps_total": {
+        "n": 3,
+        "mean": 5.33,
+        "stdev": 0.58,
+        "min": 5,
+        "max": 6
+      },
+      "objects_total": {
+        "n": 3,
+        "mean": 18.67,
+        "stdev": 1.53,
+        "min": 17,
+        "max": 20
+      },
+      "annotations_total": {
+        "n": 3,
+        "mean": 4.0,
+        "stdev": 1.0,
+        "min": 3,
+        "max": 5
+      }
+    },
+    "task16_rhombus_diagonals": {
+      "wall_sec": {
+        "n": 3,
+        "mean": 29.41,
+        "stdev": 27.68,
+        "min": 12.4,
+        "max": 61.34
+      },
+      "llm_sec": {
+        "n": 3,
+        "mean": 29.4,
+        "stdev": 27.68,
+        "min": 12.39,
+        "max": 61.34
+      },
+      "llm_calls_total": {
+        "n": 3,
+        "mean": 1.0,
+        "stdev": 0.0,
+        "min": 1,
+        "max": 1
+      },
+      "llm_calls_plan": {
+        "n": 3,
+        "mean": 1.0,
+        "stdev": 0.0,
+        "min": 1,
+        "max": 1
+      },
+      "llm_calls_fix": {
+        "n": 3,
+        "mean": 0.0,
+        "stdev": 0.0,
+        "min": 0,
+        "max": 0
+      },
+      "tokens_in": {
+        "n": 3,
+        "mean": 5068.0,
+        "stdev": 0.0,
+        "min": 5068,
+        "max": 5068
+      },
+      "tokens_out": {
+        "n": 3,
+        "mean": 1571.67,
+        "stdev": 228.18,
+        "min": 1394,
+        "max": 1829
+      },
+      "steps_total": {
+        "n": 3,
+        "mean": 5.0,
+        "stdev": 2.65,
+        "min": 3,
+        "max": 8
+      },
+      "objects_total": {
+        "n": 3,
+        "mean": 14.67,
+        "stdev": 0.58,
+        "min": 14,
+        "max": 15
+      },
+      "annotations_total": {
+        "n": 3,
+        "mean": 5.33,
+        "stdev": 2.52,
+        "min": 3,
+        "max": 8
+      }
+    }
+  },
+  "fix_rate": {
+    "per_problem": {
+      "task14_pyramid_apex_to_face": {
+        "cells": 3,
+        "fix_cells": 3,
+        "rate": 1.0
+      },
+      "task14_pyramid_dihedral_angle": {
+        "cells": 3,
+        "fix_cells": 2,
+        "rate": 0.667
+      },
+      "task16_rhombus_diagonals": {
+        "cells": 3,
+        "fix_cells": 0,
+        "rate": 0.0
+      }
+    },
+    "overall": {
+      "cells": 9,
+      "fix_cells": 5,
+      "rate": 0.556
+    }
+  },
+  "answer_vis_rate": {
+    "per_problem": {
+      "task14_pyramid_apex_to_face": {
+        "cells": 3,
+        "flagged_cells": 0,
+        "rate": 0.0
+      },
+      "task14_pyramid_dihedral_angle": {
+        "cells": 3,
+        "flagged_cells": 0,
+        "rate": 0.0
+      },
+      "task16_rhombus_diagonals": {
+        "cells": 3,
+        "flagged_cells": 0,
+        "rate": 0.0
+      }
+    },
+    "overall": {
+      "cells": 9,
+      "flagged_cells": 0,
+      "rate": 0.0
+    }
+  }
+}

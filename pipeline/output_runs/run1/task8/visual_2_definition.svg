@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="898">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
+    </marker>
+  </defs>
+  <rect width="500" height="898" fill="white"/>
+  <text x="250" y="44" text-anchor="middle" font-size="17" font-weight="bold" fill="#333">Определение производной и её значения в разных ситуациях</text>
+  <line x1="250.0" y1="122.0" x2="250.0" y2="192.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="256.0" x2="250.0" y2="326.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="450.0" x2="250.0" y2="520.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="624.0" x2="250.0" y2="694.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <rect x="120.0" y="70.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="98.0" text-anchor="middle" font-size="13" fill="#333">definition: производная — это ско…</text>
+  <rect x="120.0" y="192.0" width="260" height="64.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="226.0" text-anchor="middle" font-size="13" fill="#333">graph_representation: наклон каса…</text>
+  <rect x="120.0" y="326.0" width="260" height="124.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="373.0" text-anchor="middle" font-size="13" fill="#333">situation: функция быстро растёт</text>
+  <text x="250.0" y="390.0" text-anchor="middle" font-size="13" fill="#333">slope: почти вертикальная</text>
+  <text x="250.0" y="407.0" text-anchor="middle" font-size="13" fill="#333">derivative: большая положительная</text>
+  <rect x="120.0" y="520.0" width="260" height="104.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="557.0" text-anchor="middle" font-size="13" fill="#333">situation: функция падает</text>
+  <text x="250.0" y="574.0" text-anchor="middle" font-size="13" fill="#333">slope: идёт вниз</text>
+  <text x="250.0" y="591.0" text-anchor="middle" font-size="13" fill="#333">derivative: отрицательная</text>
+  <rect x="120.0" y="694.0" width="260" height="104.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="731.0" text-anchor="middle" font-size="13" fill="#333">situation: функция &quot;стоит на месте&quot;</text>
+  <text x="250.0" y="748.0" text-anchor="middle" font-size="13" fill="#333">slope: горизонтальная</text>
+  <text x="250.0" y="765.0" text-anchor="middle" font-size="13" fill="#333">derivative: равна нулю</text>
+</svg>

@@ -1,0 +1,29 @@
+{
+  "scene_type": "function_plot",
+  "canvas": {
+    "width": 500,
+    "height": 200,
+    "x_min": -6,
+    "x_max": 6,
+    "y_min": -2,
+    "y_max": 2
+  },
+  "style": {
+    "theme": "light",
+    "stroke_color": "#333333",
+    "fill_color": "none",
+    "font_size": 13,
+    "font_family": "sans-serif"
+  },
+  "objects": [
+    {
+      "type": "function_curve",
+      "id": "axis_line",
+      "expression": "0",
+      "x_min": -6,
+      "x_max": 6
+    }
+  ],
+  "constraints": [],
+  "annotations": []
+}

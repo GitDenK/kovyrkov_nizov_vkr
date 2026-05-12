@@ -1,0 +1,299 @@
+{
+  "title": "Сечение куба плоскостью через точки A, M и D1",
+  "points": {
+    "A": {
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "label_dx": -12,
+      "label_dy": 12
+    },
+    "B": {
+      "x": -4,
+      "y": 4,
+      "z": 0,
+      "label_dx": -12,
+      "label_dy": 12
+    },
+    "C": {
+      "x": 4,
+      "y": 4,
+      "z": 0,
+      "label_dx": 12,
+      "label_dy": 12
+    },
+    "D": {
+      "x": 0,
+      "y": 4,
+      "z": 0,
+      "label_dx": -12,
+      "label_dy": 12
+    },
+    "A1": {
+      "x": 0,
+      "y": 4,
+      "z": 4,
+      "label_dx": -12,
+      "label_dy": -12
+    },
+    "B1": {
+      "x": -4,
+      "y": 4,
+      "z": 4,
+      "label_dx": -12,
+      "label_dy": -12
+    },
+    "C1": {
+      "x": 4,
+      "y": 4,
+      "z": 4,
+      "label_dx": 12,
+      "label_dy": -12
+    },
+    "D1": {
+      "x": 0,
+      "y": 4,
+      "z": 4,
+      "label_dx": -12,
+      "label_dy": -12
+    },
+    "M": {
+      "x": 0,
+      "y": 4,
+      "z": 2,
+      "label_dx": -12,
+      "label_dy": -12
+    },
+    "H": {
+      "x": 0,
+      "y": 0,
+      "label_dx": 8,
+      "label_dy": 12,
+      "z": 0
+    }
+  },
+  "faces": [
+    [
+      "A",
+      "B",
+      "B1",
+      "A1"
+    ],
+    [
+      "B",
+      "C",
+      "C1",
+      "B1"
+    ],
+    [
+      "C",
+      "D",
+      "D1",
+      "C1"
+    ],
+    [
+      "D",
+      "A",
+      "A1",
+      "D1"
+    ],
+    [
+      "A",
+      "D",
+      "D1",
+      "A1"
+    ],
+    [
+      "B",
+      "C",
+      "D",
+      "A"
+    ]
+  ],
+  "steps": [
+    {
+      "text": "Дан куб ABCDA1B1C1D1 с ребром 4. Точка M --- середина ребра CC1.",
+      "objects": [
+        {
+          "type": "point",
+          "id": "A"
+        },
+        {
+          "type": "point",
+          "id": "B"
+        },
+        {
+          "type": "point",
+          "id": "C"
+        },
+        {
+          "type": "point",
+          "id": "D"
+        },
+        {
+          "type": "point",
+          "id": "A1"
+        },
+        {
+          "type": "point",
+          "id": "B1"
+        },
+        {
+          "type": "point",
+          "id": "C1"
+        },
+        {
+          "type": "point",
+          "id": "D1"
+        },
+        {
+          "type": "point",
+          "id": "M"
+        }
+      ],
+      "annotations": [],
+      "constraints": [],
+      "caption": "Куб ABCDA1B1C1D1"
+    },
+    {
+      "text": "Построим сечение куба плоскостью, проходящей через точки A, M и D1.",
+      "objects": [
+        {
+          "type": "point",
+          "id": "A"
+        },
+        {
+          "type": "point",
+          "id": "M"
+        },
+        {
+          "type": "point",
+          "id": "D1"
+        }
+      ],
+      "annotations": [],
+      "constraints": [],
+      "caption": "Точки A, M и D1"
+    },
+    {
+      "text": "Найдем точку H --- проекцию точки D1 на плоскость ACD1.",
+      "objects": [
+        {
+          "type": "point",
+          "id": "H",
+          "x": 0,
+          "y": 4,
+          "z": 0,
+          "label_dx": -12,
+          "label_dy": 12
+        }
+      ],
+      "annotations": [],
+      "constraints": [
+        {
+          "type": "perpendicular",
+          "id": "perp_AD1",
+          "point": "H",
+          "line_point1": "A",
+          "line_point2": "D1",
+          "foot_id": "H"
+        }
+      ],
+      "caption": "Точка H --- проекция D1 на ACD1"
+    },
+    {
+      "text": "Точки A, H, M, D1 образуют сечение куба.",
+      "objects": [
+        {
+          "type": "segment",
+          "id": "s_AM",
+          "from_point": "A",
+          "to_point": "M",
+          "style": {
+            "stroke": "#2980b9",
+            "stroke_width": 2
+          }
+        },
+        {
+          "type": "segment",
+          "id": "s_MD1",
+          "from_point": "M",
+          "to_point": "D1",
+          "style": {
+            "stroke": "#2980b9",
+            "stroke_width": 2
+          }
+        },
+        {
+          "type": "segment",
+          "id": "s_AD1",
+          "from_point": "A",
+          "to_point": "D1",
+          "style": {
+            "stroke": "#2980b9",
+            "stroke_width": 2
+          }
+        },
+        {
+          "type": "segment",
+          "id": "s_HD1",
+          "from_point": "H",
+          "to_point": "D1",
+          "style": {
+            "stroke": "#2980b9",
+            "stroke_width": 2
+          }
+        },
+        {
+          "type": "segment",
+          "id": "s_HM",
+          "from_point": "H",
+          "to_point": "M",
+          "style": {
+            "stroke": "#2980b9",
+            "stroke_width": 2
+          }
+        }
+      ],
+      "annotations": [],
+      "constraints": [],
+      "caption": "Сечение куба"
+    },
+    {
+      "text": "Площадь сечения равна площади параллелограмма AHD1M.",
+      "objects": [],
+      "annotations": [
+        {
+          "type": "label",
+          "id": "lbl_parallelogram",
+          "text": "AHD1M",
+          "anchor": "A",
+          "dx": 1.5,
+          "dy": -0.3,
+          "color": "#27ae60",
+          "font_size": 14
+        }
+      ],
+      "constraints": [],
+      "caption": "Площадь сечения"
+    },
+    {
+      "text": "Вычислим площадь параллелограмма AHD1M.\n\nПлощадь параллелограмма AHD1M равна $4 \times 2 = 8$.",
+      "objects": [],
+      "annotations": [
+        {
+          "type": "label",
+          "id": "lbl_area",
+          "text": "8",
+          "anchor": "A",
+          "dx": 1.5,
+          "dy": -0.3,
+          "color": "#27ae60",
+          "font_size": 14
+        }
+      ],
+      "constraints": [],
+      "caption": "Ответ: 8"
+    }
+  ]
+}

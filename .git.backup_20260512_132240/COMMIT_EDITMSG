@@ -1,0 +1,15 @@
+Pipeline integration: visual planner + SVG generator
+
+- Created pipeline/ directory connecting planner v2 with colleague's SVG generator
+- converter.py: maps 13 planner visual types → 3 SVG generator scene types
+  (function_plot, geometry, diagram) with concrete object builders
+- run_pipeline.py: end-to-end script (conspect → plan → convert → render → SVG)
+- Fallback SVG renderer for environments without full SVG generator deps
+- Tested on all 4 conspects: 37/37 visuals rendered successfully
+- HTML preview with all generated SVGs at pipeline/output/preview.html
+- Added svg-generator/ (colleague's SVG generation code
+
+EOF
+)
+
+Made-with: Cursor

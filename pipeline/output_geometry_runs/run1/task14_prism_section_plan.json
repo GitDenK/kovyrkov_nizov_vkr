@@ -1,0 +1,269 @@
+{
+  "title": "Сечение призмы плоскостью через A, B и M",
+  "points": {
+    "A": {
+      "x": 0,
+      "y": 3.46,
+      "z": 0,
+      "label_dx": -12,
+      "label_dy": 10
+    },
+    "B": {
+      "x": -3,
+      "y": -1.73,
+      "z": 0,
+      "label_dx": -14,
+      "label_dy": 8
+    },
+    "C": {
+      "x": 3,
+      "y": -1.73,
+      "z": 0,
+      "label_dx": 10,
+      "label_dy": 8
+    },
+    "A1": {
+      "x": 0,
+      "y": 3.46,
+      "z": 4,
+      "label_dx": -12,
+      "label_dy": -10
+    },
+    "B1": {
+      "x": -3,
+      "y": -1.73,
+      "z": 4,
+      "label_dx": -14,
+      "label_dy": -8
+    },
+    "C1": {
+      "x": 3,
+      "y": -1.73,
+      "z": 4,
+      "label_dx": 10,
+      "label_dy": -8
+    },
+    "M": {
+      "x": 3,
+      "y": -1.73,
+      "z": 2,
+      "label_dx": 10,
+      "label_dy": 0
+    }
+  },
+  "faces": [
+    [
+      "A",
+      "B",
+      "C"
+    ],
+    [
+      "A1",
+      "B1",
+      "C1"
+    ],
+    [
+      "A",
+      "A1",
+      "B",
+      "B1"
+    ],
+    [
+      "B",
+      "B1",
+      "C",
+      "C1"
+    ],
+    [
+      "C",
+      "C1",
+      "A",
+      "A1"
+    ]
+  ],
+  "steps": [
+    {
+      "text": "Правильная треугольная призма $ABCA_1B_1C_1$.",
+      "objects": [
+        {
+          "type": "point",
+          "id": "A"
+        },
+        {
+          "type": "point",
+          "id": "B"
+        },
+        {
+          "type": "point",
+          "id": "C"
+        },
+        {
+          "type": "point",
+          "id": "A1"
+        },
+        {
+          "type": "point",
+          "id": "B1"
+        },
+        {
+          "type": "point",
+          "id": "C1"
+        },
+        {
+          "type": "segment",
+          "id": "s_AB",
+          "from_point": "A",
+          "to_point": "B"
+        },
+        {
+          "type": "segment",
+          "id": "s_BC",
+          "from_point": "B",
+          "to_point": "C"
+        },
+        {
+          "type": "segment",
+          "id": "s_CA",
+          "from_point": "C",
+          "to_point": "A"
+        },
+        {
+          "type": "segment",
+          "id": "s_A1B1",
+          "from_point": "A1",
+          "to_point": "B1"
+        },
+        {
+          "type": "segment",
+          "id": "s_B1C1",
+          "from_point": "B1",
+          "to_point": "C1"
+        },
+        {
+          "type": "segment",
+          "id": "s_C1A1",
+          "from_point": "C1",
+          "to_point": "A1"
+        },
+        {
+          "type": "segment",
+          "id": "s_AA1",
+          "from_point": "A",
+          "to_point": "A1"
+        },
+        {
+          "type": "segment",
+          "id": "s_BB1",
+          "from_point": "B",
+          "to_point": "B1"
+        },
+        {
+          "type": "segment",
+          "id": "s_CC1",
+          "from_point": "C",
+          "to_point": "C1"
+        }
+      ],
+      "annotations": [],
+      "constraints": [],
+      "caption": "Призма ABCA1B1C1"
+    },
+    {
+      "text": "Точка $M$ — середина ребра $CC_1$.",
+      "objects": [
+        {
+          "type": "point",
+          "id": "M",
+          "style": {
+            "fill": "#27ae60",
+            "stroke": "#27ae60"
+          }
+        },
+        {
+          "type": "segment",
+          "id": "s_CM",
+          "from_point": "C",
+          "to_point": "M",
+          "style": {
+            "stroke": "#27ae60",
+            "stroke_width": 2
+          }
+        },
+        {
+          "type": "segment",
+          "id": "s_MC1",
+          "from_point": "M",
+          "to_point": "C1",
+          "style": {
+            "stroke": "#27ae60",
+            "stroke_width": 2
+          }
+        }
+      ],
+      "annotations": [],
+      "constraints": [],
+      "caption": "Середина CC1"
+    },
+    {
+      "text": "Плоскость, проходящая через точки $A$, $B$ и $M$, пересекает призму.",
+      "objects": [
+        {
+          "type": "segment",
+          "id": "s_AM",
+          "from_point": "A",
+          "to_point": "M",
+          "style": {
+            "stroke": "#e74c3c",
+            "stroke_width": 2
+          }
+        },
+        {
+          "type": "segment",
+          "id": "s_BM",
+          "from_point": "B",
+          "to_point": "M",
+          "style": {
+            "stroke": "#e74c3c",
+            "stroke_width": 2
+          }
+        }
+      ],
+      "annotations": [],
+      "constraints": [],
+      "caption": "Плоскость через A, B и M"
+    },
+    {
+      "text": "Сечение призмы плоскостью через $A$, $B$ и $M$ — треугольник $ABM$.",
+      "objects": [
+        {
+          "type": "polygon",
+          "id": "tri_ABM",
+          "vertices": [
+            "A",
+            "B",
+            "M"
+          ],
+          "style": {
+            "fill": "rgba(41,128,185,0.08)",
+            "stroke": "#2980b9",
+            "stroke_width": 2
+          }
+        }
+      ],
+      "annotations": [
+        {
+          "type": "label",
+          "id": "lbl_S",
+          "text": "S = 12",
+          "anchor": "M",
+          "dx": 0.5,
+          "dy": 0.3,
+          "color": "#8e44ad",
+          "font_size": 13
+        }
+      ],
+      "constraints": [],
+      "caption": "Треугольник ABM"
+    }
+  ]
+}

@@ -1,0 +1,1071 @@
+{
+  "model": "meta-llama/Llama-3.3-70B-Instruct-Turbo",
+  "runs": 3,
+  "problems": [
+    "task16_trapezoid",
+    "task16_rhombus_diagonals",
+    "task14_pyramid_apex_to_face",
+    "task14_prism_section",
+    "task16_triangle_circumscribed",
+    "task16_parallelogram_diagonals",
+    "task14_cube_diagonal_section",
+    "task14_pyramid_dihedral_angle"
+  ],
+  "generated_at": "2026-05-08 21:11:04",
+  "elapsed_overall_sec": 0.0,
+  "raw_per_run": {
+    "task16_trapezoid": [
+      {
+        "wall_sec": 6.591,
+        "llm_sec": 6.585,
+        "llm_calls_total": 1,
+        "llm_calls_plan": 1,
+        "llm_calls_fix": 0,
+        "tokens_in": 5075,
+        "tokens_out": 928,
+        "steps_total": 3,
+        "objects_total": 12,
+        "annotations_total": 5,
+        "run": 1,
+        "domain": "planimetry",
+        "answer_vis_warnings": 0
+      },
+      {
+        "wall_sec": 23.226,
+        "llm_sec": 23.221,
+        "llm_calls_total": 1,
+        "llm_calls_plan": 1,
+        "llm_calls_fix": 0,
+        "tokens_in": 5075,
+        "tokens_out": 1000,
+        "steps_total": 3,
+        "objects_total": 12,
+        "annotations_total": 1,
+        "run": 2,
+        "domain": "planimetry",
+        "answer_vis_warnings": 0
+      },
+      {
+        "wall_sec": 10.195,
+        "llm_sec": 10.191,
+        "llm_calls_total": 1,
+        "llm_calls_plan": 1,
+        "llm_calls_fix": 0,
+        "tokens_in": 5075,
+        "tokens_out": 1370,
+        "steps_total": 5,
+        "objects_total": 14,
+        "annotations_total": 2,
+        "run": 3,
+        "domain": "planimetry",
+        "answer_vis_warnings": 0
+      }
+    ],
+    "task16_rhombus_diagonals": [
+      {
+        "wall_sec": 13.606,
+        "llm_sec": 13.602,
+        "llm_calls_total": 1,
+        "llm_calls_plan": 1,
+        "llm_calls_fix": 0,
+        "tokens_in": 5068,
+        "tokens_out": 1301,
+        "steps_total": 4,
+        "objects_total": 14,
+        "annotations_total": 4,
+        "run": 1,
+        "domain": "planimetry",
+        "answer_vis_warnings": 0
+      },
+      {
+        "wall_sec": 6.761,
+        "llm_sec": 6.756,
+        "llm_calls_total": 1,
+        "llm_calls_plan": 1,
+        "llm_calls_fix": 0,
+        "tokens_in": 5068,
+        "tokens_out": 1314,
+        "steps_total": 4,
+        "objects_total": 14,
+        "annotations_total": 4,
+        "run": 2,
+        "domain": "planimetry",
+        "answer_vis_warnings": 0
+      },
+      {
+        "wall_sec": 13.001,
+        "llm_sec": 12.996,
+        "llm_calls_total": 1,
+        "llm_calls_plan": 1,
+        "llm_calls_fix": 0,
+        "tokens_in": 5068,
+        "tokens_out": 1208,
+        "steps_total": 3,
+        "objects_total": 14,
+        "annotations_total": 4,
+        "run": 3,
+        "domain": "planimetry",
+        "answer_vis_warnings": 1
+      }
+    ],
+    "task14_pyramid_apex_to_face": [
+      {
+        "wall_sec": 30.654,
+        "llm_sec": 30.65,
+        "llm_calls_total": 1,
+        "llm_calls_plan": 1,
+        "llm_calls_fix": 0,
+        "tokens_in": 5058,
+        "tokens_out": 881,
+        "steps_total": 2,
+        "objects_total": 11,
+        "annotations_total": 3,
+        "run": 1,
+        "domain": "stereometry",
+        "answer_vis_warnings": 1
+      },
+      {
+        "wall_sec": 12.063,
+        "llm_sec": 12.061,
+        "llm_calls_total": 1,
+        "llm_calls_plan": 1,
+        "llm_calls_fix": 0,
+        "tokens_in": 5058,
+        "tokens_out": 1069,
+        "steps_total": 3,
+        "objects_total": 12,
+        "annotations_total": 4,
+        "run": 2,
+        "domain": "stereometry",
+        "answer_vis_warnings": 1
+      },
+      {
+        "wall_sec": 5.704,
+        "llm_sec": 5.7,
+        "llm_calls_total": 1,
+        "llm_calls_plan": 1,
+        "llm_calls_fix": 0,
+        "tokens_in": 5058,
+        "tokens_out": 876,
+        "steps_total": 2,
+        "objects_total": 11,
+        "annotations_total": 3,
+        "run": 3,
+        "domain": "stereometry",
+        "answer_vis_warnings": 1
+      }
+    ],
+    "task14_prism_section": [
+      {
+        "wall_sec": 25.334,
+        "llm_sec": 25.329,
+        "llm_calls_total": 1,
+        "llm_calls_plan": 1,
+        "llm_calls_fix": 0,
+        "tokens_in": 5082,
+        "tokens_out": 1336,
+        "steps_total": 4,
+        "objects_total": 21,
+        "annotations_total": 1,
+        "run": 1,
+        "domain": "stereometry",
+        "answer_vis_warnings": 0
+      },
+      {
+        "wall_sec": 11.065,
+        "llm_sec": 11.06,
+        "llm_calls_total": 1,
+        "llm_calls_plan": 1,
+        "llm_calls_fix": 0,
+        "tokens_in": 5082,
+        "tokens_out": 1404,
+        "steps_total": 5,
+        "objects_total": 21,
+        "annotations_total": 1,
+        "run": 2,
+        "domain": "stereometry",
+        "answer_vis_warnings": 0
+      },
+      {
+        "wall_sec": 10.922,
+        "llm_sec": 10.917,
+        "llm_calls_total": 1,
+        "llm_calls_plan": 1,
+        "llm_calls_fix": 0,
+        "tokens_in": 5082,
+        "tokens_out": 1396,
+        "steps_total": 4,
+        "objects_total": 18,
+        "annotations_total": 4,
+        "run": 3,
+        "domain": "stereometry",
+        "answer_vis_warnings": 0
+      }
+    ],
+    "task16_triangle_circumscribed": [
+      {
+        "wall_sec": 12.723,
+        "llm_sec": 12.722,
+        "llm_calls_total": 1,
+        "llm_calls_plan": 1,
+        "llm_calls_fix": 0,
+        "tokens_in": 5080,
+        "tokens_out": 1030,
+        "steps_total": 3,
+        "objects_total": 8,
+        "annotations_total": 6,
+        "run": 1,
+        "domain": "planimetry",
+        "answer_vis_warnings": 0
+      },
+      {
+        "wall_sec": 8.685,
+        "llm_sec": 8.681,
+        "llm_calls_total": 1,
+        "llm_calls_plan": 1,
+        "llm_calls_fix": 0,
+        "tokens_in": 5080,
+        "tokens_out": 1036,
+        "steps_total": 3,
+        "objects_total": 8,
+        "annotations_total": 6,
+        "run": 2,
+        "domain": "planimetry",
+        "answer_vis_warnings": 0
+      },
+      {
+        "wall_sec": 10.539,
+        "llm_sec": 10.535,
+        "llm_calls_total": 1,
+        "llm_calls_plan": 1,
+        "llm_calls_fix": 0,
+        "tokens_in": 5080,
+        "tokens_out": 816,
+        "steps_total": 3,
+        "objects_total": 8,
+        "annotations_total": 3,
+        "run": 3,
+        "domain": "planimetry",
+        "answer_vis_warnings": 0
+      }
+    ],
+    "task16_parallelogram_diagonals": [
+      {
+        "wall_sec": 14.237,
+        "llm_sec": 14.23,
+        "llm_calls_total": 1,
+        "llm_calls_plan": 1,
+        "llm_calls_fix": 0,
+        "tokens_in": 5066,
+        "tokens_out": 1480,
+        "steps_total": 4,
+        "objects_total": 12,
+        "annotations_total": 2,
+        "run": 1,
+        "domain": "planimetry",
+        "answer_vis_warnings": 0
+      },
+      {
+        "wall_sec": 20.616,
+        "llm_sec": 20.608,
+        "llm_calls_total": 1,
+        "llm_calls_plan": 1,
+        "llm_calls_fix": 0,
+        "tokens_in": 5066,
+        "tokens_out": 2164,
+        "steps_total": 4,
+        "objects_total": 11,
+        "annotations_total": 7,
+        "run": 2,
+        "domain": "planimetry",
+        "answer_vis_warnings": 0
+      },
+      {
+        "wall_sec": 15.447,
+        "llm_sec": 15.441,
+        "llm_calls_total": 1,
+        "llm_calls_plan": 1,
+        "llm_calls_fix": 0,
+        "tokens_in": 5066,
+        "tokens_out": 2028,
+        "steps_total": 4,
+        "objects_total": 14,
+        "annotations_total": 8,
+        "run": 3,
+        "domain": "planimetry",
+        "answer_vis_warnings": 0
+      }
+    ],
+    "task14_cube_diagonal_section": [
+      {
+        "wall_sec": 18.139,
+        "llm_sec": 18.133,
+        "llm_calls_total": 1,
+        "llm_calls_plan": 1,
+        "llm_calls_fix": 0,
+        "tokens_in": 5073,
+        "tokens_out": 1638,
+        "steps_total": 4,
+        "objects_total": 26,
+        "annotations_total": 3,
+        "run": 1,
+        "domain": "stereometry",
+        "answer_vis_warnings": 0
+      },
+      {
+        "wall_sec": 17.232,
+        "llm_sec": 17.225,
+        "llm_calls_total": 1,
+        "llm_calls_plan": 1,
+        "llm_calls_fix": 0,
+        "tokens_in": 5073,
+        "tokens_out": 1456,
+        "steps_total": 4,
+        "objects_total": 24,
+        "annotations_total": 3,
+        "run": 2,
+        "domain": "stereometry",
+        "answer_vis_warnings": 0
+      },
+      {
+        "wall_sec": 34.462,
+        "llm_sec": 34.457,
+        "llm_calls_total": 1,
+        "llm_calls_plan": 1,
+        "llm_calls_fix": 0,
+        "tokens_in": 5073,
+        "tokens_out": 1636,
+        "steps_total": 4,
+        "objects_total": 28,
+        "annotations_total": 3,
+        "run": 3,
+        "domain": "stereometry",
+        "answer_vis_warnings": 0
+      }
+    ],
+    "task14_pyramid_dihedral_angle": [
+      {
+        "wall_sec": 11.924,
+        "llm_sec": 11.918,
+        "llm_calls_total": 1,
+        "llm_calls_plan": 1,
+        "llm_calls_fix": 0,
+        "tokens_in": 5083,
+        "tokens_out": 1476,
+        "steps_total": 5,
+        "objects_total": 18,
+        "annotations_total": 4,
+        "run": 1,
+        "domain": "stereometry",
+        "answer_vis_warnings": 0
+      },
+      {
+        "wall_sec": 10.935,
+        "llm_sec": 10.93,
+        "llm_calls_total": 1,
+        "llm_calls_plan": 1,
+        "llm_calls_fix": 0,
+        "tokens_in": 5083,
+        "tokens_out": 1414,
+        "steps_total": 4,
+        "objects_total": 18,
+        "annotations_total": 2,
+        "run": 2,
+        "domain": "stereometry",
+        "answer_vis_warnings": 1
+      },
+      {
+        "wall_sec": 22.342,
+        "llm_sec": 22.336,
+        "llm_calls_total": 1,
+        "llm_calls_plan": 1,
+        "llm_calls_fix": 0,
+        "tokens_in": 5083,
+        "tokens_out": 1680,
+        "steps_total": 5,
+        "objects_total": 21,
+        "annotations_total": 4,
+        "run": 3,
+        "domain": "stereometry",
+        "answer_vis_warnings": 0
+      }
+    ]
+  },
+  "per_problem": {
+    "task16_trapezoid": {
+      "wall_sec": {
+        "n": 3,
+        "mean": 13.34,
+        "stdev": 8.75,
+        "min": 6.59,
+        "max": 23.23
+      },
+      "llm_sec": {
+        "n": 3,
+        "mean": 13.33,
+        "stdev": 8.75,
+        "min": 6.58,
+        "max": 23.22
+      },
+      "llm_calls_total": {
+        "n": 3,
+        "mean": 1.0,
+        "stdev": 0.0,
+        "min": 1,
+        "max": 1
+      },
+      "llm_calls_plan": {
+        "n": 3,
+        "mean": 1.0,
+        "stdev": 0.0,
+        "min": 1,
+        "max": 1
+      },
+      "llm_calls_fix": {
+        "n": 3,
+        "mean": 0.0,
+        "stdev": 0.0,
+        "min": 0,
+        "max": 0
+      },
+      "tokens_in": {
+        "n": 3,
+        "mean": 5075.0,
+        "stdev": 0.0,
+        "min": 5075,
+        "max": 5075
+      },
+      "tokens_out": {
+        "n": 3,
+        "mean": 1099.33,
+        "stdev": 237.15,
+        "min": 928,
+        "max": 1370
+      },
+      "steps_total": {
+        "n": 3,
+        "mean": 3.67,
+        "stdev": 1.15,
+        "min": 3,
+        "max": 5
+      },
+      "objects_total": {
+        "n": 3,
+        "mean": 12.67,
+        "stdev": 1.15,
+        "min": 12,
+        "max": 14
+      },
+      "annotations_total": {
+        "n": 3,
+        "mean": 2.67,
+        "stdev": 2.08,
+        "min": 1,
+        "max": 5
+      }
+    },
+    "task16_rhombus_diagonals": {
+      "wall_sec": {
+        "n": 3,
+        "mean": 11.12,
+        "stdev": 3.79,
+        "min": 6.76,
+        "max": 13.61
+      },
+      "llm_sec": {
+        "n": 3,
+        "mean": 11.12,
+        "stdev": 3.79,
+        "min": 6.76,
+        "max": 13.6
+      },
+      "llm_calls_total": {
+        "n": 3,
+        "mean": 1.0,
+        "stdev": 0.0,
+        "min": 1,
+        "max": 1
+      },
+      "llm_calls_plan": {
+        "n": 3,
+        "mean": 1.0,
+        "stdev": 0.0,
+        "min": 1,
+        "max": 1
+      },
+      "llm_calls_fix": {
+        "n": 3,
+        "mean": 0.0,
+        "stdev": 0.0,
+        "min": 0,
+        "max": 0
+      },
+      "tokens_in": {
+        "n": 3,
+        "mean": 5068.0,
+        "stdev": 0.0,
+        "min": 5068,
+        "max": 5068
+      },
+      "tokens_out": {
+        "n": 3,
+        "mean": 1274.33,
+        "stdev": 57.81,
+        "min": 1208,
+        "max": 1314
+      },
+      "steps_total": {
+        "n": 3,
+        "mean": 3.67,
+        "stdev": 0.58,
+        "min": 3,
+        "max": 4
+      },
+      "objects_total": {
+        "n": 3,
+        "mean": 14.0,
+        "stdev": 0.0,
+        "min": 14,
+        "max": 14
+      },
+      "annotations_total": {
+        "n": 3,
+        "mean": 4.0,
+        "stdev": 0.0,
+        "min": 4,
+        "max": 4
+      }
+    },
+    "task14_pyramid_apex_to_face": {
+      "wall_sec": {
+        "n": 3,
+        "mean": 16.14,
+        "stdev": 12.97,
+        "min": 5.7,
+        "max": 30.65
+      },
+      "llm_sec": {
+        "n": 3,
+        "mean": 16.14,
+        "stdev": 12.96,
+        "min": 5.7,
+        "max": 30.65
+      },
+      "llm_calls_total": {
+        "n": 3,
+        "mean": 1.0,
+        "stdev": 0.0,
+        "min": 1,
+        "max": 1
+      },
+      "llm_calls_plan": {
+        "n": 3,
+        "mean": 1.0,
+        "stdev": 0.0,
+        "min": 1,
+        "max": 1
+      },
+      "llm_calls_fix": {
+        "n": 3,
+        "mean": 0.0,
+        "stdev": 0.0,
+        "min": 0,
+        "max": 0
+      },
+      "tokens_in": {
+        "n": 3,
+        "mean": 5058.0,
+        "stdev": 0.0,
+        "min": 5058,
+        "max": 5058
+      },
+      "tokens_out": {
+        "n": 3,
+        "mean": 942.0,
+        "stdev": 110.01,
+        "min": 876,
+        "max": 1069
+      },
+      "steps_total": {
+        "n": 3,
+        "mean": 2.33,
+        "stdev": 0.58,
+        "min": 2,
+        "max": 3
+      },
+      "objects_total": {
+        "n": 3,
+        "mean": 11.33,
+        "stdev": 0.58,
+        "min": 11,
+        "max": 12
+      },
+      "annotations_total": {
+        "n": 3,
+        "mean": 3.33,
+        "stdev": 0.58,
+        "min": 3,
+        "max": 4
+      }
+    },
+    "task14_prism_section": {
+      "wall_sec": {
+        "n": 3,
+        "mean": 15.77,
+        "stdev": 8.28,
+        "min": 10.92,
+        "max": 25.33
+      },
+      "llm_sec": {
+        "n": 3,
+        "mean": 15.77,
+        "stdev": 8.28,
+        "min": 10.92,
+        "max": 25.33
+      },
+      "llm_calls_total": {
+        "n": 3,
+        "mean": 1.0,
+        "stdev": 0.0,
+        "min": 1,
+        "max": 1
+      },
+      "llm_calls_plan": {
+        "n": 3,
+        "mean": 1.0,
+        "stdev": 0.0,
+        "min": 1,
+        "max": 1
+      },
+      "llm_calls_fix": {
+        "n": 3,
+        "mean": 0.0,
+        "stdev": 0.0,
+        "min": 0,
+        "max": 0
+      },
+      "tokens_in": {
+        "n": 3,
+        "mean": 5082.0,
+        "stdev": 0.0,
+        "min": 5082,
+        "max": 5082
+      },
+      "tokens_out": {
+        "n": 3,
+        "mean": 1378.67,
+        "stdev": 37.17,
+        "min": 1336,
+        "max": 1404
+      },
+      "steps_total": {
+        "n": 3,
+        "mean": 4.33,
+        "stdev": 0.58,
+        "min": 4,
+        "max": 5
+      },
+      "objects_total": {
+        "n": 3,
+        "mean": 20.0,
+        "stdev": 1.73,
+        "min": 18,
+        "max": 21
+      },
+      "annotations_total": {
+        "n": 3,
+        "mean": 2.0,
+        "stdev": 1.73,
+        "min": 1,
+        "max": 4
+      }
+    },
+    "task16_triangle_circumscribed": {
+      "wall_sec": {
+        "n": 3,
+        "mean": 10.65,
+        "stdev": 2.02,
+        "min": 8.69,
+        "max": 12.72
+      },
+      "llm_sec": {
+        "n": 3,
+        "mean": 10.65,
+        "stdev": 2.02,
+        "min": 8.68,
+        "max": 12.72
+      },
+      "llm_calls_total": {
+        "n": 3,
+        "mean": 1.0,
+        "stdev": 0.0,
+        "min": 1,
+        "max": 1
+      },
+      "llm_calls_plan": {
+        "n": 3,
+        "mean": 1.0,
+        "stdev": 0.0,
+        "min": 1,
+        "max": 1
+      },
+      "llm_calls_fix": {
+        "n": 3,
+        "mean": 0.0,
+        "stdev": 0.0,
+        "min": 0,
+        "max": 0
+      },
+      "tokens_in": {
+        "n": 3,
+        "mean": 5080.0,
+        "stdev": 0.0,
+        "min": 5080,
+        "max": 5080
+      },
+      "tokens_out": {
+        "n": 3,
+        "mean": 960.67,
+        "stdev": 125.32,
+        "min": 816,
+        "max": 1036
+      },
+      "steps_total": {
+        "n": 3,
+        "mean": 3.0,
+        "stdev": 0.0,
+        "min": 3,
+        "max": 3
+      },
+      "objects_total": {
+        "n": 3,
+        "mean": 8.0,
+        "stdev": 0.0,
+        "min": 8,
+        "max": 8
+      },
+      "annotations_total": {
+        "n": 3,
+        "mean": 5.0,
+        "stdev": 1.73,
+        "min": 3,
+        "max": 6
+      }
+    },
+    "task16_parallelogram_diagonals": {
+      "wall_sec": {
+        "n": 3,
+        "mean": 16.77,
+        "stdev": 3.39,
+        "min": 14.24,
+        "max": 20.62
+      },
+      "llm_sec": {
+        "n": 3,
+        "mean": 16.76,
+        "stdev": 3.39,
+        "min": 14.23,
+        "max": 20.61
+      },
+      "llm_calls_total": {
+        "n": 3,
+        "mean": 1.0,
+        "stdev": 0.0,
+        "min": 1,
+        "max": 1
+      },
+      "llm_calls_plan": {
+        "n": 3,
+        "mean": 1.0,
+        "stdev": 0.0,
+        "min": 1,
+        "max": 1
+      },
+      "llm_calls_fix": {
+        "n": 3,
+        "mean": 0.0,
+        "stdev": 0.0,
+        "min": 0,
+        "max": 0
+      },
+      "tokens_in": {
+        "n": 3,
+        "mean": 5066.0,
+        "stdev": 0.0,
+        "min": 5066,
+        "max": 5066
+      },
+      "tokens_out": {
+        "n": 3,
+        "mean": 1890.67,
+        "stdev": 362.09,
+        "min": 1480,
+        "max": 2164
+      },
+      "steps_total": {
+        "n": 3,
+        "mean": 4.0,
+        "stdev": 0.0,
+        "min": 4,
+        "max": 4
+      },
+      "objects_total": {
+        "n": 3,
+        "mean": 12.33,
+        "stdev": 1.53,
+        "min": 11,
+        "max": 14
+      },
+      "annotations_total": {
+        "n": 3,
+        "mean": 5.67,
+        "stdev": 3.21,
+        "min": 2,
+        "max": 8
+      }
+    },
+    "task14_cube_diagonal_section": {
+      "wall_sec": {
+        "n": 3,
+        "mean": 23.28,
+        "stdev": 9.7,
+        "min": 17.23,
+        "max": 34.46
+      },
+      "llm_sec": {
+        "n": 3,
+        "mean": 23.27,
+        "stdev": 9.7,
+        "min": 17.23,
+        "max": 34.46
+      },
+      "llm_calls_total": {
+        "n": 3,
+        "mean": 1.0,
+        "stdev": 0.0,
+        "min": 1,
+        "max": 1
+      },
+      "llm_calls_plan": {
+        "n": 3,
+        "mean": 1.0,
+        "stdev": 0.0,
+        "min": 1,
+        "max": 1
+      },
+      "llm_calls_fix": {
+        "n": 3,
+        "mean": 0.0,
+        "stdev": 0.0,
+        "min": 0,
+        "max": 0
+      },
+      "tokens_in": {
+        "n": 3,
+        "mean": 5073.0,
+        "stdev": 0.0,
+        "min": 5073,
+        "max": 5073
+      },
+      "tokens_out": {
+        "n": 3,
+        "mean": 1576.67,
+        "stdev": 104.51,
+        "min": 1456,
+        "max": 1638
+      },
+      "steps_total": {
+        "n": 3,
+        "mean": 4.0,
+        "stdev": 0.0,
+        "min": 4,
+        "max": 4
+      },
+      "objects_total": {
+        "n": 3,
+        "mean": 26.0,
+        "stdev": 2.0,
+        "min": 24,
+        "max": 28
+      },
+      "annotations_total": {
+        "n": 3,
+        "mean": 3.0,
+        "stdev": 0.0,
+        "min": 3,
+        "max": 3
+      }
+    },
+    "task14_pyramid_dihedral_angle": {
+      "wall_sec": {
+        "n": 3,
+        "mean": 15.07,
+        "stdev": 6.32,
+        "min": 10.94,
+        "max": 22.34
+      },
+      "llm_sec": {
+        "n": 3,
+        "mean": 15.06,
+        "stdev": 6.32,
+        "min": 10.93,
+        "max": 22.34
+      },
+      "llm_calls_total": {
+        "n": 3,
+        "mean": 1.0,
+        "stdev": 0.0,
+        "min": 1,
+        "max": 1
+      },
+      "llm_calls_plan": {
+        "n": 3,
+        "mean": 1.0,
+        "stdev": 0.0,
+        "min": 1,
+        "max": 1
+      },
+      "llm_calls_fix": {
+        "n": 3,
+        "mean": 0.0,
+        "stdev": 0.0,
+        "min": 0,
+        "max": 0
+      },
+      "tokens_in": {
+        "n": 3,
+        "mean": 5083.0,
+        "stdev": 0.0,
+        "min": 5083,
+        "max": 5083
+      },
+      "tokens_out": {
+        "n": 3,
+        "mean": 1523.33,
+        "stdev": 139.17,
+        "min": 1414,
+        "max": 1680
+      },
+      "steps_total": {
+        "n": 3,
+        "mean": 4.67,
+        "stdev": 0.58,
+        "min": 4,
+        "max": 5
+      },
+      "objects_total": {
+        "n": 3,
+        "mean": 19.0,
+        "stdev": 1.73,
+        "min": 18,
+        "max": 21
+      },
+      "annotations_total": {
+        "n": 3,
+        "mean": 3.33,
+        "stdev": 1.15,
+        "min": 2,
+        "max": 4
+      }
+    }
+  },
+  "fix_rate": {
+    "per_problem": {
+      "task16_trapezoid": {
+        "cells": 3,
+        "fix_cells": 0,
+        "rate": 0.0
+      },
+      "task16_rhombus_diagonals": {
+        "cells": 3,
+        "fix_cells": 0,
+        "rate": 0.0
+      },
+      "task14_pyramid_apex_to_face": {
+        "cells": 3,
+        "fix_cells": 0,
+        "rate": 0.0
+      },
+      "task14_prism_section": {
+        "cells": 3,
+        "fix_cells": 0,
+        "rate": 0.0
+      },
+      "task16_triangle_circumscribed": {
+        "cells": 3,
+        "fix_cells": 0,
+        "rate": 0.0
+      },
+      "task16_parallelogram_diagonals": {
+        "cells": 3,
+        "fix_cells": 0,
+        "rate": 0.0
+      },
+      "task14_cube_diagonal_section": {
+        "cells": 3,
+        "fix_cells": 0,
+        "rate": 0.0
+      },
+      "task14_pyramid_dihedral_angle": {
+        "cells": 3,
+        "fix_cells": 0,
+        "rate": 0.0
+      }
+    },
+    "overall": {
+      "cells": 24,
+      "fix_cells": 0,
+      "rate": 0.0
+    }
+  },
+  "answer_vis_rate": {
+    "per_problem": {
+      "task16_trapezoid": {
+        "cells": 3,
+        "flagged_cells": 0,
+        "rate": 0.0
+      },
+      "task16_rhombus_diagonals": {
+        "cells": 3,
+        "flagged_cells": 1,
+        "rate": 0.333
+      },
+      "task14_pyramid_apex_to_face": {
+        "cells": 3,
+        "flagged_cells": 3,
+        "rate": 1.0
+      },
+      "task14_prism_section": {
+        "cells": 3,
+        "flagged_cells": 0,
+        "rate": 0.0
+      },
+      "task16_triangle_circumscribed": {
+        "cells": 3,
+        "flagged_cells": 0,
+        "rate": 0.0
+      },
+      "task16_parallelogram_diagonals": {
+        "cells": 3,
+        "flagged_cells": 0,
+        "rate": 0.0
+      },
+      "task14_cube_diagonal_section": {
+        "cells": 3,
+        "flagged_cells": 0,
+        "rate": 0.0
+      },
+      "task14_pyramid_dihedral_angle": {
+        "cells": 3,
+        "flagged_cells": 1,
+        "rate": 0.333
+      }
+    },
+    "overall": {
+      "cells": 24,
+      "flagged_cells": 5,
+      "rate": 0.208
+    }
+  },
+  "note": "Re-aggregated from existing metrics files; elapsed_overall_sec set to 0."
+}

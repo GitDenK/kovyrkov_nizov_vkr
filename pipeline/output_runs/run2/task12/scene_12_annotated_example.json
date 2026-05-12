@@ -1,0 +1,278 @@
+{
+  "scene_type": "diagram",
+  "canvas": {
+    "width": 500,
+    "height": 300,
+    "x_min": 0,
+    "x_max": 500,
+    "y_min": 0,
+    "y_max": 300
+  },
+  "style": {
+    "theme": "light",
+    "stroke_color": "#333333",
+    "fill_color": "#f5f5f5",
+    "font_size": 13,
+    "font_family": "sans-serif"
+  },
+  "objects": [
+    {
+      "type": "title",
+      "id": "title",
+      "text": "Пошаговое решение задачи на нахождение наибольшего значения функции $f(x) = x^2 - 4x + 5$ на отрезке $[0; 3]$"
+    },
+    {
+      "type": "box",
+      "id": "problem",
+      "text": "Задача: Найти наибольшее значение функции $f(x) = x^2 - 4x + 5$ на отрезке $[0; 3]$",
+      "style": {
+        "fill": "#fdebd0",
+        "stroke": "#e67e22"
+      }
+    },
+    {
+      "type": "formula_block",
+      "id": "expr_0",
+      "formula": "$f(x) = x^2 - 4x + 5$"
+    },
+    {
+      "type": "arrow",
+      "id": "arr_e_0",
+      "from_point": "problem",
+      "to_point": "expr_0"
+    },
+    {
+      "type": "box",
+      "id": "ann_0",
+      "text": "Формула исходной функции"
+    },
+    {
+      "type": "arrow",
+      "id": "arr_a_0",
+      "from_point": "expr_0",
+      "to_point": "ann_0"
+    },
+    {
+      "type": "formula_block",
+      "id": "expr_1",
+      "formula": "$f'(x) = 2x - 4$"
+    },
+    {
+      "type": "arrow",
+      "id": "arr_e_1",
+      "from_point": "ann_0",
+      "to_point": "expr_1"
+    },
+    {
+      "type": "box",
+      "id": "ann_1",
+      "text": "Найдем производную"
+    },
+    {
+      "type": "arrow",
+      "id": "arr_a_1",
+      "from_point": "expr_1",
+      "to_point": "ann_1"
+    },
+    {
+      "type": "formula_block",
+      "id": "expr_2",
+      "formula": "$2x - 4 = 0$"
+    },
+    {
+      "type": "arrow",
+      "id": "arr_e_2",
+      "from_point": "ann_1",
+      "to_point": "expr_2"
+    },
+    {
+      "type": "box",
+      "id": "ann_2",
+      "text": "Решим уравнение $f'(x) = 0$"
+    },
+    {
+      "type": "arrow",
+      "id": "arr_a_2",
+      "from_point": "expr_2",
+      "to_point": "ann_2"
+    },
+    {
+      "type": "formula_block",
+      "id": "expr_3",
+      "formula": "$2x = 4$"
+    },
+    {
+      "type": "arrow",
+      "id": "arr_e_3",
+      "from_point": "ann_2",
+      "to_point": "expr_3"
+    },
+    {
+      "type": "box",
+      "id": "ann_3",
+      "text": "Решаем уравнение"
+    },
+    {
+      "type": "arrow",
+      "id": "arr_a_3",
+      "from_point": "expr_3",
+      "to_point": "ann_3"
+    },
+    {
+      "type": "formula_block",
+      "id": "expr_4",
+      "formula": "$x = 2$"
+    },
+    {
+      "type": "arrow",
+      "id": "arr_e_4",
+      "from_point": "ann_3",
+      "to_point": "expr_4"
+    },
+    {
+      "type": "box",
+      "id": "ann_4",
+      "text": "Найдем критическую точку"
+    },
+    {
+      "type": "arrow",
+      "id": "arr_a_4",
+      "from_point": "expr_4",
+      "to_point": "ann_4"
+    },
+    {
+      "type": "formula_block",
+      "id": "expr_5",
+      "formula": "$0 ≤ 2 ≤ 3$"
+    },
+    {
+      "type": "arrow",
+      "id": "arr_e_5",
+      "from_point": "ann_4",
+      "to_point": "expr_5"
+    },
+    {
+      "type": "box",
+      "id": "ann_5",
+      "text": "Проверим, входит ли критическая точка в отрезок"
+    },
+    {
+      "type": "arrow",
+      "id": "arr_a_5",
+      "from_point": "expr_5",
+      "to_point": "ann_5"
+    },
+    {
+      "type": "formula_block",
+      "id": "expr_6",
+      "formula": "$f(0) = 0^2 - 4 · 0 + 5 = 5$"
+    },
+    {
+      "type": "arrow",
+      "id": "arr_e_6",
+      "from_point": "ann_5",
+      "to_point": "expr_6"
+    },
+    {
+      "type": "box",
+      "id": "ann_6",
+      "text": "Подставим $x = 0$ в исходную функцию"
+    },
+    {
+      "type": "arrow",
+      "id": "arr_a_6",
+      "from_point": "expr_6",
+      "to_point": "ann_6"
+    },
+    {
+      "type": "formula_block",
+      "id": "expr_7",
+      "formula": "$f(2) = 2^2 - 4 · 2 + 5 = 4 - 8 + 5 = 1$"
+    },
+    {
+      "type": "arrow",
+      "id": "arr_e_7",
+      "from_point": "ann_6",
+      "to_point": "expr_7"
+    },
+    {
+      "type": "box",
+      "id": "ann_7",
+      "text": "Подставим $x = 2$ в исходную функцию"
+    },
+    {
+      "type": "arrow",
+      "id": "arr_a_7",
+      "from_point": "expr_7",
+      "to_point": "ann_7"
+    },
+    {
+      "type": "formula_block",
+      "id": "expr_8",
+      "formula": "$f(3) = 3^2 - 4 · 3 + 5 = 9 - 12 + 5 = 2$"
+    },
+    {
+      "type": "arrow",
+      "id": "arr_e_8",
+      "from_point": "ann_7",
+      "to_point": "expr_8"
+    },
+    {
+      "type": "box",
+      "id": "ann_8",
+      "text": "Подставим $x = 3$ в исходную функцию"
+    },
+    {
+      "type": "arrow",
+      "id": "arr_a_8",
+      "from_point": "expr_8",
+      "to_point": "ann_8"
+    },
+    {
+      "type": "formula_block",
+      "id": "expr_9",
+      "formula": "$f(0) = 5, f(2) = 1, f(3) = 2$"
+    },
+    {
+      "type": "arrow",
+      "id": "arr_e_9",
+      "from_point": "ann_8",
+      "to_point": "expr_9"
+    },
+    {
+      "type": "box",
+      "id": "ann_9",
+      "text": "Сравним значения функции"
+    },
+    {
+      "type": "arrow",
+      "id": "arr_a_9",
+      "from_point": "expr_9",
+      "to_point": "ann_9"
+    },
+    {
+      "type": "formula_block",
+      "id": "expr_10",
+      "formula": "$Наибольшее значение — 5$"
+    },
+    {
+      "type": "arrow",
+      "id": "arr_e_10",
+      "from_point": "ann_9",
+      "to_point": "expr_10"
+    },
+    {
+      "type": "box",
+      "id": "ann_10",
+      "text": "Определим наибольшее значение"
+    },
+    {
+      "type": "arrow",
+      "id": "arr_a_10",
+      "from_point": "expr_10",
+      "to_point": "ann_10"
+    }
+  ],
+  "constraints": [],
+  "annotations": []
+}

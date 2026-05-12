@@ -1,0 +1,193 @@
+{
+  "title": "Треугольник ABC с биссектрисой AL",
+  "canvas": {
+    "width": 560,
+    "height": 380,
+    "x_min": -1,
+    "x_max": 12,
+    "y_min": -1.5,
+    "y_max": 6
+  },
+  "points": {
+    "A": {
+      "x": 1,
+      "y": 0,
+      "label_dx": -12,
+      "label_dy": 12
+    },
+    "B": {
+      "x": 3,
+      "y": 5,
+      "label_dx": -12,
+      "label_dy": -12
+    },
+    "C": {
+      "x": 9,
+      "y": 5,
+      "label_dx": 8,
+      "label_dy": -12
+    },
+    "L": {
+      "x": 5,
+      "y": 2,
+      "label_dx": 0,
+      "label_dy": 12
+    }
+  },
+  "steps": [
+    {
+      "text": "Дан треугольник $ABC$ с биссектрисой $AL$. Известно, что $AB = 6$, $AC = 4$, $BC = 8$.",
+      "objects": [
+        {
+          "type": "point",
+          "id": "A"
+        },
+        {
+          "type": "point",
+          "id": "B"
+        },
+        {
+          "type": "point",
+          "id": "C"
+        },
+        {
+          "type": "segment",
+          "id": "s_AB",
+          "from_point": "A",
+          "to_point": "B",
+          "style": {
+            "stroke": "#333"
+          }
+        },
+        {
+          "type": "segment",
+          "id": "s_AC",
+          "from_point": "A",
+          "to_point": "C",
+          "style": {
+            "stroke": "#2980b9",
+            "stroke_width": 1.8
+          }
+        },
+        {
+          "type": "segment",
+          "id": "s_BC",
+          "from_point": "B",
+          "to_point": "C",
+          "style": {
+            "stroke": "#e74c3c",
+            "stroke_width": 1.8
+          }
+        },
+        {
+          "type": "segment",
+          "id": "s_AL",
+          "from_point": "A",
+          "to_point": "L",
+          "style": {
+            "stroke": "#27ae60",
+            "stroke_width": 1.2
+          }
+        }
+      ],
+      "annotations": [
+        {
+          "type": "label",
+          "id": "lbl_AB",
+          "text": "AB = 6",
+          "anchor": "A",
+          "dx": -0.3,
+          "dy": 0.8,
+          "color": "#333",
+          "font_size": 12
+        },
+        {
+          "type": "label",
+          "id": "lbl_AC",
+          "text": "AC = 4",
+          "anchor": "A",
+          "dx": -0.3,
+          "dy": 0.4,
+          "color": "#2980b9",
+          "font_size": 12
+        },
+        {
+          "type": "label",
+          "id": "lbl_BC",
+          "text": "BC = 8",
+          "anchor": "B",
+          "dx": -1.0,
+          "dy": 0.8,
+          "color": "#e74c3c",
+          "font_size": 12
+        }
+      ],
+      "constraints": [],
+      "caption": "Треугольник ABC"
+    },
+    {
+      "text": "По свойству биссектрисы: $BL/LC = AB/AC = 6/4 = 3/2$.",
+      "objects": [],
+      "annotations": [
+        {
+          "type": "label",
+          "id": "lbl_BL",
+          "text": "BL = 24/5",
+          "anchor": "B",
+          "dx": 0.5,
+          "dy": -0.5,
+          "color": "#e67e22",
+          "font_size": 12
+        },
+        {
+          "type": "label",
+          "id": "lbl_LC",
+          "text": "LC = 16/5",
+          "anchor": "C",
+          "dx": -0.5,
+          "dy": -0.5,
+          "color": "#e67e22",
+          "font_size": 12
+        }
+      ],
+      "constraints": [],
+      "caption": "Биссектриса AL"
+    },
+    {
+      "text": "По формуле длины биссектрисы:\n$AL² = AB · AC − BL · LC = 6 · 4 − (24/5)(16/5) = 24 − 384/25 = (600 − 384)/25 = 216/25$.\n$AL = √(216/25) = 6√6/5$.",
+      "objects": [],
+      "annotations": [
+        {
+          "type": "label",
+          "id": "lbl_AL",
+          "text": "AL = 6√6/5",
+          "anchor": "A",
+          "dx": 0.5,
+          "dy": 0.2,
+          "color": "#8e44ad",
+          "font_size": 14
+        }
+      ],
+      "constraints": [],
+      "caption": "Длина биссектрисы AL"
+    },
+    {
+      "text": "По формуле Герона:\n$p = (6 + 4 + 8)/2 = 9$.\n$S = √(p(p−a)(p−b)(p−c)) = √(9 · 1 · 3 · 5) = √135 = 3√15$.",
+      "objects": [],
+      "annotations": [
+        {
+          "type": "label",
+          "id": "lbl_S",
+          "text": "S = 3√15",
+          "anchor": "A",
+          "dx": 0.5,
+          "dy": -0.5,
+          "color": "#8e44ad",
+          "font_size": 14
+        }
+      ],
+      "constraints": [],
+      "caption": "Площадь треугольника ABC"
+    }
+  ]
+}

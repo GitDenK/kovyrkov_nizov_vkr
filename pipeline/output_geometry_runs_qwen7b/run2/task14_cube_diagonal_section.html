@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8"/>
+<title>Сечение куба, проходящее через диагональ грани</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$']], displayMath: [['$$','$$']] },
+  svg: { fontCache: 'global' }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Georgia','PT Serif',serif; background:#faf9f6; color:#2c2c2c; line-height:1.85; }
+  .page-header { background:linear-gradient(135deg,#1a1a2e 0%,#16213e 50%,#0f3460 100%); padding:36px 20px; text-align:center; color:white; }
+  .page-header h1 { font-size:24px; margin-bottom:6px; font-family:sans-serif; }
+  .page-header p { opacity:0.8; font-size:13px; font-family:sans-serif; }
+  .page-header a { color:#81d4fa; text-decoration:none; }
+  .conspect { max-width:740px; margin:0 auto; padding:32px 28px 60px; }
+  .text-block { margin:14px 0; font-size:16.5px; }
+  .text-block p { margin:5px 0; }
+  .text-block h2 { font-size:21px; color:#2c3e50; font-family:sans-serif; }
+  .text-block h3 { font-size:18px; color:#34495e; font-family:sans-serif; }
+  .text-block strong { color:#2c3e50; }
+  .formula { background:#f7f9fc; padding:14px 20px; border-radius:8px; margin:12px 0; text-align:center; border-left:3px solid #2980b9; }
+  .visual-block { margin:22px 0; text-align:center; }
+  .visual-frame { display:inline-block; background:white; border:1px solid #e0e0e0; border-radius:10px; padding:14px 18px; box-shadow:0 2px 10px rgba(0,0,0,0.06); }
+  .visual-frame svg { max-width:100%; height:auto; }
+  .visual-caption { font-family:-apple-system,sans-serif; font-size:13px; color:#777; margin-top:8px; font-style:italic; }
+  .footer { text-align:center; padding:30px 20px; color:#aaa; font-size:11px; font-family:sans-serif; border-top:1px solid #eee; }
+</style>
+</head>
+<body>
+<div class="page-header">
+  <h1>Сечение куба, проходящее через диагональ грани</h1>
+  <p>Пошаговое решение с автоматически сгенерированными построениями (LLM → SVG)</p>
+  
+</div>
+<div class="conspect">
+
+<div class="text-block"><p>Дан куб ABCDA1B1C1D1 с ребром 4. Точка M --- середина ребра CC1.</p></div>
+
+<div class="visual-block">
+  <div class="visual-frame"><svg xmlns="http://www.w3.org/2000/svg" width="560" height="440" viewBox="0 0 560 440" style="background:white;font-family:sans-serif">
+  <circle cx="353.4" cy="356.8" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="341.4" y="368.8" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">A</text>
+  <circle cx="96.4" cy="311.2" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="84.4" y="323.2" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">B</text>
+  <circle cx="463.6" cy="311.2" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="475.6" y="323.2" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">C</text>
+  <circle cx="280.0" cy="311.2" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="268.0" y="323.2" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">D</text>
+  <circle cx="280.0" cy="83.2" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="268.0" y="71.2" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">A₁</text>
+  <circle cx="96.4" cy="83.2" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="84.4" y="71.2" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">B₁</text>
+  <circle cx="463.6" cy="83.2" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="475.6" y="71.2" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">C₁</text>
+  <circle cx="280.0" cy="83.2" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="268.0" y="71.2" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">D₁</text>
+  <circle cx="280.0" cy="197.2" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="268.0" y="185.2" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">M</text>
+</svg></div>
+  <div class="visual-caption">Куб ABCDA1B1C1D1</div>
+</div>
+<div class="text-block"><p>Построим сечение куба плоскостью, проходящей через точки A, M и D1.</p></div>
+
+<div class="visual-block">
+  <div class="visual-frame"><svg xmlns="http://www.w3.org/2000/svg" width="560" height="440" viewBox="0 0 560 440" style="background:white;font-family:sans-serif">
+  <circle cx="353.4" cy="356.8" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="341.4" y="368.8" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">A</text>
+  <circle cx="96.4" cy="311.2" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="84.4" y="323.2" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">B</text>
+  <circle cx="463.6" cy="311.2" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="475.6" y="323.2" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">C</text>
+  <circle cx="280.0" cy="311.2" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="268.0" y="323.2" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">D</text>
+  <circle cx="280.0" cy="83.2" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="268.0" y="71.2" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">A₁</text>
+  <circle cx="96.4" cy="83.2" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="84.4" y="71.2" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">B₁</text>
+  <circle cx="463.6" cy="83.2" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="475.6" y="71.2" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">C₁</text>
+  <circle cx="280.0" cy="83.2" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="268.0" y="71.2" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">D₁</text>
+  <circle cx="280.0" cy="197.2" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="268.0" y="185.2" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">M</text>
+</svg></div>
+  <div class="visual-caption">Точки A, M и D1</div>
+</div>
+<div class="text-block"><p>Найдем точку H --- проекцию точки D1 на плоскость ACD1.</p></div>
+
+<div class="visual-block">
+  <div class="visual-frame"><svg xmlns="http://www.w3.org/2000/svg" width="560" height="440" viewBox="0 0 560 440" style="background:white;font-family:sans-serif">
+  <line x1="353.4" y1="356.8" x2="353.4" y2="356.8" stroke="#e74c3c" stroke-width="1.5" stroke-dasharray="8,4"/>
+  <circle cx="353.4" cy="356.8" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="341.4" y="368.8" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">A</text>
+  <circle cx="96.4" cy="311.2" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="84.4" y="323.2" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">B</text>
+  <circle cx="463.6" cy="311.2" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="475.6" y="323.2" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">C</text>
+  <circle cx="280.0" cy="311.2" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="268.0" y="323.2" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">D</text>
+  <circle cx="280.0" cy="83.2" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="268.0" y="71.2" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">A₁</text>
+  <circle cx="96.4" cy="83.2" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="84.4" y="71.2" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">B₁</text>
+  <circle cx="463.6" cy="83.2" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="475.6" y="71.2" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">C₁</text>
+  <circle cx="280.0" cy="83.2" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="268.0" y="71.2" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">D₁</text>
+  <circle cx="280.0" cy="197.2" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="268.0" y="185.2" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">M</text>
+  <circle cx="353.4" cy="356.8" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="361.4" y="368.8" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">H</text>
+</svg></div>
+  <div class="visual-caption">Точка H --- проекция D1 на ACD1</div>
+</div>
+<div class="text-block"><p>Точки A, H, M, D1 образуют сечение куба.</p></div>
+
+<div class="visual-block">
+  <div class="visual-frame"><svg xmlns="http://www.w3.org/2000/svg" width="560" height="440" viewBox="0 0 560 440" style="background:white;font-family:sans-serif">
+  <line x1="353.4" y1="356.8" x2="280.0" y2="197.2" stroke="#2980b9" stroke-width="2"/>
+  <line x1="280.0" y1="197.2" x2="280.0" y2="83.2" stroke="#2980b9" stroke-width="2"/>
+  <line x1="353.4" y1="356.8" x2="280.0" y2="83.2" stroke="#2980b9" stroke-width="2"/>
+  <line x1="353.4" y1="356.8" x2="280.0" y2="83.2" stroke="#2980b9" stroke-width="2"/>
+  <line x1="353.4" y1="356.8" x2="280.0" y2="197.2" stroke="#2980b9" stroke-width="2"/>
+  <line x1="353.4" y1="356.8" x2="353.4" y2="356.8" stroke="#e74c3c" stroke-width="1.5" stroke-dasharray="8,4"/>
+  <circle cx="353.4" cy="356.8" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="341.4" y="368.8" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">A</text>
+  <circle cx="96.4" cy="311.2" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="84.4" y="323.2" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">B</text>
+  <circle cx="463.6" cy="311.2" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="475.6" y="323.2" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">C</text>
+  <circle cx="280.0" cy="311.2" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="268.0" y="323.2" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">D</text>
+  <circle cx="280.0" cy="83.2" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="268.0" y="71.2" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">A₁</text>
+  <circle cx="96.4" cy="83.2" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="84.4" y="71.2" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">B₁</text>
+  <circle cx="463.6" cy="83.2" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="475.6" y="71.2" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">C₁</text>
+  <circle cx="280.0" cy="83.2" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="268.0" y="71.2" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">D₁</text>
+  <circle cx="280.0" cy="197.2" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="268.0" y="185.2" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">M</text>
+  <circle cx="353.4" cy="356.8" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="361.4" y="368.8" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">H</text>
+</svg></div>
+  <div class="visual-caption">Сечение куба</div>
+</div>
+<div class="text-block"><p>Площадь сечения равна площади параллелограмма AHD1M.</p></div>
+
+<div class="visual-block">
+  <div class="visual-frame"><svg xmlns="http://www.w3.org/2000/svg" width="560" height="440" viewBox="0 0 560 440" style="background:white;font-family:sans-serif">
+  <line x1="353.4" y1="356.8" x2="280.0" y2="197.2" stroke="#2980b9" stroke-width="2"/>
+  <line x1="280.0" y1="197.2" x2="280.0" y2="83.2" stroke="#2980b9" stroke-width="2"/>
+  <line x1="353.4" y1="356.8" x2="280.0" y2="83.2" stroke="#2980b9" stroke-width="2"/>
+  <line x1="353.4" y1="356.8" x2="280.0" y2="83.2" stroke="#2980b9" stroke-width="2"/>
+  <line x1="353.4" y1="356.8" x2="280.0" y2="197.2" stroke="#2980b9" stroke-width="2"/>
+  <line x1="353.4" y1="356.8" x2="353.4" y2="356.8" stroke="#e74c3c" stroke-width="1.5" stroke-dasharray="8,4"/>
+  <circle cx="353.4" cy="356.8" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="341.4" y="368.8" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">A</text>
+  <circle cx="96.4" cy="311.2" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="84.4" y="323.2" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">B</text>
+  <circle cx="463.6" cy="311.2" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="475.6" y="323.2" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">C</text>
+  <circle cx="280.0" cy="311.2" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="268.0" y="323.2" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">D</text>
+  <circle cx="280.0" cy="83.2" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="268.0" y="71.2" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">A₁</text>
+  <circle cx="96.4" cy="83.2" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="84.4" y="71.2" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">B₁</text>
+  <circle cx="463.6" cy="83.2" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="475.6" y="71.2" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">C₁</text>
+  <circle cx="280.0" cy="83.2" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="268.0" y="71.2" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">D₁</text>
+  <circle cx="280.0" cy="197.2" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="268.0" y="185.2" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">M</text>
+  <circle cx="353.4" cy="356.8" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="361.4" y="368.8" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">H</text>
+  <text x="422.3" y="373.9" font-size="14" font-family="sans-serif" fill="#27ae60">AHD1M</text>
+</svg></div>
+  <div class="visual-caption">Площадь сечения</div>
+</div>
+<div class="text-block"><p>Вычислим площадь параллелограмма AHD1M.</p>
+<br/>
+<p>Площадь параллелограмма AHD1M равна $4 	imes 2 = 8$.</p></div>
+
+<div class="visual-block">
+  <div class="visual-frame"><svg xmlns="http://www.w3.org/2000/svg" width="560" height="440" viewBox="0 0 560 440" style="background:white;font-family:sans-serif">
+  <line x1="353.4" y1="356.8" x2="280.0" y2="197.2" stroke="#2980b9" stroke-width="2"/>
+  <line x1="280.0" y1="197.2" x2="280.0" y2="83.2" stroke="#2980b9" stroke-width="2"/>
+  <line x1="353.4" y1="356.8" x2="280.0" y2="83.2" stroke="#2980b9" stroke-width="2"/>
+  <line x1="353.4" y1="356.8" x2="280.0" y2="83.2" stroke="#2980b9" stroke-width="2"/>
+  <line x1="353.4" y1="356.8" x2="280.0" y2="197.2" stroke="#2980b9" stroke-width="2"/>
+  <line x1="353.4" y1="356.8" x2="353.4" y2="356.8" stroke="#e74c3c" stroke-width="1.5" stroke-dasharray="8,4"/>
+  <circle cx="353.4" cy="356.8" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="341.4" y="368.8" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">A</text>
+  <circle cx="96.4" cy="311.2" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="84.4" y="323.2" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">B</text>
+  <circle cx="463.6" cy="311.2" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="475.6" y="323.2" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">C</text>
+  <circle cx="280.0" cy="311.2" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="268.0" y="323.2" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">D</text>
+  <circle cx="280.0" cy="83.2" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="268.0" y="71.2" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">A₁</text>
+  <circle cx="96.4" cy="83.2" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="84.4" y="71.2" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">B₁</text>
+  <circle cx="463.6" cy="83.2" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="475.6" y="71.2" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">C₁</text>
+  <circle cx="280.0" cy="83.2" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="268.0" y="71.2" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">D₁</text>
+  <circle cx="280.0" cy="197.2" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="268.0" y="185.2" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">M</text>
+  <circle cx="353.4" cy="356.8" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="361.4" y="368.8" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">H</text>
+  <text x="422.3" y="363.9" font-size="14" font-family="sans-serif" fill="#27ae60">AHD1M</text>
+  <text x="422.3" y="383.9" font-size="14" font-family="sans-serif" fill="#27ae60">8</text>
+</svg></div>
+  <div class="visual-caption">Ответ: 8</div>
+</div>
+
+</div>
+<div class="footer">
+  Автоматическая генерация: LLM-планировщик → StepByStepGeo → Solver → SVG Renderer |
+  6 пошаговых построений
+</div>
+</body></html>

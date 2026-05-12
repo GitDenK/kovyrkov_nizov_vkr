@@ -1,0 +1,76 @@
+{
+  "scene_type": "function_plot",
+  "canvas": {
+    "width": 500,
+    "height": 400,
+    "x_min": -2.0,
+    "x_max": 6.0,
+    "y_min": -5.0,
+    "y_max": 5.0
+  },
+  "style": {
+    "theme": "light",
+    "stroke_color": "#333333",
+    "fill_color": "none",
+    "font_size": 13,
+    "font_family": "sans-serif"
+  },
+  "objects": [
+    {
+      "type": "function_curve",
+      "id": "func_main",
+      "expression": "f(x)",
+      "x_min": -1.0,
+      "x_max": 5.0
+    },
+    {
+      "type": "function_curve",
+      "id": "func_deriv",
+      "expression": "f'(x)",
+      "x_min": -1.0,
+      "x_max": 5.0,
+      "style": {
+        "stroke": "#e74c3c",
+        "dash": "dashed"
+      }
+    },
+    {
+      "type": "point",
+      "id": "cp_0",
+      "x": 2.0,
+      "y": 0,
+      "label": "x=2.0"
+    },
+    {
+      "type": "point",
+      "id": "ext_0",
+      "x": 2.0,
+      "y": 0.0
+    },
+    {
+      "type": "point",
+      "id": "iv_anchor_0",
+      "x": 0.5,
+      "y": 0
+    }
+  ],
+  "constraints": [],
+  "annotations": [
+    {
+      "type": "label",
+      "id": "ann_ext_0",
+      "text": "минимум: (2.0, 0.0)",
+      "anchor": "ext_0",
+      "dx": 0.3,
+      "dy": -0.5
+    },
+    {
+      "type": "label",
+      "id": "ann_iv_0",
+      "text": "(-inf, 2): f'+  (возрастает)",
+      "anchor": "iv_anchor_0",
+      "dx": 0,
+      "dy": -0.8
+    }
+  ]
+}

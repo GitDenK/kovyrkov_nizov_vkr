@@ -1,0 +1,257 @@
+{
+  "title": "Расстояние от точки M до диагонали BD в ромбе ABCD",
+  "canvas": {
+    "width": 560,
+    "height": 380,
+    "x_min": -1,
+    "x_max": 18,
+    "y_min": -1,
+    "y_max": 6
+  },
+  "points": {
+    "A": {
+      "x": 1,
+      "y": 0,
+      "label_dx": -12,
+      "label_dy": 12
+    },
+    "B": {
+      "x": 9,
+      "y": 0,
+      "label_dx": 8,
+      "label_dy": 12
+    },
+    "C": {
+      "x": 17,
+      "y": 0,
+      "label_dx": 10,
+      "label_dy": 12
+    },
+    "D": {
+      "x": 9,
+      "y": 5,
+      "label_dx": 8,
+      "label_dy": -12
+    },
+    "O": {
+      "x": 9,
+      "y": 2.5,
+      "label_dx": 8,
+      "label_dy": 10
+    },
+    "M": {
+      "x": 6,
+      "y": 0,
+      "label_dx": 8,
+      "label_dy": 12
+    },
+    "N": {
+      "x": 6,
+      "y": -2,
+      "label_dx": 8,
+      "label_dy": 12
+    }
+  },
+  "steps": [
+    {
+      "text": "Ромб $ABCD$ с диагоналями $AC$ и $BD$, пересекающимися в точке $O$. $AC = 16$, $BD = 12$. Точка $M$ на стороне $AB$ такая, что $AM = 5$.",
+      "objects": [
+        {
+          "type": "point",
+          "id": "A"
+        },
+        {
+          "type": "point",
+          "id": "B"
+        },
+        {
+          "type": "point",
+          "id": "C"
+        },
+        {
+          "type": "point",
+          "id": "D"
+        },
+        {
+          "type": "point",
+          "id": "O"
+        },
+        {
+          "type": "point",
+          "id": "M"
+        },
+        {
+          "type": "segment",
+          "id": "s_AB",
+          "from_point": "A",
+          "to_point": "B",
+          "style": {
+            "stroke": "#2980b9",
+            "stroke_width": 1.8
+          }
+        },
+        {
+          "type": "segment",
+          "id": "s_BC",
+          "from_point": "B",
+          "to_point": "C",
+          "style": {
+            "stroke": "#2980b9",
+            "stroke_width": 1.8
+          }
+        },
+        {
+          "type": "segment",
+          "id": "s_CD",
+          "from_point": "C",
+          "to_point": "D",
+          "style": {
+            "stroke": "#2980b9",
+            "stroke_width": 1.8
+          }
+        },
+        {
+          "type": "segment",
+          "id": "s_DA",
+          "from_point": "D",
+          "to_point": "A",
+          "style": {
+            "stroke": "#2980b9",
+            "stroke_width": 1.8
+          }
+        },
+        {
+          "type": "segment",
+          "id": "s_AC",
+          "from_point": "A",
+          "to_point": "C",
+          "style": {
+            "stroke": "#e74c3c",
+            "stroke_width": 1.8,
+            "dash": "dashed"
+          }
+        },
+        {
+          "type": "segment",
+          "id": "s_BD",
+          "from_point": "B",
+          "to_point": "D",
+          "style": {
+            "stroke": "#e74c3c",
+            "stroke_width": 1.8,
+            "dash": "dashed"
+          }
+        }
+      ],
+      "annotations": [
+        {
+          "type": "label",
+          "id": "lbl_AC",
+          "text": "AC = 16",
+          "anchor": "A",
+          "dx": -0.3,
+          "dy": 0.8,
+          "color": "#e74c3c",
+          "font_size": 12
+        },
+        {
+          "type": "label",
+          "id": "lbl_BD",
+          "text": "BD = 12",
+          "anchor": "B",
+          "dx": -1.0,
+          "dy": 0.8,
+          "color": "#e74c3c",
+          "font_size": 12
+        },
+        {
+          "type": "label",
+          "id": "lbl_AM",
+          "text": "AM = 5",
+          "anchor": "A",
+          "dx": 1.5,
+          "dy": -0.3,
+          "color": "#8e44ad",
+          "font_size": 14
+        }
+      ],
+      "constraints": [],
+      "caption": "Ромб ABCD"
+    },
+    {
+      "text": "Найти расстояние от точки $M$ до диагонали $BD$.",
+      "objects": [
+        {
+          "type": "segment",
+          "id": "s_MO",
+          "from_point": "M",
+          "to_point": "O",
+          "style": {
+            "stroke": "#27ae60",
+            "stroke_width": 2
+          }
+        }
+      ],
+      "annotations": [
+        {
+          "type": "label",
+          "id": "lbl_MO",
+          "text": "MO = ?",
+          "anchor": "M",
+          "dx": 0.5,
+          "dy": 0.3,
+          "color": "#27ae60",
+          "font_size": 13
+        }
+      ],
+      "constraints": [
+        {
+          "type": "perpendicular",
+          "id": "perp",
+          "point": "M",
+          "line_point1": "B",
+          "line_point2": "D",
+          "foot_id": "N"
+        }
+      ],
+      "caption": "Расстояние от M до BD"
+    },
+    {
+      "text": "Расстояние от точки $M$ до диагонали $BD$ равно $MN$. $MN = \\frac{AM \\cdot BD}{AB} = \\frac{5 \\cdot 12}{10} = 6$.",
+      "objects": [
+        {
+          "type": "point",
+          "id": "N",
+          "style": {
+            "fill": "#e67e22",
+            "stroke": "#e67e22"
+          }
+        },
+        {
+          "type": "segment",
+          "id": "s_MN",
+          "from_point": "M",
+          "to_point": "N",
+          "style": {
+            "stroke": "#e67e22",
+            "stroke_width": 2
+          }
+        }
+      ],
+      "annotations": [
+        {
+          "type": "label",
+          "id": "lbl_MN",
+          "text": "MN = 6",
+          "anchor": "M",
+          "dx": 0.5,
+          "dy": 0.3,
+          "color": "#e67e22",
+          "font_size": 13
+        }
+      ],
+      "constraints": [],
+      "caption": "Ответ: MN = 6"
+    }
+  ]
+}

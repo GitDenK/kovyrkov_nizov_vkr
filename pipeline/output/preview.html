@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8"/>
+<title>Pipeline: Планировщик → SVG-генератор</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+         max-width: 1200px; margin: 0 auto; padding: 20px; background: #f8f9fa; }
+  h1 { color: #2c3e50; border-bottom: 3px solid #3498db; padding-bottom: 10px; }
+  h2 { color: #2c3e50; margin-top: 40px; }
+  .task-card { background: white; border-radius: 12px; padding: 20px;
+               margin: 20px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+  .stats { display: flex; gap: 20px; flex-wrap: wrap; margin: 10px 0; }
+  .stat { background: #ebf5fb; padding: 8px 16px; border-radius: 8px; font-size: 14px; }
+  .visual-card { border: 1px solid #dee2e6; border-radius: 8px; margin: 16px 0;
+                 overflow: hidden; }
+  .visual-header { background: #f1f3f5; padding: 12px 16px; display: flex;
+                   justify-content: space-between; align-items: center; }
+  .visual-header h4 { margin: 0; font-size: 14px; }
+  .badge { padding: 3px 10px; border-radius: 12px; font-size: 11px; color: white; }
+  .badge-fp { background: #3498db; }
+  .badge-geo { background: #27ae60; }
+  .badge-dia { background: #8e44ad; }
+  .badge-high { background: #e74c3c; }
+  .badge-medium { background: #f39c12; }
+  .badge-low { background: #95a5a6; }
+  .visual-body { padding: 16px; text-align: center; background: white; }
+  .visual-body svg { max-width: 100%; height: auto; }
+  .caption { font-style: italic; color: #666; margin-top: 8px; font-size: 13px; }
+  .warnings { color: #e67e22; font-size: 12px; margin-top: 4px; }
+  .summary-table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+  .summary-table th, .summary-table td { border: 1px solid #dee2e6;
+    padding: 8px 12px; text-align: left; }
+  .summary-table th { background: #f1f3f5; }
+</style>
+</head>
+<body>
+<h1>Пайплайн: Планировщик визуалов → SVG-генератор</h1>
+<p>Автоматическая генерация визуалов для конспектов ЕГЭ по математике.</p>
+
+
+<div class="task-card">
+<h2>task6</h2>
+<div class="stats">
+  <div class="stat">Секций: 14</div>
+  <div class="stat">Визуалов запланировано: 9</div>
+  <div class="stat">SVG отрендерено: 9/9</div>
+  <div class="stat">Время планирования: 46.28s</div>
+</div>
+
+
+<div class="visual-card">
+  <div class="visual-header">
+    <h4>Секция 2: 🔹 Показательные уравнения</h4>
+    <div>
+      <span class="badge badge-fp">function_plot</span>
+      <span class="badge badge-high">high</span>
+    </div>
+  </div>
+  <div class="visual-body">
+
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" overflow="hidden">
+  <defs>
+    <marker id="arrow_axis" markerWidth="8" markerHeight="8" refX="8" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#888"/>
+    </marker>
+  </defs>
+  <rect width="400" height="400" fill="white"/>
+  <line x1="0.0" y1="0" x2="0.0" y2="400" stroke="#e0e0e0" stroke-width="0.5"/>
+  <line x1="33.3" y1="0" x2="33.3" y2="400" stroke="#e0e0e0" stroke-width="0.5"/>
+  <line x1="66.7" y1="0" x2="66.7" y2="400" stroke="#e0e0e0" stroke-width="0.5"/>
+  <line x1="100.0" y1="0" x2="100.0" y2="400" stroke="#e0e0e0" stroke-width="0.5"/>
+  <line x1="133.3" y1="0" x2="133.3" y2="400" stroke="#e0e0e0" stroke-width="0.5"/>
+  <line x1="166.7" y1="0" x2="166.7" y2="400" stroke="#e0e0e0" stroke-width="0.5"/>
+  <line x1="200.0" y1="0" x2="200.0" y2="400" stroke="#e0e0e0" stroke-width="0.5"/>
+  <line x1="233.3" y1="0" x2="233.3" y2="400" stroke="#e0e0e0" stroke-width="0.5"/>
+  <line x1="266.7" y1="0" x2="266.7" y2="400" stroke="#e0e0e0" stroke-width="0.5"/>
+  <line x1="300.0" y1="0" x2="300.0" y2="400" stroke="#e0e0e0" stroke-width="0.5"/>
+  <line x1="333.3" y1="0" x2="333.3" y2="400" stroke="#e0e0e0" stroke-width="0.5"/>
+  <line x1="366.7" y1="0" x2="366.7" y2="400" stroke="#e0e0e0" stroke-width="0.5"/>
+  <line x1="400.0" y1="0" x2="400.0" y2="400" stroke="#e0e0e0" stroke-width="0.5"/>
+  <line x1="0" y1="400.0" x2="400" y2="400.0" stroke="#e0e0e0" stroke-width="0.5"/>
+  <line x1="0" y1="387.9" x2="400" y2="387.9" stroke="#e0e0e0" stroke-width="0.5"/>
+  <line x1="0" y1="375.8" x2="400" y2="375.8" stroke="#e0e0e0" stroke-width="0.5"/>
+  <line x1="0" y1="363.6" x2="400" y2="363.6" stroke="#e0e0e0" stroke-width="0.5"/>
+  <line x1="0" y1="351.5" x2="400" y2="351.5" stroke="#e0e0e0" stroke-width="0.5"/>
+  <line x1="0" y1="339.4" x2="400" y2="339.4" stroke="#e0e0e0" stroke-width="0.5"/>
+  <line x1="0" y1="327.3" x2="400" y2="327.3" stroke="#e0e0e0" stroke-width="0.5"/>
+  <line x1="0" y1="315.2" x2="400" y2="315.2" stroke="#e0e0e0" stroke-width="0.5"/>
+  <line x1="0" y1="303.0" x2="400" y2="303.0" stroke="#e0e0e0" stroke-width="0.5"/>
+  <line x1="0" y1="290.9" x2="400" y2="290.9" stroke="#e0e0e0" stroke-width="0.5"/>
+  <line x1="0" y1="278.8" x2="400" y2="278.8" stroke="#e0e0e0" stroke-width="0.5"/>
+  <line x1="0" y1="266.7" x2="400" y2="266.7" stroke="#e0e0e0" stroke-width="0.5"/>
+  <line x1="0" y1="254.5" x2="400" y2="254.5" stroke="#e0e0e0" stroke-width="0.5"/>
+  <line x1="0" y1="242.4" x2="400" y2="242.4" stroke="#e0e0e0" stroke-width="0.5"/>
+  <line x1="0" y1="230.3" x2="400" y2="230.3" stroke="#e0e0e0" stroke-width="0.5"/>
+  <line x1="0" y1="218.2" x2="400" y2="218.2" stroke="#e0e0e0" stroke-width="0.5"/>
+  <line x1="0" y1="206.1" x2="400" y2="206.1" stroke="#e0e0e0" stroke-width="0.5"/>
+  <line x1="0" y1="193.9" x2="400" y2="193.9" stroke="#e0e0e0" stroke-width="0.5"/>
+  <line x1="0" y1="181.8" x2="400" y2="181.8" stroke="#e0e0e0" stroke-width="0.5"/>
+  <line x1="0" y1="169.7" x2="400" y2="169.7" stroke="#e0e0e0" stroke-width="0.5"/>
+  <line x1="0" y1="157.6" x2="400" y2="157.6" stroke="#e0e0e0" stroke-width="0.5"/>
+  <line x1="0" y1="145.5" x2="400" y2="145.5" stroke="#e0e0e0" stroke-width="0.5"/>
+  <line x1="0" y1="133.3" x2="400" y2="133.3" stroke="#e0e0e0" stroke-width="0.5"/>
+  <line x1="0" y1="121.2" x2="400" y2="121.2" stroke="#e0e0e0" stroke-width="0.5"/>
+  <line x1="0" y1="109.1" x2="400" y2="109.1" stroke="#e0e0e0" stroke-width="0.5"/>
+  <line x1="0" y1="97.0" x2="400" y2="97.0" stroke="#e0e0e0" stroke-width="0.5"/>
+  <line x1="0" y1="84.8" x2="400" y2="84.8" stroke="#e0e0e0" stroke-width="0.5"/>
+  <line x1="0" y1="72.7" x2="400" y2="72.7" stroke="#e0e0e0" stroke-width="0.5"/>
+  <line x1="0" y1="60.6" x2="400" y2="60.6" stroke="#e0e0e0" stroke-width="0.5"/>
+  <line x1="0" y1="48.5" x2="400" y2="48.5" stroke="#e0e0e0" stroke-width="0.5"/>
+  <line x1="0" y1="36.4" x2="400" y2="36.4" stroke="#e0e0e0" stroke-width="0.5"/>
+  <line x1="0" y1="24.2" x2="400" y2="24.2" stroke="#e0e0e0" stroke-width="0.5"/>
+  <line x1="0" y1="12.1" x2="400" y2="12.1" stroke="#e0e0e0" stroke-width="0.5"/>
+  <line x1="0" y1="0.0" x2="400" y2="0.0" stroke="#e0e0e0" stroke-width="0.5"/>
+  <line x1="0" y1="351.5" x2="400" y2="351.5" stroke="#888" stroke-width="1" marker-end="url(#arrow_axis)"/>
+  <line x1="200.0" y1="400" x2="200.0" y2="0" stroke="#888" stroke-width="1" marker-end="url(#arrow_axis)"/>
+  <text x="0.0" y="365.5" text-anchor="middle" font-size="10" fill="#666">-6</text>
+  <text x="33.3" y="365.5" text-anchor="middle" font-size="10" fill="#666">-5</text>
+  <text x="66.7" y="365.5" text-anchor="middle" font-size="10" fill="#666">-4</text>
+  <text x="100.0" y="365.5" text-anchor="middle" font-size="10" fill="#666">-3</text>
+  <text x="133.3" y="365.5" text-anchor="middle" font-size="10" fill="#666">-2</text>
+  <text x="166.7" y="365.5" text-anchor="middle" font-size="10" fill="#666">-1</text>
+  <text x="233.3" y="365.5" text-anchor="middle" font-size="10" fill="#666">1</text>
+  <text x="266.7" y="365.5" text-anchor="middle" font-size="10" fill="#666">2</text>
+  <text x="300.0" y="365.5" text-anchor="middle" font-size="10" fill="#666">3</text>
+  <text x="333.3" y="365.5" text-anchor="middle" font-size="10" fill="#666">4</text>
+  <text x="366.7" y="365.5" text-anchor="middle" font-size="10" fill="#666">5</text>
+  <text x="400.0" y="365.5" text-anchor="middle" font-size="10" fill="#666">6</text>
+  <text x="192.0" y="404.0" text-anchor="end" font-size="10" fill="#666">-4</text>
+  <text x="192.0" y="391.9" text-anchor="end" font-size="10" fill="#666">-3</text>
+  <text x="192.0" y="379.8" text-anchor="end" font-size="10" fill="#666">-2</text>
+  <text x="192.0" y="367.6" text-anchor="end" font-size="10" fill="#666">-1</text>
+  <text x="192.0" y="343.4" text-anchor="end" font-size="10" fill="#666">1</text>
+  <text x="192.0" y="331.3" text-anchor="end" font-size="10" fill="#666">2</text>
+  <text x="192.0" y="319.2" text-anchor="end" font-size="10" fill="#666">3</text>
+  <text x="192.0" y="307.0" text-anchor="end" font-size="10" fill="#666">4</text>
+  <text x="192.0" y="294.9" text-anchor="end" font-size="10" fill="#666">5</text>
+  <text x="192.0" y="282.8" text-anchor="end" font-size="10" fill="#666">6</text>
+  <text x="192.0" y="270.7" text-anchor="end" font-size="10" fill="#666">7</text>
+  <text x="192.0" y="258.5" text-anchor="end" font-size="10" fill="#666">8</text>
+  <text x="192.0" y="246.4" text-anchor="end" font-size="10" fill="#666">9</text>
+  <text x="192.0" y="234.3" text-anchor="end" font-size="10" fill="#666">10</text>
+  <text x="192.0" y="222.2" text-anchor="end" font-size="10" fill="#666">11</text>
+  <text x="192.0" y="210.1" text-anchor="end" font-size="10" fill="#666">12</text>
+  <text x="192.0" y="197.9" text-anchor="end" font-size="10" fill="#666">13</text>
+  <text x="192.0" y="185.8" text-anchor="end" font-size="10" fill="#666">14</text>
+  <text x="192.0" y="173.7" text-anchor="end" font-size="10" fill="#666">15</text>
+  <text x="192.0" y="161.6" text-anchor="end" font-size="10" fill="#666">16</text>
+  <text x="192.0" y="149.5" text-anchor="end" font-size="10" fill="#666">17</text>
+  <text x="192.0" y="137.3" text-anchor="end" font-size="10" fill="#666">18</text>
+  <text x="192.0" y="125.2" text-anchor="end" font-size="10" fill="#666">19</text>
+  <text x="192.0" y="113.1" text-anchor="end" font-size="10" fill="#666">20</text>
+  <text x="192.0" y="101.0" text-anchor="end" font-size="10" fill="#666">21</text>
+  <text x="192.0" y="88.8" text-anchor="end" font-size="10" fill="#666">22</text>
+  <text x="192.0" y="76.7" text-anchor="end" font-size="10" fill="#666">23</text>
+  <text x="192.0" y="64.6" text-anchor="end" font-size="10" fill="#666">24</text>
+  <text x="192.0" y="52.5" text-anchor="end" font-size="10" fill="#666">25</text>
+  <text x="192.0" y="40.4" text-anchor="end" font-size="10" fill="#666">26</text>
+  <text x="192.0" y="28.2" text-anchor="end" font-size="10" fill="#666">27</text>
+  <text x="192.0" y="16.1" text-anchor="end" font-size="10" fill="#666">28</text>
+  <text x="192.0" y="4.0" text-anchor="end" font-size="10" fill="#666">29</text>
+  <polyline points="33.3,48.5 35.0,54.5 36.7,60.5 38.3,66.4 40.0,72.2 41.7,78.0 43.3,83.8 45.0,89.4 46.7,95.0 48.3,100.6 50.0,106.1 51.7,111.5 53.3,116.8 55.0,122.2 56.7,127.4 58.3,132.6 60.0,137.7 61.7,142.8 63.3,147.8 65.0,152.7 66.7,157.6 68.3,162.4 70.0,167.2 71.7,171.8 73.3,176.5 75.0,181.1 76.7,185.6 78.3,190.0 80.0,194.4 81.7,198.8 83.3,203.0 85.0,207.2 86.7,211.4 88.3,215.5 90.0,219.5 91.7,223.5 93.3,227.4 95.0,231.2 96.7,235.0 98.3,238.8 100.0,242.4 101.7,246.0 103.3,249.6 105.0,253.1 106.7,256.5 108.3,259.8 110.0,263.2 111.7,266.4 113.3,269.6 115.0,272.7 116.7,275.8 118.3,278.8 120.0,281.7 121.7,284.6 123.3,287.4 125.0,290.2 126.7,292.8 128.3,295.5 130.0,298.1 131.7,300.6 133.3,303.0 135.0,305.4 136.7,307.8 138.3,310.0 140.0,312.2 141.7,314.4 143.3,316.5 145.0,318.5 146.7,320.5 148.3,322.4 150.0,324.2 151.7,326.0 153.3,327.8 155.0,329.4 156.7,331.0 158.3,332.6 160.0,334.1 161.7,335.5 163.3,336.8 165.0,338.2 166.7,339.4 168.3,340.6 170.0,341.7 171.7,342.8 173.3,343.8 175.0,344.7 176.7,345.6 178.3,346.4 180.0,347.2 181.7,347.8 183.3,348.5 185.0,349.1 186.7,349.6 188.3,350.0 190.0,350.4 191.7,350.8 193.3,351.0 195.0,351.2 196.7,351.4 198.3,351.5 200.0,351.5 201.7,351.5 203.3,351.4 205.0,351.2 206.7,351.0 208.3,350.8 210.0,350.4 211.7,350.0 213.3,349.6 215.0,349.1 216.7,348.5 218.3,347.8 220.0,347.2 221.7,346.4 223.3,345.6 225.0,344.7 226.7,343.8 228.3,342.8 230.0,341.7 231.7,340.6 233.3,339.4 235.0,338.2 236.7,336.8 238.3,335.5 240.0,334.1 241.7,332.6 243.3,331.0 245.0,329.4 246.7,327.8 248.3,326.0 250.0,324.2 251.7,322.4 253.3,320.5 255.0,318.5 256.7,316.5 258.3,314.4 260.0,312.2 261.7,310.0 263.3,307.8 265.0,305.4 266.7,303.0 268.3,300.6 270.0,298.1 271.7,295.5 273.3,292.8 275.0,290.2 276.7,287.4 278.3,284.6 280.0,281.7 281.7,278.8 283.3,275.8 285.0,272.7 286.7,269.6 288.3,266.4 290.0,263.2 291.7,259.8 293.3,256.5 295.0,253.1 296.7,249.6 298.3,246.0 300.0,242.4 301.7,238.8 303.3,235.0 305.0,231.2 306.7,227.4 308.3,223.5 310.0,219.5 311.7,215.5 313.3,211.4 315.0,207.2 316.7,203.0 318.3,198.8 320.0,194.4 321.7,190.0 323.3,185.6 325.0,181.1 326.7,176.5 328.3,171.8 330.0,167.2 331.7,162.4 333.3,157.6 335.0,152.7 336.7,147.8 338.3,142.8 340.0,137.7 341.7,132.6 343.3,127.4 345.0,122.2 346.7,116.8 348.3,111.5 350.0,106.1 351.7,100.6 353.3,95.0 355.0,89.4 356.7,83.8 358.3,78.0 360.0,72.2 361.7,66.4 363.3,60.5 365.0,54.5 366.7,48.5" fill="none" stroke="#2980b9" stroke-width="2" />
+</svg>
+<div class="caption">Графики функций f(x) = x + 1 и g(x) = 3 с точкой пересечения x = 2</div>
+<div class="warnings">⚠ used fallback renderer</div>
+</div></div>
+
+<div class="visual-card">
+  <div class="visual-header">
+    <h4>Секция 3: 🔹 Логарифмические уравнения</h4>
+    <div>
+      <span class="badge badge-fp">function_plot</span>
+      <span class="badge badge-high">high</span>
+    </div>
+  </div>
+  <div class="visual-body">
+
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" overflow="hidden">
+  <defs>
+    <marker id="arrow_axis" markerWidth="8" markerHeight="8" refX="8" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#888"/>
+    </marker>
+  </defs>
+  <rect width="400" height="400" fill="white"/>
+  <line x1="0.0" y1="0" x2="0.0" y2="400" stroke="#e0e0e0" stroke-width="0.5"/>
+  <line x1="33.3" y1="0" x2="33.3" y2="400" stroke="#e0e0e0" stroke-width="0.5"/>
+  <line x1="66.7" y1="0" x2="66.7" y2="400" stroke="#e0e0e0" stroke-width="0.5"/>
+  <line x1="100.0" y1="0" x2="100.0" y2="400" stroke="#e0e0e0" stroke-width="0.5"/>
+  <line x1="133.3" y1="0" x2="133.3" y2="400" stroke="#e0e0e0" stroke-width="0.5"/>
+  <line x1="166.7" y1="0" x2="166.7" y2="400" stroke="#e0e0e0" stroke-width="0.5"/>
+  <line x1="200.0" y1="0" x2="200.0" y2="400" stroke="#e0e0e0" stroke-width="0.5"/>
+  <line x1="233.3" y1="0" x2="233.3" y2="400" stroke="#e0e0e0" stroke-width="0.5"/>
+  <line x1="266.7" y1="0" x2="266.7" y2="400" stroke="#e0e0e0" stroke-width="0.5"/>
+  <line x1="300.0" y1="0" x2="300.0" y2="400" stroke="#e0e0e0" stroke-width="0.5"/>
+  <line x1="333.3" y1="0" x2="333.3" y2="400" stroke="#e0e0e0" stroke-width="0.5"/>
+  <line x1="366.7" y1="0" x2="366.7" y2="400" stroke="#e0e0e0" stroke-width="0.5"/>
+  <line x1="400.0" y1="0" x2="400.0" y2="400" stroke="#e0e0e0" stroke-width="0.5"/>
+  <line x1="0" y1="400.0" x2="400" y2="400.0" stroke="#e0e0e0" stroke-width="0.5"/>
+  <line x1="0" y1="387.9" x2="400" y2="387.9" stroke="#e0e0e0" stroke-width="0.5"/>
+  <line x1="0" y1="375.8" x2="400" y2="375.8" stroke="#e0e0e0" stroke-width="0.5"/>
+  <line x1="0" y1="363.6" x2="400" y2="363.6" stroke="#e0e0e0" stroke-width="0.5"/>
+  <line x1="0" y1="351.5" x2="400" y2="351.5" stroke="#e0e0e0" stroke-width="0.5"/>
+  <line x1="0" y1="339.4" x2="400" y2="339.4" stroke="#e0e0e0" stroke-width="0.5"/>
+  <line x1="0" y1="327.3" x2="400" y2="327.3" stroke="#e0e0e0" stroke-width="0.5"/>
+  <line x1="0" y1="315.2" x2="400" y2="315.2" stroke="#e0e0e0" stroke-width="0.5"/>
+  <line x1="0" y1="303.0" x2="400" y2="303.0" stroke="#e0e0e0" stroke-width="0.5"/>
+  <line x1="0" y1="290.9" x2="400" y2="290.9" stroke="#e0e0e0" stroke-width="0.5"/>
+  <line x1="0" y1="278.8" x2="400" y2="278.8" stroke="#e0e0e0" stroke-width="0.5"/>
+  <line x1="0" y1="266.7" x2="400" y2="266.7" stroke="#e0e0e0" stroke-width="0.5"/>
+  <line x1="0" y1="254.5" x2="400" y2="254.5" stroke="#e0e0e0" stroke-width="0.5"/>
+  <line x1="0" y1="242.4" x2="400" y2="242.4" stroke="#e0e0e0" stroke-width="0.5"/>
+  <line x1="0" y1="230.3" x2="400" y2="230.3" stroke="#e0e0e0" stroke-width="0.5"/>
+  <line x1="0" y1="218.2" x2="400" y2="218.2" stroke="#e0e0e0" stroke-width="0.5"/>
+  <line x1="0" y1="206.1" x2="400" y2="206.1" stroke="#e0e0e0" stroke-width="0.5"/>
+  <line x1="0" y1="193.9" x2="400" y2="193.9" stroke="#e0e0e0" stroke-width="0.5"/>
+  <line x1="0" y1="181.8" x2="400" y2="181.8" stroke="#e0e0e0" stroke-width="0.5"/>
+  <line x1="0" y1="169.7" x2="400" y2="169.7" stroke="#e0e0e0" stroke-width="0.5"/>
+  <line x1="0" y1="157.6" x2="400" y2="157.6" stroke="#e0e0e0" stroke-width="0.5"/>
+  <line x1="0" y1="145.5" x2="400" y2="145.5" stroke="#e0e0e0" stroke-width="0.5"/>
+  <line x1="0" y1="133.3" x2="400" y2="133.3" stroke="#e0e0e0" stroke-width="0.5"/>
+  <line x1="0" y1="121.2" x2="400" y2="121.2" stroke="#e0e0e0" stroke-width="0.5"/>
+  <line x1="0" y1="109.1" x2="400" y2="109.1" stroke="#e0e0e0" stroke-width="0.5"/>
+  <line x1="0" y1="97.0" x2="400" y2="97.0" stroke="#e0e0e0" stroke-width="0.5"/>
+  <line x1="0" y1="84.8" x2="400" y2="84.8" stroke="#e0e0e0" stroke-width="0.5"/>
+  <line x1="0" y1="72.7" x2="400" y2="72.7" stroke="#e0e0e0" stroke-width="0.5"/>
+  <line x1="0" y1="60.6" x2="400" y2="60.6" stroke="#e0e0e0" stroke-width="0.5"/>
+  <line x1="0" y1="48.5" x2="400" y2="48.5" stroke="#e0e0e0" stroke-width="0.5"/>
+  <line x1="0" y1="36.4" x2="400" y2="36.4" stroke="#e0e0e0" stroke-width="0.5"/>
+  <line x1="0" y1="24.2" x2="400" y2="24.2" stroke="#e0e0e0" stroke-width="0.5"/>
+  <line x1="0" y1="12.1" x2="400" y2="12.1" stroke="#e0e0e0" stroke-width="0.5"/>
+  <line x1="0" y1="0.0" x2="400" y2="0.0" stroke="#e0e0e0" stroke-width="0.5"/>
+  <line x1="0" y1="351.5" x2="400" y2="351.5" stroke="#888" stroke-width="1" marker-end="url(#arrow_axis)"/>
+  <line x1="200.0" y1="400" x2="200.0" y2="0" stroke="#888" stroke-width="1" marker-end="url(#arrow_axis)"/>
+  <text x="0.0" y="365.5" text-anchor="middle" font-size="10" fill="#666">-6</text>
+  <text x="33.3" y="365.5" text-anchor="middle" font-size="10" fill="#666">-5</text>
+  <text x="66.7" y="365.5" text-anchor="middle" font-size="10" fill="#666">-4</text>
+  <text x="100.0" y="365.5" text-anchor="middle" font-size="10" fill="#666">-3</text>
+  <text x="133.3" y="365.5" text-anchor="middle" font-size="10" fill="#666">-2</text>
+  <text x="166.7" y="365.5" text-anchor="middle" font-size="10" fill="#666">-1</text>
+  <text x="233.3" y="365.5" text-anchor="middle" font-size="10" fill="#666">1</text>
+  <text x="266.7" y="365.5" text-anchor="middle" font-size="10" fill="#666">2</text>
+  <text x="300.0" y="365.5" text-anchor="middle" font-size="10" fill="#666">3</text>
+  <text x="333.3" y="365.5" text-anchor="middle" font-size="10" fill="#666">4</text>
+  <text x="366.7" y="365.5" text-anchor="middle" font-size="10" fill="#666">5</text>
+  <text x="400.0" y="365.5" text-anchor="middle" font-size="10" fill="#666">6</text>
+  <text x="192.0" y="404.0" text-anchor="end" font-size="10" fill="#666">-4</text>
+  <text x="192.0" y="391.9" text-anchor="end" font-size="10" fill="#666">-3</text>
+  <text x="192.0" y="379.8" text-anchor="end" font-size="10" fill="#666">-2</text>
+  <text x="192.0" y="367.6" text-anchor="end" font-size="10" fill="#666">-1</text>
+  <text x="192.0" y="343.4" text-anchor="end" font-size="10" fill="#666">1</text>
+  <text x="192.0" y="331.3" text-anchor="end" font-size="10" fill="#666">2</text>
+  <text x="192.0" y="319.2" text-anchor="end" font-size="10" fill="#666">3</text>
+  <text x="192.0" y="307.0" text-anchor="end" font-size="10" fill="#666">4</text>
+  <text x="192.0" y="294.9" text-anchor="end" font-size="10" fill="#666">5</text>
+  <text x="192.0" y="282.8" text-anchor="end" font-size="10" fill="#666">6</text>
+  <text x="192.0" y="270.7" text-anchor="end" font-size="10" fill="#666">7</text>
+  <text x="192.0" y="258.5" text-anchor="end" font-size="10" fill="#666">8</text>
+  <text x="192.0" y="246.4" text-anchor="end" font-size="10" fill="#666">9</text>
+  <text x="192.0" y="234.3" text-anchor="end" font-size="10" fill="#666">10</text>
+  <text x="192.0" y="222.2" text-anchor="end" font-size="10" fill="#666">11</text>
+  <text x="192.0" y="210.1" text-anchor="end" font-size="10" fill="#666">12</text>
+  <text x="192.0" y="197.9" text-anchor="end" font-size="10" fill="#666">13</text>
+  <text x="192.0" y="185.8" text-anchor="end" font-size="10" fill="#666">14</text>
+  <text x="192.0" y="173.7" text-anchor="end" font-size="10" fill="#666">15</text>
+  <text x="192.0" y="161.6" text-anchor="end" font-size="10" fill="#666">16</text>
+  <text x="192.0" y="149.5" text-anchor="end" font-size="10" fill="#666">17</text>
+  <text x="192.0" y="137.3" text-anchor="end" font-size="10" fill="#666">18</text>
+  <text x="192.0" y="125.2" text-anchor="end" font-size="10" fill="#666">19</text>
+  <text x="192.0" y="113.1" text-anchor="end" font-size="10" fill="#666">20</text>
+  <text x="192.0" y="101.0" text-anchor="end" font-size="10" fill="#666">21</text>
+  <text x="192.0" y="88.8" text-anchor="end" font-size="10" fill="#666">22</text>
+  <text x="192.0" y="76.7" text-anchor="end" font-size="10" fill="#666">23</text>
+  <text x="192.0" y="64.6" text-anchor="end" font-size="10" fill="#666">24</text>
+  <text x="192.0" y="52.5" text-anchor="end" font-size="10" fill="#666">25</text>
+  <text x="192.0" y="40.4" text-anchor="end" font-size="10" fill="#666">26</text>
+  <text x="192.0" y="28.2" text-anchor="end" font-size="10" fill="#666">27</text>
+  <text x="192.0" y="16.1" text-anchor="end" font-size="10" fill="#666">28</text>
+  <text x="192.0" y="4.0" text-anchor="end" font-size="10" fill="#666">29</text>
+  <polyline points="33.3,48.5 35.0,54.5 36.7,60.5 38.3,66.4 40.0,72.2 41.7,78.0 43.3,83.8 45.0,89.4 46.7,95.0 48.3,100.6 50.0,106.1 51.7,111.5 53.3,116.8 55.0,122.2 56.7,127.4 58.3,132.6 60.0,137.7 61.7,142.8 63.3,147.8 65.0,152.7 66.7,157.6 68.3,162.4 70.0,167.2 71.7,171.8 73.3,176.5 75.0,181.1 76.7,185.6 78.3,190.0 80.0,194.4 81.7,198.8 83.3,203.0 85.0,207.2 86.7,211.4 88.3,215.5 90.0,219.5 91.7,223.5 93.3,227.4 95.0,231.2 96.7,235.0 98.3,238.8 100.0,242.4 101.7,246.0 103.3,249.6 105.0,253.1 106.7,256.5 108.3,259.8 110.0,263.2 111.7,266.4 113.3,269.6 115.0,272.7 116.7,275.8 118.3,278.8 120.0,281.7 121.7,284.6 123.3,287.4 125.0,290.2 126.7,292.8 128.3,295.5 130.0,298.1 131.7,300.6 133.3,303.0 135.0,305.4 136.7,307.8 138.3,310.0 140.0,312.2 141.7,314.4 143.3,316.5 145.0,318.5 146.7,320.5 148.3,322.4 150.0,324.2 151.7,326.0 153.3,327.8 155.0,329.4 156.7,331.0 158.3,332.6 160.0,334.1 161.7,335.5 163.3,336.8 165.0,338.2 166.7,339.4 168.3,340.6 170.0,341.7 171.7,342.8 173.3,343.8 175.0,344.7 176.7,345.6 178.3,346.4 180.0,347.2 181.7,347.8 183.3,348.5 185.0,349.1 186.7,349.6 188.3,350.0 190.0,350.4 191.7,350.8 193.3,351.0 195.0,351.2 196.7,351.4 198.3,351.5 200.0,351.5 201.7,351.5 203.3,351.4 205.0,351.2 206.7,351.0 208.3,350.8 210.0,350.4 211.7,350.0 213.3,349.6 215.0,349.1 216.7,348.5 218.3,347.8 220.0,347.2 221.7,346.4 223.3,345.6 225.0,344.7 226.7,343.8 228.3,342.8 230.0,341.7 231.7,340.6 233.3,339.4 235.0,338.2 236.7,336.8 238.3,335.5 240.0,334.1 241.7,332.6 243.3,331.0 245.0,329.4 246.7,327.8 248.3,326.0 250.0,324.2 251.7,322.4 253.3,320.5 255.0,318.5 256.7,316.5 258.3,314.4 260.0,312.2 261.7,310.0 263.3,307.8 265.0,305.4 266.7,303.0 268.3,300.6 270.0,298.1 271.7,295.5 273.3,292.8 275.0,290.2 276.7,287.4 278.3,284.6 280.0,281.7 281.7,278.8 283.3,275.8 285.0,272.7 286.7,269.6 288.3,266.4 290.0,263.2 291.7,259.8 293.3,256.5 295.0,253.1 296.7,249.6 298.3,246.0 300.0,242.4 301.7,238.8 303.3,235.0 305.0,231.2 306.7,227.4 308.3,223.5 310.0,219.5 311.7,215.5 313.3,211.4 315.0,207.2 316.7,203.0 318.3,198.8 320.0,194.4 321.7,190.0 323.3,185.6 325.0,181.1 326.7,176.5 328.3,171.8 330.0,167.2 331.7,162.4 333.3,157.6 335.0,152.7 336.7,147.8 338.3,142.8 340.0,137.7 341.7,132.6 343.3,127.4 345.0,122.2 346.7,116.8 348.3,111.5 350.0,106.1 351.7,100.6 353.3,95.0 355.0,89.4 356.7,83.8 358.3,78.0 360.0,72.2 361.7,66.4 363.3,60.5 365.0,54.5 366.7,48.5" fill="none" stroke="#2980b9" stroke-width="2" />
+</svg>
+<div class="warnings">⚠ used fallback renderer</div>
+</div></div>
+
+<div class="visual-card">
+  <div class="visual-header">
+    <h4>Секция 4: 🔹 Дробно-рациональные уравнения</h4>
+    <div>
+      <span class="badge badge-fp">function_plot</span>
+      <span class="badge badge-high">high</span>
+    </div>
+  </div>
+  <div class="visual-body">
+
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="200" overflow="hidden">
+  <defs>
+    <marker id="arrow_axis" markerWidth="8" markerHeight="8" refX="8" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#888"/>
+    </marker>
+  </defs>
+  <rect width="500" height="200" fill="white"/>
+  <line x1="0.0" y1="0" x2="0.0" y2="200" stroke="#e0e0e0" stroke-width="0.5"/>
+  <line x1="41.7" y1="0" x2="41.7" y2="200" stroke="#e0e0e0" stroke-width="0.5"/>
+  <line x1="83.3" y1="0" x2="83.3" y2="200" stroke="#e0e0e0" stroke-width="0.5"/>
+  <line x1="125.0" y1="0" x2="125.0" y2="200" stroke="#e0e0e0" stroke-width="0.5"/>
+  <line x1="166.7" y1="0" x2="166.7" y2="200" stroke="#e0e0e0" stroke-width="0.5"/>
+  <line x1="208.3" y1="0" x2="208.3" y2="200" stroke="#e0e0e0" stroke-width="0.5"/>
+  <line x1="250.0" y1="0" x2="250.0" y2="200" stroke="#e0e0e0" stroke-width="0.5"/>
+  <line x1="291.7" y1="0" x2="291.7" y2="200" stroke="#e0e0e0" stroke-width="0.5"/>
+  <line x1="333.3" y1="0" x2="333.3" y2="200" stroke="#e0e0e0" stroke-width="0.5"/>
+  <line x1="375.0" y1="0" x2="375.0" y2="200" stroke="#e0e0e0" stroke-width="0.5"/>
+  <line x1="416.7" y1="0" x2="416.7" y2="200" stroke="#e0e0e0" stroke-width="0.5"/>
+  <line x1="458.3" y1="0" x2="458.3" y2="200" stroke="#e0e0e0" stroke-width="0.5"/>
+  <line x1="500.0" y1="0" x2="500.0" y2="200" stroke="#e0e0e0" stroke-width="0.5"/>
+  <line x1="0" y1="200.0" x2="500" y2="200.0" stroke="#e0e0e0" stroke-width="0.5"/>
+  <line x1="0" y1="150.0" x2="500" y2="150.0" stroke="#e0e0e0" stroke-width="0.5"/>
+  <line x1="0" y1="100.0" x2="500" y2="100.0" stroke="#e0e0e0" stroke-width="0.5"/>
+  <line x1="0" y1="50.0" x2="500" y2="50.0" stroke="#e0e0e0" stroke-width="0.5"/>
+  <line x1="0" y1="0.0" x2="500" y2="0.0" stroke="#e0e0e0" stroke-width="0.5"/>
+  <line x1="0" y1="100.0" x2="500" y2="100.0" stroke="#888" stroke-width="1" marker-end="url(#arrow_axis)"/>
+  <line x1="250.0" y1="200" x2="250.0" y2="0" stroke="#888" stroke-width="1" marker-end="url(#arrow_axis)"/>
+  <text x="0.0" y="114.0" text-anchor="middle" font-size="10" fill="#666">-6</text>
+  <text x="41.7" y="114.0" text-anchor="middle" font-size="10" fill="#666">-5</text>
+  <text x="83.3" y="114.0" text-anchor="middle" font-size="10" fill="#666">-4</text>
+  <text x="125.0" y="114.0" text-anchor="middle" font-size="10" fill="#666">-3</text>
+  <text x="166.7" y="114.0" text-anchor="middle" font-size="10" fill="#666">-2</text>
+  <text x="208.3" y="114.0" text-anchor="middle" font-size="10" fill="#666">-1</text>
+  <text x="291.7" y="114.0" text-anchor="middle" font-size="10" fill="#666">1</text>
+  <text x="333.3" y="114.0" text-anchor="middle" font-size="10" fill="#666">2</text>
+  <text x="375.0" y="114.0" text-anchor="middle" font-size="10" fill="#666">3</text>
+  <text x="416.7" y="114.0" text-anchor="middle" font-size="10" fill="#666">4</text>
+  <text x="458.3" y="114.0" text-anchor="middle" font-size="10" fill="#666">5</text>
+  <text x="500.0" y="114.0" text-anchor="middle" font-size="10" fill="#666">6</text>
+  <text x="242.0" y="204.0" text-anchor="end" font-size="10" fill="#666">-2</text>
+  <text x="242.0" y="154.0" text-anchor="end" font-size="10" fill="#666">-1</text>
+  <text x="242.0" y="54.0" text-anchor="end" font-size="10" fill="#666">1</text>
+  <text x="242.0" y="4.0" text-anchor="end" font-size="10" fill="#666">2</text>
+  <polyline points="0.0,100.0 2.5,100.0 5.0,100.0 7.5,100.0 10.0,100.0 12.5,100.0 15.0,100.0 17.5,100.0 20.0,100.0 22.5,100.0 25.0,100.0 27.5,100.0 30.0,100.0 32.5,100.0 35.0,100.0 37.5,100.0 40.0,100.0 42.5,100.0 45.0,100.0 47.5,100.0 50.0,100.0 52.5,100.0 55.0,100.0 57.5,100.0 60.0,100.0 62.5,100.0 65.0,100.0 67.5,100.0 70.0,100.0 72.5,100.0 75.0,100.0 77.5,100.0 80.0,100.0 82.5,100.0 85.0,100.0 87.5,100.0 90.0,100.0 92.5,100.0 95.0,100.0 97.5,100.0 100.0,100.0 102.5,100.0 105.0,100.0 107.5,100.0 110.0,100.0 112.5,100.0 115.0,100.0 117.5,100.0 120.0,100.0 122.5,100.0 125.0,100.0 127.5,100.0 130.0,100.0 132.5,100.0 135.0,100.0 137.5,100.0 140.0,100.0 142.5,100.0 145.0,100.0 147.5,100.0 150.0,100.0 152.5,100.0 155.0,100.0 157.5,100.0 160.0,100.0 162.5,100.0 165.0,100.0 167.5,100.0 170.0,100.0 172.5,100.0 175.0,100.0 177.5,100.0 180.0,100.0 182.5,100.0 185.0,100.0 187.5,100.0 190.0,100.0 192.5,100.0 195.0,100.0 197.5,100.0 200.0,100.0 202.5,100.0 205.0,100.0 207.5,100.0 210.0,100.0 212.5,100.0 215.0,100.0 217.5,100.0 220.0,100.0 222.5,100.0 225.0,100.0 227.5,100.0 230.0,100.0 232.5,100.0 235.0,100.0 237.5,100.0 240.0,100.0 242.5,100.0 245.0,100.0 247.5,100.0 250.0,100.0 252.5,100.0 255.0,100.0 257.5,100.0 260.0,100.0 262.5,100.0 265.0,100.0 267.5,100.0 270.0,100.0 272.5,100.0 275.0,100.0 277.5,100.0 280.0,100.0 282.5,100.0 285.0,100.0 287.5,100.0 290.0,100.0 292.5,100.0 295.0,100.0 297.5,100.0 300.0,100.0 302.5,100.0 305.0,100.0 307.5,100.0 310.0,100.0 312.5,100.0 315.0,100.0 317.5,100.0 320.0,100.0 322.5,100.0 325.0,100.0 327.5,100.0 330.0,100.0 332.5,100.0 335.0,100.0 337.5,100.0 340.0,100.0 342.5,100.0 345.0,100.0 347.5,100.0 350.0,100.0 352.5,100.0 355.0,100.0 357.5,100.0 360.0,100.0 362.5,100.0 365.0,100.0 367.5,100.0 370.0,100.0 372.5,100.0 375.0,100.0 377.5,100.0 380.0,100.0 382.5,100.0 385.0,100.0 387.5,100.0 390.0,100.0 392.5,100.0 395.0,100.0 397.5,100.0 400.0,100.0 402.5,100.0 405.0,100.0 407.5,100.0 410.0,100.0 412.5,100.0 415.0,100.0 417.5,100.0 420.0,100.0 422.5,100.0 425.0,100.0 427.5,100.0 430.0,100.0 432.5,100.0 435.0,100.0 437.5,100.0 440.0,100.0 442.5,100.0 445.0,100.0 447.5,100.0 450.0,100.0 452.5,100.0 455.0,100.0 457.5,100.0 460.0,100.0 462.5,100.0 465.0,100.0 467.5,100.0 470.0,100.0 472.5,100.0 475.0,100.0 477.5,100.0 480.0,100.0 482.5,100.0 485.0,100.0 487.5,100.0 490.0,100.0 492.5,100.0 495.0,100.0 497.5,100.0 500.0,100.0" fill="none" stroke="#2980b9" stroke-width="2" />
+</svg>
+<div class="caption">Решение дробно-рационального уравнения и проверка ОДЗ</div>
+<div class="warnings">⚠ used fallback renderer</div>
+</div></div>
+
+<div class="visual-card">
+  <div class="visual-header">
+    <h4>Секция 6: 3. ТИПЫ ЗАДАЧ КОТОРЫЕ МОГУТ ПОПАСТЬСЯ</h4>
+    <div>
+      <span class="badge badge-dia">diagram</span>
+      <span class="badge badge-high">high</span>
+    </div>
+  </div>
+  <div class="visual-body">
+
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="816">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
+    </marker>
+  </defs>
+  <rect width="500" height="816" fill="white"/>
+  <text x="250" y="44" text-anchor="middle" font-size="17" font-weight="bold" fill="#333">Типы задач и их особенности</text>
+  <line x1="250.0" y1="174.0" x2="250.0" y2="244.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="348.0" x2="250.0" y2="418.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="542.0" x2="250.0" y2="612.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <rect x="120.0" y="70.0" width="260" height="104.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="124.0" text-anchor="middle" font-size="13" fill="#333">{&#x27;type&#x27;: &#x27;Показательное&#x27;, &#x27;descri…</text>
+  <rect x="120.0" y="244.0" width="260" height="104.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="298.0" text-anchor="middle" font-size="13" fill="#333">{&#x27;type&#x27;: &#x27;Логарифмическое&#x27;, &#x27;desc…</text>
+  <rect x="120.0" y="418.0" width="260" height="124.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="482.0" text-anchor="middle" font-size="13" fill="#333">{&#x27;type&#x27;: &#x27;Дробно-рациональное&#x27;, &#x27;…</text>
+  <rect x="120.0" y="612.0" width="260" height="104.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="666.0" text-anchor="middle" font-size="13" fill="#333">{&#x27;type&#x27;: &#x27;Иррациональное&#x27;, &#x27;descr…</text>
+</svg>
+<div class="caption">Типы задач и их особенности</div>
+<div class="warnings">⚠ used fallback renderer</div>
+</div></div>
+
+<div class="visual-card">
+  <div class="visual-header">
+    <h4>Секция 7: 🔸 Для всех типов уравнений — общий план:</h4>
+    <div>
+      <span class="badge badge-dia">diagram</span>
+      <span class="badge badge-high">high</span>
+    </div>
+  </div>
+  <div class="visual-body">
+
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="1044">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
+    </marker>
+  </defs>
+  <rect width="500" height="1044" fill="white"/>
+  <text x="250" y="44" text-anchor="middle" font-size="17" font-weight="bold" fill="#333">Алгоритм решения уравнений</text>
+  <line x1="250.0" y1="154.0" x2="250.0" y2="224.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="288.0" x2="250.0" y2="358.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="542.0" x2="250.0" y2="612.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="676.0" x2="250.0" y2="746.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="810.0" x2="250.0" y2="880.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <rect x="120.0" y="70.0" width="260" height="84.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="105.5" text-anchor="middle" font-size="13" fill="#333">Определи тип уравнения</text>
+  <text x="250.0" y="122.5" text-anchor="middle" font-size="13" fill="#333">по наличию степени, логарифма, др…</text>
+  <rect x="120.0" y="224.0" width="260" height="64.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="249.5" text-anchor="middle" font-size="13" fill="#333">Найди ОДЗ</text>
+  <text x="250.0" y="266.5" text-anchor="middle" font-size="13" fill="#333">особенно для логарифмов и корней</text>
+  <rect x="120.0" y="358.0" width="260" height="184.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="443.5" text-anchor="middle" font-size="13" fill="#333">Приведи уравнение к простому виду</text>
+  <text x="250.0" y="460.5" text-anchor="middle" font-size="13" fill="#333">для показательных: основания один…</text>
+  <rect x="120.0" y="612.0" width="260" height="64.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="637.5" text-anchor="middle" font-size="13" fill="#333">Реши полученное уравнение</text>
+  <text x="250.0" y="654.5" text-anchor="middle" font-size="13" fill="#333">обычно линейное или квадратное</text>
+  <rect x="120.0" y="746.0" width="260" height="64.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="771.5" text-anchor="middle" font-size="13" fill="#333">Проверь корни по ОДЗ</text>
+  <text x="250.0" y="788.5" text-anchor="middle" font-size="13" fill="#333">отбрось те, что не подходят</text>
+  <rect x="120.0" y="880.0" width="260" height="64.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="905.5" text-anchor="middle" font-size="13" fill="#333">Запиши ответ</text>
+  <text x="250.0" y="922.5" text-anchor="middle" font-size="13" fill="#333">целое число или десятичная дробь</text>
+</svg>
+<div class="caption">Алгоритм решения уравнений</div>
+<div class="warnings">⚠ used fallback renderer</div>
+</div></div>
+
+<div class="visual-card">
+  <div class="visual-header">
+    <h4>Секция 8: ✏️ Пример 1: Показательное уравнение</h4>
+    <div>
+      <span class="badge badge-dia">diagram</span>
+      <span class="badge badge-high">high</span>
+    </div>
+  </div>
+  <div class="visual-body">
+
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="1686">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
+    </marker>
+  </defs>
+  <rect width="500" height="1686" fill="white"/>
+  <text x="250" y="44" text-anchor="middle" font-size="17" font-weight="bold" fill="#333">Решение показательного уравнения 4^{x+1} = 8</text>
+  <line x1="250.0" y1="122.0" x2="250.0" y2="192.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="244.0" x2="250.0" y2="314.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="366.0" x2="250.0" y2="436.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="488.0" x2="250.0" y2="558.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="610.0" x2="250.0" y2="680.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="732.0" x2="250.0" y2="802.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="854.0" x2="250.0" y2="924.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="976.0" x2="250.0" y2="1046.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="1098.0" x2="250.0" y2="1168.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="1220.0" x2="250.0" y2="1290.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="1342.0" x2="250.0" y2="1412.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="1464.0" x2="250.0" y2="1534.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <rect x="120.0" y="70.0" width="260" height="52.0" rx="6" fill="#fdebd0" stroke="#e67e22" stroke-width="1.5"/>
+  <text x="250.0" y="98.0" text-anchor="middle" font-size="13" fill="#333">Задача: Решите 4^{x+1} = 8</text>
+  <rect x="120.0" y="314.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="342.0" text-anchor="middle" font-size="13" fill="#333">Запишем уравнение</text>
+  <rect x="120.0" y="558.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="586.0" text-anchor="middle" font-size="13" fill="#333">4 = 2², 8 = 2³</text>
+  <rect x="120.0" y="802.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="830.0" text-anchor="middle" font-size="13" fill="#333">Степень степени</text>
+  <rect x="120.0" y="1046.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="1074.0" text-anchor="middle" font-size="13" fill="#333">Основания равны → показатели равны</text>
+  <rect x="120.0" y="1290.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="1318.0" text-anchor="middle" font-size="13" fill="#333">Решаем линейное уравнение</text>
+  <rect x="120.0" y="1534.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="1562.0" text-anchor="middle" font-size="13" fill="#333">x = 0.5</text>
+  <rect x="120.0" y="192.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="220.0" text-anchor="middle" font-size="13" fill="#333">$4^{x+1} = 8$</text>
+  <rect x="120.0" y="436.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="464.0" text-anchor="middle" font-size="13" fill="#333">$(2^2)^{x+1} = 2^3$</text>
+  <rect x="120.0" y="680.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="708.0" text-anchor="middle" font-size="13" fill="#333">$2^{2x+2} = 2^3$</text>
+  <rect x="120.0" y="924.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="952.0" text-anchor="middle" font-size="13" fill="#333">$2x + 2 = 3$</text>
+  <rect x="120.0" y="1168.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="1196.0" text-anchor="middle" font-size="13" fill="#333">$2x = 1$</text>
+  <rect x="120.0" y="1412.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="1440.0" text-anchor="middle" font-size="13" fill="#333">$x = 0.5$</text>
+</svg>
+<div class="caption">Решение показательного уравнения 4^{x+1} = 8</div>
+<div class="warnings">⚠ used fallback renderer</div>
+</div></div>
+
+<div class="visual-card">
+  <div class="visual-header">
+    <h4>Секция 9: ✏️ Пример 2: Логарифмическое уравнение</h4>
+    <div>
+      <span class="badge badge-dia">diagram</span>
+      <span class="badge badge-high">high</span>
+    </div>
+  </div>
+  <div class="visual-body">
+
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="1442">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
+    </marker>
+  </defs>
+  <rect width="500" height="1442" fill="white"/>
+  <text x="250" y="44" text-anchor="middle" font-size="17" font-weight="bold" fill="#333">Решение логарифмического уравнения \( \log_3(x+2) = 2 \)</text>
+  <line x1="250.0" y1="122.0" x2="250.0" y2="192.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="244.0" x2="250.0" y2="314.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="366.0" x2="250.0" y2="436.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="488.0" x2="250.0" y2="558.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="610.0" x2="250.0" y2="680.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="732.0" x2="250.0" y2="802.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="854.0" x2="250.0" y2="924.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="976.0" x2="250.0" y2="1046.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="1098.0" x2="250.0" y2="1168.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="1220.0" x2="250.0" y2="1290.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <rect x="120.0" y="70.0" width="260" height="52.0" rx="6" fill="#fdebd0" stroke="#e67e22" stroke-width="1.5"/>
+  <text x="250.0" y="98.0" text-anchor="middle" font-size="13" fill="#333">Задача: Решите уравнение \( \log_…</text>
+  <rect x="120.0" y="314.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="342.0" text-anchor="middle" font-size="13" fill="#333">Запишем уравнение</text>
+  <rect x="120.0" y="558.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="586.0" text-anchor="middle" font-size="13" fill="#333">Используем определение логарифма</text>
+  <rect x="120.0" y="802.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="830.0" text-anchor="middle" font-size="13" fill="#333">Вычисляем степень</text>
+  <rect x="120.0" y="1046.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="1074.0" text-anchor="middle" font-size="13" fill="#333">Решаем уравнение</text>
+  <rect x="120.0" y="1290.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="1318.0" text-anchor="middle" font-size="13" fill="#333">Проверяем ОДЗ: \( x &gt; -2 \)</text>
+  <rect x="120.0" y="192.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="220.0" text-anchor="middle" font-size="13" fill="#333">$\( \log_3(x+2) = 2 \)$</text>
+  <rect x="120.0" y="436.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="464.0" text-anchor="middle" font-size="13" fill="#333">$\( 3^2 = x+2 \)$</text>
+  <rect x="120.0" y="680.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="708.0" text-anchor="middle" font-size="13" fill="#333">$\( 9 = x+2 \)$</text>
+  <rect x="120.0" y="924.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="952.0" text-anchor="middle" font-size="13" fill="#333">$\( x = 7 \)$</text>
+  <rect x="120.0" y="1168.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="1196.0" text-anchor="middle" font-size="13" fill="#333">$\( x = 7 \)$</text>
+</svg>
+<div class="caption">Решение логарифмического уравнения \( \log_3(x+2) = 2 \)</div>
+<div class="warnings">⚠ used fallback renderer</div>
+</div></div>
+
+<div class="visual-card">
+  <div class="visual-header">
+    <h4>Секция 10: ✏️ Пример 3: Дробно-рациональное уравнение</h4>
+    <div>
+      <span class="badge badge-dia">diagram</span>
+      <span class="badge badge-high">high</span>
+    </div>
+  </div>
+  <div class="visual-body">
+
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="1686">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
+    </marker>
+  </defs>
+  <rect width="500" height="1686" fill="white"/>
+  <text x="250" y="44" text-anchor="middle" font-size="17" font-weight="bold" fill="#333">Решение дробно-рационального уравнения \( \frac{x+1}{x-3} = 0 \)</text>
+  <line x1="250.0" y1="122.0" x2="250.0" y2="192.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="244.0" x2="250.0" y2="314.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="366.0" x2="250.0" y2="436.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="488.0" x2="250.0" y2="558.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="610.0" x2="250.0" y2="680.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="732.0" x2="250.0" y2="802.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="854.0" x2="250.0" y2="924.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="976.0" x2="250.0" y2="1046.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="1098.0" x2="250.0" y2="1168.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="1220.0" x2="250.0" y2="1290.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="1342.0" x2="250.0" y2="1412.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="1464.0" x2="250.0" y2="1534.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <rect x="120.0" y="70.0" width="260" height="52.0" rx="6" fill="#fdebd0" stroke="#e67e22" stroke-width="1.5"/>
+  <text x="250.0" y="98.0" text-anchor="middle" font-size="13" fill="#333">Задача: Решите уравнение \( \frac…</text>
+  <rect x="120.0" y="314.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="342.0" text-anchor="middle" font-size="13" fill="#333">Запишем уравнение</text>
+  <rect x="120.0" y="558.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="586.0" text-anchor="middle" font-size="13" fill="#333">Числитель = 0</text>
+  <rect x="120.0" y="802.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="830.0" text-anchor="middle" font-size="13" fill="#333">Решаем уравнение</text>
+  <rect x="120.0" y="1046.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="1074.0" text-anchor="middle" font-size="13" fill="#333">Знаменатель ≠ 0</text>
+  <rect x="120.0" y="1290.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="1318.0" text-anchor="middle" font-size="13" fill="#333">Решаем неравенство</text>
+  <rect x="120.0" y="1534.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="1562.0" text-anchor="middle" font-size="13" fill="#333">Проверяем решение</text>
+  <rect x="120.0" y="192.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="220.0" text-anchor="middle" font-size="13" fill="#333">$\( \frac{x+1}{x-3} = 0 \)$</text>
+  <rect x="120.0" y="436.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="464.0" text-anchor="middle" font-size="13" fill="#333">$\( x+1 = 0 \)$</text>
+  <rect x="120.0" y="680.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="708.0" text-anchor="middle" font-size="13" fill="#333">$\( x = -1 \)$</text>
+  <rect x="120.0" y="924.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="952.0" text-anchor="middle" font-size="13" fill="#333">$\( x-3 \ne 0 \)$</text>
+  <rect x="120.0" y="1168.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="1196.0" text-anchor="middle" font-size="13" fill="#333">$\( x \ne 3 \)$</text>
+  <rect x="120.0" y="1412.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="1440.0" text-anchor="middle" font-size="13" fill="#333">$\( x = -1 \ne 3 \)$</text>
+</svg>
+<div class="caption">Решение дробно-рационального уравнения \( \frac{x+1}{x-3} = 0 \)</div>
+<div class="warnings">⚠ used fallback renderer</div>
+</div></div>
+
+<div class="visual-card">
+  <div class="visual-header">
+    <h4>Секция 11: ✏️ Пример 4: Иррациональное уравнение</h4>
+    <div>
+      <span class="badge badge-dia">diagram</span>
+      <span class="badge badge-high">high</span>
+    </div>
+  </div>
+  <div class="visual-body">
+
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="1454">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
+    </marker>
+  </defs>
+  <rect width="500" height="1454" fill="white"/>
+  <text x="250" y="44" text-anchor="middle" font-size="17" font-weight="bold" fill="#333">Решение иррационального уравнения \( \sqrt{x+3} = 2 \)</text>
+  <line x1="250.0" y1="122.0" x2="250.0" y2="192.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="244.0" x2="250.0" y2="314.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="366.0" x2="250.0" y2="436.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="500.0" x2="250.0" y2="570.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="622.0" x2="250.0" y2="692.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="744.0" x2="250.0" y2="814.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="866.0" x2="250.0" y2="936.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="988.0" x2="250.0" y2="1058.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="1110.0" x2="250.0" y2="1180.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="1232.0" x2="250.0" y2="1302.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <rect x="120.0" y="70.0" width="260" height="52.0" rx="6" fill="#fdebd0" stroke="#e67e22" stroke-width="1.5"/>
+  <text x="250.0" y="98.0" text-anchor="middle" font-size="13" fill="#333">Задача: Решите уравнение \( \sqrt…</text>
+  <rect x="120.0" y="314.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="342.0" text-anchor="middle" font-size="13" fill="#333">Запишем уравнение</text>
+  <rect x="120.0" y="570.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="598.0" text-anchor="middle" font-size="13" fill="#333">Возведём обе части в квадрат</text>
+  <rect x="120.0" y="814.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="842.0" text-anchor="middle" font-size="13" fill="#333">Решаем уравнение</text>
+  <rect x="120.0" y="1058.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="1086.0" text-anchor="middle" font-size="13" fill="#333">Проверяем ОДЗ</text>
+  <rect x="120.0" y="1302.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="1330.0" text-anchor="middle" font-size="13" fill="#333">Проверяем в исходном уравнении</text>
+  <rect x="120.0" y="192.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="220.0" text-anchor="middle" font-size="13" fill="#333">$\( \sqrt{x+3} = 2 \)$</text>
+  <rect x="120.0" y="436.0" width="260" height="64.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="470.0" text-anchor="middle" font-size="13" fill="#333">$\( (\sqrt{x+3})^2 = 2^2 \) \Righ…</text>
+  <rect x="120.0" y="692.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="720.0" text-anchor="middle" font-size="13" fill="#333">$\( x = 1 \)$</text>
+  <rect x="120.0" y="936.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="964.0" text-anchor="middle" font-size="13" fill="#333">$\( x = 1 \ge -3 \)$</text>
+  <rect x="120.0" y="1180.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="1208.0" text-anchor="middle" font-size="13" fill="#333">$\( \sqrt{1+3} = \sqrt{4} = 2 \)$</text>
+</svg>
+<div class="caption">Решение иррационального уравнения \( \sqrt{x+3} = 2 \)</div>
+<div class="warnings">⚠ used fallback renderer</div>
+</div></div>
+</div>
+
+<h2>Сводка</h2>
+<table class="summary-table">
+<tr><th>Конспект</th><th>Секций</th><th>Визуалов</th><th>SVG OK</th><th>Время (сек)</th></tr>
+
+<tr><td>task6</td><td>14</td><td>9</td><td>9/9</td><td>46.28</td></tr>
+
+<tr style="font-weight:bold;"><td>ИТОГО</td><td>—</td>
+<td>9</td><td>9/9</td><td>—</td></tr>
+</table>
+
+<p style="color:#888; margin-top:40px; font-size:12px;">
+  Модель планировщика: Qwen/Qwen2.5-7B-Instruct-Turbo | SVG-генератор: svg-generator (3 scene types)
+</p>
+</body>
+</html>

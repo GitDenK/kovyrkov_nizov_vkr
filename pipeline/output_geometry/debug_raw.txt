@@ -1,0 +1,16 @@
+{
+  "title": "Трапеция ABCD",
+  "canvas": {"width":560,"height":380,"x_min":-1,"x_max":12,"y_min":-1,"y_max":6},
+  "points": {
+    "A": {"x":1,"y":![-1,0],"label_dx":-12,"label_dy":12},
+    "B": {"x":3,"y":5,"label_dx":-12,"label_dy":-12},
+    "C": {"x":9,"y":5,"label_dx":10,"label_dy":-12},
+    "D": {"x":11,"y":0,"label_dx":12,"label_dy":12},
+    "H": {"x":1,"y":0,"label_dx":-12,"label_dy":10}
+  },
+  "steps": [
+    {"text":"Трапеция $ABCD$ с основаниями $BC=6$ и $AD=10$.","objects":[{"type":"point","id":"A"},{"type":"point","id":"B"},{"type":"point","id":"C"},{"type":"point","id":"D"},{"type":"segment","id":"s_AB","from_point":"A","to_point":"B","style":{"stroke":"#2980b9","stroke_width":1.8}},{"type":"segment","id":"s_BC","from_point":"B","to_point":"C","style":{"stroke":"#e74c3c","stroke_width":1.8},"length_label":"6"},{"type":"segment","id":"s_CD","from_point":"C","to_point":"D","style":{"stroke":"#8e44ad","stroke_width":1.8}},{"type":"segment","id":"s_DA","from_point":"D","to_point":"A","style":{"stroke":"#27ae60","stroke_width":1.8},"length_label":"10"}],"annotations":[{"type":"label","id":"lbl_AB","text":"AB = 5","anchor":"A","dx":1.5,"dy":-0.3,"color":"#333","font_size":12},{"type":"label","id":"lbl_A","text":"∠A = 60°","anchor":"A","dx":0.3,"dy":0.5,"color":"#e74c3c","font_size":13}],"constraints":[],"caption":"Трапеция ABCD"},
+    {"text":"Проведена высота $BH$ из вершины $B$ на основание $AD$.","objects":[{"type":"point","id":"H"},{"type":"segment","id":"s_BH","from_point":"B","to_point":"H","style":{"stroke":"#e67e22","stroke_width":1.8}}],"annotations":[],"constraints":[{"type":"perpendicular","id":"perp_BH","point":"B","line_point1":"A","line_point2":"D","foot_id":"H"}],"caption":"Высота BH"},
+    {"text":"В прямоугольном треугольнике $ABH$:\n$$BH = AB \\cdot sin(∠A) = 5 \\cdot sin(60°) = \\frac{5\\sqrt{3}}{2}$$","objects":[],"annotations":[{"type":"label","id":"lbl_BH","text":"BH = 5√3/2","anchor":"H","dx":0.5,"dy":0.3,"color":"#e67e22","font_size":13}],"constraints":[],"caption":"Ответ: BH = 5√3/2"}
+  ]
+}

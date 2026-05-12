@@ -1,0 +1,109 @@
+{
+  "scene_type": "diagram",
+  "canvas": {
+    "width": 500,
+    "height": 300,
+    "x_min": 0,
+    "x_max": 500,
+    "y_min": 0,
+    "y_max": 300
+  },
+  "style": {
+    "theme": "light",
+    "stroke_color": "#333333",
+    "fill_color": "#f5f5f5",
+    "font_size": 13,
+    "font_family": "sans-serif"
+  },
+  "objects": [
+    {
+      "type": "title",
+      "id": "title",
+      "text": "Определение углового коэффициента и пример его вычисления"
+    },
+    {
+      "type": "box",
+      "id": "p_0",
+      "text": "definition: Угловой коэффициент прямой $y = kx + b$ задаётся формулой $k = \\frac{\\Delta y}{\\Delta x}$"
+    },
+    {
+      "type": "box",
+      "id": "p_1_0",
+      "text": "delta_y: 2"
+    },
+    {
+      "type": "box",
+      "id": "p_1_1",
+      "text": "delta_x: 4"
+    },
+    {
+      "type": "box",
+      "id": "p_1_2",
+      "text": "k: 0.5"
+    },
+    {
+      "type": "box",
+      "id": "p_1_3",
+      "text": "slope_direction: вверх слева направо"
+    },
+    {
+      "type": "box",
+      "id": "p_2_0",
+      "text": "direction: вверх слева направо\nk_range: k > 0"
+    },
+    {
+      "type": "box",
+      "id": "p_2_1",
+      "text": "direction: вниз\nk_range: k < 0"
+    },
+    {
+      "type": "box",
+      "id": "p_2_2",
+      "text": "direction: горизонтальна\nk_range: k = 0"
+    },
+    {
+      "type": "arrow",
+      "id": "fb_arr_0",
+      "from_point": "p_0",
+      "to_point": "p_1_0"
+    },
+    {
+      "type": "arrow",
+      "id": "fb_arr_1",
+      "from_point": "p_1_0",
+      "to_point": "p_1_1"
+    },
+    {
+      "type": "arrow",
+      "id": "fb_arr_2",
+      "from_point": "p_1_1",
+      "to_point": "p_1_2"
+    },
+    {
+      "type": "arrow",
+      "id": "fb_arr_3",
+      "from_point": "p_1_2",
+      "to_point": "p_1_3"
+    },
+    {
+      "type": "arrow",
+      "id": "fb_arr_4",
+      "from_point": "p_1_3",
+      "to_point": "p_2_0"
+    },
+    {
+      "type": "arrow",
+      "id": "fb_arr_5",
+      "from_point": "p_2_0",
+      "to_point": "p_2_1"
+    },
+    {
+      "type": "arrow",
+      "id": "fb_arr_6",
+      "from_point": "p_2_1",
+      "to_point": "p_2_2"
+    }
+  ],
+  "constraints": [],
+  "annotations": []
+}

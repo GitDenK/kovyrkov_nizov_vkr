@@ -1,0 +1,98 @@
+{
+  "scene_type": "diagram",
+  "canvas": {
+    "width": 500,
+    "height": 300,
+    "x_min": 0,
+    "x_max": 500,
+    "y_min": 0,
+    "y_max": 300
+  },
+  "style": {
+    "theme": "light",
+    "stroke_color": "#333333",
+    "fill_color": "#f5f5f5",
+    "font_size": 13,
+    "font_family": "sans-serif"
+  },
+  "objects": [
+    {
+      "type": "title",
+      "id": "title",
+      "text": "Найдём m — пары, где a + b = 7"
+    },
+    {
+      "type": "box",
+      "id": "step_0",
+      "text": "Перебираем пары\n(1, 6) → 1+6=7"
+    },
+    {
+      "type": "box",
+      "id": "step_1",
+      "text": "\n(2, 5) → 2+5=7"
+    },
+    {
+      "type": "box",
+      "id": "step_2",
+      "text": "\n(3, 4) → 3+4=7"
+    },
+    {
+      "type": "box",
+      "id": "step_3",
+      "text": "\n(4, 3) → 4+3=7"
+    },
+    {
+      "type": "box",
+      "id": "step_4",
+      "text": "\n(5, 2) → 5+2=7"
+    },
+    {
+      "type": "box",
+      "id": "step_5",
+      "text": "\n(6, 1) → 6+1=7"
+    },
+    {
+      "type": "box",
+      "id": "step_6",
+      "text": "Подсчитываем количество пар\nm = 6"
+    },
+    {
+      "type": "arrow",
+      "id": "arr_0",
+      "from_point": "step_0",
+      "to_point": "step_1"
+    },
+    {
+      "type": "arrow",
+      "id": "arr_1",
+      "from_point": "step_1",
+      "to_point": "step_2"
+    },
+    {
+      "type": "arrow",
+      "id": "arr_2",
+      "from_point": "step_2",
+      "to_point": "step_3"
+    },
+    {
+      "type": "arrow",
+      "id": "arr_3",
+      "from_point": "step_3",
+      "to_point": "step_4"
+    },
+    {
+      "type": "arrow",
+      "id": "arr_4",
+      "from_point": "step_4",
+      "to_point": "step_5"
+    },
+    {
+      "type": "arrow",
+      "id": "arr_5",
+      "from_point": "step_5",
+      "to_point": "step_6"
+    }
+  ],
+  "constraints": [],
+  "annotations": []
+}

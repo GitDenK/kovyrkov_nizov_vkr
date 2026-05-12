@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="620" height="300">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
+    </marker>
+  </defs>
+  <rect width="620" height="300" fill="white"/>
+  <text x="250" y="44" text-anchor="middle" font-size="17" font-weight="bold" fill="#333">Сравнение ловушек и правильных знаний при работе с производной</text>
+  <rect x="40.0" y="70.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="170.0" y="98.0" text-anchor="middle" font-size="13" fill="#333">Ловушка</text>
+  <rect x="320.0" y="70.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="450.0" y="98.0" text-anchor="middle" font-size="13" fill="#333">Правильный ответ</text>
+</svg>

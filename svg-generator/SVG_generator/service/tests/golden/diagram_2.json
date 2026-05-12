@@ -1,0 +1,60 @@
+{
+  "scene_type": "diagram",
+  "canvas": {
+    "width": 500,
+    "height": 350,
+    "x_min": 0,
+    "x_max": 500,
+    "y_min": 0,
+    "y_max": 350
+  },
+  "style": {
+    "theme": "light",
+    "stroke_color": "#333333",
+    "fill_color": "#f5f5f5",
+    "font_size": 13,
+    "font_family": "sans-serif"
+  },
+  "objects": [
+    {
+      "type": "box",
+      "id": "title_box",
+      "text": "Треугольник: свойства"
+    },
+    {
+      "type": "box",
+      "id": "median_box",
+      "text": "Медиана делит сторону пополам"
+    },
+    {
+      "type": "box",
+      "id": "altitude_box",
+      "text": "Высота ⊥ противоположной стороне"
+    },
+    {
+      "type": "box",
+      "id": "bisector_box",
+      "text": "Биссектриса делит угол пополам"
+    },
+    {
+      "type": "arrow",
+      "id": "arr_med",
+      "from_point": "title_box",
+      "to_point": "median_box"
+    },
+    {
+      "type": "arrow",
+      "id": "arr_alt",
+      "from_point": "title_box",
+      "to_point": "altitude_box"
+    },
+    {
+      "type": "arrow",
+      "id": "arr_bis",
+      "from_point": "title_box",
+      "to_point": "bisector_box"
+    }
+  ],
+  "constraints": [],
+  "annotations": []
+}

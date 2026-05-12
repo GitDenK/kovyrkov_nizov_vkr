@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8"/>
+<title>Конспект по геометрии с пошаговыми визуалами</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Georgia', 'Times New Roman', serif;
+         background: #faf9f6; color: #2c2c2c; line-height: 1.8; }
+
+  .page-header { background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+                  padding: 40px 20px; text-align: center; color: white; }
+  .page-header h1 { font-size: 26px; margin-bottom: 6px; font-family: sans-serif; }
+  .page-header p { opacity: 0.85; font-size: 14px; font-family: sans-serif; }
+
+  .conspect { max-width: 760px; margin: 0 auto; padding: 30px 24px; }
+
+  .section { margin-bottom: 50px; }
+  .section-title { font-size: 22px; color: #2c3e50; margin-bottom: 20px;
+                    padding-bottom: 8px; border-bottom: 2px solid #3498db;
+                    font-family: -apple-system, sans-serif; }
+
+  .text-block { margin: 16px 0; font-size: 16px; }
+  .text-block p { margin: 6px 0; }
+  .text-block h3 { font-size: 18px; margin: 14px 0 6px; font-family: sans-serif; }
+  .text-block strong { color: #2c3e50; }
+  .text-block .math-inline { font-family: 'Cambria Math', 'STIX Two Math', serif;
+                              background: #f0f4f8; padding: 1px 5px; border-radius: 3px;
+                              font-style: italic; color: #1a5276; }
+  .text-block .math-block { font-family: 'Cambria Math', serif;
+                             background: #f0f4f8; padding: 10px 16px; border-radius: 6px;
+                             margin: 10px 0; font-size: 17px; text-align: center;
+                             color: #1a5276; font-style: italic; }
+
+  .visual-block { margin: 20px 0; text-align: center; }
+  .visual-frame { display: inline-block; background: white; border: 1px solid #e0e0e0;
+                   border-radius: 10px; padding: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+  .visual-frame svg { max-width: 100%; height: auto; }
+  .visual-caption { font-family: -apple-system, sans-serif;
+                     font-size: 13px; color: #666; margin-top: 8px;
+                     font-style: italic; }
+
+  .section-divider { text-align: center; margin: 40px 0; color: #ccc; font-size: 24px;
+                      letter-spacing: 8px; }
+
+  .footer { text-align: center; padding: 30px; color: #999; font-size: 12px;
+             font-family: sans-serif; }
+</style>
+</head>
+<body>
+<div class="page-header">
+  <h1>Конспект: Планиметрия (ЕГЭ, задание 16)</h1>
+  <p>Пошаговые геометрические построения, интегрированные в текст</p>
+</div>
+
+<div class="conspect">
+
+
+<div class="section">
+  <div class="section-title">Площадь треугольника через высоту</div>
+
+  <div class="text-block"><h3 style="color:#2c3e50; margin:16px 0 8px;">Задача</h3>
+<p>В треугольнике <span class="math-inline">ABC</span> даны координаты вершин: <span class="math-inline">A(0,\,0)</span>, <span class="math-inline">B(7,\,0)</span>, <span class="math-inline">C(3,\,5{,}5)</span>.</p>
+<br/>
+<p><strong>Найти:</strong> высоту из вершины <span class="math-inline">C</span> на сторону <span class="math-inline">AB</span> и площадь треугольника.</p>
+<br/>
+<p><strong>Решение.</strong> Начнём с построения треугольника по заданным координатам.</p></div>
+
+  <div class="visual-block">
+    <div class="visual-frame">
+      <svg xmlns="http://www.w3.org/2000/svg" width="480" height="380" viewBox="0 0 480 380" style="background:white;font-family:sans-serif">
+  <polygon points="48.0,312.9 384.0,312.9 192.0,67.1" fill="rgba(52,152,219,0.06)" stroke="#333333" stroke-width="1.5"/>
+  <circle cx="48.0" cy="312.9" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="34.0" y="328.9" font-size="14" font-family="sans-serif" font-weight="bold" fill="#333333">A</text>
+  <circle cx="384.0" cy="312.9" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="396.0" y="328.9" font-size="14" font-family="sans-serif" font-weight="bold" fill="#333333">B</text>
+  <circle cx="192.0" cy="67.1" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="192.0" y="55.1" font-size="14" font-family="sans-serif" font-weight="bold" fill="#333333">C</text>
+</svg>
+    </div>
+    <div class="visual-caption">Треугольник ABC по заданным координатам</div>
+  </div>
+
+  <div class="text-block"><p>Заметим, что точки <span class="math-inline">A</span> и <span class="math-inline">B</span> лежат на оси <span class="math-inline">Ox</span> (у обоих <span class="math-inline">y = 0</span>). Значит, сторона <span class="math-inline">AB</span> — горизонтальная, и её длину легко найти:</p>
+<br/>
+<p><div class="math-block">a = AB = x_B - x_A = 7 - 0 = 7</div></p>
+<br/>
+<p>Выберем <span class="math-inline">AB</span> как <strong>основание</strong> треугольника.</p></div>
+
+  <div class="visual-block">
+    <div class="visual-frame">
+      <svg xmlns="http://www.w3.org/2000/svg" width="480" height="380" viewBox="0 0 480 380" style="background:white;font-family:sans-serif">
+  <polygon points="48.0,312.9 384.0,312.9 192.0,67.1" fill="rgba(52,152,219,0.06)" stroke="#333333" stroke-width="1.5"/>
+  <circle cx="48.0" cy="312.9" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="34.0" y="328.9" font-size="14" font-family="sans-serif" font-weight="bold" fill="#333333">A</text>
+  <circle cx="384.0" cy="312.9" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="396.0" y="328.9" font-size="14" font-family="sans-serif" font-weight="bold" fill="#333333">B</text>
+  <circle cx="192.0" cy="67.1" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="192.0" y="55.1" font-size="14" font-family="sans-serif" font-weight="bold" fill="#333333">C</text>
+  <text x="120.0" y="326.4" font-size="13" font-family="sans-serif" fill="#2980b9">a = AB = 7</text>
+</svg>
+    </div>
+    <div class="visual-caption">Основание a = AB = 7</div>
+  </div>
+
+  <div class="text-block"><p>Теперь проведём <strong>высоту</strong> — перпендикуляр из вершины <span class="math-inline">C</span> на прямую <span class="math-inline">AB</span>.</p>
+<br/>
+<p>Поскольку <span class="math-inline">AB</span> лежит на оси <span class="math-inline">Ox</span>, высота — это просто вертикальный отрезок от <span class="math-inline">C</span> до точки <span class="math-inline">H</span> на <span class="math-inline">AB</span>. Точка <span class="math-inline">H</span> имеет ту же абсциссу, что и <span class="math-inline">C</span>:</p>
+<br/>
+<p><div class="math-block">H = (x_C,\; 0) = (3,\; 0)</div></p></div>
+
+  <div class="visual-block">
+    <div class="visual-frame">
+      <svg xmlns="http://www.w3.org/2000/svg" width="480" height="380" viewBox="0 0 480 380" style="background:white;font-family:sans-serif">
+  <polygon points="48.0,312.9 384.0,312.9 192.0,67.1" fill="rgba(52,152,219,0.06)" stroke="#333333" stroke-width="1.5"/>
+  <line x1="192.0" y1="67.1" x2="192.0" y2="312.9" stroke="#e74c3c" stroke-width="1.5" stroke-dasharray="8,4"/>
+  <circle cx="48.0" cy="312.9" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="34.0" y="328.9" font-size="14" font-family="sans-serif" font-weight="bold" fill="#333333">A</text>
+  <circle cx="384.0" cy="312.9" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="396.0" y="328.9" font-size="14" font-family="sans-serif" font-weight="bold" fill="#333333">B</text>
+  <circle cx="192.0" cy="67.1" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="192.0" y="55.1" font-size="14" font-family="sans-serif" font-weight="bold" fill="#333333">C</text>
+  <circle cx="192.0" cy="312.9" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="120.0" y="326.4" font-size="13" font-family="sans-serif" fill="#2980b9">a = AB = 7</text>
+</svg>
+    </div>
+    <div class="visual-caption">Высота CH опущена из C на AB</div>
+  </div>
+
+  <div class="text-block"><p>Отметим прямой угол в точке <span class="math-inline">H</span> — это подтверждает, что <span class="math-inline">CH \perp AB</span>.</p>
+<br/>
+<p>Длина высоты равна ординате вершины <span class="math-inline">C</span>:</p>
+<br/>
+<p><div class="math-block">h = y_C = 5{,}5</div></p></div>
+
+  <div class="visual-block">
+    <div class="visual-frame">
+      <svg xmlns="http://www.w3.org/2000/svg" width="480" height="380" viewBox="0 0 480 380" style="background:white;font-family:sans-serif">
+  <polygon points="48.0,312.9 384.0,312.9 192.0,67.1" fill="rgba(52,152,219,0.06)" stroke="#333333" stroke-width="1.5"/>
+  <line x1="192.0" y1="67.1" x2="192.0" y2="312.9" stroke="#e74c3c" stroke-width="1.5" stroke-dasharray="8,4"/>
+  <polyline points="180.0,312.9 180.0,300.9 192.0,300.9" fill="none" stroke="#333333" stroke-width="1.2"/>
+  <circle cx="48.0" cy="312.9" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="34.0" y="328.9" font-size="14" font-family="sans-serif" font-weight="bold" fill="#333333">A</text>
+  <circle cx="384.0" cy="312.9" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="396.0" y="328.9" font-size="14" font-family="sans-serif" font-weight="bold" fill="#333333">B</text>
+  <circle cx="192.0" cy="67.1" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="192.0" y="55.1" font-size="14" font-family="sans-serif" font-weight="bold" fill="#333333">C</text>
+  <circle cx="192.0" cy="312.9" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="120.0" y="326.4" font-size="13" font-family="sans-serif" fill="#2980b9">a = AB = 7</text>
+  <text x="199.2" y="326.4" font-size="12" font-family="sans-serif" fill="#e74c3c">H</text>
+  <text x="216.0" y="120.7" font-size="13" font-family="sans-serif" fill="#e74c3c">h = 5.5</text>
+</svg>
+    </div>
+    <div class="visual-caption">CH ⊥ AB, высота h = 5.5</div>
+  </div>
+
+  <div class="text-block"><p>Теперь вычислим площадь по формуле:</p>
+<br/>
+<p><div class="math-block">S = \frac{1}{2} \cdot a \cdot h = \frac{1}{2} \cdot 7 \cdot 5{,}5 = 19{,}25</div></p>
+<br/>
+<p><strong>Ответ:</strong> высота <span class="math-inline">CH = 5{,}5</span>; площадь <span class="math-inline">S = 19{,}25</span>.</p></div>
+
+  <div class="visual-block">
+    <div class="visual-frame">
+      <svg xmlns="http://www.w3.org/2000/svg" width="480" height="380" viewBox="0 0 480 380" style="background:white;font-family:sans-serif">
+  <polygon points="48.0,312.9 384.0,312.9 192.0,67.1" fill="rgba(52,152,219,0.06)" stroke="#333333" stroke-width="1.5"/>
+  <line x1="192.0" y1="67.1" x2="192.0" y2="312.9" stroke="#e74c3c" stroke-width="1.5" stroke-dasharray="8,4"/>
+  <polyline points="180.0,312.9 180.0,300.9 192.0,300.9" fill="none" stroke="#333333" stroke-width="1.2"/>
+  <circle cx="48.0" cy="312.9" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="34.0" y="328.9" font-size="14" font-family="sans-serif" font-weight="bold" fill="#333333">A</text>
+  <circle cx="384.0" cy="312.9" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="396.0" y="328.9" font-size="14" font-family="sans-serif" font-weight="bold" fill="#333333">B</text>
+  <circle cx="192.0" cy="67.1" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="192.0" y="55.1" font-size="14" font-family="sans-serif" font-weight="bold" fill="#333333">C</text>
+  <circle cx="192.0" cy="312.9" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="120.0" y="326.4" font-size="13" font-family="sans-serif" fill="#2980b9">a = AB = 7</text>
+  <text x="199.2" y="326.4" font-size="12" font-family="sans-serif" fill="#e74c3c">H</text>
+  <text x="216.0" y="120.7" font-size="13" font-family="sans-serif" fill="#e74c3c">h = 5.5</text>
+  <text x="120.0" y="350.9" font-size="14" font-family="sans-serif" fill="#8e44ad">S = ½ · 7 · 5.5 = 19.25</text>
+</svg>
+    </div>
+    <div class="visual-caption">Площадь S = ½ · a · h = 19.25</div>
+  </div>
+
+</div>
+<div class="section-divider">* * *</div>
+
+<div class="section">
+  <div class="section-title">Описанная окружность треугольника</div>
+
+  <div class="text-block"><h3 style="color:#2c3e50; margin:16px 0 8px;">Задача</h3>
+<p>Дан треугольник <span class="math-inline">ABC</span>: <span class="math-inline">A(0,\,0)</span>, <span class="math-inline">B(8,\,0)</span>, <span class="math-inline">C(3,\,7)</span>.</p>
+<br/>
+<p><strong>Найти:</strong> центр и радиус описанной окружности.</p>
+<br/>
+<p><strong>Решение.</strong> Описанная окружность проходит через все три вершины. Чтобы найти её центр, нужно построить серединные перпендикуляры к сторонам — их пересечение и есть центр <span class="math-inline">O</span>.</p>
+<br/>
+<p>Построим треугольник.</p></div>
+
+  <div class="visual-block">
+    <div class="visual-frame">
+      <svg xmlns="http://www.w3.org/2000/svg" width="480" height="440" viewBox="0 0 480 440" style="background:white;font-family:sans-serif">
+  <polygon points="80.0,330.0 400.0,330.0 200.0,73.3" fill="rgba(52,152,219,0.06)" stroke="#333333" stroke-width="1.5"/>
+  <circle cx="80.0" cy="330.0" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="66.0" y="344.0" font-size="14" font-family="sans-serif" font-weight="bold" fill="#333333">A</text>
+  <circle cx="400.0" cy="330.0" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="412.0" y="344.0" font-size="14" font-family="sans-serif" font-weight="bold" fill="#333333">B</text>
+  <circle cx="200.0" cy="73.3" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="200.0" y="61.3" font-size="14" font-family="sans-serif" font-weight="bold" fill="#333333">C</text>
+</svg>
+    </div>
+    <div class="visual-caption">Треугольник ABC</div>
+  </div>
+
+  <div class="text-block"><p><strong>Шаг 1.</strong> Находим середины сторон <span class="math-inline">AB</span> и <span class="math-inline">BC</span>:</p>
+<br/>
+<p><div class="math-block">M_1 = \frac{A + B}{2} = \left(\frac{0+8}{2},\; \frac{0+0}{2}\right) = (4,\; 0)</div></p>
+<br/>
+<p><div class="math-block">M_2 = \frac{B + C}{2} = \left(\frac{8+3}{2},\; \frac{0+7}{2}\right) = (5{,}5;\; 3{,}5)</div></p></div>
+
+  <div class="visual-block">
+    <div class="visual-frame">
+      <svg xmlns="http://www.w3.org/2000/svg" width="480" height="440" viewBox="0 0 480 440" style="background:white;font-family:sans-serif">
+  <polygon points="80.0,330.0 400.0,330.0 200.0,73.3" fill="rgba(52,152,219,0.06)" stroke="#333333" stroke-width="1.5"/>
+  <line x1="80.0" y1="330.0" x2="400.0" y2="330.0" stroke="#333333" stroke-width="1.5"/>
+  <line x1="400.0" y1="330.0" x2="200.0" y2="73.3" stroke="#333333" stroke-width="1.5"/>
+  <circle cx="80.0" cy="330.0" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="66.0" y="344.0" font-size="14" font-family="sans-serif" font-weight="bold" fill="#333333">A</text>
+  <circle cx="400.0" cy="330.0" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="412.0" y="344.0" font-size="14" font-family="sans-serif" font-weight="bold" fill="#333333">B</text>
+  <circle cx="200.0" cy="73.3" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="200.0" y="61.3" font-size="14" font-family="sans-serif" font-weight="bold" fill="#333333">C</text>
+  <circle cx="240.0" cy="330.0" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <circle cx="300.0" cy="201.7" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="240.0" y="342.8" font-size="12" font-family="sans-serif" fill="#555">M₁(4, 0)</text>
+  <text x="320.0" y="201.7" font-size="12" font-family="sans-serif" fill="#555">M₂(5.5, 3.5)</text>
+</svg>
+    </div>
+    <div class="visual-caption">Середины сторон M₁ и M₂</div>
+  </div>
+
+  <div class="text-block"><p><strong>Шаг 2.</strong> Проводим серединные перпендикуляры через <span class="math-inline">M_1</span> и <span class="math-inline">M_2</span>.</p>
+<br/>
+<p>Серединный перпендикуляр к <span class="math-inline">AB</span>: так как <span class="math-inline">AB</span> горизонтальная, перпендикуляр — вертикальная прямая <span class="math-inline">x = 4</span>.</p>
+<br/>
+<p>Серединный перпендикуляр к <span class="math-inline">BC</span>: направлен перпендикулярно вектору <span class="math-inline">\vec{BC} = (-5,\, 7)</span>.</p></div>
+
+  <div class="visual-block">
+    <div class="visual-frame">
+      <svg xmlns="http://www.w3.org/2000/svg" width="480" height="440" viewBox="0 0 480 440" style="background:white;font-family:sans-serif">
+  <polygon points="80.0,330.0 400.0,330.0 200.0,73.3" fill="rgba(52,152,219,0.06)" stroke="#333333" stroke-width="1.5"/>
+  <line x1="80.0" y1="330.0" x2="400.0" y2="330.0" stroke="#333333" stroke-width="1.5"/>
+  <line x1="400.0" y1="330.0" x2="200.0" y2="73.3" stroke="#333333" stroke-width="1.5"/>
+  <line x1="240.0" y1="330.0" x2="240.0" y2="73.3" stroke="#3498db" stroke-width="1.5" stroke-dasharray="8,4"/>
+  <line x1="300.0" y1="201.7" x2="164.0" y2="289.7" stroke="#3498db" stroke-width="1.5" stroke-dasharray="8,4"/>
+  <circle cx="80.0" cy="330.0" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="66.0" y="344.0" font-size="14" font-family="sans-serif" font-weight="bold" fill="#333333">A</text>
+  <circle cx="400.0" cy="330.0" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="412.0" y="344.0" font-size="14" font-family="sans-serif" font-weight="bold" fill="#333333">B</text>
+  <circle cx="200.0" cy="73.3" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="200.0" y="61.3" font-size="14" font-family="sans-serif" font-weight="bold" fill="#333333">C</text>
+  <circle cx="240.0" cy="330.0" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <circle cx="300.0" cy="201.7" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="240.0" y="342.8" font-size="12" font-family="sans-serif" fill="#555">M₁(4, 0)</text>
+  <text x="320.0" y="201.7" font-size="12" font-family="sans-serif" fill="#555">M₂(5.5, 3.5)</text>
+</svg>
+    </div>
+    <div class="visual-caption">Серединные перпендикуляры (синий пунктир)</div>
+  </div>
+
+  <div class="text-block"><p><strong>Шаг 3.</strong> Находим пересечение серединных перпендикуляров — это центр описанной окружности <span class="math-inline">O</span>.</p>
+<br/>
+<p>Радиус: <span class="math-inline">R = OA = OB = OC</span> — расстояние от центра до любой вершины.</p>
+<br/>
+<p>Строим окружность через все три вершины.</p></div>
+
+  <div class="visual-block">
+    <div class="visual-frame">
+      <svg xmlns="http://www.w3.org/2000/svg" width="480" height="440" viewBox="0 0 480 440" style="background:white;font-family:sans-serif">
+  <polygon points="80.0,330.0 400.0,330.0 200.0,73.3" fill="rgba(52,152,219,0.06)" stroke="#333333" stroke-width="1.5"/>
+  <circle cx="240.0" cy="241.0" r="171.6" stroke="#2980b9" fill="none" stroke-width="1.5" stroke-dasharray="8,4"/>
+  <line x1="80.0" y1="330.0" x2="400.0" y2="330.0" stroke="#333333" stroke-width="1.5"/>
+  <line x1="400.0" y1="330.0" x2="200.0" y2="73.3" stroke="#333333" stroke-width="1.5"/>
+  <line x1="240.0" y1="330.0" x2="240.0" y2="73.3" stroke="#3498db" stroke-width="1.5" stroke-dasharray="8,4"/>
+  <line x1="300.0" y1="201.7" x2="164.0" y2="289.7" stroke="#3498db" stroke-width="1.5" stroke-dasharray="8,4"/>
+  <circle cx="80.0" cy="330.0" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="66.0" y="344.0" font-size="14" font-family="sans-serif" font-weight="bold" fill="#333333">A</text>
+  <circle cx="400.0" cy="330.0" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="412.0" y="344.0" font-size="14" font-family="sans-serif" font-weight="bold" fill="#333333">B</text>
+  <circle cx="200.0" cy="73.3" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="200.0" y="61.3" font-size="14" font-family="sans-serif" font-weight="bold" fill="#333333">C</text>
+  <circle cx="240.0" cy="330.0" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <circle cx="300.0" cy="201.7" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <circle cx="240.0" cy="241.0" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="248.0" y="233.0" font-size="14" font-family="sans-serif" font-weight="bold" fill="#333333">O</text>
+  <text x="240.0" y="342.8" font-size="12" font-family="sans-serif" fill="#555">M₁(4, 0)</text>
+  <text x="320.0" y="201.7" font-size="12" font-family="sans-serif" fill="#555">M₂(5.5, 3.5)</text>
+  <text x="256.0" y="226.3" font-size="12" font-family="sans-serif" fill="#2980b9">O — центр</text>
+</svg>
+    </div>
+    <div class="visual-caption">Описанная окружность: проходит через A, B, C</div>
+  </div>
+
+  <div class="text-block"><p>Описанная окружность построена. Центр <span class="math-inline">O</span> равноудалён от всех трёх вершин: <span class="math-inline">OA = OB = OC = R</span>.</p>
+<br/>
+<p><strong>Ответ:</strong> центр <span class="math-inline">O</span> — пересечение серединных перпендикуляров; окружность проходит через все вершины треугольника.</p></div>
+</div>
+<div class="section-divider">* * *</div>
+
+<div class="section">
+  <div class="section-title">Вписанная окружность через биссектрисы</div>
+
+  <div class="text-block"><h3 style="color:#2c3e50; margin:16px 0 8px;">Задача</h3>
+<p>Дан треугольник <span class="math-inline">ABC</span>: <span class="math-inline">A(0,\,0)</span>, <span class="math-inline">B(9,\,0)</span>, <span class="math-inline">C(4,\,7)</span>.</p>
+<br/>
+<p><strong>Найти:</strong> вписанную окружность (центр и радиус).</p>
+<br/>
+<p><strong>Решение.</strong> Вписанная окружность касается всех трёх сторон треугольника изнутри. Её центр — точка пересечения <strong>биссектрис</strong> углов (инцентр <span class="math-inline">I</span>).</p>
+<br/>
+<p>Начнём с построения треугольника.</p></div>
+
+  <div class="visual-block">
+    <div class="visual-frame">
+      <svg xmlns="http://www.w3.org/2000/svg" width="480" height="400" viewBox="0 0 480 400" style="background:white;font-family:sans-serif">
+  <polygon points="40.0,340.0 400.0,340.0 200.0,60.0" fill="rgba(230,126,34,0.06)" stroke="#333333" stroke-width="1.5"/>
+  <circle cx="40.0" cy="340.0" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="26.0" y="354.0" font-size="14" font-family="sans-serif" font-weight="bold" fill="#333333">A</text>
+  <circle cx="400.0" cy="340.0" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="412.0" y="354.0" font-size="14" font-family="sans-serif" font-weight="bold" fill="#333333">B</text>
+  <circle cx="200.0" cy="60.0" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="200.0" y="48.0" font-size="14" font-family="sans-serif" font-weight="bold" fill="#333333">C</text>
+</svg>
+    </div>
+    <div class="visual-caption">Треугольник ABC</div>
+  </div>
+
+  <div class="text-block"><p><strong>Шаг 1.</strong> Проводим биссектрису угла <span class="math-inline">A</span>.</p>
+<br/>
+<p>Биссектриса делит угол <span class="math-inline">\angle BAC</span> пополам. По теореме о биссектрисе, она делит противоположную сторону <span class="math-inline">BC</span> в отношении <span class="math-inline">AB : AC</span>.</p></div>
+
+  <div class="visual-block">
+    <div class="visual-frame">
+      <svg xmlns="http://www.w3.org/2000/svg" width="480" height="400" viewBox="0 0 480 400" style="background:white;font-family:sans-serif">
+  <polygon points="40.0,340.0 400.0,340.0 200.0,60.0" fill="rgba(230,126,34,0.06)" stroke="#333333" stroke-width="1.5"/>
+  <line x1="40.0" y1="340.0" x2="294.5" y2="192.3" stroke="#27ae60" stroke-width="1.5" stroke-dasharray="8,4"/>
+  <circle cx="40.0" cy="340.0" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="26.0" y="354.0" font-size="14" font-family="sans-serif" font-weight="bold" fill="#333333">A</text>
+  <circle cx="400.0" cy="340.0" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="412.0" y="354.0" font-size="14" font-family="sans-serif" font-weight="bold" fill="#333333">B</text>
+  <circle cx="200.0" cy="60.0" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="200.0" y="48.0" font-size="14" font-family="sans-serif" font-weight="bold" fill="#333333">C</text>
+  <circle cx="294.5" cy="192.3" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+</svg>
+    </div>
+    <div class="visual-caption">Биссектриса из вершины A (зелёный пунктир)</div>
+  </div>
+
+  <div class="text-block"><p><strong>Шаг 2.</strong> Проводим биссектрису угла <span class="math-inline">B</span>.</p>
+<br/>
+<p>Пересечение двух биссектрис уже даёт нам инцентр — но для наглядности проведём и третью.</p></div>
+
+  <div class="visual-block">
+    <div class="visual-frame">
+      <svg xmlns="http://www.w3.org/2000/svg" width="480" height="400" viewBox="0 0 480 400" style="background:white;font-family:sans-serif">
+  <polygon points="40.0,340.0 400.0,340.0 200.0,60.0" fill="rgba(230,126,34,0.06)" stroke="#333333" stroke-width="1.5"/>
+  <line x1="40.0" y1="340.0" x2="294.5" y2="192.3" stroke="#27ae60" stroke-width="1.5" stroke-dasharray="8,4"/>
+  <line x1="400.0" y1="340.0" x2="121.8" y2="196.8" stroke="#27ae60" stroke-width="1.5" stroke-dasharray="8,4"/>
+  <circle cx="40.0" cy="340.0" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="26.0" y="354.0" font-size="14" font-family="sans-serif" font-weight="bold" fill="#333333">A</text>
+  <circle cx="400.0" cy="340.0" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="412.0" y="354.0" font-size="14" font-family="sans-serif" font-weight="bold" fill="#333333">B</text>
+  <circle cx="200.0" cy="60.0" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="200.0" y="48.0" font-size="14" font-family="sans-serif" font-weight="bold" fill="#333333">C</text>
+  <circle cx="294.5" cy="192.3" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <circle cx="121.8" cy="196.8" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+</svg>
+    </div>
+    <div class="visual-caption">Биссектрисы из A и B пересекаются</div>
+  </div>
+
+  <div class="text-block"><p><strong>Шаг 3.</strong> Проводим биссектрису угла <span class="math-inline">C</span>.</p>
+<br/>
+<p>Замечаем важное свойство: <strong>все три биссектрисы пересекаются в одной точке <span class="math-inline">I</span></strong> — это инцентр треугольника.</p></div>
+
+  <div class="visual-block">
+    <div class="visual-frame">
+      <svg xmlns="http://www.w3.org/2000/svg" width="480" height="400" viewBox="0 0 480 400" style="background:white;font-family:sans-serif">
+  <polygon points="40.0,340.0 400.0,340.0 200.0,60.0" fill="rgba(230,126,34,0.06)" stroke="#333333" stroke-width="1.5"/>
+  <line x1="40.0" y1="340.0" x2="294.5" y2="192.3" stroke="#27ae60" stroke-width="1.5" stroke-dasharray="8,4"/>
+  <line x1="400.0" y1="340.0" x2="121.8" y2="196.8" stroke="#27ae60" stroke-width="1.5" stroke-dasharray="8,4"/>
+  <line x1="200.0" y1="60.0" x2="214.2" y2="340.0" stroke="#27ae60" stroke-width="1.5" stroke-dasharray="8,4"/>
+  <circle cx="40.0" cy="340.0" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="26.0" y="354.0" font-size="14" font-family="sans-serif" font-weight="bold" fill="#333333">A</text>
+  <circle cx="400.0" cy="340.0" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="412.0" y="354.0" font-size="14" font-family="sans-serif" font-weight="bold" fill="#333333">B</text>
+  <circle cx="200.0" cy="60.0" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="200.0" y="48.0" font-size="14" font-family="sans-serif" font-weight="bold" fill="#333333">C</text>
+  <circle cx="294.5" cy="192.3" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <circle cx="121.8" cy="196.8" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <circle cx="214.2" cy="340.0" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+</svg>
+    </div>
+    <div class="visual-caption">Все три биссектрисы проходят через одну точку</div>
+  </div>
+
+  <div class="text-block"><p><strong>Шаг 4.</strong> Строим вписанную окружность с центром <span class="math-inline">I</span>.</p>
+<br/>
+<p>Радиус <span class="math-inline">r</span> — расстояние от инцентра <span class="math-inline">I</span> до любой стороны треугольника. Его можно вычислить по формуле:</p>
+<br/>
+<p><div class="math-block">r = \frac{S}{p}</div></p>
+<br/>
+<p>где <span class="math-inline">S</span> — площадь треугольника, <span class="math-inline">p</span> — полупериметр.</p></div>
+
+  <div class="visual-block">
+    <div class="visual-frame">
+      <svg xmlns="http://www.w3.org/2000/svg" width="480" height="400" viewBox="0 0 480 400" style="background:white;font-family:sans-serif">
+  <polygon points="40.0,340.0 400.0,340.0 200.0,60.0" fill="rgba(230,126,34,0.06)" stroke="#333333" stroke-width="1.5"/>
+  <circle cx="209.2" cy="241.8" r="98.2" stroke="#e67e22" fill="none" stroke-width="1.5" stroke-dasharray="8,4"/>
+  <line x1="40.0" y1="340.0" x2="294.5" y2="192.3" stroke="#27ae60" stroke-width="1.5" stroke-dasharray="8,4"/>
+  <line x1="400.0" y1="340.0" x2="121.8" y2="196.8" stroke="#27ae60" stroke-width="1.5" stroke-dasharray="8,4"/>
+  <line x1="200.0" y1="60.0" x2="214.2" y2="340.0" stroke="#27ae60" stroke-width="1.5" stroke-dasharray="8,4"/>
+  <circle cx="40.0" cy="340.0" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="26.0" y="354.0" font-size="14" font-family="sans-serif" font-weight="bold" fill="#333333">A</text>
+  <circle cx="400.0" cy="340.0" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="412.0" y="354.0" font-size="14" font-family="sans-serif" font-weight="bold" fill="#333333">B</text>
+  <circle cx="200.0" cy="60.0" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="200.0" y="48.0" font-size="14" font-family="sans-serif" font-weight="bold" fill="#333333">C</text>
+  <circle cx="294.5" cy="192.3" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <circle cx="121.8" cy="196.8" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <circle cx="214.2" cy="340.0" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <circle cx="209.2" cy="241.8" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="217.2" y="233.8" font-size="14" font-family="sans-serif" font-weight="bold" fill="#333333">I</text>
+  <text x="221.2" y="229.8" font-size="12" font-family="sans-serif" fill="#e67e22">I</text>
+  <text x="233.2" y="251.8" font-size="13" font-family="sans-serif" fill="#e67e22">r</text>
+</svg>
+    </div>
+    <div class="visual-caption">Вписанная окружность касается всех трёх сторон</div>
+  </div>
+
+  <div class="text-block"><p>Вписанная окружность построена. Она касается каждой стороны треугольника ровно в одной точке.</p>
+<br/>
+<p><strong>Ответ:</strong> центр вписанной окружности <span class="math-inline">I</span> — пересечение биссектрис; радиус <span class="math-inline">r = S / p</span>.</p></div>
+</div>
+
+</div>
+<div class="footer">
+  Сгенерировано автоматически: Планировщик визуалов → Конвертер → Solver → SVG Renderer<br/>
+  14 пошаговых визуалов встроено в текст конспекта
+</div>
+</body>
+</html>

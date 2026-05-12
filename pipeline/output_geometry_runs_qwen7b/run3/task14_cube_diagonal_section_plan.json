@@ -1,0 +1,320 @@
+{
+  "title": "Сечение куба плоскостью через точки A, M и D1",
+  "points": {
+    "A": {
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "label_dx": -12,
+      "label_dy": 12
+    },
+    "B": {
+      "x": -4,
+      "y": 4,
+      "z": 0,
+      "label_dx": -14,
+      "label_dy": 8
+    },
+    "C": {
+      "x": 4,
+      "y": 4,
+      "z": 0,
+      "label_dx": 10,
+      "label_dy": 8
+    },
+    "D": {
+      "x": 0,
+      "y": 4,
+      "z": 0,
+      "label_dx": -12,
+      "label_dy": -12
+    },
+    "A1": {
+      "x": 0,
+      "y": 4,
+      "z": 4,
+      "label_dx": -12,
+      "label_dy": -12
+    },
+    "B1": {
+      "x": -4,
+      "y": 4,
+      "z": 4,
+      "label_dx": -14,
+      "label_dy": 8
+    },
+    "C1": {
+      "x": 4,
+      "y": 4,
+      "z": 4,
+      "label_dx": 10,
+      "label_dy": 8
+    },
+    "D1": {
+      "x": 0,
+      "y": 4,
+      "z": 4,
+      "label_dx": -12,
+      "label_dy": -12
+    },
+    "M": {
+      "x": 0,
+      "y": 4,
+      "z": 2,
+      "label_dx": -12,
+      "label_dy": -12
+    },
+    "H": {
+      "x": -2,
+      "y": 2,
+      "z": 0,
+      "label_dx": -14,
+      "label_dy": 8
+    },
+    "K": {
+      "x": 2,
+      "y": 2,
+      "z": 0,
+      "label_dx": 10,
+      "label_dy": 8
+    }
+  },
+  "faces": [
+    [
+      "A",
+      "B",
+      "B1",
+      "A1"
+    ],
+    [
+      "B",
+      "C",
+      "C1",
+      "B1"
+    ],
+    [
+      "C",
+      "D",
+      "D1",
+      "C1"
+    ],
+    [
+      "D",
+      "A",
+      "A1",
+      "D1"
+    ],
+    [
+      "A",
+      "D",
+      "D1",
+      "A1"
+    ],
+    [
+      "B",
+      "C",
+      "C1",
+      "B1"
+    ],
+    [
+      "A",
+      "B",
+      "B1",
+      "A1"
+    ],
+    [
+      "B1",
+      "C1",
+      "C",
+      "B"
+    ],
+    [
+      "C1",
+      "D1",
+      "D",
+      "C"
+    ],
+    [
+      "D1",
+      "A1",
+      "A",
+      "D"
+    ],
+    [
+      "A1",
+      "B1",
+      "B",
+      "A"
+    ],
+    [
+      "A",
+      "M",
+      "D1",
+      "D"
+    ]
+  ],
+  "steps": [
+    {
+      "text": "Куб ABCDA1B1C1D1 с ребром 4. Точка M --- середина ребра CC1.",
+      "objects": [
+        {
+          "type": "point",
+          "id": "A"
+        },
+        {
+          "type": "point",
+          "id": "B"
+        },
+        {
+          "type": "point",
+          "id": "C"
+        },
+        {
+          "type": "point",
+          "id": "D"
+        },
+        {
+          "type": "point",
+          "id": "A1"
+        },
+        {
+          "type": "point",
+          "id": "B1"
+        },
+        {
+          "type": "point",
+          "id": "C1"
+        },
+        {
+          "type": "point",
+          "id": "D1"
+        },
+        {
+          "type": "point",
+          "id": "M"
+        }
+      ],
+      "annotations": [],
+      "constraints": [],
+      "caption": "Куб ABCDA1B1C1D1"
+    },
+    {
+      "text": "Построим сечение плоскостью через точки A, M и D1.",
+      "objects": [
+        {
+          "type": "segment",
+          "id": "s_AM",
+          "from_point": "A",
+          "to_point": "M"
+        },
+        {
+          "type": "segment",
+          "id": "s_MD1",
+          "from_point": "M",
+          "to_point": "D1"
+        }
+      ],
+      "annotations": [],
+      "constraints": [],
+      "caption": "Сечение через точки A, M и D1"
+    },
+    {
+      "text": "Найдем точки пересечения плоскости с другими ребрами куба.",
+      "objects": [
+        {
+          "type": "intersection",
+          "id": "int1",
+          "line1": [
+            "A",
+            "M"
+          ],
+          "line2": [
+            "B",
+            "B1"
+          ],
+          "result_id": "H"
+        },
+        {
+          "type": "intersection",
+          "id": "int2",
+          "line1": [
+            "M",
+            "D1"
+          ],
+          "line2": [
+            "C",
+            "C1"
+          ],
+          "result_id": "K"
+        }
+      ],
+      "annotations": [],
+      "constraints": [],
+      "caption": "Точки пересечения"
+    },
+    {
+      "text": "Сечение куба --- трапеция AHKD1.\n\nНайдем площадь трапеции AHKD1.\n\nПлощадь трапеции AHKD1 = $\\frac{1}{2} (AH + KD1) \\cdot HK = \\frac{1}{2} (2 + 2) \\cdot 4 = 8$.",
+      "objects": [
+        {
+          "type": "polygon",
+          "id": "rect",
+          "vertices": [
+            "A",
+            "H",
+            "K",
+            "D1"
+          ],
+          "style": {
+            "fill": "rgba(41,128,185,0.08)",
+            "stroke": "#2980b9",
+            "stroke_width": 2
+          }
+        }
+      ],
+      "annotations": [
+        {
+          "type": "label",
+          "id": "lbl_AH",
+          "text": "AH=2",
+          "anchor": "A",
+          "dx": 1.5,
+          "dy": -0.3,
+          "color": "#2980b9",
+          "font_size": 12
+        },
+        {
+          "type": "label",
+          "id": "lbl_HK",
+          "text": "HK=4",
+          "anchor": "H",
+          "dx": 0.5,
+          "dy": 0.3,
+          "color": "#2980b9",
+          "font_size": 12
+        },
+        {
+          "type": "label",
+          "id": "lbl_KD1",
+          "text": "KD1=2",
+          "anchor": "K",
+          "dx": -1.5,
+          "dy": -0.3,
+          "color": "#2980b9",
+          "font_size": 12
+        },
+        {
+          "type": "label",
+          "id": "lbl_AHKD1",
+          "text": "AHKD1",
+          "anchor": "A",
+          "dx": 2.5,
+          "dy": 1.5,
+          "color": "#2980b9",
+          "font_size": 14
+        }
+      ],
+      "constraints": [],
+      "caption": "Трапеция AHKD1"
+    }
+  ]
+}

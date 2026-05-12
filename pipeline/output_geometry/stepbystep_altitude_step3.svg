@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="420" viewBox="0 0 480 420" style="background:white;font-family:sans-serif">
+  <polygon points="48.0,345.9 384.0,345.9 192.0,74.1" fill="rgba(52,152,219,0.06)" stroke="#333333" stroke-width="1.5"/>
+  <line x1="192.0" y1="74.1" x2="192.0" y2="345.9" stroke="#e74c3c" stroke-width="1.5" stroke-dasharray="8,4"/>
+  <circle cx="48.0" cy="345.9" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="34.0" y="361.9" font-size="14" font-family="sans-serif" font-weight="bold" fill="#333333">A</text>
+  <circle cx="384.0" cy="345.9" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="396.0" y="361.9" font-size="14" font-family="sans-serif" font-weight="bold" fill="#333333">B</text>
+  <circle cx="192.0" cy="74.1" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="192.0" y="62.1" font-size="14" font-family="sans-serif" font-weight="bold" fill="#333333">C</text>
+  <circle cx="192.0" cy="345.9" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="124.8" y="363.2" font-size="12" font-family="sans-serif" fill="#2980b9">основание a = AB</text>
+</svg>

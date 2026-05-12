@@ -1,0 +1,376 @@
+{
+  "model": "Qwen/Qwen2.5-7B-Instruct-Turbo",
+  "runs": 3,
+  "conspects": [
+    "task4",
+    "task6",
+    "task8",
+    "task12"
+  ],
+  "generated_at": "2026-05-08 19:42:35",
+  "elapsed_overall_sec": 520.9,
+  "raw_per_run": {
+    "task4": [
+      {
+        "total_sections": 20,
+        "sections_analyzed": 20,
+        "visuals_planned": 12,
+        "total_tokens_in": 23172,
+        "total_tokens_out": 3886,
+        "total_time_sec": 53.9,
+        "run": 1,
+        "rendered_ok": 12,
+        "total_visuals": 12
+      },
+      {
+        "total_sections": 20,
+        "sections_analyzed": 20,
+        "visuals_planned": 6,
+        "total_tokens_in": 13628,
+        "total_tokens_out": 2815,
+        "total_time_sec": 33.36,
+        "run": 2,
+        "rendered_ok": 6,
+        "total_visuals": 6
+      },
+      {
+        "total_sections": 20,
+        "sections_analyzed": 20,
+        "visuals_planned": 16,
+        "total_tokens_in": 29855,
+        "total_tokens_out": 4990,
+        "total_time_sec": 61.82,
+        "run": 3,
+        "rendered_ok": 16,
+        "total_visuals": 16
+      }
+    ],
+    "task6": [
+      {
+        "total_sections": 14,
+        "sections_analyzed": 14,
+        "visuals_planned": 9,
+        "total_tokens_in": 19373,
+        "total_tokens_out": 3190,
+        "total_time_sec": 39.64,
+        "run": 1,
+        "rendered_ok": 9,
+        "total_visuals": 9
+      },
+      {
+        "total_sections": 14,
+        "sections_analyzed": 14,
+        "visuals_planned": 9,
+        "total_tokens_in": 19375,
+        "total_tokens_out": 3205,
+        "total_time_sec": 35.03,
+        "run": 2,
+        "rendered_ok": 9,
+        "total_visuals": 9
+      },
+      {
+        "total_sections": 14,
+        "sections_analyzed": 14,
+        "visuals_planned": 10,
+        "total_tokens_in": 21244,
+        "total_tokens_out": 3750,
+        "total_time_sec": 44.97,
+        "run": 3,
+        "rendered_ok": 10,
+        "total_visuals": 10
+      }
+    ],
+    "task8": [
+      {
+        "total_sections": 13,
+        "sections_analyzed": 13,
+        "visuals_planned": 8,
+        "total_tokens_in": 17767,
+        "total_tokens_out": 2931,
+        "total_time_sec": 31.39,
+        "run": 1,
+        "rendered_ok": 8,
+        "total_visuals": 8
+      },
+      {
+        "total_sections": 13,
+        "sections_analyzed": 13,
+        "visuals_planned": 8,
+        "total_tokens_in": 17771,
+        "total_tokens_out": 2888,
+        "total_time_sec": 32.55,
+        "run": 2,
+        "rendered_ok": 8,
+        "total_visuals": 8
+      },
+      {
+        "total_sections": 13,
+        "sections_analyzed": 13,
+        "visuals_planned": 8,
+        "total_tokens_in": 17767,
+        "total_tokens_out": 2957,
+        "total_time_sec": 41.0,
+        "run": 3,
+        "rendered_ok": 8,
+        "total_visuals": 8
+      }
+    ],
+    "task12": [
+      {
+        "total_sections": 16,
+        "sections_analyzed": 15,
+        "visuals_planned": 10,
+        "total_tokens_in": 21723,
+        "total_tokens_out": 4311,
+        "total_time_sec": 48.45,
+        "run": 1,
+        "rendered_ok": 10,
+        "total_visuals": 10
+      },
+      {
+        "total_sections": 16,
+        "sections_analyzed": 15,
+        "visuals_planned": 10,
+        "total_tokens_in": 21723,
+        "total_tokens_out": 4319,
+        "total_time_sec": 54.98,
+        "run": 2,
+        "rendered_ok": 10,
+        "total_visuals": 10
+      },
+      {
+        "total_sections": 16,
+        "sections_analyzed": 14,
+        "visuals_planned": 9,
+        "total_tokens_in": 21723,
+        "total_tokens_out": 4269,
+        "total_time_sec": 43.37,
+        "run": 3,
+        "rendered_ok": 9,
+        "total_visuals": 9
+      }
+    ]
+  },
+  "per_conspect": {
+    "task4": {
+      "total_sections": {
+        "n": 3,
+        "mean": 20.0,
+        "stdev": 0.0,
+        "min": 20,
+        "max": 20
+      },
+      "sections_analyzed": {
+        "n": 3,
+        "mean": 20.0,
+        "stdev": 0.0,
+        "min": 20,
+        "max": 20
+      },
+      "visuals_planned": {
+        "n": 3,
+        "mean": 11.33,
+        "stdev": 5.03,
+        "min": 6,
+        "max": 16
+      },
+      "total_tokens_in": {
+        "n": 3,
+        "mean": 22218.33,
+        "stdev": 8155.43,
+        "min": 13628,
+        "max": 29855
+      },
+      "total_tokens_out": {
+        "n": 3,
+        "mean": 3897.0,
+        "stdev": 1087.54,
+        "min": 2815,
+        "max": 4990
+      },
+      "total_time_sec": {
+        "n": 3,
+        "mean": 49.69,
+        "stdev": 14.69,
+        "min": 33.36,
+        "max": 61.82
+      }
+    },
+    "task6": {
+      "total_sections": {
+        "n": 3,
+        "mean": 14.0,
+        "stdev": 0.0,
+        "min": 14,
+        "max": 14
+      },
+      "sections_analyzed": {
+        "n": 3,
+        "mean": 14.0,
+        "stdev": 0.0,
+        "min": 14,
+        "max": 14
+      },
+      "visuals_planned": {
+        "n": 3,
+        "mean": 9.33,
+        "stdev": 0.58,
+        "min": 9,
+        "max": 10
+      },
+      "total_tokens_in": {
+        "n": 3,
+        "mean": 19997.33,
+        "stdev": 1079.65,
+        "min": 19373,
+        "max": 21244
+      },
+      "total_tokens_out": {
+        "n": 3,
+        "mean": 3381.67,
+        "stdev": 319.07,
+        "min": 3190,
+        "max": 3750
+      },
+      "total_time_sec": {
+        "n": 3,
+        "mean": 39.88,
+        "stdev": 4.97,
+        "min": 35.03,
+        "max": 44.97
+      }
+    },
+    "task8": {
+      "total_sections": {
+        "n": 3,
+        "mean": 13.0,
+        "stdev": 0.0,
+        "min": 13,
+        "max": 13
+      },
+      "sections_analyzed": {
+        "n": 3,
+        "mean": 13.0,
+        "stdev": 0.0,
+        "min": 13,
+        "max": 13
+      },
+      "visuals_planned": {
+        "n": 3,
+        "mean": 8.0,
+        "stdev": 0.0,
+        "min": 8,
+        "max": 8
+      },
+      "total_tokens_in": {
+        "n": 3,
+        "mean": 17768.33,
+        "stdev": 2.31,
+        "min": 17767,
+        "max": 17771
+      },
+      "total_tokens_out": {
+        "n": 3,
+        "mean": 2925.33,
+        "stdev": 34.85,
+        "min": 2888,
+        "max": 2957
+      },
+      "total_time_sec": {
+        "n": 3,
+        "mean": 34.98,
+        "stdev": 5.25,
+        "min": 31.39,
+        "max": 41.0
+      }
+    },
+    "task12": {
+      "total_sections": {
+        "n": 3,
+        "mean": 16.0,
+        "stdev": 0.0,
+        "min": 16,
+        "max": 16
+      },
+      "sections_analyzed": {
+        "n": 3,
+        "mean": 14.67,
+        "stdev": 0.58,
+        "min": 14,
+        "max": 15
+      },
+      "visuals_planned": {
+        "n": 3,
+        "mean": 9.67,
+        "stdev": 0.58,
+        "min": 9,
+        "max": 10
+      },
+      "total_tokens_in": {
+        "n": 3,
+        "mean": 21723.0,
+        "stdev": 0.0,
+        "min": 21723,
+        "max": 21723
+      },
+      "total_tokens_out": {
+        "n": 3,
+        "mean": 4299.67,
+        "stdev": 26.86,
+        "min": 4269,
+        "max": 4319
+      },
+      "total_time_sec": {
+        "n": 3,
+        "mean": 48.93,
+        "stdev": 5.82,
+        "min": 43.37,
+        "max": 54.98
+      }
+    }
+  },
+  "totals_per_run": {
+    "total_sections": {
+      "n": 3,
+      "mean": 63.0,
+      "stdev": 0.0,
+      "min": 63.0,
+      "max": 63.0
+    },
+    "sections_analyzed": {
+      "n": 3,
+      "mean": 61.67,
+      "stdev": 0.58,
+      "min": 61.0,
+      "max": 62.0
+    },
+    "visuals_planned": {
+      "n": 3,
+      "mean": 38.33,
+      "stdev": 5.03,
+      "min": 33.0,
+      "max": 43.0
+    },
+    "total_tokens_in": {
+      "n": 3,
+      "mean": 81707.0,
+      "stdev": 9050.46,
+      "min": 72497.0,
+      "max": 90589.0
+    },
+    "total_tokens_out": {
+      "n": 3,
+      "mean": 14503.67,
+      "stdev": 1378.91,
+      "min": 13227.0,
+      "max": 15966.0
+    },
+    "total_time_sec": {
+      "n": 3,
+      "mean": 173.49,
+      "stdev": 17.62,
+      "min": 155.92,
+      "max": 191.16
+    }
+  }
+}

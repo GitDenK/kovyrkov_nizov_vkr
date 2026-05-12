@@ -1,0 +1,54 @@
+{
+  "scene_type": "diagram",
+  "canvas": {
+    "width": 500,
+    "height": 300,
+    "x_min": 0,
+    "x_max": 500,
+    "y_min": 0,
+    "y_max": 300
+  },
+  "style": {
+    "theme": "light",
+    "stroke_color": "#333333",
+    "fill_color": "#f5f5f5",
+    "font_size": 13,
+    "font_family": "sans-serif"
+  },
+  "objects": [
+    {
+      "type": "title",
+      "id": "title",
+      "text": "Основные понятия и их определения"
+    },
+    {
+      "type": "box",
+      "id": "row_0",
+      "text": "{'cell1': 'Исход', 'cell2': 'Один из возможных результатов опыта.'}"
+    },
+    {
+      "type": "box",
+      "id": "row_1",
+      "text": "{'cell1': 'Благоприятный исход', 'cell2': 'Исход, при котором событие происходит.'}"
+    },
+    {
+      "type": "box",
+      "id": "row_2",
+      "text": "{'cell1': 'Пространство исходов', 'cell2': 'Полный список всех возможных исходов.'}"
+    },
+    {
+      "type": "arrow",
+      "id": "arr_r_1",
+      "from_point": "row_0",
+      "to_point": "row_1"
+    },
+    {
+      "type": "arrow",
+      "id": "arr_r_2",
+      "from_point": "row_1",
+      "to_point": "row_2"
+    }
+  ],
+  "constraints": [],
+  "annotations": []
+}

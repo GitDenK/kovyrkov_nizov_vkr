@@ -1,0 +1,343 @@
+{
+  "title": "Пирамида SABCD",
+  "points": {
+    "A": {
+      "x": -3,
+      "y": 3.46,
+      "z": 0,
+      "label_dx": -12,
+      "label_dy": 10
+    },
+    "B": {
+      "x": 3,
+      "y": 3.46,
+      "z": 0,
+      "label_dx": 10,
+      "label_dy": 10
+    },
+    "C": {
+      "x": 3,
+      "y": -1.73,
+      "z": 0,
+      "label_dx": 10,
+      "label_dy": -12
+    },
+    "D": {
+      "x": -3,
+      "y": -1.73,
+      "z": 0,
+      "label_dx": -12,
+      "label_dy": -12
+    },
+    "S": {
+      "x": 0,
+      "y": 0,
+      "z": 4,
+      "label_dx": 8,
+      "label_dy": -12
+    },
+    "O": {
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "label_dx": 8,
+      "label_dy": 10
+    },
+    "M": {
+      "x": 0,
+      "y": 0.86,
+      "z": 0,
+      "label_dx": 8,
+      "label_dy": 12
+    },
+    "H": {
+      "x": 0,
+      "y": 0.86,
+      "z": 4,
+      "label_dx": 8,
+      "label_dy": 12
+    },
+    "E": {
+      "x": 0,
+      "y": 3.46,
+      "z": 0,
+      "label_dx": 8,
+      "label_dy": 12
+    }
+  },
+  "faces": [
+    [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    [
+      "S",
+      "A",
+      "B"
+    ],
+    [
+      "S",
+      "B",
+      "C"
+    ],
+    [
+      "S",
+      "C",
+      "D"
+    ],
+    [
+      "S",
+      "D",
+      "A"
+    ]
+  ],
+  "steps": [
+    {
+      "text": "Пирамида SABCD с основанием ABCD и высотой SO = 4.",
+      "objects": [
+        {
+          "type": "point",
+          "id": "A"
+        },
+        {
+          "type": "point",
+          "id": "B"
+        },
+        {
+          "type": "point",
+          "id": "C"
+        },
+        {
+          "type": "point",
+          "id": "D"
+        },
+        {
+          "type": "point",
+          "id": "S"
+        },
+        {
+          "type": "segment",
+          "id": "s_AB",
+          "from_point": "A",
+          "to_point": "B"
+        },
+        {
+          "type": "segment",
+          "id": "s_BC",
+          "from_point": "B",
+          "to_point": "C"
+        },
+        {
+          "type": "segment",
+          "id": "s_CD",
+          "from_point": "C",
+          "to_point": "D"
+        },
+        {
+          "type": "segment",
+          "id": "s_DA",
+          "from_point": "D",
+          "to_point": "A"
+        },
+        {
+          "type": "segment",
+          "id": "s_SA",
+          "from_point": "S",
+          "to_point": "A"
+        },
+        {
+          "type": "segment",
+          "id": "s_SB",
+          "from_point": "S",
+          "to_point": "B"
+        },
+        {
+          "type": "segment",
+          "id": "s_SC",
+          "from_point": "S",
+          "to_point": "C"
+        },
+        {
+          "type": "segment",
+          "id": "s_SD",
+          "from_point": "S",
+          "to_point": "D"
+        }
+      ],
+      "annotations": [
+        {
+          "type": "label",
+          "id": "lbl_SO",
+          "text": "SO = 4",
+          "anchor": "S",
+          "dx": 0.4,
+          "dy": -0.4,
+          "color": "#e74c3c",
+          "font_size": 12
+        }
+      ],
+      "constraints": [],
+      "caption": "Пирамида SABCD"
+    },
+    {
+      "text": "Центр основания O и середина AB - M.",
+      "objects": [
+        {
+          "type": "point",
+          "id": "O",
+          "style": {
+            "fill": "#e74c3c",
+            "stroke": "#e74c3c"
+          }
+        },
+        {
+          "type": "point",
+          "id": "M",
+          "style": {
+            "fill": "#27ae60",
+            "stroke": "#27ae60"
+          }
+        },
+        {
+          "type": "segment",
+          "id": "s_OM",
+          "from_point": "O",
+          "to_point": "M",
+          "style": {
+            "stroke": "#27ae60",
+            "stroke_width": 2
+          }
+        }
+      ],
+      "annotations": [],
+      "constraints": [],
+      "caption": "Центр O и середина M"
+    },
+    {
+      "text": "Нога перпендикуляра из S на AB - H.",
+      "objects": [
+        {
+          "type": "point",
+          "id": "H",
+          "style": {
+            "fill": "#8e44ad",
+            "stroke": "#8e44ad"
+          }
+        },
+        {
+          "type": "segment",
+          "id": "s_SH",
+          "from_point": "S",
+          "to_point": "H",
+          "style": {
+            "stroke": "#8e44ad",
+            "stroke_width": 2
+          }
+        }
+      ],
+      "annotations": [],
+      "constraints": [
+        {
+          "type": "perpendicular",
+          "id": "perp_SH",
+          "point": "S",
+          "line_point1": "A",
+          "line_point2": "B",
+          "foot_id": "H"
+        }
+      ],
+      "caption": "Нога перпендикуляра H"
+    },
+    {
+      "text": "Линейный угол двугранного угла при ребре AB.",
+      "objects": [
+        {
+          "type": "segment",
+          "id": "s_AH",
+          "from_point": "A",
+          "to_point": "H",
+          "style": {
+            "stroke": "#e67e22",
+            "stroke_width": 2
+          }
+        },
+        {
+          "type": "segment",
+          "id": "s_BH",
+          "from_point": "B",
+          "to_point": "H",
+          "style": {
+            "stroke": "#e67e22",
+            "stroke_width": 2
+          }
+        }
+      ],
+      "annotations": [
+        {
+          "type": "label",
+          "id": "lbl_AH",
+          "text": "AH",
+          "anchor": "A",
+          "dx": -0.5,
+          "dy": 0.3,
+          "color": "#e67e22",
+          "font_size": 12
+        },
+        {
+          "type": "label",
+          "id": "lbl_BH",
+          "text": "BH",
+          "anchor": "B",
+          "dx": 0.5,
+          "dy": 0.3,
+          "color": "#e67e22",
+          "font_size": 12
+        }
+      ],
+      "constraints": [],
+      "caption": "Линейный угол"
+    },
+    {
+      "text": "Двугранный угол при ребре AB.",
+      "objects": [
+        {
+          "type": "segment",
+          "id": "s_SE",
+          "from_point": "S",
+          "to_point": "E",
+          "style": {
+            "stroke": "#8e44ad",
+            "stroke_width": 2
+          }
+        }
+      ],
+      "annotations": [
+        {
+          "type": "label",
+          "id": "lbl_SE",
+          "text": "SE",
+          "anchor": "S",
+          "dx": 0.4,
+          "dy": -0.4,
+          "color": "#8e44ad",
+          "font_size": 12
+        }
+      ],
+      "constraints": [
+        {
+          "type": "angle_arc",
+          "id": "aa_SE",
+          "vertex": "S",
+          "ray1": "A",
+          "ray2": "E",
+          "radius": 20,
+          "color": "#e74c3c",
+          "label": "α"
+        }
+      ],
+      "caption": "Двугранный угол"
+    }
+  ]
+}

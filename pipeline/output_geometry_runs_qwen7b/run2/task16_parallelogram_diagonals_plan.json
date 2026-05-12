@@ -1,0 +1,239 @@
+{
+  "title": "Диагонали параллелограмма",
+  "points": {
+    "A": {
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "label_dx": -12,
+      "label_dy": 12
+    },
+    "B": {
+      "x": 5,
+      "y": 0,
+      "z": 0,
+      "label_dx": 8,
+      "label_dy": 12
+    },
+    "D": {
+      "x": 8,
+      "y": 0,
+      "z": 0,
+      "label_dx": 10,
+      "label_dy": 12
+    },
+    "C": {
+      "x": 13,
+      "y": 0,
+      "z": 0,
+      "label_dx": -12,
+      "label_dy": 12
+    },
+    "O": {
+      "x": 6.5,
+      "y": 0,
+      "z": 0,
+      "label_dx": 0,
+      "label_dy": 12
+    }
+  },
+  "faces": [
+    [
+      "A",
+      "B",
+      "C",
+      "D"
+    ]
+  ],
+  "steps": [
+    {
+      "text": "Дан параллелограмм $ABCD$ с $AB=5$, $AD=8$. Диагонали пересекаются в точке $O$.",
+      "objects": [
+        {
+          "type": "point",
+          "id": "A"
+        },
+        {
+          "type": "point",
+          "id": "B"
+        },
+        {
+          "type": "point",
+          "id": "C"
+        },
+        {
+          "type": "point",
+          "id": "D"
+        },
+        {
+          "type": "segment",
+          "id": "s_AB",
+          "from_point": "A",
+          "to_point": "B"
+        },
+        {
+          "type": "segment",
+          "id": "s_AD",
+          "from_point": "A",
+          "to_point": "D"
+        },
+        {
+          "type": "segment",
+          "id": "s_BC",
+          "from_point": "B",
+          "to_point": "C"
+        },
+        {
+          "type": "segment",
+          "id": "s_CD",
+          "from_point": "C",
+          "to_point": "D"
+        }
+      ],
+      "annotations": [
+        {
+          "type": "label",
+          "id": "lbl_AB",
+          "text": "AB = 5",
+          "anchor": "A",
+          "dx": -0.3,
+          "dy": 0.8,
+          "color": "#2980b9",
+          "font_size": 12
+        },
+        {
+          "type": "label",
+          "id": "lbl_AD",
+          "text": "AD = 8",
+          "anchor": "A",
+          "dx": -0.3,
+          "dy": -0.8,
+          "color": "#e74c3c",
+          "font_size": 12
+        }
+      ],
+      "constraints": [],
+      "caption": "Параллелограмм ABCD"
+    },
+    {
+      "text": "Диагонали $AC$ и $BD$ пересекаются в точке $O$ под углом $60^\\circ$.",
+      "objects": [
+        {
+          "type": "point",
+          "id": "O",
+          "style": {
+            "fill": "#e74c3c",
+            "stroke": "#e74c3c"
+          }
+        },
+        {
+          "type": "segment",
+          "id": "s_AC",
+          "from_point": "A",
+          "to_point": "C"
+        },
+        {
+          "type": "segment",
+          "id": "s_BD",
+          "from_point": "B",
+          "to_point": "D"
+        }
+      ],
+      "annotations": [
+        {
+          "type": "label",
+          "id": "lbl_angle",
+          "text": "60°",
+          "anchor": "O",
+          "dx": 0.3,
+          "dy": -0.5,
+          "color": "#e74c3c",
+          "font_size": 13
+        }
+      ],
+      "constraints": [
+        {
+          "type": "right_angle_marker",
+          "id": "ra_O",
+          "vertex": "O",
+          "ray1": "A",
+          "ray2": "C"
+        }
+      ],
+      "caption": "Диагонали пересекаются под углом 60°"
+    },
+    {
+      "text": "По теореме косинусов в треугольнике $AOD$: $AC^2 = AO^2 + DO^2 - 2 \\cdot AO \\cdot DO \\cdot \\cos(60^\\circ)$.",
+      "objects": [
+        {
+          "type": "segment",
+          "id": "s_AO",
+          "from_point": "A",
+          "to_point": "O"
+        },
+        {
+          "type": "segment",
+          "id": "s_DO",
+          "from_point": "D",
+          "to_point": "O"
+        }
+      ],
+      "annotations": [
+        {
+          "type": "label",
+          "id": "lbl_AO",
+          "text": "AO = 4",
+          "anchor": "A",
+          "dx": -0.3,
+          "dy": -0.8,
+          "color": "#2980b9",
+          "font_size": 12
+        },
+        {
+          "type": "label",
+          "id": "lbl_DO",
+          "text": "DO = 4",
+          "anchor": "D",
+          "dx": -0.3,
+          "dy": -0.8,
+          "color": "#e74c3c",
+          "font_size": 12
+        }
+      ],
+      "constraints": [
+        {
+          "type": "midpoint",
+          "id": "mid_AD",
+          "segment": "s_AD",
+          "result_id": "M"
+        }
+      ],
+      "caption": "Треугольник AOD"
+    },
+    {
+      "text": "Вычислим длину диагонали $AC$: $AC^2 = 4^2 + 4^2 - 2 \\cdot 4 \\cdot 4 \\cdot \\cos(60^\\circ) = 16 + 16 - 16 = 16$.",
+      "objects": [
+        {
+          "type": "segment",
+          "id": "s_AC",
+          "from_point": "A",
+          "to_point": "C"
+        }
+      ],
+      "annotations": [
+        {
+          "type": "label",
+          "id": "lbl_AC",
+          "text": "AC = 4√3",
+          "anchor": "A",
+          "dx": 1.5,
+          "dy": -0.3,
+          "color": "#27ae60",
+          "font_size": 14
+        }
+      ],
+      "constraints": [],
+      "caption": "Ответ: AC = 4√3"
+    }
+  ]
+}

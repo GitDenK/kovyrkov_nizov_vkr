@@ -1,0 +1,146 @@
+{
+  "scene_type": "diagram",
+  "canvas": {
+    "width": 500,
+    "height": 300,
+    "x_min": 0,
+    "x_max": 500,
+    "y_min": 0,
+    "y_max": 300
+  },
+  "style": {
+    "theme": "light",
+    "stroke_color": "#333333",
+    "fill_color": "#f5f5f5",
+    "font_size": 13,
+    "font_family": "sans-serif"
+  },
+  "objects": [
+    {
+      "type": "title",
+      "id": "title",
+      "text": "Пошаговое решение задачи о бросании двух монет"
+    },
+    {
+      "type": "box",
+      "id": "problem",
+      "text": "Задача: Найдите вероятность того, что выпало ровно один орёл при бросании двух симметричных монет.",
+      "style": {
+        "fill": "#fdebd0",
+        "stroke": "#e67e22"
+      }
+    },
+    {
+      "type": "formula_block",
+      "id": "expr_0",
+      "formula": "$Вероятность выпадения орла на одной монете = 0.5$"
+    },
+    {
+      "type": "arrow",
+      "id": "arr_e_0",
+      "from_point": "problem",
+      "to_point": "expr_0"
+    },
+    {
+      "type": "box",
+      "id": "ann_0",
+      "text": "Вероятность выпадения орла на одной монете"
+    },
+    {
+      "type": "arrow",
+      "id": "arr_a_0",
+      "from_point": "expr_0",
+      "to_point": "ann_0"
+    },
+    {
+      "type": "formula_block",
+      "id": "expr_1",
+      "formula": "$Вероятность выпадения решки на одной монете = 0.5$"
+    },
+    {
+      "type": "arrow",
+      "id": "arr_e_1",
+      "from_point": "ann_0",
+      "to_point": "expr_1"
+    },
+    {
+      "type": "box",
+      "id": "ann_1",
+      "text": "Вероятность выпадения решки на одной монете"
+    },
+    {
+      "type": "arrow",
+      "id": "arr_a_1",
+      "from_point": "expr_1",
+      "to_point": "ann_1"
+    },
+    {
+      "type": "formula_block",
+      "id": "expr_2",
+      "formula": "$Вероятность выпадения орла на первой монете и решки на второй = 0.5 * 0.5 = 0.25$"
+    },
+    {
+      "type": "arrow",
+      "id": "arr_e_2",
+      "from_point": "ann_1",
+      "to_point": "expr_2"
+    },
+    {
+      "type": "box",
+      "id": "ann_2",
+      "text": "Вероятность выпадения орла на первой монете и решки на второй"
+    },
+    {
+      "type": "arrow",
+      "id": "arr_a_2",
+      "from_point": "expr_2",
+      "to_point": "ann_2"
+    },
+    {
+      "type": "formula_block",
+      "id": "expr_3",
+      "formula": "$Вероятность выпадения решки на первой монете и орла на второй = 0.5 * 0.5 = 0.25$"
+    },
+    {
+      "type": "arrow",
+      "id": "arr_e_3",
+      "from_point": "ann_2",
+      "to_point": "expr_3"
+    },
+    {
+      "type": "box",
+      "id": "ann_3",
+      "text": "Вероятность выпадения решки на первой монете и орла на второй"
+    },
+    {
+      "type": "arrow",
+      "id": "arr_a_3",
+      "from_point": "expr_3",
+      "to_point": "ann_3"
+    },
+    {
+      "type": "formula_block",
+      "id": "expr_4",
+      "formula": "$Вероятность выпадения ровно одного орла = 0.25 + 0.25 = 0.5$"
+    },
+    {
+      "type": "arrow",
+      "id": "arr_e_4",
+      "from_point": "ann_3",
+      "to_point": "expr_4"
+    },
+    {
+      "type": "box",
+      "id": "ann_4",
+      "text": "Сумма вероятностей двух исходов"
+    },
+    {
+      "type": "arrow",
+      "id": "arr_a_4",
+      "from_point": "expr_4",
+      "to_point": "ann_4"
+    }
+  ],
+  "constraints": [],
+  "annotations": []
+}

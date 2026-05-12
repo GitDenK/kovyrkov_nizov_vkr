@@ -1,0 +1,267 @@
+{
+  "title": "Трапеция с перпендикулярными диагоналями",
+  "canvas": {
+    "width": 560,
+    "height": 380,
+    "x_min": -1,
+    "x_max": 15,
+    "y_min": -1,
+    "y_max": 6
+  },
+  "points": {
+    "A": {
+      "x": 1,
+      "y": 0,
+      "label_dx": -12,
+      "label_dy": 12
+    },
+    "B": {
+      "x": 3.5,
+      "y": 5,
+      "label_dx": -12,
+      "label_dy": -12
+    },
+    "C": {
+      "x": 7.5,
+      "y": 5,
+      "label_dx": 8,
+      "label_dy": -12
+    },
+    "D": {
+      "x": 10,
+      "y": 0,
+      "label_dx": 12,
+      "label_dy": 12
+    },
+    "F": {
+      "x": 14,
+      "y": 0,
+      "label_dx": 12,
+      "label_dy": 12
+    }
+  },
+  "steps": [
+    {
+      "text": "Дана трапеция $ABCD$ с основаниями $BC=4$ и $AD=9$, диагоналями $AC=12$ и $BD=5$.",
+      "objects": [
+        {
+          "type": "point",
+          "id": "A"
+        },
+        {
+          "type": "point",
+          "id": "B"
+        },
+        {
+          "type": "point",
+          "id": "C"
+        },
+        {
+          "type": "point",
+          "id": "D"
+        },
+        {
+          "type": "segment",
+          "id": "s_AB",
+          "from_point": "A",
+          "to_point": "B",
+          "style": {
+            "stroke": "#333"
+          }
+        },
+        {
+          "type": "segment",
+          "id": "s_BC",
+          "from_point": "B",
+          "to_point": "C",
+          "style": {
+            "stroke": "#2980b9",
+            "stroke_width": 1.8
+          }
+        },
+        {
+          "type": "segment",
+          "id": "s_CD",
+          "from_point": "C",
+          "to_point": "D",
+          "style": {
+            "stroke": "#333"
+          }
+        },
+        {
+          "type": "segment",
+          "id": "s_DA",
+          "from_point": "D",
+          "to_point": "A",
+          "style": {
+            "stroke": "#333"
+          }
+        },
+        {
+          "type": "segment",
+          "id": "s_AC",
+          "from_point": "A",
+          "to_point": "C",
+          "style": {
+            "stroke": "#e74c3c",
+            "stroke_width": 1.8
+          }
+        },
+        {
+          "type": "segment",
+          "id": "s_BD",
+          "from_point": "B",
+          "to_point": "D",
+          "style": {
+            "stroke": "#27ae60",
+            "stroke_width": 1.8
+          }
+        }
+      ],
+      "annotations": [
+        {
+          "type": "label",
+          "id": "lbl_BC",
+          "text": "BC = 4",
+          "anchor": "B",
+          "dx": -1.0,
+          "dy": 0.3,
+          "color": "#2980b9",
+          "font_size": 12
+        },
+        {
+          "type": "label",
+          "id": "lbl_AD",
+          "text": "AD = 9",
+          "anchor": "A",
+          "dx": 1.0,
+          "dy": 0.3,
+          "color": "#333",
+          "font_size": 12
+        },
+        {
+          "type": "label",
+          "id": "lbl_AC",
+          "text": "AC = 12",
+          "anchor": "A",
+          "dx": -0.3,
+          "dy": 0.8,
+          "color": "#e74c3c",
+          "font_size": 12
+        },
+        {
+          "type": "label",
+          "id": "lbl_BD",
+          "text": "BD = 5",
+          "anchor": "B",
+          "dx": -1.0,
+          "dy": 0.8,
+          "color": "#27ae60",
+          "font_size": 12
+        }
+      ],
+      "constraints": [],
+      "caption": "Трапеция ABCD"
+    },
+    {
+      "text": "Проведём $CF \\parallel BD$. $BCFD$ — параллелограмм, значит, $DF = BC = 4$, $CF = BD = 5$.",
+      "objects": [
+        {
+          "type": "point",
+          "id": "F"
+        },
+        {
+          "type": "segment",
+          "id": "s_CF",
+          "from_point": "C",
+          "to_point": "F",
+          "style": {
+            "stroke": "#8e44ad",
+            "stroke_width": 1.8
+          }
+        }
+      ],
+      "annotations": [
+        {
+          "type": "label",
+          "id": "lbl_DF",
+          "text": "DF = 4",
+          "anchor": "D",
+          "dx": 1.0,
+          "dy": -0.3,
+          "color": "#8e44ad",
+          "font_size": 12
+        },
+        {
+          "type": "label",
+          "id": "lbl_CF",
+          "text": "CF = 5",
+          "anchor": "C",
+          "dx": 0.5,
+          "dy": -0.3,
+          "color": "#8e44ad",
+          "font_size": 12
+        }
+      ],
+      "constraints": [
+        {
+          "type": "parallel_lines",
+          "id": "par_1",
+          "line1": [
+            "C",
+            "F"
+          ],
+          "line2": [
+            "B",
+            "D"
+          ]
+        }
+      ],
+      "caption": "Параллелограмм BCFD"
+    },
+    {
+      "text": "Треугольник $ACF$ со сторонами $AC = 12$, $CF = 5$, $AF = 9 + 4 = 13$ прямоугольный.",
+      "objects": [],
+      "annotations": [
+        {
+          "type": "label",
+          "id": "lbl_AF",
+          "text": "AF = 13",
+          "anchor": "A",
+          "dx": 1.5,
+          "dy": -0.3,
+          "color": "#e67e22",
+          "font_size": 13
+        }
+      ],
+      "constraints": [
+        {
+          "type": "right_angle_marker",
+          "id": "ra_1",
+          "vertex": "C",
+          "ray1": "A",
+          "ray2": "F"
+        }
+      ],
+      "caption": "Прямоугольный треугольник ACF"
+    },
+    {
+      "text": "Значит, $AC$ и $BD$ перпендикулярны, что и требовалось доказать.\n\nВысота трапеции равна высоте треугольника $ACF$. Обозначим эту высоту $h$.\n\n$S_{ACF} = \\frac{1}{2} \\cdot AF \\cdot h = \\frac{1}{2} \\cdot AC \\cdot CF$\n\n$13h = 12 \\cdot 5$\n\n$h = \\frac{60}{13}$",
+      "objects": [],
+      "annotations": [
+        {
+          "type": "label",
+          "id": "lbl_h",
+          "text": "h = 60/13",
+          "anchor": "A",
+          "dx": 1.5,
+          "dy": -0.3,
+          "color": "#8e44ad",
+          "font_size": 13
+        }
+      ],
+      "constraints": [],
+      "caption": "Ответ: h = 60/13"
+    }
+  ]
+}

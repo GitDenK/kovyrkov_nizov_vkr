@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="1442">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
+    </marker>
+  </defs>
+  <rect width="500" height="1442" fill="white"/>
+  <text x="250" y="44" text-anchor="middle" font-size="17" font-weight="bold" fill="#333">Решение логарифмического уравнения \( \log_3(x+2) = 2 \)</text>
+  <line x1="250.0" y1="122.0" x2="250.0" y2="192.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="244.0" x2="250.0" y2="314.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="366.0" x2="250.0" y2="436.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="488.0" x2="250.0" y2="558.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="610.0" x2="250.0" y2="680.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="732.0" x2="250.0" y2="802.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="854.0" x2="250.0" y2="924.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="976.0" x2="250.0" y2="1046.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="1098.0" x2="250.0" y2="1168.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="1220.0" x2="250.0" y2="1290.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <rect x="120.0" y="70.0" width="260" height="52.0" rx="6" fill="#fdebd0" stroke="#e67e22" stroke-width="1.5"/>
+  <text x="250.0" y="98.0" text-anchor="middle" font-size="13" fill="#333">Задача: Решите уравнение \( \log_…</text>
+  <rect x="120.0" y="314.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="342.0" text-anchor="middle" font-size="13" fill="#333">Запишем уравнение</text>
+  <rect x="120.0" y="558.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="586.0" text-anchor="middle" font-size="13" fill="#333">Используем определение логарифма</text>
+  <rect x="120.0" y="802.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="830.0" text-anchor="middle" font-size="13" fill="#333">Вычисляем степень</text>
+  <rect x="120.0" y="1046.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="1074.0" text-anchor="middle" font-size="13" fill="#333">Решаем уравнение</text>
+  <rect x="120.0" y="1290.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="1318.0" text-anchor="middle" font-size="13" fill="#333">Проверяем ОДЗ: \( x &gt; -2 \)</text>
+  <rect x="120.0" y="192.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="220.0" text-anchor="middle" font-size="13" fill="#333">$\( \log_3(x+2) = 2 \)$</text>
+  <rect x="120.0" y="436.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="464.0" text-anchor="middle" font-size="13" fill="#333">$\( 3^2 = x+2 \)$</text>
+  <rect x="120.0" y="680.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="708.0" text-anchor="middle" font-size="13" fill="#333">$\( 9 = x+2 \)$</text>
+  <rect x="120.0" y="924.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="952.0" text-anchor="middle" font-size="13" fill="#333">$\( x = 7 \)$</text>
+  <rect x="120.0" y="1168.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="1196.0" text-anchor="middle" font-size="13" fill="#333">$\( x = 7 \)$</text>
+</svg>

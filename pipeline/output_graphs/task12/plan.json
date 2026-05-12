@@ -1,0 +1,147 @@
+{
+  "model": "Qwen/Qwen2.5-7B-Instruct-Turbo",
+  "total_sections": 16,
+  "graphs_planned": 5,
+  "total_tokens_in": 8929,
+  "total_tokens_out": 1423,
+  "total_time_sec": 13.87,
+  "plans": [
+    {
+      "section_id": 6,
+      "section_title": "Тип 1: Найти **наибольшее или наименьшее значение функции на отрезке**",
+      "section_text_preview": "Пример:  \nНайти наибольшее значение функции $f(x) = x^2 - 4x + 5$ на отрезке $[0; 3]$.",
+      "need_visual": true,
+      "visual_type": "function_graph",
+      "description": "График функции f(x) = x^2 - 4x + 5 на отрезке [0; 3]",
+      "params": {
+        "equation": "x**2 - 4*x + 5",
+        "x_range": [
+          0,
+          3
+        ],
+        "highlight_points": [
+          {
+            "x": 2,
+            "y": 1,
+            "label": "вершина (2,1)"
+          }
+        ]
+      },
+      "caption": "f(x) = x^2 - 4x + 5 на отрезке [0; 3]",
+      "priority": "high"
+    },
+    {
+      "section_id": 7,
+      "section_title": "Тип 2: Найти **точку максимума или минимума**",
+      "section_text_preview": "Пример:  \nНайти точку минимума функции $f(x) = x^2 - 6x + 8$.",
+      "need_visual": true,
+      "visual_type": "function_graph",
+      "description": "График функции f(x) = x^2 - 6x + 8 с точкой минимума",
+      "params": {
+        "equation": "x**2 - 6*x + 8",
+        "x_range": [
+          0,
+          6
+        ],
+        "highlight_points": [
+          {
+            "x": 3,
+            "y": -1,
+            "label": "точка минимума (3,-1)"
+          }
+        ]
+      },
+      "caption": "f(x) = x^2 - 6x + 8",
+      "priority": "high"
+    },
+    {
+      "section_id": 8,
+      "section_title": "Тип 3: Найти **значение функции в точке экстремума**",
+      "section_text_preview": "Пример:  \nНайти значение функции $f(x) = x^2 - 4x + 3$ в её точке минимума.\n\n---",
+      "need_visual": true,
+      "visual_type": "function_graph",
+      "description": "График функции f(x) = x^2 - 4x + 3 с точкой минимума",
+      "params": {
+        "equation": "x**2 - 4*x + 3",
+        "x_range": [
+          -1,
+          5
+        ],
+        "highlight_points": [
+          {
+            "x": 2,
+            "y": -1,
+            "label": "точка минимума (2,-1)"
+          }
+        ]
+      },
+      "caption": "f(x) = x^2 - 4x + 3",
+      "priority": "high"
+    },
+    {
+      "section_id": 12,
+      "section_title": "Пример 1: Найти наибольшее значение функции на отрезке",
+      "section_text_preview": "**Задача:**  \nНайти наибольшее значение функции $f(x) = x^2 - 4x + 5$ на отрезке $[0; 3]$.\n\n**Решение:**\n\n**Шаг 1: Найдем производную**  \n$f(x) = x^2 - 4x + 5$  \n$f'(x) = 2x - 4$\n\n**Шаг 2: Найдем крит",
+      "need_visual": true,
+      "visual_type": "function_graph",
+      "description": "График функции f(x) = x^2 - 4x + 5 на отрезке [0; 3]",
+      "params": {
+        "equation": "x**2 - 4*x + 5",
+        "x_range": [
+          0,
+          3
+        ],
+        "highlight_points": [
+          {
+            "x": 0,
+            "y": 5,
+            "label": "f(0) = 5"
+          },
+          {
+            "x": 2,
+            "y": 1,
+            "label": "f(2) = 1"
+          },
+          {
+            "x": 3,
+            "y": 2,
+            "label": "f(3) = 2"
+          }
+        ],
+        "critical_points": [
+          {
+            "x": 2,
+            "y": 1,
+            "label": "критическая точка (2,1)"
+          }
+        ]
+      },
+      "caption": "f(x) = x^2 - 4x + 5 на отрезке [0; 3]",
+      "priority": "high"
+    },
+    {
+      "section_id": 13,
+      "section_title": "Пример 2: Найти точку минимума",
+      "section_text_preview": "**Задача:**  \nНайти точку минимума функции $f(x) = x^2 - 6x + 8$\n\n**Решение:**\n\n**Шаг 1: Производная**  \n$f'(x) = 2x - 6$\n\n**Шаг 2: $f'(x) = 0$**  \n$2x - 6 = 0$  \n$2x = 6$  \n$x = 3$\n\n**Шаг 3: Определи",
+      "need_visual": true,
+      "visual_type": "function_graph",
+      "description": "График функции f(x) = x^2 - 6x + 8 с точкой минимума x = 3",
+      "params": {
+        "equation": "x**2 - 6*x + 8",
+        "x_range": [
+          0,
+          6
+        ],
+        "highlight_points": [
+          {
+            "x": 3,
+            "y": -1,
+            "label": "точка минимума (3, -1)"
+          }
+        ]
+      },
+      "caption": "f(x) = x^2 - 6x + 8",
+      "priority": "high"
+    }
+  ]
+}

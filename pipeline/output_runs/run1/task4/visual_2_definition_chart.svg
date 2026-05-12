@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="530">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
+    </marker>
+  </defs>
+  <rect width="500" height="530" fill="white"/>
+  <text x="250" y="44" text-anchor="middle" font-size="17" font-weight="bold" fill="#333">Определение классической вероятности и условия её применения</text>
+  <line x1="250.0" y1="174.0" x2="250.0" y2="244.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="296.0" x2="250.0" y2="366.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <rect x="120.0" y="70.0" width="260" height="104.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="124.0" text-anchor="middle" font-size="13" fill="#333">definition: Классическая вероятно…</text>
+  <rect x="120.0" y="244.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="272.0" text-anchor="middle" font-size="13" fill="#333">condition: Все исходы равновероятны</text>
+  <rect x="120.0" y="366.0" width="260" height="64.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="400.0" text-anchor="middle" font-size="13" fill="#333">example: Пример: бросок честной м…</text>
+</svg>

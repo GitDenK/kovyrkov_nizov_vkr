@@ -1,0 +1,391 @@
+{
+  "title": "Площадь сечения правильной треугольной призмы",
+  "points": {
+    "A": {
+      "x": 0,
+      "y": 3.46,
+      "z": 0,
+      "label_dx": -12,
+      "label_dy": 12
+    },
+    "B": {
+      "x": -3,
+      "y": -1.73,
+      "z": 0,
+      "label_dx": -14,
+      "label_dy": 8
+    },
+    "C": {
+      "x": 3,
+      "y": -1.73,
+      "z": 0,
+      "label_dx": 10,
+      "label_dy": 8
+    },
+    "A1": {
+      "x": 0,
+      "y": 3.46,
+      "z": 4,
+      "label_dx": -12,
+      "label_dy": 10
+    },
+    "B1": {
+      "x": -3,
+      "y": -1.73,
+      "z": 4,
+      "label_dx": -14,
+      "label_dy": 8
+    },
+    "C1": {
+      "x": 3,
+      "y": -1.73,
+      "z": 4,
+      "label_dx": 10,
+      "label_dy": 8
+    },
+    "M": {
+      "x": 0,
+      "y": -1.73,
+      "z": 2,
+      "label_dx": 8,
+      "label_dy": 12
+    },
+    "N": {
+      "x": 0,
+      "y": 0,
+      "label_dx": 8,
+      "label_dy": 12,
+      "z": 0
+    }
+  },
+  "faces": [
+    [
+      "A",
+      "B",
+      "C"
+    ],
+    [
+      "A1",
+      "B1",
+      "C1"
+    ],
+    [
+      "A",
+      "A1",
+      "B1",
+      "B"
+    ],
+    [
+      "A",
+      "A1",
+      "C1",
+      "C"
+    ],
+    [
+      "B",
+      "B1",
+      "C1",
+      "C"
+    ],
+    [
+      "C",
+      "C1",
+      "A1",
+      "A"
+    ]
+  ],
+  "steps": [
+    {
+      "text": "Правильная треугольная призма $ABC A1B1C1$ со стороной основания 6 и высотой 4.",
+      "objects": [
+        {
+          "type": "point",
+          "id": "A"
+        },
+        {
+          "type": "point",
+          "id": "B"
+        },
+        {
+          "type": "point",
+          "id": "C"
+        },
+        {
+          "type": "point",
+          "id": "A1"
+        },
+        {
+          "type": "point",
+          "id": "B1"
+        },
+        {
+          "type": "point",
+          "id": "C1"
+        },
+        {
+          "type": "segment",
+          "id": "s_AB",
+          "from_point": "A",
+          "to_point": "B"
+        },
+        {
+          "type": "segment",
+          "id": "s_BC",
+          "from_point": "B",
+          "to_point": "C"
+        },
+        {
+          "type": "segment",
+          "id": "s_CA",
+          "from_point": "C",
+          "to_point": "A"
+        },
+        {
+          "type": "segment",
+          "id": "s_A1B1",
+          "from_point": "A1",
+          "to_point": "B1"
+        },
+        {
+          "type": "segment",
+          "id": "s_B1C1",
+          "from_point": "B1",
+          "to_point": "C1"
+        },
+        {
+          "type": "segment",
+          "id": "s_C1A1",
+          "from_point": "C1",
+          "to_point": "A1"
+        }
+      ],
+      "annotations": [],
+      "constraints": [],
+      "caption": "Призма ABC A1B1C1"
+    },
+    {
+      "text": "Точка $M$ --- середина ребра $CC1$.",
+      "objects": [
+        {
+          "type": "point",
+          "id": "M",
+          "style": {
+            "fill": "#27ae60",
+            "stroke": "#27ae60"
+          }
+        }
+      ],
+      "annotations": [],
+      "constraints": [],
+      "caption": "Точка M"
+    },
+    {
+      "text": "Плоскость проходит через точки $A$, $B$ и $M$.",
+      "objects": [
+        {
+          "type": "segment",
+          "id": "s_AM",
+          "from_point": "A",
+          "to_point": "M"
+        },
+        {
+          "type": "segment",
+          "id": "s_MB",
+          "from_point": "M",
+          "to_point": "B"
+        }
+      ],
+      "annotations": [],
+      "constraints": [],
+      "caption": "Плоскость через A, B, M"
+    },
+    {
+      "text": "Сечение призмы --- трапеция $ABMN$.",
+      "objects": [
+        {
+          "type": "segment",
+          "id": "s_AN",
+          "from_point": "A",
+          "to_point": "N"
+        },
+        {
+          "type": "segment",
+          "id": "s_BN",
+          "from_point": "B",
+          "to_point": "N"
+        },
+        {
+          "type": "segment",
+          "id": "s_MN",
+          "from_point": "M",
+          "to_point": "N"
+        }
+      ],
+      "annotations": [
+        {
+          "type": "label",
+          "id": "lbl_MN",
+          "text": "MN",
+          "anchor": "M",
+          "dx": 0.5,
+          "dy": 0.3,
+          "color": "#27ae60",
+          "font_size": 13
+        }
+      ],
+      "constraints": [
+        {
+          "type": "intersection",
+          "id": "int_1",
+          "line1": [
+            "A",
+            "N"
+          ],
+          "line2": [
+            "B",
+            "N"
+          ],
+          "result_id": "N"
+        }
+      ],
+      "caption": "Сечение призмы"
+    },
+    {
+      "text": "Высота $MN = 2$.",
+      "objects": [
+        {
+          "type": "segment",
+          "id": "s_MN",
+          "from_point": "M",
+          "to_point": "N",
+          "style": {
+            "stroke": "#2980b9",
+            "stroke_width": 2
+          }
+        }
+      ],
+      "annotations": [
+        {
+          "type": "label",
+          "id": "lbl_MN",
+          "text": "MN=2",
+          "anchor": "M",
+          "dx": 0.5,
+          "dy": 0.3,
+          "color": "#2980b9",
+          "font_size": 13
+        }
+      ],
+      "constraints": [
+        {
+          "type": "right_angle_marker",
+          "id": "ra_M",
+          "vertex": "M",
+          "ray1": "A",
+          "ray2": null
+        },
+        {
+          "type": "right_angle_marker",
+          "id": "ra_N",
+          "vertex": "N",
+          "ray1": "B",
+          "ray2": "M"
+        }
+      ],
+      "caption": "Высота MN=2"
+    },
+    {
+      "text": "Основания трапеции $ABMN$.",
+      "objects": [
+        {
+          "type": "segment",
+          "id": "s_AN",
+          "from_point": "A",
+          "to_point": "N"
+        },
+        {
+          "type": "segment",
+          "id": "s_BN",
+          "from_point": "B",
+          "to_point": "N"
+        }
+      ],
+      "annotations": [
+        {
+          "type": "label",
+          "id": "lbl_AN",
+          "text": "AN=6",
+          "anchor": "A",
+          "dx": 1.5,
+          "dy": -0.3,
+          "color": "#2980b9",
+          "font_size": 13
+        },
+        {
+          "type": "label",
+          "id": "lbl_BN",
+          "text": "BN=6",
+          "anchor": "B",
+          "dx": 1.5,
+          "dy": -0.3,
+          "color": "#2980b9",
+          "font_size": 13
+        }
+      ],
+      "constraints": [
+        {
+          "type": "equal_segments",
+          "id": "eq_1",
+          "segments": [
+            [
+              "A",
+              "N"
+            ],
+            [
+              "B",
+              "N"
+            ]
+          ]
+        }
+      ],
+      "caption": "Основания трапеции ABMN"
+    },
+    {
+      "text": "Площадь трапеции $ABMN = \\frac{1}{2} (AB + MN) \\cdot AN = \\frac{1}{2} (6 + 2) \\cdot 6 = 24$.",
+      "objects": [
+        {
+          "type": "polygon",
+          "id": "trap",
+          "vertices": [
+            "A",
+            "B",
+            "M",
+            "N"
+          ],
+          "style": {
+            "fill": "rgba(41,128,185,0.08)",
+            "stroke": "#2980b9",
+            "stroke_width": 2,
+            "hatch": "diagonal",
+            "hatch_color": "#2980b9",
+            "hatch_opacity": 0.3
+          }
+        }
+      ],
+      "annotations": [
+        {
+          "type": "label",
+          "id": "lbl_trap",
+          "text": "24",
+          "anchor": "M",
+          "dx": 0.5,
+          "dy": 0.3,
+          "color": "#27ae60",
+          "font_size": 13
+        }
+      ],
+      "constraints": [],
+      "caption": "Площадь трапеции ABMN"
+    }
+  ]
+}

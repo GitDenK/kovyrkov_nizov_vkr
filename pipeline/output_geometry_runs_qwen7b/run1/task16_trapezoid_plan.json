@@ -1,0 +1,312 @@
+{
+  "title": "Доказательство перпендикулярности диагоналей трапеции и нахождение высоты",
+  "points": {
+    "A": {
+      "x": 1,
+      "y": 0,
+      "z": 0,
+      "label_dx": -12,
+      "label_dy": 12
+    },
+    "D": {
+      "x": 10,
+      "y": 0,
+      "z": 0,
+      "label_dx": 8,
+      "label_dy": 12
+    },
+    "B": {
+      "x": 3.5,
+      "y": 5,
+      "z": 0,
+      "label_dx": 8,
+      "label_dy": 12
+    },
+    "C": {
+      "x": 7.5,
+      "y": 5,
+      "z": 0,
+      "label_dx": 8,
+      "label_dy": 12
+    },
+    "O": {
+      "x": 5.5,
+      "y": 2.5,
+      "z": 0,
+      "label_dx": 8,
+      "label_dy": 12
+    },
+    "H": {
+      "x": 5.5,
+      "y": 0,
+      "z": 0,
+      "label_dx": 8,
+      "label_dy": 12
+    },
+    "M": {
+      "x": 5.5,
+      "y": 2.5,
+      "z": 0,
+      "label_dx": 8,
+      "label_dy": 12
+    }
+  },
+  "steps": [
+    {
+      "text": "Дано: трапеция $ABCD$ с основаниями $BC=4$ и $AD=9$, диагоналями $AC=12$ и $BD=5$.",
+      "objects": [
+        {
+          "type": "point",
+          "id": "A"
+        },
+        {
+          "type": "point",
+          "id": "D"
+        },
+        {
+          "type": "point",
+          "id": "B"
+        },
+        {
+          "type": "point",
+          "id": "C"
+        },
+        {
+          "type": "segment",
+          "id": "s_AD",
+          "from_point": "A",
+          "to_point": "D",
+          "style": {
+            "stroke": "#2980b9",
+            "stroke_width": 1.8
+          }
+        },
+        {
+          "type": "segment",
+          "id": "s_BC",
+          "from_point": "B",
+          "to_point": "C",
+          "style": {
+            "stroke": "#e74c3c",
+            "stroke_width": 1.8
+          }
+        },
+        {
+          "type": "segment",
+          "id": "s_AC",
+          "from_point": "A",
+          "to_point": "C",
+          "style": {
+            "stroke": "#2980b9",
+            "stroke_width": 1.8
+          }
+        },
+        {
+          "type": "segment",
+          "id": "s_BD",
+          "from_point": "B",
+          "to_point": "D",
+          "style": {
+            "stroke": "#e74c3c",
+            "stroke_width": 1.8
+          }
+        }
+      ],
+      "annotations": [
+        {
+          "type": "label",
+          "id": "lbl_AD",
+          "text": "AD = 9",
+          "anchor": "A",
+          "dx": -1.5,
+          "dy": 0.8,
+          "color": "#2980b9",
+          "font_size": 12
+        },
+        {
+          "type": "label",
+          "id": "lbl_BC",
+          "text": "BC = 4",
+          "anchor": "B",
+          "dx": -1.5,
+          "dy": 0.8,
+          "color": "#e74c3c",
+          "font_size": 12
+        },
+        {
+          "type": "label",
+          "id": "lbl_AC",
+          "text": "AC = 12",
+          "anchor": "A",
+          "dx": -1.5,
+          "dy": -0.8,
+          "color": "#2980b9",
+          "font_size": 12
+        },
+        {
+          "type": "label",
+          "id": "lbl_BD",
+          "text": "BD = 5",
+          "anchor": "B",
+          "dx": -1.5,
+          "dy": -0.8,
+          "color": "#e74c3c",
+          "font_size": 12
+        }
+      ],
+      "constraints": [],
+      "caption": "Трапеция ABCD"
+    },
+    {
+      "text": "Найдем координаты точки $O$, середину диагонали $AC$.",
+      "objects": [
+        {
+          "type": "point",
+          "id": "O",
+          "style": {
+            "fill": "#27ae60",
+            "stroke": "#27ae60"
+          }
+        }
+      ],
+      "annotations": [],
+      "constraints": [
+        {
+          "type": "midpoint",
+          "id": "mid_AC",
+          "segment": "s_AC",
+          "result_id": "O"
+        }
+      ],
+      "caption": "Найдена середина AC"
+    },
+    {
+      "text": "Найдем координаты точки $H$, проекцию точки $B$ на прямую $AD$.",
+      "objects": [
+        {
+          "type": "point",
+          "id": "H",
+          "style": {
+            "fill": "#27ae60",
+            "stroke": "#27ae60"
+          }
+        }
+      ],
+      "annotations": [],
+      "constraints": [
+        {
+          "type": "perpendicular",
+          "id": "perp_H",
+          "point": "H",
+          "line_point1": "A",
+          "line_point2": "D",
+          "foot_id": "H"
+        }
+      ],
+      "caption": "Найдена проекция B на AD"
+    },
+    {
+      "text": "Докажем, что диагонали $AC$ и $BD$ перпендикулярны, используя свойство проекции.",
+      "objects": [
+        {
+          "type": "segment",
+          "id": "s_OH",
+          "from_point": "O",
+          "to_point": "H",
+          "style": {
+            "stroke": "#2980b9",
+            "stroke_width": 1.8
+          }
+        }
+      ],
+      "annotations": [
+        {
+          "type": "label",
+          "id": "lbl_OH",
+          "text": "OH",
+          "anchor": "O",
+          "dx": 0.5,
+          "dy": 0.3,
+          "color": "#2980b9",
+          "font_size": 12
+        }
+      ],
+      "constraints": [
+        {
+          "type": "right_angle_marker",
+          "id": "ra_OH",
+          "vertex": "O",
+          "ray1": "H",
+          "ray2": "D"
+        }
+      ],
+      "caption": "Доказано перпендикулярность AC и BD"
+    },
+    {
+      "text": "Найдем высоту трапеции $h$.",
+      "objects": [
+        {
+          "type": "segment",
+          "id": "s_HA",
+          "from_point": "H",
+          "to_point": "A",
+          "style": {
+            "stroke": "#e74c3c",
+            "stroke_width": 1.8,
+            "dash": "dashed"
+          }
+        }
+      ],
+      "annotations": [
+        {
+          "type": "label",
+          "id": "lbl_HA",
+          "text": "$h$",
+          "anchor": "H",
+          "dx": 0.5,
+          "dy": 0.3,
+          "color": "#e74c3c",
+          "font_size": 12
+        }
+      ],
+      "constraints": [
+        {
+          "type": "altitude",
+          "id": "alt_H",
+          "triangle": "tri_ABD",
+          "vertex": "H"
+        }
+      ],
+      "caption": "Найдена высота трапеции"
+    },
+    {
+      "text": "Высота трапеции $h = 4$.",
+      "objects": [
+        {
+          "type": "segment",
+          "id": "s_HA",
+          "from_point": "H",
+          "to_point": "A",
+          "style": {
+            "stroke": "#e74c3c",
+            "stroke_width": 1.8
+          }
+        }
+      ],
+      "annotations": [
+        {
+          "type": "label",
+          "id": "lbl_HA",
+          "text": "4",
+          "anchor": "H",
+          "dx": 0.5,
+          "dy": 0.3,
+          "color": "#e74c3c",
+          "font_size": 12
+        }
+      ],
+      "constraints": [],
+      "caption": "Ответ: высота трапеции h = 4"
+    }
+  ]
+}

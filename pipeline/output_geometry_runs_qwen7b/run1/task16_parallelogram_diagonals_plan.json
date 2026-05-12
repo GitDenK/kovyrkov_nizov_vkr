@@ -1,0 +1,254 @@
+{
+  "title": "Диагонали параллелограмма",
+  "points": {
+    "A": {
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "label_dx": -12,
+      "label_dy": 12
+    },
+    "B": {
+      "x": 5,
+      "y": 0,
+      "z": 0,
+      "label_dx": 10,
+      "label_dy": 12
+    },
+    "D": {
+      "x": 8,
+      "y": 0,
+      "z": 0,
+      "label_dx": 10,
+      "label_dy": -12
+    },
+    "C": {
+      "x": 13,
+      "y": 0,
+      "z": 0,
+      "label_dx": -12,
+      "label_dy": -12
+    },
+    "O": {
+      "x": 6.5,
+      "y": 0,
+      "z": 0,
+      "label_dx": 0,
+      "label_dy": -12
+    },
+    "H": {
+      "x": 6.5,
+      "y": 4.33,
+      "z": 0,
+      "label_dx": 0,
+      "label_dy": 12
+    },
+    "M": {
+      "x": 6.5,
+      "y": -2.17,
+      "z": 0,
+      "label_dx": 0,
+      "label_dy": -12
+    }
+  },
+  "faces": [
+    [
+      "A",
+      "B",
+      "C",
+      "D"
+    ]
+  ],
+  "steps": [
+    {
+      "text": "Дан параллелограмм $ABCD$ с $AB=5$, $AD=8$, диагонали пересекаются в точке $O$. Угол между диагоналями $60^\\circ$.",
+      "objects": [
+        {
+          "type": "point",
+          "id": "A"
+        },
+        {
+          "type": "point",
+          "id": "B"
+        },
+        {
+          "type": "point",
+          "id": "C"
+        },
+        {
+          "type": "point",
+          "id": "D"
+        },
+        {
+          "type": "segment",
+          "id": "s_AB",
+          "from_point": "A",
+          "to_point": "B"
+        },
+        {
+          "type": "segment",
+          "id": "s_AD",
+          "from_point": "A",
+          "to_point": "D"
+        },
+        {
+          "type": "segment",
+          "id": "s_BC",
+          "from_point": "B",
+          "to_point": "C"
+        },
+        {
+          "type": "segment",
+          "id": "s_CD",
+          "from_point": "C",
+          "to_point": "D"
+        }
+      ],
+      "annotations": [
+        {
+          "type": "label",
+          "id": "lbl_AB",
+          "text": "AB = 5",
+          "anchor": "A",
+          "dx": -12,
+          "dy": 12,
+          "color": "#2980b9",
+          "font_size": 12
+        },
+        {
+          "type": "label",
+          "id": "lbl_AD",
+          "text": "AD = 8",
+          "anchor": "A",
+          "dx": -12,
+          "dy": -12,
+          "color": "#e74c3c",
+          "font_size": 12
+        }
+      ],
+      "constraints": [],
+      "caption": "Параллелограмм ABCD"
+    },
+    {
+      "text": "Точки $O$ и $H$ — середины диагоналей $AC$ и $BD$ соответственно.",
+      "objects": [
+        {
+          "type": "point",
+          "id": "O",
+          "style": {
+            "fill": "#e74c3c",
+            "stroke": "#e74c3c"
+          }
+        },
+        {
+          "type": "point",
+          "id": "H",
+          "style": {
+            "fill": "#27ae60",
+            "stroke": "#27ae60"
+          }
+        }
+      ],
+      "annotations": [
+        {
+          "type": "label",
+          "id": "lbl_O",
+          "text": "O",
+          "anchor": "O",
+          "dx": 0,
+          "dy": -12,
+          "color": "#e74c3c",
+          "font_size": 12
+        },
+        {
+          "type": "label",
+          "id": "lbl_H",
+          "text": "H",
+          "anchor": "H",
+          "dx": 0,
+          "dy": 12,
+          "color": "#27ae60",
+          "font_size": 12
+        }
+      ],
+      "constraints": [
+        {
+          "type": "midpoint",
+          "id": "mid_AC",
+          "segment": "s_AC",
+          "result_id": "O"
+        },
+        {
+          "type": "midpoint",
+          "id": "mid_BD",
+          "segment": "s_BD",
+          "result_id": "H"
+        }
+      ],
+      "caption": "Середины диагоналей"
+    },
+    {
+      "text": "Угол между диагоналями $60^\\circ$.",
+      "objects": [],
+      "annotations": [],
+      "constraints": [
+        {
+          "type": "angle_arc",
+          "id": "aa_1",
+          "vertex": "O",
+          "ray1": "A",
+          "ray2": "C",
+          "radius": 20,
+          "color": "#e74c3c",
+          "label": "60°"
+        }
+      ],
+      "caption": "Угол между диагоналями"
+    },
+    {
+      "text": "Длина диагонали $AC$.\n\nПо теореме косинусов: $AC^2 = AB^2 + AD^2 - 2 \\cdot AB \\cdot AD \\cdot \\cos(60^\\circ) = 25 + 64 - 2 \\cdot 5 \\cdot 8 \\cdot \\frac{1}{2} = 49$.\n$AC = 7$.",
+      "objects": [
+        {
+          "type": "segment",
+          "id": "s_AC",
+          "from_point": "A",
+          "to_point": "C",
+          "style": {
+            "stroke": "#27ae60",
+            "stroke_width": 2
+          }
+        }
+      ],
+      "annotations": [
+        {
+          "type": "label",
+          "id": "lbl_AC",
+          "text": "AC",
+          "anchor": "A",
+          "dx": 1.5,
+          "dy": -0.3,
+          "color": "#27ae60",
+          "font_size": 14
+        }
+      ],
+      "constraints": [
+        {
+          "type": "right_angle_marker",
+          "id": "ra_OH",
+          "vertex": "O",
+          "ray1": "A",
+          "ray2": "H"
+        },
+        {
+          "type": "perpendicular",
+          "id": "perp_OH",
+          "point": "O",
+          "line_point1": "A",
+          "line_point2": "C",
+          "foot_id": "H"
+        }
+      ],
+      "caption": "Длина диагонали AC"
+    }
+  ]
+}

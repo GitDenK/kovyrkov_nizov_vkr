@@ -1,0 +1,363 @@
+{
+  "model": "Qwen/Qwen3.5-9B",
+  "total_sections": 16,
+  "sections_analyzed": 16,
+  "visuals_planned": 0,
+  "total_tokens_in": 18839,
+  "total_tokens_out": 32768,
+  "total_time_sec": 614.92,
+  "plans": [
+    {
+      "plan": {
+        "section_id": 0,
+        "section_title": "Оценка уровня владения учеником темой",
+        "section_text_preview": "На основе анализа компетенций я делаю вывод:  \nУченик **очень слабо владеет** темой исследования функций с помощью производной. Уровень владения большинством ключевых навыков — **менее 10%**, а по мно",
+        "need_visual": false,
+        "visual_type": "none",
+        "pedagogical_goal": "",
+        "description": "",
+        "params": {},
+        "caption": "",
+        "placement": "after_section",
+        "priority": "medium"
+      },
+      "llm_meta": {
+        "model": "Qwen/Qwen3.5-9B",
+        "elapsed_sec": 41.66,
+        "tokens_in": 1403,
+        "tokens_out": 2048,
+        "raw_response": ""
+      }
+    },
+    {
+      "plan": {
+        "section_id": 1,
+        "section_title": "1. КРАТКОЕ ОПИСАНИЕ ЗАДАНИЯ",
+        "section_text_preview": "Задание №12 ЕГЭ по профильной математике проверяет умение **исследовать функцию с помощью производной**.\n\nЧто проверяется:\n- Умение находить производную.\n- Умение находить точки экстремума.\n- Умение о",
+        "need_visual": false,
+        "visual_type": "none",
+        "pedagogical_goal": "",
+        "description": "",
+        "params": {},
+        "caption": "",
+        "placement": "after_section",
+        "priority": "medium"
+      },
+      "llm_meta": {
+        "model": "Qwen/Qwen3.5-9B",
+        "elapsed_sec": 40.71,
+        "tokens_in": 1185,
+        "tokens_out": 2048,
+        "raw_response": ""
+      }
+    },
+    {
+      "plan": {
+        "section_id": 2,
+        "section_title": "Что такое производная?",
+        "section_text_preview": "Производная функции $f(x)$ в точке $x$ — это скорость изменения функции в этой точке.  \nОна показывает, **возрастает** или **убывает** функция.",
+        "need_visual": false,
+        "visual_type": "none",
+        "pedagogical_goal": "",
+        "description": "",
+        "params": {},
+        "caption": "",
+        "placement": "after_section",
+        "priority": "medium"
+      },
+      "llm_meta": {
+        "model": "Qwen/Qwen3.5-9B",
+        "elapsed_sec": 33.3,
+        "tokens_in": 1076,
+        "tokens_out": 2048,
+        "raw_response": ""
+      }
+    },
+    {
+      "plan": {
+        "section_id": 3,
+        "section_title": "Как производная помогает находить экстремумы?",
+        "section_text_preview": "- Если $f'(x) > 0$ — функция **возрастает**.\n- Если $f'(x) < 0$ — функция **убывает**.\n- Если $f'(x) = 0$ — **возможно**, в этой точке **экстремум** (максимум или минимум).",
+        "need_visual": false,
+        "visual_type": "none",
+        "pedagogical_goal": "",
+        "description": "",
+        "params": {},
+        "caption": "",
+        "placement": "after_section",
+        "priority": "medium"
+      },
+      "llm_meta": {
+        "model": "Qwen/Qwen3.5-9B",
+        "elapsed_sec": 24.24,
+        "tokens_in": 1112,
+        "tokens_out": 2048,
+        "raw_response": ""
+      }
+    },
+    {
+      "plan": {
+        "section_id": 4,
+        "section_title": "Что такое экстремум?",
+        "section_text_preview": "- **Точка максимума**: функция сначала возрастает, потом убывает → производная меняет знак с **+ на –**.\n- **Точка минимума**: функция сначала убывает, потом возрастает → производная меняет знак с **–",
+        "need_visual": false,
+        "visual_type": "none",
+        "pedagogical_goal": "",
+        "description": "",
+        "params": {},
+        "caption": "",
+        "placement": "after_section",
+        "priority": "medium"
+      },
+      "llm_meta": {
+        "model": "Qwen/Qwen3.5-9B",
+        "elapsed_sec": 31.24,
+        "tokens_in": 1095,
+        "tokens_out": 2048,
+        "raw_response": ""
+      }
+    },
+    {
+      "plan": {
+        "section_id": 5,
+        "section_title": "Важные формулы производных (запоминаем!):",
+        "section_text_preview": "| Функция | Производная |\n|--------|-------------|\n| $x^n$ | $n \\cdot x^{n-1}$ |\n| $c$ (константа) | $0$ |\n| $kx$ | $k$ |\n\n> Пример: $(x^2)' = 2x$, $(x^3)' = 3x^2$, $(5x)' = 5$\n\n---",
+        "need_visual": false,
+        "visual_type": "none",
+        "pedagogical_goal": "",
+        "description": "",
+        "params": {},
+        "caption": "",
+        "placement": "after_section",
+        "priority": "medium"
+      },
+      "llm_meta": {
+        "model": "Qwen/Qwen3.5-9B",
+        "elapsed_sec": 30.93,
+        "tokens_in": 1138,
+        "tokens_out": 2048,
+        "raw_response": ""
+      }
+    },
+    {
+      "plan": {
+        "section_id": 6,
+        "section_title": "Тип 1: Найти **наибольшее или наименьшее значение функции на отрезке**",
+        "section_text_preview": "Пример:  \nНайти наибольшее значение функции $f(x) = x^2 - 4x + 5$ на отрезке $[0; 3]$.",
+        "need_visual": false,
+        "visual_type": "none",
+        "pedagogical_goal": "",
+        "description": "",
+        "params": {},
+        "caption": "",
+        "placement": "after_section",
+        "priority": "medium"
+      },
+      "llm_meta": {
+        "model": "Qwen/Qwen3.5-9B",
+        "elapsed_sec": 50.45,
+        "tokens_in": 1091,
+        "tokens_out": 2048,
+        "raw_response": ""
+      }
+    },
+    {
+      "plan": {
+        "section_id": 7,
+        "section_title": "Тип 2: Найти **точку максимума или минимума**",
+        "section_text_preview": "Пример:  \nНайти точку минимума функции $f(x) = x^2 - 6x + 8$.",
+        "need_visual": false,
+        "visual_type": "none",
+        "pedagogical_goal": "",
+        "description": "",
+        "params": {},
+        "caption": "",
+        "placement": "after_section",
+        "priority": "medium"
+      },
+      "llm_meta": {
+        "model": "Qwen/Qwen3.5-9B",
+        "elapsed_sec": 69.87,
+        "tokens_in": 1073,
+        "tokens_out": 2048,
+        "raw_response": ""
+      }
+    },
+    {
+      "plan": {
+        "section_id": 8,
+        "section_title": "Тип 3: Найти **значение функции в точке экстремума**",
+        "section_text_preview": "Пример:  \nНайти значение функции $f(x) = x^2 - 4x + 3$ в её точке минимума.\n\n---",
+        "need_visual": false,
+        "visual_type": "none",
+        "pedagogical_goal": "",
+        "description": "",
+        "params": {},
+        "caption": "",
+        "placement": "after_section",
+        "priority": "medium"
+      },
+      "llm_meta": {
+        "model": "Qwen/Qwen3.5-9B",
+        "elapsed_sec": 45.36,
+        "tokens_in": 1079,
+        "tokens_out": 2048,
+        "raw_response": ""
+      }
+    },
+    {
+      "plan": {
+        "section_id": 9,
+        "section_title": "Для задачи: найти наибольшее/наименьшее значение на отрезке",
+        "section_text_preview": "**Шаг 1: Найди производную $f'(x)$**  \nИспользуй правило: $(x^n)' = n \\cdot x^{n-1}$.\n\n**Шаг 2: Найди критические точки**  \nРеши уравнение: $f'(x) = 0$.  \n(Критические точки — это точки, где производн",
+        "need_visual": false,
+        "visual_type": "none",
+        "pedagogical_goal": "",
+        "description": "",
+        "params": {},
+        "caption": "",
+        "placement": "after_section",
+        "priority": "medium"
+      },
+      "llm_meta": {
+        "model": "Qwen/Qwen3.5-9B",
+        "elapsed_sec": 37.04,
+        "tokens_in": 1288,
+        "tokens_out": 2048,
+        "raw_response": ""
+      }
+    },
+    {
+      "plan": {
+        "section_id": 10,
+        "section_title": "Для задачи: найти точку экстремума",
+        "section_text_preview": "**Шаг 1: Найди $f'(x)$**  \n**Шаг 2: Найди $f'(x) = 0$**  \n**Шаг 3: Определи знак производной слева и справа от корня**  \n- Если $f'(x)$ меняет знак с **+ на –** → максимум.\n- Если с **– на +** → миним",
+        "need_visual": false,
+        "visual_type": "none",
+        "pedagogical_goal": "",
+        "description": "",
+        "params": {},
+        "caption": "",
+        "placement": "after_section",
+        "priority": "medium"
+      },
+      "llm_meta": {
+        "model": "Qwen/Qwen3.5-9B",
+        "elapsed_sec": 30.44,
+        "tokens_in": 1124,
+        "tokens_out": 2048,
+        "raw_response": ""
+      }
+    },
+    {
+      "plan": {
+        "section_id": 11,
+        "section_title": "Частые ошибки и как их избежать",
+        "section_text_preview": "| Ошибка | Как исправить |\n|-------|----------------|\n| Забыть подставить концы отрезка | Всегда подставляй **все критические точки и оба конца** |\n| Решить $f'(x) = 0$, но не проверить, входит ли кор",
+        "need_visual": false,
+        "visual_type": "none",
+        "pedagogical_goal": "",
+        "description": "",
+        "params": {},
+        "caption": "",
+        "placement": "after_section",
+        "priority": "medium"
+      },
+      "llm_meta": {
+        "model": "Qwen/Qwen3.5-9B",
+        "elapsed_sec": 25.32,
+        "tokens_in": 1191,
+        "tokens_out": 2048,
+        "raw_response": ""
+      }
+    },
+    {
+      "plan": {
+        "section_id": 12,
+        "section_title": "Пример 1: Найти наибольшее значение функции на отрезке",
+        "section_text_preview": "**Задача:**  \nНайти наибольшее значение функции $f(x) = x^2 - 4x + 5$ на отрезке $[0; 3]$.\n\n**Решение:**\n\n**Шаг 1: Найдем производную**  \n$f(x) = x^2 - 4x + 5$  \n$f'(x) = 2x - 4$\n\n**Шаг 2: Найдем крит",
+        "need_visual": false,
+        "visual_type": "none",
+        "pedagogical_goal": "",
+        "description": "",
+        "params": {},
+        "caption": "",
+        "placement": "after_section",
+        "priority": "medium"
+      },
+      "llm_meta": {
+        "model": "Qwen/Qwen3.5-9B",
+        "elapsed_sec": 47.46,
+        "tokens_in": 1404,
+        "tokens_out": 2048,
+        "raw_response": ""
+      }
+    },
+    {
+      "plan": {
+        "section_id": 13,
+        "section_title": "Пример 2: Найти точку минимума",
+        "section_text_preview": "**Задача:**  \nНайти точку минимума функции $f(x) = x^2 - 6x + 8$\n\n**Решение:**\n\n**Шаг 1: Производная**  \n$f'(x) = 2x - 6$\n\n**Шаг 2: $f'(x) = 0$**  \n$2x - 6 = 0$  \n$2x = 6$  \n$x = 3$\n\n**Шаг 3: Определи",
+        "need_visual": false,
+        "visual_type": "none",
+        "pedagogical_goal": "",
+        "description": "",
+        "params": {},
+        "caption": "",
+        "placement": "after_section",
+        "priority": "medium"
+      },
+      "llm_meta": {
+        "model": "Qwen/Qwen3.5-9B",
+        "elapsed_sec": 32.81,
+        "tokens_in": 1274,
+        "tokens_out": 2048,
+        "raw_response": ""
+      }
+    },
+    {
+      "plan": {
+        "section_id": 14,
+        "section_title": "6. Что делать дальше?",
+        "section_text_preview": "1. **Практикуйся на простых задачах** — только степенные функции.\n2. **Тренируй подстановку** — это самый частый промах.\n3. **Проверяй, входит ли корень в отрезок** — это легко упустить.\n4. **Не спеши",
+        "need_visual": false,
+        "visual_type": "none",
+        "pedagogical_goal": "",
+        "description": "",
+        "params": {},
+        "caption": "",
+        "placement": "after_section",
+        "priority": "medium"
+      },
+      "llm_meta": {
+        "model": "Qwen/Qwen3.5-9B",
+        "elapsed_sec": 38.25,
+        "tokens_in": 1120,
+        "tokens_out": 2048,
+        "raw_response": ""
+      }
+    },
+    {
+      "plan": {
+        "section_id": 15,
+        "section_title": "Полезные советы",
+        "section_text_preview": "✅ Всегда пиши:  \n- $f'(x) = \\dots$  \n- $f'(x) = 0$ → $x = \\dots$  \n- $f(0) = \\dots$, $f(2) = \\dots$, $f(3) = \\dots$  \n- Ответ: $\\dots$\n\n✅ Если не знаешь, как брать производную — начни с $(x^2)' = 2x$,",
+        "need_visual": false,
+        "visual_type": "none",
+        "pedagogical_goal": "",
+        "description": "",
+        "params": {},
+        "caption": "",
+        "placement": "after_section",
+        "priority": "medium"
+      },
+      "llm_meta": {
+        "model": "Qwen/Qwen3.5-9B",
+        "elapsed_sec": 35.84,
+        "tokens_in": 1186,
+        "tokens_out": 2048,
+        "raw_response": ""
+      }
+    }
+  ]
+}

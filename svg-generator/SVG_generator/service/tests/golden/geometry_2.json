@@ -1,0 +1,39 @@
+{
+  "scene_type": "geometry",
+  "canvas": {
+    "width": 400,
+    "height": 400,
+    "x_min": -4,
+    "x_max": 4,
+    "y_min": -4,
+    "y_max": 4
+  },
+  "style": {
+    "theme": "light",
+    "stroke_color": "#333333",
+    "fill_color": "none",
+    "font_size": 12,
+    "font_family": "sans-serif"
+  },
+  "objects": [
+    { "type": "point", "id": "O", "x": 0, "y": 0, "label": "O" },
+    { "type": "circle", "id": "circ", "center": "O", "radius": 3 },
+    { "type": "point", "id": "A", "x": -3, "y": 0, "label": "A" },
+    { "type": "point", "id": "B", "x": 3, "y": 0, "label": "B" },
+    { "type": "point", "id": "C", "x": 0, "y": 3, "label": "C" },
+    {
+      "type": "triangle",
+      "id": "tri_ABC",
+      "vertices": ["A", "B", "C"]
+    }
+  ],
+  "constraints": [
+    {
+      "type": "median",
+      "id": "med_A",
+      "triangle": "tri_ABC",
+      "vertex": "A"
+    }
+  ],
+  "annotations": []
+}

@@ -1,0 +1,138 @@
+{
+  "title": "9^x − 4·3^x + a = 0 — ровно 2 решения",
+  "canvas": {
+    "width": 560,
+    "height": 440,
+    "x_min": -1,
+    "x_max": 5,
+    "y_min": -1,
+    "y_max": 5,
+    "x_label": "t",
+    "y_label": "y или a"
+  },
+  "steps": [
+    {
+      "text": "Замена $t = 3^x$, $t > 0$. Уравнение принимает вид $t^2 - 4t + a = 0$.",
+      "objects": [
+        {
+          "type": "function_curve",
+          "id": "f1",
+          "expression": "-(t - 2)**2 + 4",
+          "label": "$y = -(t - 2)^2 + 4$",
+          "style": {
+            "stroke": "#2980b9",
+            "stroke_width": 2.5
+          }
+        }
+      ]
+    },
+    {
+      "text": "Критические значения параметра $a$: $a = 0$ и $a = 4$.",
+      "objects": [
+        {
+          "type": "hline",
+          "id": "h1",
+          "y": 0,
+          "label": "$a = 0$",
+          "style": {
+            "stroke": "#e74c3c",
+            "dash": "dashed"
+          }
+        },
+        {
+          "type": "hline",
+          "id": "h2",
+          "y": 4,
+          "label": "$a = 4$",
+          "style": {
+            "stroke": "#8e44ad",
+            "dash": "dashed"
+          }
+        }
+      ]
+    },
+    {
+      "text": "Анализ числа решений в зависимости от $a$.",
+      "objects": [
+        {
+          "type": "region_label",
+          "id": "rl1",
+          "x": 3,
+          "y": 2,
+          "text": "2 решения",
+          "style": {
+            "color": "#27ae60",
+            "font_size": 13,
+            "background": "rgba(255,255,255,0.9)"
+          }
+        },
+        {
+          "type": "region_label",
+          "id": "rl2",
+          "x": 1,
+          "y": 0.5,
+          "text": "1 решение",
+          "style": {
+            "color": "#888",
+            "font_size": 13,
+            "background": "rgba(255,255,255,0.9)"
+          }
+        },
+        {
+          "type": "region_label",
+          "id": "rl3",
+          "x": 4,
+          "y": 4.5,
+          "text": "1 решение",
+          "style": {
+            "color": "#888",
+            "font_size": 13,
+            "background": "rgba(255,255,255,0.9)"
+          }
+        }
+      ]
+    },
+    {
+      "text": "Закрашиваем область, где уравнение имеет ровно 2 решения.",
+      "objects": [
+        {
+          "type": "filled_between",
+          "id": "fb1",
+          "upper": "-(t - 2)**2 + 4",
+          "lower": "0",
+          "x_min": 0,
+          "x_max": 4,
+          "style": {
+            "fill": "rgba(41,128,185,0.18)"
+          }
+        }
+      ]
+    },
+    {
+      "text": "Ответ: $0 < a < 4$.",
+      "objects": [
+        {
+          "type": "filled_region",
+          "id": "fr1",
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              4
+            ],
+            [
+              4,
+              4
+            ]
+          ],
+          "style": {
+            "fill": "rgba(155,89,182,0.15)"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "scene_type": "diagram",
+  "canvas": {
+    "width": 500,
+    "height": 300,
+    "x_min": 0,
+    "x_max": 500,
+    "y_min": 0,
+    "y_max": 300
+  },
+  "style": {
+    "theme": "light",
+    "stroke_color": "#333333",
+    "fill_color": "#f5f5f5",
+    "font_size": 13,
+    "font_family": "sans-serif"
+  },
+  "objects": [
+    {
+      "type": "title",
+      "id": "title",
+      "text": "Алгоритм анализа графика производной для определения интервалов возрастания и убывания функции"
+    },
+    {
+      "type": "box",
+      "id": "step_0",
+      "text": "Найди участки, где $f'(x) > 0$\nГрафик производной выше оси $x$"
+    },
+    {
+      "type": "box",
+      "id": "step_1",
+      "text": "Запиши, где функция $f(x)$ возрастает\nНа этих участках"
+    },
+    {
+      "type": "box",
+      "id": "step_2",
+      "text": "Найди участки, где $f'(x) < 0$\nГрафик производной ниже оси $x$"
+    },
+    {
+      "type": "box",
+      "id": "step_3",
+      "text": "Запиши, где функция $f(x)$ убывает\nНа этих участках"
+    },
+    {
+      "type": "box",
+      "id": "step_4",
+      "text": "Если нужно, посчитай количество участков или точек\nСколько участков возрастания и убывания"
+    },
+    {
+      "type": "arrow",
+      "id": "arr_0",
+      "from_point": "step_0",
+      "to_point": "step_1"
+    },
+    {
+      "type": "arrow",
+      "id": "arr_1",
+      "from_point": "step_1",
+      "to_point": "step_2"
+    },
+    {
+      "type": "arrow",
+      "id": "arr_2",
+      "from_point": "step_2",
+      "to_point": "step_3"
+    },
+    {
+      "type": "arrow",
+      "id": "arr_3",
+      "from_point": "step_3",
+      "to_point": "step_4"
+    }
+  ],
+  "constraints": [],
+  "annotations": []
+}

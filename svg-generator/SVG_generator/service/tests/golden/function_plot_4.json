@@ -1,0 +1,41 @@
+{
+  "scene_type": "function_plot",
+  "canvas": {
+    "width": 500,
+    "height": 400,
+    "x_min": -10,
+    "x_max": 10,
+    "y_min": -5,
+    "y_max": 15
+  },
+  "style": {
+    "theme": "light",
+    "stroke_color": "#333333",
+    "fill_color": "none",
+    "font_size": 11,
+    "font_family": "sans-serif"
+  },
+  "objects": [
+    {
+      "type": "function_curve",
+      "id": "parabola",
+      "expression": "0.1 * x**2 + 1",
+      "x_min": -10,
+      "x_max": 10
+    },
+    { "type": "point", "id": "vertex", "x": 0, "y": 1, "label": "вершина" },
+    { "type": "point", "id": "p1",    "x": -10, "y": 11, "label": "" },
+    { "type": "point", "id": "p2",    "x": 10,  "y": 11, "label": "" }
+  ],
+  "constraints": [],
+  "annotations": [
+    {
+      "type": "label",
+      "id": "formula_label",
+      "text": "y = 0.1x² + 1",
+      "anchor": "vertex",
+      "dx": 0.5,
+      "dy": -1.5
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "scene_type": "diagram",
+  "canvas": {
+    "width": 500,
+    "height": 300,
+    "x_min": 0,
+    "x_max": 500,
+    "y_min": 0,
+    "y_max": 300
+  },
+  "style": {
+    "theme": "light",
+    "stroke_color": "#333333",
+    "fill_color": "#f5f5f5",
+    "font_size": 13,
+    "font_family": "sans-serif"
+  },
+  "objects": [
+    {
+      "type": "box",
+      "id": "func_box",
+      "text": "f(x)"
+    },
+    {
+      "type": "box",
+      "id": "deriv_box",
+      "text": "f'(x) — производная"
+    },
+    {
+      "type": "box",
+      "id": "interp_box",
+      "text": "Скорость изменения f(x)"
+    },
+    {
+      "type": "arrow",
+      "id": "arr_def",
+      "from_point": "func_box",
+      "to_point": "deriv_box",
+      "label": "предел разностного отношения"
+    },
+    {
+      "type": "arrow",
+      "id": "arr_interp",
+      "from_point": "deriv_box",
+      "to_point": "interp_box",
+      "label": "смысл"
+    }
+  ],
+  "constraints": [],
+  "annotations": []
+}

@@ -1,0 +1,27 @@
+# Cursor IDE
+.cursor/
+
+# Виртуальные окружения
+.venv/
+venv/
+env/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Pytest
+.pytest_cache/
+tests/golden/preview/
+
+# Артефакты LLM pipeline
+SVG_generator/service/artifacts/
+
+# Секреты
+.env
+
+# macOS
+.DS_Store
+
+SVG_generator/service/tests/benchmark/results/

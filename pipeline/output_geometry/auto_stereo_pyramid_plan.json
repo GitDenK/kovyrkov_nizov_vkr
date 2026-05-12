@@ -1,0 +1,244 @@
+{
+  "title": "Правильная треугольная пирамида SABC",
+  "points": {
+    "A": {
+      "x": 0,
+      "y": 3.46,
+      "z": 0,
+      "label_dx": -12,
+      "label_dy": 10
+    },
+    "B": {
+      "x": -3,
+      "y": -1.73,
+      "z": 0,
+      "label_dx": -14,
+      "label_dy": 8
+    },
+    "C": {
+      "x": 3,
+      "y": -1.73,
+      "z": 0,
+      "label_dx": 10,
+      "label_dy": 8
+    },
+    "S": {
+      "x": 0,
+      "y": 0,
+      "z": 4,
+      "label_dx": 8,
+      "label_dy": -12
+    },
+    "O": {
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "label_dx": 8,
+      "label_dy": 10
+    },
+    "M": {
+      "x": 0,
+      "y": -1.73,
+      "z": 0,
+      "label_dx": 8,
+      "label_dy": 12
+    },
+    "H": {
+      "x": 0,
+      "y": 1.73,
+      "z": 2,
+      "label_dx": 8,
+      "label_dy": 12
+    }
+  },
+  "steps": [
+    {
+      "text": "Правильная треугольная пирамида $SABC$.",
+      "objects": [
+        {
+          "type": "point",
+          "id": "A"
+        },
+        {
+          "type": "point",
+          "id": "B"
+        },
+        {
+          "type": "point",
+          "id": "C"
+        },
+        {
+          "type": "point",
+          "id": "S"
+        },
+        {
+          "type": "segment",
+          "id": "s_AB",
+          "from_point": "A",
+          "to_point": "B",
+          "style": {
+            "stroke": "#2980b9"
+          }
+        },
+        {
+          "type": "segment",
+          "id": "s_BC",
+          "from_point": "B",
+          "to_point": "C",
+          "style": {
+            "stroke": "#aaa",
+            "hidden": true
+          }
+        },
+        {
+          "type": "segment",
+          "id": "s_CA",
+          "from_point": "C",
+          "to_point": "A",
+          "style": {
+            "stroke": "#2980b9"
+          }
+        },
+        {
+          "type": "segment",
+          "id": "s_SA",
+          "from_point": "S",
+          "to_point": "A"
+        },
+        {
+          "type": "segment",
+          "id": "s_SB",
+          "from_point": "S",
+          "to_point": "B"
+        },
+        {
+          "type": "segment",
+          "id": "s_SC",
+          "from_point": "S",
+          "to_point": "C"
+        }
+      ],
+      "annotations": [],
+      "constraints": [],
+      "caption": "Пирамида SABC"
+    },
+    {
+      "text": "Высота $SO=4$, $O$ — центр основания.",
+      "objects": [
+        {
+          "type": "point",
+          "id": "O",
+          "style": {
+            "fill": "#e74c3c",
+            "stroke": "#e74c3c"
+          }
+        },
+        {
+          "type": "segment",
+          "id": "s_SO",
+          "from_point": "S",
+          "to_point": "O",
+          "style": {
+            "stroke": "#e74c3c",
+            "dash": "dashed"
+          }
+        }
+      ],
+      "annotations": [
+        {
+          "type": "label",
+          "id": "lbl_SO",
+          "text": "SO=4",
+          "anchor": "S",
+          "dx": 0.4,
+          "dy": -0.4,
+          "color": "#e74c3c",
+          "font_size": 12
+        }
+      ],
+      "constraints": [],
+      "caption": "Высота SO=4"
+    },
+    {
+      "text": "$M$ — середина $BC$. $SM = \\sqrt{SO^2+OM^2}=\\sqrt{9+3}=2\\sqrt{3}$.",
+      "objects": [
+        {
+          "type": "point",
+          "id": "M",
+          "style": {
+            "fill": "#27ae60",
+            "stroke": "#27ae60"
+          }
+        },
+        {
+          "type": "segment",
+          "id": "s_SM",
+          "from_point": "S",
+          "to_point": "M",
+          "style": {
+            "stroke": "#27ae60",
+            "stroke_width": 2
+          }
+        }
+      ],
+      "annotations": [
+        {
+          "type": "label",
+          "id": "lbl_SM",
+          "text": "SM=2√3",
+          "anchor": "M",
+          "dx": 0.5,
+          "dy": 0.3,
+          "color": "#27ae60",
+          "font_size": 13
+        }
+      ],
+      "constraints": [],
+      "caption": "SM=2√3"
+    },
+    {
+      "text": "Проведём $AH \\perp SM$ в плоскости $ASM$. $H$ — нога перпендикуляра, лежит НА отрезке $SM$.",
+      "objects": [
+        {
+          "type": "point",
+          "id": "H",
+          "style": {
+            "fill": "#8e44ad",
+            "stroke": "#8e44ad"
+          }
+        },
+        {
+          "type": "segment",
+          "id": "s_AH",
+          "from_point": "A",
+          "to_point": "H",
+          "style": {
+            "stroke": "#8e44ad",
+            "dash": "dashed"
+          }
+        }
+      ],
+      "annotations": [],
+      "constraints": [],
+      "caption": "AH ⊥ SM"
+    },
+    {
+      "text": "$AH = 6$ — расстояние от вершины основания до плоскости противолежащей ей боковой грани.",
+      "objects": [],
+      "annotations": [
+        {
+          "type": "label",
+          "id": "lbl_AH",
+          "text": "AH=6",
+          "anchor": "H",
+          "dx": 0.5,
+          "dy": 0.3,
+          "color": "#8e44ad",
+          "font_size": 13
+        }
+      ],
+      "constraints": [],
+      "caption": "Ответ: AH=6"
+    }
+  ]
+}

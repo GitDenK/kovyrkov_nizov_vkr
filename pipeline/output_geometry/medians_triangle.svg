@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="450" height="420" viewBox="0 0 450 420" style="background:white;font-family:sans-serif">
+  <polygon points="45.0,373.3 405.0,373.3 180.0,46.7" fill="rgba(46,204,113,0.06)" stroke="#333333" stroke-width="1.5"/>
+  <line x1="45.0" y1="373.3" x2="292.5" y2="210.0" stroke="#333333" stroke-width="1.5"/>
+  <line x1="405.0" y1="373.3" x2="112.5" y2="210.0" stroke="#333333" stroke-width="1.5"/>
+  <line x1="180.0" y1="46.7" x2="225.0" y2="373.3" stroke="#333333" stroke-width="1.5"/>
+  <circle cx="45.0" cy="373.3" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="31.0" y="387.3" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">A</text>
+  <circle cx="405.0" cy="373.3" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="417.0" y="387.3" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">B</text>
+  <circle cx="180.0" cy="46.7" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="180.0" y="34.7" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">C</text>
+  <circle cx="292.5" cy="210.0" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <circle cx="112.5" cy="210.0" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <circle cx="225.0" cy="373.3" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+</svg>

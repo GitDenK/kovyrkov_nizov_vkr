@@ -1,0 +1,51 @@
+{
+  "scene_type": "function_plot",
+  "canvas": {
+    "width": 500,
+    "height": 400,
+    "x_min": -2.5,
+    "x_max": 2.5,
+    "y_min": -1,
+    "y_max": 65
+  },
+  "style": {
+    "theme": "light",
+    "stroke_color": "#333",
+    "fill_color": "none",
+    "font_size": 12,
+    "font_family": "sans-serif"
+  },
+  "objects": [
+    {
+      "type": "function_curve",
+      "id": "func_0",
+      "expression": "4**(x+1)",
+      "x_min": -2.0,
+      "x_max": 2.0,
+      "style": {
+        "stroke": "#2980b9",
+        "label": "y = 4^(x+1)"
+      }
+    },
+    {
+      "type": "function_curve",
+      "id": "func_1",
+      "expression": "8",
+      "x_min": -2.0,
+      "x_max": 2.0,
+      "style": {
+        "stroke": "#e74c3c",
+        "label": "y = 8"
+      }
+    },
+    {
+      "type": "point",
+      "id": "pt_0",
+      "x": 0.5,
+      "y": 8.0,
+      "label": "x = 0.5"
+    }
+  ],
+  "constraints": [],
+  "annotations": []
+}

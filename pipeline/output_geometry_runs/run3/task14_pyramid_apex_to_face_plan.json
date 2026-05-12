@@ -1,0 +1,174 @@
+{
+  "title": "Расстояние от вершины A до плоскости SBC",
+  "points": {
+    "A": {
+      "x": 0,
+      "y": 3.46,
+      "z": 0,
+      "label_dx": -12,
+      "label_dy": 10
+    },
+    "B": {
+      "x": -3,
+      "y": -1.73,
+      "z": 0,
+      "label_dx": -14,
+      "label_dy": 8
+    },
+    "C": {
+      "x": 3,
+      "y": -1.73,
+      "z": 0,
+      "label_dx": 10,
+      "label_dy": 8
+    },
+    "S": {
+      "x": 0,
+      "y": 0,
+      "z": 5,
+      "label_dx": 8,
+      "label_dy": -12
+    },
+    "H": {
+      "x": 0,
+      "y": 3.46,
+      "z": 3.33,
+      "label_dx": 8,
+      "label_dy": 10
+    }
+  },
+  "faces": [
+    [
+      "A",
+      "B",
+      "C"
+    ],
+    [
+      "S",
+      "B",
+      "A"
+    ],
+    [
+      "S",
+      "C",
+      "B"
+    ],
+    [
+      "S",
+      "A",
+      "C"
+    ]
+  ],
+  "steps": [
+    {
+      "text": "Правильная треугольная пирамида $SABC$. Основание $ABC$ — равносторонний треугольник со стороной $AB = 6$, боковое ребро $SA = 5$.",
+      "objects": [
+        {
+          "type": "point",
+          "id": "A"
+        },
+        {
+          "type": "point",
+          "id": "B"
+        },
+        {
+          "type": "point",
+          "id": "C"
+        },
+        {
+          "type": "point",
+          "id": "S"
+        },
+        {
+          "type": "segment",
+          "id": "s_AB",
+          "from_point": "A",
+          "to_point": "B"
+        },
+        {
+          "type": "segment",
+          "id": "s_BC",
+          "from_point": "B",
+          "to_point": "C"
+        },
+        {
+          "type": "segment",
+          "id": "s_CA",
+          "from_point": "C",
+          "to_point": "A"
+        },
+        {
+          "type": "segment",
+          "id": "s_SA",
+          "from_point": "S",
+          "to_point": "A"
+        },
+        {
+          "type": "segment",
+          "id": "s_SB",
+          "from_point": "S",
+          "to_point": "B"
+        },
+        {
+          "type": "segment",
+          "id": "s_SC",
+          "from_point": "S",
+          "to_point": "C"
+        }
+      ],
+      "annotations": [
+        {
+          "type": "label",
+          "id": "lbl_AB",
+          "text": "AB = 6",
+          "anchor": "A",
+          "dx": -0.3,
+          "dy": 0.8,
+          "color": "#2980b9",
+          "font_size": 12
+        },
+        {
+          "type": "label",
+          "id": "lbl_SA",
+          "text": "SA = 5",
+          "anchor": "S",
+          "dx": 0.4,
+          "dy": -0.4,
+          "color": "#e74c3c",
+          "font_size": 12
+        }
+      ],
+      "constraints": [],
+      "caption": "Пирамида SABC"
+    },
+    {
+      "text": "Найдите расстояние от вершины $A$ до плоскости $SBC$.",
+      "objects": [
+        {
+          "type": "segment",
+          "id": "s_AH",
+          "from_point": "A",
+          "to_point": "H",
+          "style": {
+            "stroke": "#27ae60",
+            "stroke_width": 2
+          }
+        }
+      ],
+      "annotations": [
+        {
+          "type": "label",
+          "id": "lbl_AH",
+          "text": "AH = 3.33",
+          "anchor": "H",
+          "dx": 0.5,
+          "dy": 0.3,
+          "color": "#27ae60",
+          "font_size": 13
+        }
+      ],
+      "constraints": [],
+      "caption": "Ответ: AH = 3.33"
+    }
+  ]
+}

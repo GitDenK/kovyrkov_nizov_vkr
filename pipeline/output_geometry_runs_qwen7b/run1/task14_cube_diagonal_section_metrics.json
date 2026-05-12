@@ -1,0 +1,155 @@
+{
+  "started_at": "2026-05-08 20:40:37",
+  "model": "Qwen/Qwen2.5-7B-Instruct-Turbo",
+  "mode": "run",
+  "llm_calls": [
+    {
+      "model": "Qwen/Qwen2.5-7B-Instruct-Turbo",
+      "role": "plan",
+      "attempt": 1,
+      "tokens_in": 5285,
+      "tokens_out": 1236,
+      "duration_sec": 12.253,
+      "success": true
+    },
+    {
+      "model": "Qwen/Qwen2.5-7B-Instruct-Turbo",
+      "role": "fix",
+      "attempt": 1,
+      "tokens_in": 6561,
+      "tokens_out": 1474,
+      "duration_sec": 13.903,
+      "success": true
+    }
+  ],
+  "phases": {
+    "extract_json": {
+      "count": 2,
+      "total_sec": 0.0031,
+      "last_sec": 0.0019,
+      "extra": [
+        {
+          "chars": 2982
+        },
+        {
+          "chars": 4262
+        }
+      ]
+    },
+    "postprocess_plan": {
+      "count": 2,
+      "total_sec": 0.0,
+      "last_sec": 0.0,
+      "extra": []
+    },
+    "validate_plan": {
+      "count": 2,
+      "total_sec": 0.0001,
+      "last_sec": 0.0,
+      "extra": []
+    },
+    "validation_round": {
+      "count": 2,
+      "total_sec": 0.0,
+      "last_sec": 0.0,
+      "extra": [
+        {
+          "round_idx": 0,
+          "warnings": 3
+        },
+        {
+          "round_idx": 1,
+          "warnings": 0
+        }
+      ]
+    },
+    "auto_mark_hidden_edges": {
+      "count": 1,
+      "total_sec": 0.0002,
+      "last_sec": 0.0002,
+      "extra": [
+        {
+          "n_points": 10,
+          "n_faces": 10
+        }
+      ]
+    },
+    "compute_canvas_3d": {
+      "count": 1,
+      "total_sec": 0.0,
+      "last_sec": 0.0,
+      "extra": [
+        {
+          "n_points": 10
+        }
+      ]
+    },
+    "execute_plan": {
+      "count": 1,
+      "total_sec": 0.0012,
+      "last_sec": 0.0012,
+      "extra": [
+        {
+          "n_points": 10,
+          "n_steps": 4,
+          "is_3d": true
+        }
+      ]
+    },
+    "html_render": {
+      "count": 1,
+      "total_sec": 0.0001,
+      "last_sec": 0.0001,
+      "extra": [
+        {
+          "animated": false
+        }
+      ]
+    }
+  },
+  "steps": [
+    {
+      "step_idx": 0,
+      "duration_sec": 0.0002,
+      "n_objects": 9,
+      "n_annotations": 0,
+      "n_constraints": 0,
+      "has_text": true
+    },
+    {
+      "step_idx": 1,
+      "duration_sec": 0.0002,
+      "n_objects": 2,
+      "n_annotations": 0,
+      "n_constraints": 0,
+      "has_text": true
+    },
+    {
+      "step_idx": 2,
+      "duration_sec": 0.0002,
+      "n_objects": 1,
+      "n_annotations": 0,
+      "n_constraints": 1,
+      "has_text": true
+    },
+    {
+      "step_idx": 3,
+      "duration_sec": 0.0003,
+      "n_objects": 1,
+      "n_annotations": 1,
+      "n_constraints": 0,
+      "has_text": true
+    }
+  ],
+  "totals": {
+    "wall_sec": 26.162,
+    "llm_calls": 2,
+    "llm_calls_successful": 2,
+    "llm_tokens_in": 11846,
+    "llm_tokens_out": 2710,
+    "llm_sec": 26.156,
+    "phases_sec": 0.0047,
+    "steps_count": 4,
+    "steps_sec": 0.0009
+  }
+}

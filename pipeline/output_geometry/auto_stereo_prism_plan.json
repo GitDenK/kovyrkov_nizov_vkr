@@ -1,0 +1,502 @@
+{
+  "title": "Угол между прямой AG и плоскостью BDD₁",
+  "points": {
+    "A": {
+      "x": 1,
+      "y": 0,
+      "z": 0,
+      "label_dx": -12,
+      "label_dy": 10
+    },
+    "B": {
+      "x": 0.5,
+      "y": 0.866,
+      "z": 0,
+      "label_dx": -14,
+      "label_dy": 8
+    },
+    "C": {
+      "x": -0.5,
+      "y": 0.866,
+      "z": 0,
+      "label_dx": 10,
+      "label_dy": 8
+    },
+    "D": {
+      "x": -1,
+      "y": 0,
+      "z": 0,
+      "label_dx": 8,
+      "label_dy": 10
+    },
+    "E": {
+      "x": -0.5,
+      "y": -0.866,
+      "z": 0,
+      "label_dx": 8,
+      "label_dy": -12
+    },
+    "F": {
+      "x": 0.5,
+      "y": -0.866,
+      "z": 0,
+      "label_dx": -12,
+      "label_dy": -10
+    },
+    "A1": {
+      "x": 1,
+      "y": 0,
+      "z": 1,
+      "label_dx": -12,
+      "label_dy": 10
+    },
+    "B1": {
+      "x": 0.5,
+      "y": 0.866,
+      "z": 1,
+      "label_dx": -14,
+      "label_dy": 8
+    },
+    "C1": {
+      "x": -0.5,
+      "y": 0.866,
+      "z": 1,
+      "label_dx": 10,
+      "label_dy": 8
+    },
+    "D1": {
+      "x": -1,
+      "y": 0,
+      "z": 1,
+      "label_dx": 8,
+      "label_dy": 10
+    },
+    "E1": {
+      "x": -0.5,
+      "y": -0.866,
+      "z": 1,
+      "label_dx": 8,
+      "label_dy": -12
+    },
+    "F1": {
+      "x": 0.5,
+      "y": -0.866,
+      "z": 1,
+      "label_dx": -12,
+      "label_dy": -10
+    },
+    "G": {
+      "x": 0.75,
+      "y": 0.433,
+      "z": 1,
+      "label_dx": -10,
+      "label_dy": 8
+    },
+    "T": {
+      "x": 0.75,
+      "y": 0.433,
+      "z": 0,
+      "label_dx": -10,
+      "label_dy": 8
+    }
+  },
+  "steps": [
+    {
+      "text": "Правильная шестиугольная призма $ABCDEF A₁B₁C₁D₁E₁F₁$. Точка $G$ — середина ребра $A₁B₁$.",
+      "objects": [
+        {
+          "type": "point",
+          "id": "A"
+        },
+        {
+          "type": "point",
+          "id": "B"
+        },
+        {
+          "type": "point",
+          "id": "C"
+        },
+        {
+          "type": "point",
+          "id": "D"
+        },
+        {
+          "type": "point",
+          "id": "E"
+        },
+        {
+          "type": "point",
+          "id": "F"
+        },
+        {
+          "type": "point",
+          "id": "A1"
+        },
+        {
+          "type": "point",
+          "id": "B1"
+        },
+        {
+          "type": "point",
+          "id": "C1"
+        },
+        {
+          "type": "point",
+          "id": "D1"
+        },
+        {
+          "type": "point",
+          "id": "E1"
+        },
+        {
+          "type": "point",
+          "id": "F1"
+        },
+        {
+          "type": "segment",
+          "id": "s_AB",
+          "from_point": "A",
+          "to_point": "B",
+          "style": {
+            "stroke": "#2980b9"
+          }
+        },
+        {
+          "type": "segment",
+          "id": "s_BC",
+          "from_point": "B",
+          "to_point": "C",
+          "style": {
+            "stroke": "#2980b9"
+          }
+        },
+        {
+          "type": "segment",
+          "id": "s_CD",
+          "from_point": "C",
+          "to_point": "D",
+          "style": {
+            "stroke": "#2980b9"
+          }
+        },
+        {
+          "type": "segment",
+          "id": "s_DE",
+          "from_point": "D",
+          "to_point": "E",
+          "style": {
+            "stroke": "#2980b9"
+          }
+        },
+        {
+          "type": "segment",
+          "id": "s_EF",
+          "from_point": "E",
+          "to_point": "F",
+          "style": {
+            "stroke": "#2980b9"
+          }
+        },
+        {
+          "type": "segment",
+          "id": "s_FA",
+          "from_point": "F",
+          "to_point": "A",
+          "style": {
+            "stroke": "#2980b9"
+          }
+        },
+        {
+          "type": "segment",
+          "id": "s_A1B1",
+          "from_point": "A1",
+          "to_point": "B1",
+          "style": {
+            "stroke": "#e74c3c"
+          }
+        },
+        {
+          "type": "segment",
+          "id": "s_B1C1",
+          "from_point": "B1",
+          "to_point": "C1",
+          "style": {
+            "stroke": "#e74c3c"
+          }
+        },
+        {
+          "type": "segment",
+          "id": "s_C1D1",
+          "from_point": "C1",
+          "to_point": "D1",
+          "style": {
+            "stroke": "#e74c3c"
+          }
+        },
+        {
+          "type": "segment",
+          "id": "s_D1E1",
+          "from_point": "D1",
+          "to_point": "E1",
+          "style": {
+            "stroke": "#e74c3c"
+          }
+        },
+        {
+          "type": "segment",
+          "id": "s_E1F1",
+          "from_point": "E1",
+          "to_point": "F1",
+          "style": {
+            "stroke": "#e74c3c"
+          }
+        },
+        {
+          "type": "segment",
+          "id": "s_F1A1",
+          "from_point": "F1",
+          "to_point": "A1",
+          "style": {
+            "stroke": "#e74c3c"
+          }
+        },
+        {
+          "type": "segment",
+          "id": "s_AA1",
+          "from_point": "A",
+          "to_point": "A1",
+          "style": {
+            "stroke": "#aaa",
+            "hidden": true
+          }
+        },
+        {
+          "type": "segment",
+          "id": "s_BB1",
+          "from_point": "B",
+          "to_point": "B1",
+          "style": {
+            "stroke": "#aaa",
+            "hidden": true
+          }
+        },
+        {
+          "type": "segment",
+          "id": "s_CC1",
+          "from_point": "C",
+          "to_point": "C1",
+          "style": {
+            "stroke": "#aaa",
+            "hidden": true
+          }
+        },
+        {
+          "type": "segment",
+          "id": "s_DD1",
+          "from_point": "D",
+          "to_point": "D1",
+          "style": {
+            "stroke": "#aaa",
+            "hidden": true
+          }
+        },
+        {
+          "type": "segment",
+          "id": "s_EE1",
+          "from_point": "E",
+          "to_point": "E1",
+          "style": {
+            "stroke": "#aaa",
+            "hidden": true
+          }
+        },
+        {
+          "type": "segment",
+          "id": "s_FF1",
+          "from_point": "F",
+          "to_point": "F1",
+          "style": {
+            "stroke": "#aaa",
+            "hidden": true
+          }
+        }
+      ],
+      "annotations": [
+        {
+          "type": "label",
+          "id": "lbl_G",
+          "text": "G",
+          "anchor": "G",
+          "dx": 0.2,
+          "dy": 0.2,
+          "color": "#333",
+          "font_size": 12
+        }
+      ],
+      "constraints": [],
+      "caption": "Призма ABCDEF A₁B₁C₁D₁E₁F₁"
+    },
+    {
+      "text": "Точка $T$ — середина ребра $AB$. $AT = GB₁ = 1/2$ и $AT ∥ GB₁$. Значит, $ATB₁G$ — параллелограмм, и $B₁T ∥ AG$.",
+      "objects": [
+        {
+          "type": "point",
+          "id": "T"
+        },
+        {
+          "type": "segment",
+          "id": "s_AT",
+          "from_point": "A",
+          "to_point": "T",
+          "style": {
+            "stroke": "#27ae60"
+          }
+        },
+        {
+          "type": "segment",
+          "id": "s_GB1",
+          "from_point": "G",
+          "to_point": "B1",
+          "style": {
+            "stroke": "#27ae60"
+          }
+        },
+        {
+          "type": "segment",
+          "id": "s_B1T",
+          "from_point": "B1",
+          "to_point": "T",
+          "style": {
+            "stroke": "#8e44ad"
+          }
+        },
+        {
+          "type": "segment",
+          "id": "s_AG",
+          "from_point": "A",
+          "to_point": "G",
+          "style": {
+            "stroke": "#8e44ad"
+          }
+        }
+      ],
+      "annotations": [
+        {
+          "type": "label",
+          "id": "lbl_T",
+          "text": "T",
+          "anchor": "T",
+          "dx": 0.2,
+          "dy": 0.2,
+          "color": "#333",
+          "font_size": 12
+        }
+      ],
+      "constraints": [],
+      "caption": "Параллелограмм ATB₁G"
+    },
+    {
+      "text": "Искомый угол = угол между $B₁T$ и плоскостью $(BDD₁)$.",
+      "objects": [],
+      "annotations": [
+        {
+          "type": "label",
+          "id": "lbl_B1T",
+          "text": "B₁T",
+          "anchor": "B1",
+          "dx": 0.2,
+          "dy": 0.2,
+          "color": "#8e44ad",
+          "font_size": 12
+        }
+      ],
+      "constraints": [],
+      "caption": "Угол между B₁T и плоскостью (BDD₁)"
+    },
+    {
+      "text": "∠ABC = 120° (угол правильного шестиугольника). Треугольник BCD равнобедренный (BC=CD=1), значит ∠DBC = 30°. ∠ABD = 120° - 30° = 90°. T ∈ AB, значит TB ⊥ DB.",
+      "objects": [
+        {
+          "type": "segment",
+          "id": "s_TB",
+          "from_point": "T",
+          "to_point": "B",
+          "style": {
+            "stroke": "#e67e22"
+          }
+        },
+        {
+          "type": "segment",
+          "id": "s_DB",
+          "from_point": "D",
+          "to_point": "B",
+          "style": {
+            "stroke": "#e67e22"
+          }
+        }
+      ],
+      "annotations": [
+        {
+          "type": "label",
+          "id": "lbl_120",
+          "text": "120°",
+          "anchor": "B",
+          "dx": 0.2,
+          "dy": 0.2,
+          "color": "#e74c3c",
+          "font_size": 12
+        },
+        {
+          "type": "label",
+          "id": "lbl_30",
+          "text": "30°",
+          "anchor": "D",
+          "dx": 0.2,
+          "dy": 0.2,
+          "color": "#e74c3c",
+          "font_size": 12
+        },
+        {
+          "type": "label",
+          "id": "lbl_90",
+          "text": "90°",
+          "anchor": "B",
+          "dx": 0.2,
+          "dy": 0.2,
+          "color": "#e74c3c",
+          "font_size": 12
+        }
+      ],
+      "constraints": [],
+      "caption": "Углы треугольника BCD"
+    },
+    {
+      "text": "Также TB ⊥ BB₁ (боковое ребро ⊥ основанию). По признаку: TB ⊥ (BDD₁). В прямоугольном △TBB₁ (прямой угол при B): BT = 1/2, BB₁ = 1. tan φ = BT/BB₁ = 1/2. φ = arctan(1/2)",
+      "objects": [
+        {
+          "type": "segment",
+          "id": "s_BB1",
+          "from_point": "B",
+          "to_point": "B1",
+          "style": {
+            "stroke": "#e67e22"
+          }
+        }
+      ],
+      "annotations": [
+        {
+          "type": "label",
+          "id": "lbl_arctan",
+          "text": "φ = arctan(1/2)",
+          "anchor": "B",
+          "dx": 0.2,
+          "dy": 0.2,
+          "color": "#8e44ad",
+          "font_size": 12
+        }
+      ],
+      "constraints": [],
+      "caption": "Ответ: φ = arctan(1/2)"
+    }
+  ]
+}

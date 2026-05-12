@@ -1,0 +1,407 @@
+{
+  "title": "Параллелограмм ABCD",
+  "canvas": {
+    "width": 560,
+    "height": 380,
+    "x_min": -1,
+    "x_max": 11,
+    "y_min": -1,
+    "y_max": 6
+  },
+  "points": {
+    "A": {
+      "x": 1,
+      "y": 0,
+      "label_dx": -12,
+      "label_dy": 12
+    },
+    "B": {
+      "x": 3.5,
+      "y": 5,
+      "label_dx": -10,
+      "label_dy": -12
+    },
+    "C": {
+      "x": 7.5,
+      "y": 5,
+      "label_dx": 10,
+      "label_dy": -12
+    },
+    "D": {
+      "x": 10,
+      "y": 0,
+      "label_dx": 12,
+      "label_dy": 12
+    },
+    "O": {
+      "x": 5.5,
+      "y": 2.5,
+      "label_dx": 8,
+      "label_dy": -12
+    },
+    "M": {
+      "x": 2.33,
+      "y": 5,
+      "label_dx": -10,
+      "label_dy": 12
+    }
+  },
+  "steps": [
+    {
+      "text": "Параллелограмм $ABCD$. Окружность, построенная на стороне $AD$ как на диаметре, проходит через точку пересечения диагоналей параллелограмма.",
+      "objects": [
+        {
+          "type": "point",
+          "id": "A"
+        },
+        {
+          "type": "point",
+          "id": "B"
+        },
+        {
+          "type": "point",
+          "id": "C"
+        },
+        {
+          "type": "point",
+          "id": "D"
+        },
+        {
+          "type": "segment",
+          "id": "s_AB",
+          "from_point": "A",
+          "to_point": "B",
+          "style": {
+            "stroke": "#2980b9"
+          }
+        },
+        {
+          "type": "segment",
+          "id": "s_BC",
+          "from_point": "B",
+          "to_point": "C",
+          "style": {
+            "stroke": "#e74c3c"
+          }
+        },
+        {
+          "type": "segment",
+          "id": "s_CD",
+          "from_point": "C",
+          "to_point": "D",
+          "style": {
+            "stroke": "#2980b9"
+          }
+        },
+        {
+          "type": "segment",
+          "id": "s_DA",
+          "from_point": "D",
+          "to_point": "A",
+          "style": {
+            "stroke": "#e74c3c"
+          }
+        }
+      ],
+      "annotations": [],
+      "constraints": [],
+      "caption": "Параллелограмм ABCD"
+    },
+    {
+      "text": "Диагонали параллелограмма пересекаются в точке $O$. Угол $AOD = 90°$. Диагонали делятся пополам.",
+      "objects": [
+        {
+          "type": "point",
+          "id": "O",
+          "style": {
+            "fill": "#e74c3c",
+            "stroke": "#e74c3c"
+          }
+        },
+        {
+          "type": "segment",
+          "id": "s_AC",
+          "from_point": "A",
+          "to_point": "C",
+          "style": {
+            "stroke": "#27ae60"
+          }
+        },
+        {
+          "type": "segment",
+          "id": "s_BD",
+          "from_point": "B",
+          "to_point": "D",
+          "style": {
+            "stroke": "#8e44ad"
+          }
+        }
+      ],
+      "annotations": [
+        {
+          "type": "label",
+          "id": "lbl_AO",
+          "text": "AO",
+          "anchor": "O",
+          "dx": -0.5,
+          "dy": 0.5,
+          "color": "#27ae60",
+          "font_size": 12
+        },
+        {
+          "type": "label",
+          "id": "lbl_OD",
+          "text": "OD",
+          "anchor": "O",
+          "dx": 0.5,
+          "dy": -0.5,
+          "color": "#27ae60",
+          "font_size": 12
+        }
+      ],
+      "constraints": [],
+      "caption": "Диагонали делятся пополам"
+    },
+    {
+      "text": "Треугольники $AOD = AOB = COB = COD$. Следовательно, $AD = AB = BC = CD$. Параллелограмм $ABCD$ является ромбом.",
+      "objects": [],
+      "annotations": [
+        {
+          "type": "label",
+          "id": "lbl_AD",
+          "text": "AD",
+          "anchor": "A",
+          "dx": 1.0,
+          "dy": -0.5,
+          "color": "#e74c3c",
+          "font_size": 12
+        },
+        {
+          "type": "label",
+          "id": "lbl_AB",
+          "text": "AB",
+          "anchor": "A",
+          "dx": -0.5,
+          "dy": 0.5,
+          "color": "#e74c3c",
+          "font_size": 12
+        },
+        {
+          "type": "label",
+          "id": "lbl_BC",
+          "text": "BC",
+          "anchor": "B",
+          "dx": 0.5,
+          "dy": -0.5,
+          "color": "#e74c3c",
+          "font_size": 12
+        },
+        {
+          "type": "label",
+          "id": "lbl_CD",
+          "text": "CD",
+          "anchor": "C",
+          "dx": -0.5,
+          "dy": 0.5,
+          "color": "#e74c3c",
+          "font_size": 12
+        }
+      ],
+      "constraints": [],
+      "caption": "Ромб ABCD"
+    },
+    {
+      "text": "Окружность, построенная на стороне $AD$ как на диаметре, пересекает сторону $AB$ в точке $M$. $AM : MB = 1 : 2$.",
+      "objects": [
+        {
+          "type": "point",
+          "id": "M",
+          "style": {
+            "fill": "#27ae60",
+            "stroke": "#27ae60"
+          }
+        },
+        {
+          "type": "segment",
+          "id": "s_AM",
+          "from_point": "A",
+          "to_point": "M",
+          "style": {
+            "stroke": "#8e44ad"
+          }
+        },
+        {
+          "type": "segment",
+          "id": "s_MB",
+          "from_point": "M",
+          "to_point": "B",
+          "style": {
+            "stroke": "#e67e22"
+          }
+        }
+      ],
+      "annotations": [
+        {
+          "type": "label",
+          "id": "lbl_AM",
+          "text": "AM",
+          "anchor": "M",
+          "dx": -0.5,
+          "dy": 0.5,
+          "color": "#8e44ad",
+          "font_size": 12
+        },
+        {
+          "type": "label",
+          "id": "lbl_MB",
+          "text": "MB",
+          "anchor": "M",
+          "dx": 0.5,
+          "dy": -0.5,
+          "color": "#e67e22",
+          "font_size": 12
+        }
+      ],
+      "constraints": [],
+      "caption": "Точка M"
+    },
+    {
+      "text": "Поскольку $AB = AD = 2\\sqrt{3}$, $AM = \\frac{2\\sqrt{3}}{3}$, $BM = \\frac{4\\sqrt{3}}{3}$.",
+      "objects": [],
+      "annotations": [
+        {
+          "type": "label",
+          "id": "lbl_AB",
+          "text": "AB = 2\\sqrt{3}",
+          "anchor": "A",
+          "dx": -0.5,
+          "dy": 0.5,
+          "color": "#e74c3c",
+          "font_size": 12
+        },
+        {
+          "type": "label",
+          "id": "lbl_AM",
+          "text": "AM = \\frac{2\\sqrt{3}}{3}",
+          "anchor": "M",
+          "dx": -0.5,
+          "dy": 0.5,
+          "color": "#8e44ad",
+          "font_size": 12
+        },
+        {
+          "type": "label",
+          "id": "lbl_MB",
+          "text": "MB = \\frac{4\\sqrt{3}}{3}",
+          "anchor": "M",
+          "dx": 0.5,
+          "dy": -0.5,
+          "color": "#e67e22",
+          "font_size": 12
+        }
+      ],
+      "constraints": [],
+      "caption": "Длины AM и MB"
+    },
+    {
+      "text": "Угол $AMD = 90°$. Треугольник $ABD$ равнобедренный. $AO$ и $DM$ — его высоты.",
+      "objects": [],
+      "annotations": [
+        {
+          "type": "label",
+          "id": "lbl_AO",
+          "text": "AO",
+          "anchor": "O",
+          "dx": -0.5,
+          "dy": 0.5,
+          "color": "#27ae60",
+          "font_size": 12
+        },
+        {
+          "type": "label",
+          "id": "lbl_DM",
+          "text": "DM",
+          "anchor": "M",
+          "dx": 0.5,
+          "dy": -0.5,
+          "color": "#8e44ad",
+          "font_size": 12
+        }
+      ],
+      "constraints": [],
+      "caption": "Высоты AO и DM"
+    },
+    {
+      "text": "Из треугольника $AMD$: $MD^2 = AD^2 - AM^2 = 12 - \\frac{4}{3} = \\frac{32}{3}$, $MD = \\frac{4\\sqrt{6}}{3}$.",
+      "objects": [],
+      "annotations": [
+        {
+          "type": "label",
+          "id": "lbl_MD",
+          "text": "MD = \\frac{4\\sqrt{6}}{3}",
+          "anchor": "M",
+          "dx": 0.5,
+          "dy": -0.5,
+          "color": "#8e44ad",
+          "font_size": 12
+        }
+      ],
+      "constraints": [],
+      "caption": "Длина MD"
+    },
+    {
+      "text": "Из треугольника $BMD$: $BD^2 = BM^2 + MD^2 = \\frac{48}{9} + \\frac{32}{3} = \\frac{144}{9} = 16$, $BD = 4$.",
+      "objects": [],
+      "annotations": [
+        {
+          "type": "label",
+          "id": "lbl_BD",
+          "text": "BD = 4",
+          "anchor": "B",
+          "dx": 0.5,
+          "dy": -0.5,
+          "color": "#e67e22",
+          "font_size": 12
+        }
+      ],
+      "constraints": [],
+      "caption": "Длина BD"
+    },
+    {
+      "text": "Площадь треугольника $ABD$: $S(ABD) = \\frac{1}{2}AB \\cdot MD = \\frac{1}{2}BD \\cdot AO$. Отсюда $AO = \\frac{AB \\cdot MD}{BD} = \\frac{2\\sqrt{3} \\cdot 4\\sqrt{2/3}}{4} = 2\\sqrt{2}$.",
+      "objects": [],
+      "annotations": [
+        {
+          "type": "label",
+          "id": "lbl_AO",
+          "text": "AO = 2\\sqrt{2}",
+          "anchor": "O",
+          "dx": -0.5,
+          "dy": 0.5,
+          "color": "#27ae60",
+          "font_size": 12
+        }
+      ],
+      "constraints": [],
+      "caption": "Длина AO"
+    },
+    {
+      "text": "Диагональ $AC = 2AO = 4\\sqrt{2}$.",
+      "objects": [],
+      "annotations": [
+        {
+          "type": "label",
+          "id": "lbl_AC",
+          "text": "AC = 4\\sqrt{2}",
+          "anchor": "A",
+          "dx": -0.5,
+          "dy": 0.5,
+          "color": "#27ae60",
+          "font_size": 12
+        }
+      ],
+      "constraints": [],
+      "caption": "Ответ: AC = 4\\sqrt{2}"
+    }
+  ]
+}

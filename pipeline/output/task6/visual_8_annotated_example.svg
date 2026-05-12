@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="1686">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
+    </marker>
+  </defs>
+  <rect width="500" height="1686" fill="white"/>
+  <text x="250" y="44" text-anchor="middle" font-size="17" font-weight="bold" fill="#333">Решение показательного уравнения 4^{x+1} = 8</text>
+  <line x1="250.0" y1="122.0" x2="250.0" y2="192.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="244.0" x2="250.0" y2="314.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="366.0" x2="250.0" y2="436.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="488.0" x2="250.0" y2="558.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="610.0" x2="250.0" y2="680.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="732.0" x2="250.0" y2="802.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="854.0" x2="250.0" y2="924.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="976.0" x2="250.0" y2="1046.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="1098.0" x2="250.0" y2="1168.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="1220.0" x2="250.0" y2="1290.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="1342.0" x2="250.0" y2="1412.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="1464.0" x2="250.0" y2="1534.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <rect x="120.0" y="70.0" width="260" height="52.0" rx="6" fill="#fdebd0" stroke="#e67e22" stroke-width="1.5"/>
+  <text x="250.0" y="98.0" text-anchor="middle" font-size="13" fill="#333">Задача: Решите 4^{x+1} = 8</text>
+  <rect x="120.0" y="314.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="342.0" text-anchor="middle" font-size="13" fill="#333">Запишем уравнение</text>
+  <rect x="120.0" y="558.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="586.0" text-anchor="middle" font-size="13" fill="#333">4 = 2², 8 = 2³</text>
+  <rect x="120.0" y="802.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="830.0" text-anchor="middle" font-size="13" fill="#333">Степень степени</text>
+  <rect x="120.0" y="1046.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="1074.0" text-anchor="middle" font-size="13" fill="#333">Основания равны → показатели равны</text>
+  <rect x="120.0" y="1290.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="1318.0" text-anchor="middle" font-size="13" fill="#333">Решаем линейное уравнение</text>
+  <rect x="120.0" y="1534.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="1562.0" text-anchor="middle" font-size="13" fill="#333">x = 0.5</text>
+  <rect x="120.0" y="192.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="220.0" text-anchor="middle" font-size="13" fill="#333">$4^{x+1} = 8$</text>
+  <rect x="120.0" y="436.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="464.0" text-anchor="middle" font-size="13" fill="#333">$(2^2)^{x+1} = 2^3$</text>
+  <rect x="120.0" y="680.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="708.0" text-anchor="middle" font-size="13" fill="#333">$2^{2x+2} = 2^3$</text>
+  <rect x="120.0" y="924.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="952.0" text-anchor="middle" font-size="13" fill="#333">$2x + 2 = 3$</text>
+  <rect x="120.0" y="1168.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="1196.0" text-anchor="middle" font-size="13" fill="#333">$2x = 1$</text>
+  <rect x="120.0" y="1412.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="1440.0" text-anchor="middle" font-size="13" fill="#333">$x = 0.5$</text>
+</svg>

@@ -1,0 +1,350 @@
+{
+  "title": "Диагонали параллелограмма",
+  "points": {
+    "A": {
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "label_dx": -12,
+      "label_dy": 12
+    },
+    "B": {
+      "x": 5,
+      "y": 0,
+      "z": 0,
+      "label_dx": 8,
+      "label_dy": 12
+    },
+    "D": {
+      "x": 8,
+      "y": 0,
+      "z": 0,
+      "label_dx": 10,
+      "label_dy": 12
+    },
+    "C": {
+      "x": 13,
+      "y": 0,
+      "z": 0,
+      "label_dx": -12,
+      "label_dy": 12
+    },
+    "O": {
+      "x": 6.5,
+      "y": 0,
+      "z": 0,
+      "label_dx": 0,
+      "label_dy": 12
+    },
+    "H": {
+      "x": 6.5,
+      "y": 4.33,
+      "z": 0,
+      "label_dx": 0,
+      "label_dy": -12
+    },
+    "M": {
+      "x": 6.5,
+      "y": -2.17,
+      "z": 0,
+      "label_dx": 0,
+      "label_dy": 12
+    }
+  },
+  "faces": [
+    [
+      "A",
+      "B",
+      "C",
+      "D"
+    ]
+  ],
+  "steps": [
+    {
+      "text": "Параллелограмм $ABCD$ с $AB=5$, $AD=8$, угол между диагоналями $60°$.",
+      "objects": [
+        {
+          "type": "point",
+          "id": "A"
+        },
+        {
+          "type": "point",
+          "id": "B"
+        },
+        {
+          "type": "point",
+          "id": "D"
+        },
+        {
+          "type": "point",
+          "id": "C"
+        },
+        {
+          "type": "segment",
+          "id": "s_AB",
+          "from_point": "A",
+          "to_point": "B"
+        },
+        {
+          "type": "segment",
+          "id": "s_AD",
+          "from_point": "A",
+          "to_point": "D"
+        },
+        {
+          "type": "segment",
+          "id": "s_BC",
+          "from_point": "B",
+          "to_point": "C"
+        },
+        {
+          "type": "segment",
+          "id": "s_CD",
+          "from_point": "C",
+          "to_point": "D"
+        }
+      ],
+      "annotations": [
+        {
+          "type": "label",
+          "id": "lbl_AB",
+          "text": "AB = 5",
+          "anchor": "A",
+          "dx": -1.5,
+          "dy": 0.8,
+          "color": "#2980b9",
+          "font_size": 12
+        },
+        {
+          "type": "label",
+          "id": "lbl_AD",
+          "text": "AD = 8",
+          "anchor": "A",
+          "dx": 1.5,
+          "dy": 0.8,
+          "color": "#e74c3c",
+          "font_size": 12
+        }
+      ],
+      "constraints": [],
+      "caption": "Параллелограмм ABCD"
+    },
+    {
+      "text": "Диагонали пересекаются в точке $O$. $\\angle AOB = 60°$.",
+      "objects": [
+        {
+          "type": "point",
+          "id": "O",
+          "style": {
+            "fill": "#e74c3c",
+            "stroke": "#e74c3c"
+          }
+        },
+        {
+          "type": "segment",
+          "id": "s_AC",
+          "from_point": "A",
+          "to_point": "C",
+          "style": {
+            "stroke": "#27ae60",
+            "stroke_width": 2
+          }
+        },
+        {
+          "type": "segment",
+          "id": "s_BD",
+          "from_point": "B",
+          "to_point": "D",
+          "style": {
+            "stroke": "#27ae60",
+            "stroke_width": 2
+          }
+        }
+      ],
+      "annotations": [
+        {
+          "type": "label",
+          "id": "lbl_60",
+          "text": "60°",
+          "anchor": "O",
+          "dx": 0.3,
+          "dy": -0.5,
+          "color": "#e74c3c",
+          "font_size": 13
+        }
+      ],
+      "constraints": [
+        {
+          "type": "right_angle_marker",
+          "id": "ra_O",
+          "vertex": "O",
+          "ray1": "A",
+          "ray2": "B"
+        },
+        {
+          "type": "right_angle_marker",
+          "id": "ra_O",
+          "vertex": "O",
+          "ray1": "B",
+          "ray2": "D"
+        }
+      ],
+      "caption": "Диагонали пересекаются в точке O"
+    },
+    {
+      "text": "Найдем длину диагонали $AC$.",
+      "objects": [
+        {
+          "type": "segment",
+          "id": "s_AC",
+          "from_point": "A",
+          "to_point": "C",
+          "style": {
+            "stroke": "#27ae60",
+            "stroke_width": 2
+          }
+        },
+        {
+          "type": "segment",
+          "id": "s_OH",
+          "from_point": "O",
+          "to_point": "H",
+          "style": {
+            "stroke": "#2980b9",
+            "stroke_width": 1.8,
+            "dash": "dashed"
+          }
+        }
+      ],
+      "annotations": [
+        {
+          "type": "label",
+          "id": "lbl_OH",
+          "text": "OH",
+          "anchor": "H",
+          "dx": -0.5,
+          "dy": 0.3,
+          "color": "#2980b9",
+          "font_size": 12
+        }
+      ],
+      "constraints": [
+        {
+          "type": "perpendicular",
+          "id": "perp_OH",
+          "point": "O",
+          "line_point1": "A",
+          "line_point2": "C",
+          "foot_id": "H"
+        }
+      ],
+      "caption": "Найдем OH"
+    },
+    {
+      "text": "Треугольник $AOH$ равнобедренный, $AO = OH = 4$.",
+      "objects": [],
+      "annotations": [
+        {
+          "type": "label",
+          "id": "lbl_AO",
+          "text": "AO = 4",
+          "anchor": "A",
+          "dx": -1.5,
+          "dy": 0.8,
+          "color": "#2980b9",
+          "font_size": 12
+        },
+        {
+          "type": "label",
+          "id": "lbl_OH",
+          "text": "OH = 4",
+          "anchor": "H",
+          "dx": -0.5,
+          "dy": 0.3,
+          "color": "#2980b9",
+          "font_size": 12
+        }
+      ],
+      "constraints": [],
+      "caption": "Треугольник AOH равнобедренный"
+    },
+    {
+      "text": "Треугольник $AOC$ прямоугольный, $AC = 2 \\cdot AO = 8$.",
+      "objects": [
+        {
+          "type": "segment",
+          "id": "s_AC",
+          "from_point": "A",
+          "to_point": "C",
+          "style": {
+            "stroke": "#27ae60",
+            "stroke_width": 2
+          }
+        },
+        {
+          "type": "segment",
+          "id": "s_OM",
+          "from_point": "O",
+          "to_point": "M",
+          "style": {
+            "stroke": "#2980b9",
+            "stroke_width": 1.8,
+            "dash": "dashed"
+          }
+        }
+      ],
+      "annotations": [
+        {
+          "type": "label",
+          "id": "lbl_OM",
+          "text": "OM",
+          "anchor": "M",
+          "dx": -0.5,
+          "dy": 0.3,
+          "color": "#2980b9",
+          "font_size": 12
+        }
+      ],
+      "constraints": [
+        {
+          "type": "perpendicular",
+          "id": "perp_OM",
+          "point": "O",
+          "line_point1": "A",
+          "line_point2": "C",
+          "foot_id": "M"
+        }
+      ],
+      "caption": "Треугольник AOC прямоугольный"
+    },
+    {
+      "text": "Ответ: $AC = 8$.",
+      "objects": [
+        {
+          "type": "segment",
+          "id": "s_AC",
+          "from_point": "A",
+          "to_point": "C",
+          "style": {
+            "stroke": "#27ae60",
+            "stroke_width": 2
+          }
+        }
+      ],
+      "annotations": [
+        {
+          "type": "label",
+          "id": "lbl_AC",
+          "text": "AC = 8",
+          "anchor": "A",
+          "dx": 1.5,
+          "dy": -0.3,
+          "color": "#27ae60",
+          "font_size": 14
+        }
+      ],
+      "constraints": [],
+      "caption": "Ответ: AC = 8"
+    }
+  ]
+}

@@ -1,0 +1,233 @@
+{
+  "title": "Площадь сечения призмы",
+  "points": {
+    "A": {
+      "x": 0,
+      "y": 3.46,
+      "z": 0,
+      "label_dx": -12,
+      "label_dy": 12
+    },
+    "B": {
+      "x": -3,
+      "y": -1.73,
+      "z": 0,
+      "label_dx": -14,
+      "label_dy": 8
+    },
+    "C": {
+      "x": 3,
+      "y": -1.73,
+      "z": 0,
+      "label_dx": 10,
+      "label_dy": 8
+    },
+    "A1": {
+      "x": 0,
+      "y": 3.46,
+      "z": 4,
+      "label_dx": -12,
+      "label_dy": 10
+    },
+    "B1": {
+      "x": -3,
+      "y": -1.73,
+      "z": 4,
+      "label_dx": -14,
+      "label_dy": 8
+    },
+    "C1": {
+      "x": 3,
+      "y": -1.73,
+      "z": 4,
+      "label_dx": 10,
+      "label_dy": 8
+    },
+    "M": {
+      "x": 0,
+      "y": -1.73,
+      "z": 2,
+      "label_dx": 8,
+      "label_dy": 12
+    },
+    "N": {
+      "x": 0,
+      "y": 1.73,
+      "z": 2,
+      "label_dx": 8,
+      "label_dy": 12
+    }
+  },
+  "faces": [
+    [
+      "A",
+      "B",
+      "C"
+    ],
+    [
+      "A1",
+      "B1",
+      "C1"
+    ],
+    [
+      "A",
+      "A1",
+      "B1",
+      "B"
+    ],
+    [
+      "A",
+      "A1",
+      "C1",
+      "C"
+    ],
+    [
+      "B",
+      "B1",
+      "C1",
+      "C"
+    ],
+    [
+      "C",
+      "C1",
+      "A1",
+      "A"
+    ]
+  ],
+  "steps": [
+    {
+      "text": "Правильная треугольная призма $ABC A_1 B_1 C_1$ с основанием $ABC$ и высотой $4$. Точка $M$ --- середина ребра $CC_1$.",
+      "objects": [
+        {
+          "type": "point",
+          "id": "A"
+        },
+        {
+          "type": "point",
+          "id": "B"
+        },
+        {
+          "type": "point",
+          "id": "C"
+        },
+        {
+          "type": "point",
+          "id": "A1"
+        },
+        {
+          "type": "point",
+          "id": "B1"
+        },
+        {
+          "type": "point",
+          "id": "C1"
+        },
+        {
+          "type": "segment",
+          "id": "s_AB",
+          "from_point": "A",
+          "to_point": "B"
+        },
+        {
+          "type": "segment",
+          "id": "s_BC",
+          "from_point": "B",
+          "to_point": "C"
+        },
+        {
+          "type": "segment",
+          "id": "s_CA",
+          "from_point": "C",
+          "to_point": "A"
+        },
+        {
+          "type": "segment",
+          "id": "s_A1B1",
+          "from_point": "A1",
+          "to_point": "B1"
+        },
+        {
+          "type": "segment",
+          "id": "s_B1C1",
+          "from_point": "B1",
+          "to_point": "C1"
+        },
+        {
+          "type": "segment",
+          "id": "s_C1A1",
+          "from_point": "C1",
+          "to_point": "A1"
+        }
+      ],
+      "annotations": [],
+      "constraints": [],
+      "caption": "Призма ABCA1B1C1"
+    },
+    {
+      "text": "Точка $M$ --- середина ребра $CC_1$.",
+      "objects": [
+        {
+          "type": "point",
+          "id": "M"
+        }
+      ],
+      "annotations": [],
+      "constraints": [],
+      "caption": "Точка M"
+    },
+    {
+      "text": "Плоскость проходит через точки $A$, $B$ и $M$. Найдем сечение призмы.",
+      "objects": [
+        {
+          "type": "segment",
+          "id": "s_AM",
+          "from_point": "A",
+          "to_point": "M"
+        },
+        {
+          "type": "segment",
+          "id": "s_BM",
+          "from_point": "B",
+          "to_point": "M"
+        }
+      ],
+      "annotations": [],
+      "constraints": [],
+      "caption": "Сечение призмы"
+    },
+    {
+      "text": "Сечение призмы --- трапеция $ABMN$. Вычислим её площадь.",
+      "objects": [
+        {
+          "type": "polygon",
+          "id": "trap",
+          "vertices": [
+            "A",
+            "B",
+            "M",
+            "N"
+          ],
+          "style": {
+            "fill": "rgba(41,128,185,0.08)",
+            "stroke": "#2980b9",
+            "stroke_width": 2
+          }
+        }
+      ],
+      "annotations": [
+        {
+          "type": "label",
+          "id": "lbl_trap",
+          "text": "S = 18",
+          "anchor": "M",
+          "dx": 0.5,
+          "dy": 0.3,
+          "color": "#27ae60",
+          "font_size": 13
+        }
+      ],
+      "constraints": [],
+      "caption": "Трапеция ABMN"
+    }
+  ]
+}

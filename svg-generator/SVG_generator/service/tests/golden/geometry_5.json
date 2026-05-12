@@ -1,0 +1,44 @@
+{
+  "scene_type": "geometry",
+  "canvas": {
+    "width": 400,
+    "height": 400,
+    "x_min": -1,
+    "x_max": 8,
+    "y_min": -1,
+    "y_max": 7
+  },
+  "style": {
+    "theme": "light",
+    "stroke_color": "#333333",
+    "fill_color": "none",
+    "font_size": 12,
+    "font_family": "sans-serif"
+  },
+  "objects": [
+    { "type": "point", "id": "A", "x": 0, "y": 0, "label": "A" },
+    { "type": "point", "id": "B", "x": 6, "y": 0, "label": "B" },
+    { "type": "point", "id": "C", "x": 0, "y": 6, "label": "C" },
+    {
+      "type": "triangle",
+      "id": "tri_ABC",
+      "vertices": ["A", "B", "C"]
+    }
+  ],
+  "constraints": [
+    {
+      "type": "bisector",
+      "id": "bis_A",
+      "triangle": "tri_ABC",
+      "vertex": "A"
+    },
+    {
+      "type": "right_angle_marker",
+      "id": "ram_A",
+      "vertex": "A",
+      "ray1": "B",
+      "ray2": "C"
+    }
+  ],
+  "annotations": []
+}

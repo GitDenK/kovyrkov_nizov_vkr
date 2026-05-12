@@ -1,0 +1,566 @@
+{
+  "model": "google/gemma-3n-E4B-it",
+  "total_sections": 16,
+  "sections_analyzed": 16,
+  "visuals_planned": 10,
+  "total_tokens_in": 19391,
+  "total_tokens_out": 4162,
+  "total_time_sec": 92.21,
+  "plans": [
+    {
+      "plan": {
+        "section_id": 0,
+        "section_title": "Оценка уровня владения учеником темой",
+        "section_text_preview": "На основе анализа компетенций я делаю вывод:  \nУченик **очень слабо владеет** темой исследования функций с помощью производной. Уровень владения большинством ключевых навыков — **менее 10%**, а по мно",
+        "need_visual": false,
+        "visual_type": "none",
+        "pedagogical_goal": "none",
+        "description": "none",
+        "params": {},
+        "caption": "none",
+        "placement": "after_section",
+        "priority": "low"
+      },
+      "llm_meta": {
+        "model": "google/gemma-3n-E4B-it",
+        "elapsed_sec": 1.69,
+        "tokens_in": 1432,
+        "tokens_out": 80,
+        "raw_response": "```json\n{\n  \"need_visual\": false,\n  \"visual_type\": \"none\",\n  \"pedagogical_goal\": \"none\",\n  \"description\": \"none\",\n  \"params\": {},\n  \"caption\": \"none\",\n  \"placement\": \"after_section\",\n  \"priority\": \"low\"\n}\n```"
+      }
+    },
+    {
+      "plan": {
+        "section_id": 1,
+        "section_title": "1. КРАТКОЕ ОПИСАНИЕ ЗАДАНИЯ",
+        "section_text_preview": "Задание №12 ЕГЭ по профильной математике проверяет умение **исследовать функцию с помощью производной**.\n\nЧто проверяется:\n- Умение находить производную.\n- Умение находить точки экстремума.\n- Умение о",
+        "need_visual": true,
+        "visual_type": "flowchart",
+        "pedagogical_goal": "Показать последовательность действий при исследовании функции с помощью производной.",
+        "description": "Блок-схема, показывающая шаги: 1. Найти производную. 2. Найти критические точки (решить уравнение f'(x) = 0). 3. Вычислить значения функции в критических точках и на границах отрезка. 4. Определить наибольшее и наименьшее значение.",
+        "params": {
+          "nodes": [
+            {
+              "id": "1",
+              "label": "Найти производную f'(x)"
+            },
+            {
+              "id": "2",
+              "label": "Найти критические точки (f'(x) = 0)"
+            },
+            {
+              "id": "3",
+              "label": "Вычислить f(x) в критических точках и на границах отрезка"
+            },
+            {
+              "id": "4",
+              "label": "Определить наибольшее и наименьшее значение"
+            }
+          ],
+          "edges": [
+            {
+              "from": "1",
+              "to": "2"
+            },
+            {
+              "from": "2",
+              "to": "3"
+            },
+            {
+              "from": "3",
+              "to": "4"
+            }
+          ]
+        },
+        "caption": "Алгоритм исследования функции с помощью производной",
+        "placement": "after_section",
+        "priority": "high"
+      },
+      "llm_meta": {
+        "model": "google/gemma-3n-E4B-it",
+        "elapsed_sec": 7.37,
+        "tokens_in": 1221,
+        "tokens_out": 340,
+        "raw_response": "```json\n{\n  \"need_visual\": true,\n  \"visual_type\": \"flowchart\",\n  \"pedagogical_goal\": \"Показать последовательность действий при исследовании функции с помощью производной.\",\n  \"description\": \"Блок-схема, показывающая шаги: 1. Найти производную. 2. Найти критические точки (решить уравнение f'(x) = 0). 3. Вычислить значения функции в критических точках и на границах отрезка. 4. Определить наибольшее и наименьшее значение.\",\n  \"params\": {\n    \"nodes\": [\n      {\"id\": \"1\", \"label\": \"Найти производную f'(x)\"},\n      {\"id\": \"2\", \"label\": \"Найти критические точки (f'(x) = 0)\"},\n      {\"id\": \"3\", \"label\": \"Вычислить f(x) в критических точках и на границах отрезка\"},\n      {\"id\": \"4\", \"label\": \"Определить наибольшее и наименьшее значение\"}\n    ],\n    \"edges\": [\n      {\"from\": \"1\", \"to\": \"2\"},\n      {\"from\": \"2\", \"to\": \"3\"},\n      {\"from\": \"3\", \"to\": \"4\"}\n    ]\n  },\n  \"caption\": \"Алгоритм исследования функции с помощью производной\",\n  \"placement\": \"after_section\",\n  \"priority\": \"high\"\n}\n```"
+      }
+    },
+    {
+      "plan": {
+        "section_id": 2,
+        "section_title": "Что такое производная?",
+        "section_text_preview": "Производная функции $f(x)$ в точке $x$ — это скорость изменения функции в этой точке.  \nОна показывает, **возрастает** или **убывает** функция.",
+        "need_visual": false,
+        "visual_type": "none",
+        "pedagogical_goal": "",
+        "description": "",
+        "params": {},
+        "caption": "",
+        "placement": "after_section",
+        "priority": "medium"
+      },
+      "llm_meta": {
+        "model": "google/gemma-3n-E4B-it",
+        "elapsed_sec": 7.66,
+        "tokens_in": 1111,
+        "tokens_out": 342,
+        "raw_response": "```json\n{\n  \"need_visual\": true,\n  \"visual_type\": \"derivative_sign_chart\",\n  \"pedagogical_goal\": \"Показать, как знаки производной определяют возрастание и убывание функции.\",\n  \"description\": \"Схема знаков производной. Ось X - числовая прямая. Отмечены критические точки (где производная равна нулю или не существует). Разделены интервалы между критическими точками.  В каждом интервале указан знак производной (+ или -) и соответствующее поведение функции (возрастает или убывает).\",\n  \"params\": {\n    \"function\": \"Пример функции (например, x^2 - 2x + 1)\",\n    \"critical_points\": [\n      \"-1\",\n      \"3\"\n    ],\n    \"intervals\": [\n      \"(-\\infty, -1)\",\n      \"(-1, 3)\",\n      \"(3, \\infty)\"\n    ],\n    \"range\": [\n      \"знак производной\",\n      \"возрастает/убывает\"\n    ],\n    \"sign\": [\n      \"+\",\n      \"-\",\n      \"+\"\n    ],\n    \"behavior\": [\n      \"возрастает\",\n      \"убывает\",\n      \"возрастает\"\n    ]\n  },\n  \"caption\": \"Схема знаков производной, показывающая возрастание и убывание функции.\",\n  \"placement\": \"after_section\",\n  \"priority\": \"high\"\n}\n```"
+      }
+    },
+    {
+      "plan": {
+        "section_id": 3,
+        "section_title": "Как производная помогает находить экстремумы?",
+        "section_text_preview": "- Если $f'(x) > 0$ — функция **возрастает**.\n- Если $f'(x) < 0$ — функция **убывает**.\n- Если $f'(x) = 0$ — **возможно**, в этой точке **экстремум** (максимум или минимум).",
+        "need_visual": true,
+        "visual_type": "derivative_sign_chart",
+        "pedagogical_goal": "Показать, как знаки производной определяют возрастание/убывание функции и потенциальные экстремумы.",
+        "description": "Схема, показывающая числовую прямую, разделенную на интервалы, соответствующие значениям производной (положительная, отрицательная, ноль).  На интервалах с положительной производной функция возрастает, на интервалах с отрицательной производной функция убывает. Точки, где производная равна нулю, отмечаются как потенциальные экстремумы (с символом 'x' или другим маркером).",
+        "params": {
+          "function": "f'(x)",
+          "critical_points": "x = c",
+          "intervals": [
+            {
+              "range": "-∞, c",
+              "sign": "+",
+              "behavior": "возрастает"
+            },
+            {
+              "range": "c, d",
+              "sign": "-",
+              "behavior": "убывает"
+            },
+            {
+              "range": "d, ∞",
+              "sign": "+",
+              "behavior": "возрастает"
+            }
+          ]
+        },
+        "caption": "Схема знаков производной и связь с возрастанием/убыванием функции и экстремумами.",
+        "placement": "after_section",
+        "priority": "high"
+      },
+      "llm_meta": {
+        "model": "google/gemma-3n-E4B-it",
+        "elapsed_sec": 7.34,
+        "tokens_in": 1142,
+        "tokens_out": 315,
+        "raw_response": "```json\n{\n  \"need_visual\": true,\n  \"visual_type\": \"derivative_sign_chart\",\n  \"pedagogical_goal\": \"Показать, как знаки производной определяют возрастание/убывание функции и потенциальные экстремумы.\",\n  \"description\": \"Схема, показывающая числовую прямую, разделенную на интервалы, соответствующие значениям производной (положительная, отрицательная, ноль).  На интервалах с положительной производной функция возрастает, на интервалах с отрицательной производной функция убывает. Точки, где производная равна нулю, отмечаются как потенциальные экстремумы (с символом 'x' или другим маркером).\",\n  \"params\": {\n    \"function\": \"f'(x)\",\n    \"critical_points\": \"x = c\",\n    \"intervals\": [\n      {\"range\": \"-∞, c\", \"sign\": \"+\", \"behavior\": \"возрастает\"},\n      {\"range\": \"c, d\", \"sign\": \"-\", \"behavior\": \"убывает\"},\n      {\"range\": \"d, ∞\", \"sign\": \"+\", \"behavior\": \"возрастает\"}\n    ]\n  },\n  \"caption\": \"Схема знаков производной и связь с возрастанием/убыванием функции и экстремумами.\",\n  \"placement\": \"after_section\",\n  \"priority\": \"high\"\n}\n```"
+      }
+    },
+    {
+      "plan": {
+        "section_id": 4,
+        "section_title": "Что такое экстремум?",
+        "section_text_preview": "- **Точка максимума**: функция сначала возрастает, потом убывает → производная меняет знак с **+ на –**.\n- **Точка минимума**: функция сначала убывает, потом возрастает → производная меняет знак с **–",
+        "need_visual": false,
+        "visual_type": "none",
+        "pedagogical_goal": "",
+        "description": "",
+        "params": {},
+        "caption": "",
+        "placement": "after_section",
+        "priority": "medium"
+      },
+      "llm_meta": {
+        "model": "google/gemma-3n-E4B-it",
+        "elapsed_sec": 7.5,
+        "tokens_in": 1126,
+        "tokens_out": 367,
+        "raw_response": "```json\n{\n  \"need_visual\": true,\n  \"visual_type\": \"derivative_sign_chart\",\n  \"pedagogical_goal\": \"Визуализировать изменение знака производной в точках экстремума.\",\n  \"description\": \"Схема, показывающая график функции (например, парабола) с отмеченными точками максимума и минимума.  Под каждой точкой изображена соответствующая часть графика, где производная меняет знак.  Обозначения:  график функции, точки максимума и минимума, стрелки, показывающие изменение знака производной (+ на - для максимума, - на + для минимума).  Обязательно указать, что точки экстремума соответствуют нулевой производной.\",\n  \"params\": {\n    \"function\": \"парабола\",\n    \"critical_points\": [\n      {\"x\": \"точка максимума\", \"sign_change\": \"+ на -\"},\n      {\"x\": \"точка минимума\", \"sign_change\": \"- на +\"}\n    ],\n    \"intervals\": [\n      {\"range\": \"(-\\infty, x1)\", \"sign\": \"+\", \"behavior\": \"возрастает\"},\n      {\"range\": \"(x1, x2)\", \"sign\": \"-\", \"behavior\": \"убывает\"},\n      {\"range\": \"(x2, \\infty)\", \"sign\": \"+\", \"behavior\": \"возрастает\"}\n    ]\n  },\n  \"caption\": \"Изменение знака производной в точках экстремума\",\n  \"placement\": \"after_section\",\n  \"priority\": \"high\"\n}\n```"
+      }
+    },
+    {
+      "plan": {
+        "section_id": 5,
+        "section_title": "Важные формулы производных (запоминаем!):",
+        "section_text_preview": "| Функция | Производная |\n|--------|-------------|\n| $x^n$ | $n \\cdot x^{n-1}$ |\n| $c$ (константа) | $0$ |\n| $kx$ | $k$ |\n\n> Пример: $(x^2)' = 2x$, $(x^3)' = 3x^2$, $(5x)' = 5$\n\n---",
+        "need_visual": true,
+        "visual_type": "formula_card",
+        "pedagogical_goal": "Запоминание и понимание основных формул производных.",
+        "description": "Карточка с формулами производных, выделенными компонентами (функция, производная) и пояснениями. Формулы должны быть написаны на латинице, с использованием LaTeX.",
+        "params": {
+          "formula_latex": {
+            "x^n": "n * x^(n-1)",
+            "c": "0",
+            "kx": "k"
+          },
+          "components": {
+            "функция": "Исходная функция, для которой вычисляется производная.",
+            "производная": "Результат вычисления производной."
+          }
+        },
+        "caption": "Основные формулы производных",
+        "placement": "after_section",
+        "priority": "high"
+      },
+      "llm_meta": {
+        "model": "google/gemma-3n-E4B-it",
+        "elapsed_sec": 4.19,
+        "tokens_in": 1170,
+        "tokens_out": 224,
+        "raw_response": "```json\n{\n  \"need_visual\": true,\n  \"visual_type\": \"formula_card\",\n  \"pedagogical_goal\": \"Запоминание и понимание основных формул производных.\",\n  \"description\": \"Карточка с формулами производных, выделенными компонентами (функция, производная) и пояснениями. Формулы должны быть написаны на латинице, с использованием LaTeX.\",\n  \"params\": {\n    \"formula_latex\": {\n      \"x^n\": \"n * x^(n-1)\",\n      \"c\": \"0\",\n      \"kx\": \"k\"\n    },\n    \"components\": {\n      \"функция\": \"Исходная функция, для которой вычисляется производная.\",\n      \"производная\": \"Результат вычисления производной.\"\n    }\n  },\n  \"caption\": \"Основные формулы производных\",\n  \"placement\": \"after_section\",\n  \"priority\": \"high\"\n}\n```"
+      }
+    },
+    {
+      "plan": {
+        "section_id": 6,
+        "section_title": "Тип 1: Найти **наибольшее или наименьшее значение функции на отрезке**",
+        "section_text_preview": "Пример:  \nНайти наибольшее значение функции $f(x) = x^2 - 4x + 5$ на отрезке $[0; 3]$.",
+        "need_visual": true,
+        "visual_type": "function_graph",
+        "pedagogical_goal": "Визуализация параболы, чтобы показать её форму и расположение относительно заданного отрезка.",
+        "description": "График параболы $f(x) = x^2 - 4x + 5$. Обозначить отрезок $[0; 3]$ на оси x. Выделить на графике часть, соответствующую отрезку, и указать точку, где достигается наибольшее значение.",
+        "params": {
+          "equation": "x^2 - 4x + 5",
+          "x_range": "[0, 3]",
+          "highlight_roots": false,
+          "highlight_points": true
+        },
+        "caption": "График функции $f(x) = x^2 - 4x + 5$ на отрезке $[0; 3]$",
+        "placement": "after_section",
+        "priority": "high"
+      },
+      "llm_meta": {
+        "model": "google/gemma-3n-E4B-it",
+        "elapsed_sec": 5.61,
+        "tokens_in": 1125,
+        "tokens_out": 240,
+        "raw_response": "```json\n{\n  \"need_visual\": true,\n  \"visual_type\": \"function_graph\",\n  \"pedagogical_goal\": \"Визуализация параболы, чтобы показать её форму и расположение относительно заданного отрезка.\",\n  \"description\": \"График параболы $f(x) = x^2 - 4x + 5$. Обозначить отрезок $[0; 3]$ на оси x. Выделить на графике часть, соответствующую отрезку, и указать точку, где достигается наибольшее значение.\",\n  \"params\": {\n    \"equation\": \"x^2 - 4x + 5\",\n    \"x_range\": \"[0, 3]\",\n    \"highlight_roots\": false,\n    \"highlight_points\": true\n  },\n  \"caption\": \"График функции $f(x) = x^2 - 4x + 5$ на отрезке $[0; 3]$\",\n  \"placement\": \"after_section\",\n  \"priority\": \"high\"\n}\n```"
+      }
+    },
+    {
+      "plan": {
+        "section_id": 7,
+        "section_title": "Тип 2: Найти **точку максимума или минимума**",
+        "section_text_preview": "Пример:  \nНайти точку минимума функции $f(x) = x^2 - 6x + 8$.",
+        "need_visual": true,
+        "visual_type": "function_graph",
+        "pedagogical_goal": "Визуализировать параболу, чтобы ученик увидел, где находится минимум.",
+        "description": "График параболы $f(x) = x^2 - 6x + 8$.  Обозначить вершину параболы (точку минимума) и указать её координаты.  Отобразить ось симметрии.",
+        "params": {
+          "equation": "x^2 - 6x + 8",
+          "x_range": [
+            -1,
+            7
+          ],
+          "highlight_roots": true,
+          "highlight_vertex": true
+        },
+        "caption": "График функции $f(x) = x^2 - 6x + 8$ с выделенной точкой минимума.",
+        "placement": "after_section",
+        "priority": "high"
+      },
+      "llm_meta": {
+        "model": "google/gemma-3n-E4B-it",
+        "elapsed_sec": 4.72,
+        "tokens_in": 1111,
+        "tokens_out": 227,
+        "raw_response": "```json\n{\n  \"need_visual\": true,\n  \"visual_type\": \"function_graph\",\n  \"pedagogical_goal\": \"Визуализировать параболу, чтобы ученик увидел, где находится минимум.\",\n  \"description\": \"График параболы $f(x) = x^2 - 6x + 8$.  Обозначить вершину параболы (точку минимума) и указать её координаты.  Отобразить ось симметрии.\",\n  \"params\": {\n    \"equation\": \"x^2 - 6x + 8\",\n    \"x_range\": [-1, 7],\n    \"highlight_roots\": true,\n    \"highlight_vertex\": true\n  },\n  \"caption\": \"График функции $f(x) = x^2 - 6x + 8$ с выделенной точкой минимума.\",\n  \"placement\": \"after_section\",\n  \"priority\": \"high\"\n}\n```"
+      }
+    },
+    {
+      "plan": {
+        "section_id": 8,
+        "section_title": "Тип 3: Найти **значение функции в точке экстремума**",
+        "section_text_preview": "Пример:  \nНайти значение функции $f(x) = x^2 - 4x + 3$ в её точке минимума.\n\n---",
+        "need_visual": true,
+        "visual_type": "function_graph",
+        "pedagogical_goal": "Визуализировать параболу, чтобы ученик увидел её форму и расположение вершины (точки минимума).",
+        "description": "График параболы $f(x) = x^2 - 4x + 3$. Необходимо выделить вершину параболы и указать её координаты.  Ось x должна быть с отметками, позволяющими видеть симметрию.",
+        "params": {
+          "equation": "x^2 - 4x + 3",
+          "x_range": [
+            -1,
+            5
+          ],
+          "highlight_roots": true,
+          "highlight_vertex": true
+        },
+        "caption": "График функции $f(x) = x^2 - 4x + 3$ с выделенной точкой минимума.",
+        "placement": "after_section",
+        "priority": "high"
+      },
+      "llm_meta": {
+        "model": "google/gemma-3n-E4B-it",
+        "elapsed_sec": 5.43,
+        "tokens_in": 1116,
+        "tokens_out": 233,
+        "raw_response": "```json\n{\n  \"need_visual\": true,\n  \"visual_type\": \"function_graph\",\n  \"pedagogical_goal\": \"Визуализировать параболу, чтобы ученик увидел её форму и расположение вершины (точки минимума).\",\n  \"description\": \"График параболы $f(x) = x^2 - 4x + 3$. Необходимо выделить вершину параболы и указать её координаты.  Ось x должна быть с отметками, позволяющими видеть симметрию.\",\n  \"params\": {\n    \"equation\": \"x^2 - 4x + 3\",\n    \"x_range\": [-1, 5],\n    \"highlight_roots\": true,\n    \"highlight_vertex\": true\n  },\n  \"caption\": \"График функции $f(x) = x^2 - 4x + 3$ с выделенной точкой минимума.\",\n  \"placement\": \"after_section\",\n  \"priority\": \"high\"\n}\n```"
+      }
+    },
+    {
+      "plan": {
+        "section_id": 9,
+        "section_title": "Для задачи: найти наибольшее/наименьшее значение на отрезке",
+        "section_text_preview": "**Шаг 1: Найди производную $f'(x)$**  \nИспользуй правило: $(x^n)' = n \\cdot x^{n-1}$.\n\n**Шаг 2: Найди критические точки**  \nРеши уравнение: $f'(x) = 0$.  \n(Критические точки — это точки, где производн",
+        "need_visual": true,
+        "visual_type": "flowchart",
+        "pedagogical_goal": "Визуализация алгоритма нахождения наибольшего/наименьшего значения на отрезке.",
+        "description": "Блок-схема с следующими узлами:\n1. Start\n2. Find f'(x)\n3. Find critical points (f'(x) = 0)\n4. Are critical points in the interval?\n5. Evaluate f(x) at critical points and interval endpoints\n6. Compare values\n7. Maximum/Minimum value\n8. End\nСтрелки между узлами указывают на последовательность действий. Узел 4 должен иметь два выхода: 'Yes' (точка в интервале) и 'No' (точка не в интервале).",
+        "params": {
+          "nodes": [
+            {
+              "id": "start",
+              "label": "Start"
+            },
+            {
+              "id": "derive",
+              "label": "Find f'(x)"
+            },
+            {
+              "id": "critical_points",
+              "label": "Find critical points (f'(x) = 0)"
+            },
+            {
+              "id": "in_interval",
+              "label": "Are critical points in the interval?"
+            },
+            {
+              "id": "evaluate",
+              "label": "Evaluate f(x) at critical points and interval endpoints"
+            },
+            {
+              "id": "compare",
+              "label": "Compare values"
+            },
+            {
+              "id": "end",
+              "label": "Maximum/Minimum value"
+            }
+          ],
+          "edges": [
+            {
+              "from": "start",
+              "to": "derive"
+            },
+            {
+              "from": "derive",
+              "to": "critical_points"
+            },
+            {
+              "from": "critical_points",
+              "to": "in_interval"
+            },
+            {
+              "from": "in_interval",
+              "to": "evaluate"
+            },
+            {
+              "from": "evaluate",
+              "to": "compare"
+            },
+            {
+              "from": "compare",
+              "to": "end"
+            }
+          ]
+        },
+        "caption": "Алгоритм нахождения наибольшего/наименьшего значения на отрезке",
+        "placement": "after_section",
+        "priority": "high"
+      },
+      "llm_meta": {
+        "model": "google/gemma-3n-E4B-it",
+        "elapsed_sec": 9.43,
+        "tokens_in": 1318,
+        "tokens_out": 490,
+        "raw_response": "```json\n{\n  \"need_visual\": true,\n  \"visual_type\": \"flowchart\",\n  \"pedagogical_goal\": \"Визуализация алгоритма нахождения наибольшего/наименьшего значения на отрезке.\",\n  \"description\": \"Блок-схема с следующими узлами:\\n1. Start\\n2. Find f'(x)\\n3. Find critical points (f'(x) = 0)\\n4. Are critical points in the interval?\\n5. Evaluate f(x) at critical points and interval endpoints\\n6. Compare values\\n7. Maximum/Minimum value\\n8. End\\nСтрелки между узлами указывают на последовательность действий. Узел 4 должен иметь два выхода: 'Yes' (точка в интервале) и 'No' (точка не в интервале).\",\n  \"params\": {\n    \"nodes\": [\n      {\"id\": \"start\", \"label\": \"Start\"},\n      {\"id\": \"derive\", \"label\": \"Find f'(x)\"},\n      {\"id\": \"critical_points\", \"label\": \"Find critical points (f'(x) = 0)\"},\n      {\"id\": \"in_interval\", \"label\": \"Are critical points in the interval?\"},\n      {\"id\": \"evaluate\", \"label\": \"Evaluate f(x) at critical points and interval endpoints\"},\n      {\"id\": \"compare\", \"label\": \"Compare values\"},\n      {\"id\": \"end\", \"label\": \"Maximum/Minimum value\"}\n    ],\n    \"edges\": [\n      {\"from\": \"start\", \"to\": \"derive\"},\n      {\"from\": \"derive\", \"to\": \"critical_points\"},\n      {\"from\": \"critical_points\", \"to\": \"in_interval\"},\n      {\"from\": \"in_interval\", \"to\": \"evaluate\"},\n      {\"from\": \"evaluate\", \"to\": \"compare\"},\n      {\"from\": \"compare\", \"to\": \"end\"}\n    ]\n  },\n  \"caption\": \"Алгоритм нахождения наибольшего/наименьшего значения на отрезке\",\n  \"placement\": \"after_section\",\n  \"priority\": \"high\"\n}\n```"
+      }
+    },
+    {
+      "plan": {
+        "section_id": 10,
+        "section_title": "Для задачи: найти точку экстремума",
+        "section_text_preview": "**Шаг 1: Найди $f'(x)$**  \n**Шаг 2: Найди $f'(x) = 0$**  \n**Шаг 3: Определи знак производной слева и справа от корня**  \n- Если $f'(x)$ меняет знак с **+ на –** → максимум.\n- Если с **– на +** → миним",
+        "need_visual": true,
+        "visual_type": "flowchart",
+        "pedagogical_goal": "Показать пошаговый алгоритм нахождения точки экстремума с использованием производной.",
+        "description": "Блок-схема, где каждый блок представляет собой шаг алгоритма. Блоки соединены стрелками, указывающими порядок действий.  Блоки: 'Найти f'(x)', 'Найти f'(x) = 0', 'Определить знак производной слева от корня', 'Определить знак производной справа от корня', 'Если знак меняется с + на -, то максимум', 'Если знак меняется с - на +, то минимум'.",
+        "params": {
+          "nodes": [
+            {
+              "id": "1",
+              "label": "Найти f'(x)"
+            },
+            {
+              "id": "2",
+              "label": "Найти f'(x) = 0"
+            },
+            {
+              "id": "3",
+              "label": "Определить знак производной слева от корня"
+            },
+            {
+              "id": "4",
+              "label": "Определить знак производной справа от корня"
+            },
+            {
+              "id": "5",
+              "label": "Если знак меняется с + на -, то максимум"
+            },
+            {
+              "id": "6",
+              "label": "Если знак меняется с - на +, то минимум"
+            }
+          ],
+          "edges": [
+            {
+              "from": "1",
+              "to": "2"
+            },
+            {
+              "from": "2",
+              "to": "3"
+            },
+            {
+              "from": "3",
+              "to": "4"
+            },
+            {
+              "from": "4",
+              "to": "5"
+            },
+            {
+              "from": "4",
+              "to": "6"
+            }
+          ]
+        },
+        "caption": "Алгоритм нахождения точки экстремума",
+        "placement": "after_section",
+        "priority": "high"
+      },
+      "llm_meta": {
+        "model": "google/gemma-3n-E4B-it",
+        "elapsed_sec": 7.99,
+        "tokens_in": 1162,
+        "tokens_out": 432,
+        "raw_response": "```json\n{\n  \"need_visual\": true,\n  \"visual_type\": \"flowchart\",\n  \"pedagogical_goal\": \"Показать пошаговый алгоритм нахождения точки экстремума с использованием производной.\",\n  \"description\": \"Блок-схема, где каждый блок представляет собой шаг алгоритма. Блоки соединены стрелками, указывающими порядок действий.  Блоки: 'Найти f'(x)', 'Найти f'(x) = 0', 'Определить знак производной слева от корня', 'Определить знак производной справа от корня', 'Если знак меняется с + на -, то максимум', 'Если знак меняется с - на +, то минимум'.\",\n  \"params\": {\n    \"nodes\": [\n      {\"id\": \"1\", \"label\": \"Найти f'(x)\"},\n      {\"id\": \"2\", \"label\": \"Найти f'(x) = 0\"},\n      {\"id\": \"3\", \"label\": \"Определить знак производной слева от корня\"},\n      {\"id\": \"4\", \"label\": \"Определить знак производной справа от корня\"},\n      {\"id\": \"5\", \"label\": \"Если знак меняется с + на -, то максимум\"},\n      {\"id\": \"6\", \"label\": \"Если знак меняется с - на +, то минимум\"}\n    ],\n    \"edges\": [\n      {\"from\": \"1\", \"to\": \"2\"},\n      {\"from\": \"2\", \"to\": \"3\"},\n      {\"from\": \"3\", \"to\": \"4\"},\n      {\"from\": \"4\", \"to\": \"5\"},\n      {\"from\": \"4\", \"to\": \"6\"}\n    ]\n  },\n  \"caption\": \"Алгоритм нахождения точки экстремума\",\n  \"placement\": \"after_section\",\n  \"priority\": \"high\"\n}\n```"
+      }
+    },
+    {
+      "plan": {
+        "section_id": 11,
+        "section_title": "Частые ошибки и как их избежать",
+        "section_text_preview": "| Ошибка | Как исправить |\n|-------|----------------|\n| Забыть подставить концы отрезка | Всегда подставляй **все критические точки и оба конца** |\n| Решить $f'(x) = 0$, но не проверить, входит ли кор",
+        "need_visual": false,
+        "visual_type": "none",
+        "pedagogical_goal": "Подчеркнуть важность проверки границ и подстановки в исходную функцию.",
+        "description": "Таблица уже хорошо оформлена в markdown. Визуальный элемент не улучшит восприятие информации.",
+        "params": {},
+        "caption": "none",
+        "placement": "after_section",
+        "priority": "low"
+      },
+      "llm_meta": {
+        "model": "google/gemma-3n-E4B-it",
+        "elapsed_sec": 2.62,
+        "tokens_in": 1221,
+        "tokens_out": 107,
+        "raw_response": "```json\n{\n  \"need_visual\": false,\n  \"visual_type\": \"none\",\n  \"pedagogical_goal\": \"Подчеркнуть важность проверки границ и подстановки в исходную функцию.\",\n  \"description\": \"Таблица уже хорошо оформлена в markdown. Визуальный элемент не улучшит восприятие информации.\",\n  \"caption\": \"none\",\n  \"placement\": \"after_section\",\n  \"priority\": \"low\"\n}\n```"
+      }
+    },
+    {
+      "plan": {
+        "section_id": 12,
+        "section_title": "Пример 1: Найти наибольшее значение функции на отрезке",
+        "section_text_preview": "**Задача:**  \nНайти наибольшее значение функции $f(x) = x^2 - 4x + 5$ на отрезке $[0; 3]$.\n\n**Решение:**\n\n**Шаг 1: Найдем производную**  \n$f(x) = x^2 - 4x + 5$  \n$f'(x) = 2x - 4$\n\n**Шаг 2: Найдем крит",
+        "need_visual": true,
+        "visual_type": "function_graph",
+        "pedagogical_goal": "Визуализировать функцию и её график, чтобы ученик увидел, как изменяется значение функции на отрезке и где находится наибольшее значение.",
+        "description": "График функции $f(x) = x^2 - 4x + 5$ на отрезке $[0; 3]$. Необходимо выделить отрезок $[0; 3]$ на оси x.  Желательно отметить критическую точку $x=2$ и показать, что наибольшее значение функции на отрезке достигается на конце отрезка $x=0$.",
+        "params": {
+          "equation": "x^2 - 4x + 5",
+          "x_range": "[0, 3]",
+          "highlight_roots": false,
+          "highlight_points": true
+        },
+        "caption": "График функции $f(x) = x^2 - 4x + 5$ на отрезке $[0; 3]$",
+        "placement": "after_section",
+        "priority": "high"
+      },
+      "llm_meta": {
+        "model": "google/gemma-3n-E4B-it",
+        "elapsed_sec": 7.59,
+        "tokens_in": 1446,
+        "tokens_out": 269,
+        "raw_response": "```json\n{\n  \"need_visual\": true,\n  \"visual_type\": \"function_graph\",\n  \"pedagogical_goal\": \"Визуализировать функцию и её график, чтобы ученик увидел, как изменяется значение функции на отрезке и где находится наибольшее значение.\",\n  \"description\": \"График функции $f(x) = x^2 - 4x + 5$ на отрезке $[0; 3]$. Необходимо выделить отрезок $[0; 3]$ на оси x.  Желательно отметить критическую точку $x=2$ и показать, что наибольшее значение функции на отрезке достигается на конце отрезка $x=0$.\",\n  \"params\": {\n    \"equation\": \"x^2 - 4x + 5\",\n    \"x_range\": \"[0, 3]\",\n    \"highlight_roots\": false,\n    \"highlight_points\": true\n  },\n  \"caption\": \"График функции $f(x) = x^2 - 4x + 5$ на отрезке $[0; 3]$\",\n  \"placement\": \"after_section\",\n  \"priority\": \"high\"\n}\n```"
+      }
+    },
+    {
+      "plan": {
+        "section_id": 13,
+        "section_title": "Пример 2: Найти точку минимума",
+        "section_text_preview": "**Задача:**  \nНайти точку минимума функции $f(x) = x^2 - 6x + 8$\n\n**Решение:**\n\n**Шаг 1: Производная**  \n$f'(x) = 2x - 6$\n\n**Шаг 2: $f'(x) = 0$**  \n$2x - 6 = 0$  \n$2x = 6$  \n$x = 3$\n\n**Шаг 3: Определи",
+        "need_visual": true,
+        "visual_type": "tangent_line_graph",
+        "pedagogical_goal": "Показать график функции и касательную в точке минимума, чтобы визуально продемонстрировать изменение знака производной.",
+        "description": "График параболы $f(x) = x^2 - 6x + 8$.  Обозначить точку минимума (3, -1).  Провести касательную к графику в этой точке.  Показать, как производная меняет знак с отрицательного на положительный в окрестности точки минимума.",
+        "params": {
+          "equation": "x^2 - 6x + 8",
+          "x_range": [
+            -1,
+            5
+          ],
+          "highlight_point": "3, -1",
+          "highlight_tangent": "в точке (3, -1)"
+        },
+        "caption": "График функции с касательной в точке минимума",
+        "placement": "after_section",
+        "priority": "high"
+      },
+      "llm_meta": {
+        "model": "google/gemma-3n-E4B-it",
+        "elapsed_sec": 6.03,
+        "tokens_in": 1314,
+        "tokens_out": 254,
+        "raw_response": "```json\n{\n  \"need_visual\": true,\n  \"visual_type\": \"tangent_line_graph\",\n  \"pedagogical_goal\": \"Показать график функции и касательную в точке минимума, чтобы визуально продемонстрировать изменение знака производной.\",\n  \"description\": \"График параболы $f(x) = x^2 - 6x + 8$.  Обозначить точку минимума (3, -1).  Провести касательную к графику в этой точке.  Показать, как производная меняет знак с отрицательного на положительный в окрестности точки минимума.\",\n  \"params\": {\n    \"equation\": \"x^2 - 6x + 8\",\n    \"x_range\": [-1, 5],\n    \"highlight_point\": \"3, -1\",\n    \"highlight_tangent\": \"в точке (3, -1)\"\n  },\n  \"caption\": \"График функции с касательной в точке минимума\",\n  \"placement\": \"after_section\",\n  \"priority\": \"high\"\n}\n```"
+      }
+    },
+    {
+      "plan": {
+        "section_id": 14,
+        "section_title": "6. Что делать дальше?",
+        "section_text_preview": "1. **Практикуйся на простых задачах** — только степенные функции.\n2. **Тренируй подстановку** — это самый частый промах.\n3. **Проверяй, входит ли корень в отрезок** — это легко упустить.\n4. **Не спеши",
+        "need_visual": false,
+        "visual_type": "none",
+        "pedagogical_goal": "Подчеркнуть ключевые моменты для успешной подготовки к решению задач.",
+        "description": "Визуал не требуется, так как это список советов. Можно рассмотреть визуальное оформление списка с использованием иконок или выделения ключевых слов, но это опционально.",
+        "params": {},
+        "caption": "Советы по решению задач.",
+        "placement": "before_section",
+        "priority": "low"
+      },
+      "llm_meta": {
+        "model": "google/gemma-3n-E4B-it",
+        "elapsed_sec": 3.69,
+        "tokens_in": 1149,
+        "tokens_out": 129,
+        "raw_response": "```json\n{\n  \"need_visual\": false,\n  \"visual_type\": \"none\",\n  \"pedagogical_goal\": \"Подчеркнуть ключевые моменты для успешной подготовки к решению задач.\",\n  \"description\": \"Визуал не требуется, так как это список советов. Можно рассмотреть визуальное оформление списка с использованием иконок или выделения ключевых слов, но это опционально.\",\n  \"caption\": \"Советы по решению задач.\",\n  \"placement\": \"before_section\",\n  \"priority\": \"low\"\n}\n```"
+      }
+    },
+    {
+      "plan": {
+        "section_id": 15,
+        "section_title": "Полезные советы",
+        "section_text_preview": "✅ Всегда пиши:  \n- $f'(x) = \\dots$  \n- $f'(x) = 0$ → $x = \\dots$  \n- $f(0) = \\dots$, $f(2) = \\dots$, $f(3) = \\dots$  \n- Ответ: $\\dots$\n\n✅ Если не знаешь, как брать производную — начни с $(x^2)' = 2x$,",
+        "need_visual": false,
+        "visual_type": "none",
+        "pedagogical_goal": "Подчеркнуть важность записи промежуточных результатов и шагов решения.",
+        "description": "Не требуется визуализация, так как секция содержит текстовые советы и мотивацию.",
+        "params": {},
+        "caption": "Советы по решению задач",
+        "placement": "before_section",
+        "priority": "low"
+      },
+      "llm_meta": {
+        "model": "google/gemma-3n-E4B-it",
+        "elapsed_sec": 3.35,
+        "tokens_in": 1227,
+        "tokens_out": 113,
+        "raw_response": "```json\n{\n  \"need_visual\": false,\n  \"visual_type\": \"none\",\n  \"pedagogical_goal\": \"Подчеркнуть важность записи промежуточных результатов и шагов решения.\",\n  \"description\": \"Не требуется визуализация, так как секция содержит текстовые советы и мотивацию.\",\n  \"params\": {},\n  \"caption\": \"Советы по решению задач\",\n  \"placement\": \"before_section\",\n  \"priority\": \"low\"\n}\n```"
+      }
+    }
+  ]
+}

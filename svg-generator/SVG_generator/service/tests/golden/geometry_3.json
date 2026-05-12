@@ -1,0 +1,41 @@
+{
+  "scene_type": "geometry",
+  "canvas": {
+    "width": 400,
+    "height": 200,
+    "x_min": -1,
+    "x_max": 9,
+    "y_min": -1,
+    "y_max": 3
+  },
+  "style": {
+    "theme": "light",
+    "stroke_color": "#333333",
+    "fill_color": "none",
+    "font_size": 12,
+    "font_family": "sans-serif"
+  },
+  "objects": [
+    { "type": "point", "id": "P", "x": 0, "y": 0, "label": "P" },
+    { "type": "point", "id": "Q", "x": 8, "y": 0, "label": "Q" },
+    { "type": "segment", "id": "seg_PQ", "from_point": "P", "to_point": "Q" }
+  ],
+  "constraints": [
+    {
+      "type": "midpoint",
+      "id": "mid_PQ",
+      "segment": "seg_PQ",
+      "result_id": "M"
+    }
+  ],
+  "annotations": [
+    {
+      "type": "label",
+      "id": "ann_M",
+      "text": "M",
+      "anchor": "M",
+      "dx": 0,
+      "dy": 0.4
+    }
+  ]
+}

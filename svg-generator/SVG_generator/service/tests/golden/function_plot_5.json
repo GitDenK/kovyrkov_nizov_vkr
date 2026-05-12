@@ -1,0 +1,44 @@
+{
+  "scene_type": "function_plot",
+  "canvas": {
+    "width": 400,
+    "height": 400,
+    "x_min": -3,
+    "x_max": 3,
+    "y_min": -6,
+    "y_max": 6
+  },
+  "style": {
+    "theme": "light",
+    "stroke_color": "#333333",
+    "fill_color": "none",
+    "font_size": 12,
+    "font_family": "sans-serif"
+  },
+  "objects": [
+    {
+      "type": "function_curve",
+      "id": "cubic",
+      "expression": "x**3 - 3*x",
+      "x_min": -3,
+      "x_max": 3,
+      "style": { "stroke": "#2255cc", "stroke_width": 2 }
+    },
+    { "type": "point", "id": "local_max", "x": -1, "y": 2,  "label": "макс" },
+    { "type": "point", "id": "local_min", "x":  1, "y": -2, "label": "мин" },
+    { "type": "point", "id": "root_neg",  "x": -1.732, "y": 0, "label": "" },
+    { "type": "point", "id": "root_zero", "x": 0,      "y": 0, "label": "O" },
+    { "type": "point", "id": "root_pos",  "x":  1.732, "y": 0, "label": "" }
+  ],
+  "constraints": [],
+  "annotations": [
+    {
+      "type": "label",
+      "id": "fn_label",
+      "text": "y = x³ − 3x",
+      "anchor": "local_max",
+      "dx": -1.5,
+      "dy": 0.3
+    }
+  ]
+}

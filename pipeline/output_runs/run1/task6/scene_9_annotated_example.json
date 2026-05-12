@@ -1,0 +1,124 @@
+{
+  "scene_type": "diagram",
+  "canvas": {
+    "width": 500,
+    "height": 300,
+    "x_min": 0,
+    "x_max": 500,
+    "y_min": 0,
+    "y_max": 300
+  },
+  "style": {
+    "theme": "light",
+    "stroke_color": "#333333",
+    "fill_color": "#f5f5f5",
+    "font_size": 13,
+    "font_family": "sans-serif"
+  },
+  "objects": [
+    {
+      "type": "title",
+      "id": "title",
+      "text": "Решение логарифмического уравнения $\\log_3(x+2) = 2$"
+    },
+    {
+      "type": "box",
+      "id": "problem",
+      "text": "Задача: Решите уравнение $\\log_3(x+2) = 2$",
+      "style": {
+        "fill": "#fdebd0",
+        "stroke": "#e67e22"
+      }
+    },
+    {
+      "type": "formula_block",
+      "id": "expr_0",
+      "formula": "$\\log_3(x+2) = 2$"
+    },
+    {
+      "type": "arrow",
+      "id": "arr_e_0",
+      "from_point": "problem",
+      "to_point": "expr_0"
+    },
+    {
+      "type": "box",
+      "id": "ann_0",
+      "text": "Запишем уравнение"
+    },
+    {
+      "type": "arrow",
+      "id": "arr_a_0",
+      "from_point": "expr_0",
+      "to_point": "ann_0"
+    },
+    {
+      "type": "formula_block",
+      "id": "expr_1",
+      "formula": "$3^2 = x+2$"
+    },
+    {
+      "type": "arrow",
+      "id": "arr_e_1",
+      "from_point": "ann_0",
+      "to_point": "expr_1"
+    },
+    {
+      "type": "box",
+      "id": "ann_1",
+      "text": "Используем определение логарифма"
+    },
+    {
+      "type": "arrow",
+      "id": "arr_a_1",
+      "from_point": "expr_1",
+      "to_point": "ann_1"
+    },
+    {
+      "type": "formula_block",
+      "id": "expr_2",
+      "formula": "$9 = x+2$"
+    },
+    {
+      "type": "arrow",
+      "id": "arr_e_2",
+      "from_point": "ann_1",
+      "to_point": "expr_2"
+    },
+    {
+      "type": "box",
+      "id": "ann_2",
+      "text": "Вычислим $3^2$"
+    },
+    {
+      "type": "arrow",
+      "id": "arr_a_2",
+      "from_point": "expr_2",
+      "to_point": "ann_2"
+    },
+    {
+      "type": "formula_block",
+      "id": "expr_3",
+      "formula": "$x = 7$"
+    },
+    {
+      "type": "arrow",
+      "id": "arr_e_3",
+      "from_point": "ann_2",
+      "to_point": "expr_3"
+    },
+    {
+      "type": "box",
+      "id": "ann_3",
+      "text": "Решаем уравнение $9 = x+2$"
+    },
+    {
+      "type": "arrow",
+      "id": "arr_a_3",
+      "from_point": "expr_3",
+      "to_point": "ann_3"
+    }
+  ],
+  "constraints": [],
+  "annotations": []
+}

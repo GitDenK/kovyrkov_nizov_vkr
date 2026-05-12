@@ -1,0 +1,56 @@
+{
+  "fp_001": {
+    "description": "Парабола y=x²: кривая, оси и числовые подписи",
+    "min_polyline_count": 1,
+    "has_text": true,
+    "min_line_count": 2
+  },
+  "fp_002": {
+    "description": "Синус: непрерывная кривая, оси",
+    "min_polyline_count": 1,
+    "has_text": true,
+    "min_line_count": 2
+  },
+  "fp_009": {
+    "description": "y=1/x: два отдельных куска кривой (разрыв в 0)",
+    "min_polyline_count": 2,
+    "has_text": true
+  },
+  "geo_001": {
+    "description": "Треугольник с медианой: 3 стороны + отрезок медианы + точки",
+    "min_line_count": 4,
+    "min_circle_count": 3,
+    "has_text": true
+  },
+  "geo_002": {
+    "description": "Прямоугольный треугольник: стороны, маркер прямого угла",
+    "min_line_count": 3,
+    "has_text": true,
+    "has_polyline": true
+  },
+  "geo_006": {
+    "description": "Окружность с центром: должна быть circle-элемент",
+    "min_circle_count": 1,
+    "has_text": true
+  },
+  "geo_008": {
+    "description": "Прямоугольник с диагональю: 4 стороны + 1 диагональ",
+    "min_line_count": 5,
+    "has_text": true
+  },
+  "dia_001": {
+    "description": "Схема производной: блоки и стрелки",
+    "min_rect_count": 1,
+    "has_text": true
+  },
+  "dia_003": {
+    "description": "Алгоритм квадратного уравнения: несколько блоков",
+    "min_rect_count": 2,
+    "has_text": true
+  },
+  "dia_008": {
+    "description": "Иерархия множеств N⊂Z⊂Q⊂R: блоки и текст",
+    "min_rect_count": 2,
+    "has_text": true
+  }
+}

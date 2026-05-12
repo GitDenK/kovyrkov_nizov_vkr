@@ -1,0 +1,60 @@
+{
+  "scene_type": "diagram",
+  "canvas": {
+    "width": 500,
+    "height": 320,
+    "x_min": 0,
+    "x_max": 500,
+    "y_min": 0,
+    "y_max": 320
+  },
+  "style": {
+    "theme": "light",
+    "stroke_color": "#333333",
+    "fill_color": "#f5f5f5",
+    "font_size": 13,
+    "font_family": "sans-serif"
+  },
+  "objects": [
+    {
+      "type": "box",
+      "id": "base_box",
+      "text": "y = f(x)"
+    },
+    {
+      "type": "box",
+      "id": "shift_x_box",
+      "text": "y = f(x + a)\nсдвиг по X на −a"
+    },
+    {
+      "type": "box",
+      "id": "shift_y_box",
+      "text": "y = f(x) + b\nсдвиг по Y на b"
+    },
+    {
+      "type": "box",
+      "id": "scale_box",
+      "text": "y = k·f(x)\nрастяжение по Y"
+    },
+    {
+      "type": "arrow",
+      "id": "arr_x",
+      "from_point": "base_box",
+      "to_point": "shift_x_box"
+    },
+    {
+      "type": "arrow",
+      "id": "arr_y",
+      "from_point": "base_box",
+      "to_point": "shift_y_box"
+    },
+    {
+      "type": "arrow",
+      "id": "arr_k",
+      "from_point": "base_box",
+      "to_point": "scale_box"
+    }
+  ],
+  "constraints": [],
+  "annotations": []
+}

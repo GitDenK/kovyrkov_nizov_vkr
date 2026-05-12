@@ -1,0 +1,470 @@
+{
+  "model": "Qwen/Qwen2.5-7B-Instruct-Turbo",
+  "version": "v2",
+  "total_sections": 13,
+  "sections_analyzed": 13,
+  "visuals_planned": 8,
+  "total_tokens_in": 17771,
+  "total_tokens_out": 2888,
+  "total_time_sec": 32.55,
+  "plans": [
+    {
+      "plan": {
+        "section_id": 0,
+        "section_title": "Оценка уровня ученика и приоритеты",
+        "section_text_preview": "Привет! Я внимательно изучил твои данные по компетенциям — и честно скажу: ты только начинаешь знакомиться с темой **производной**. Уровень владения большинством тем — **0% или почти 0%**, особенно в ",
+        "need_visual": false,
+        "visual_type": "none",
+        "pedagogical_goal": "",
+        "description": "",
+        "params": {},
+        "caption": "",
+        "placement": "after_section",
+        "priority": "medium"
+      },
+      "llm_meta": {
+        "model": "Qwen/Qwen2.5-7B-Instruct-Turbo",
+        "pass1_decision": {
+          "section_id": 0,
+          "need_visual": false,
+          "visual_type": "none",
+          "reason": "мотивационный блок"
+        }
+      }
+    },
+    {
+      "plan": {
+        "section_id": 1,
+        "section_title": "1. КРАТКОЕ ОПИСАНИЕ ЗАДАНИЯ",
+        "section_text_preview": "**Что проверяет задание №8 на ЕГЭ по профильной математике?**  \nОно проверяет, **умеешь ли ты работать с графиками функции и её производной** без знания самой формулы функции. То есть — читать графики",
+        "need_visual": false,
+        "visual_type": "none",
+        "pedagogical_goal": "",
+        "description": "",
+        "params": {},
+        "caption": "",
+        "placement": "after_section",
+        "priority": "medium"
+      },
+      "llm_meta": {
+        "model": "Qwen/Qwen2.5-7B-Instruct-Turbo",
+        "pass1_decision": {
+          "section_id": 1,
+          "need_visual": false,
+          "visual_type": "none",
+          "reason": "описание задания"
+        }
+      }
+    },
+    {
+      "plan": {
+        "section_id": 2,
+        "section_title": "Что такое производная?",
+        "section_text_preview": "Производная — это **скорость изменения функции**.  \nНа графике это **наклон касательной** к графику функции в данной точке.\n\n📌 Пример:  \nЕсли функция быстро растёт — касательная почти вертикальная → п",
+        "need_visual": true,
+        "visual_type": "function_graph",
+        "pedagogical_goal": "Показать связь между скоростью изменения функции и наклоном касательной",
+        "description": "График функции с касательными в различных точках, отражающими положительную, отрицательную и нулевую производные",
+        "params": {
+          "function": "x^2",
+          "derivative": "2x",
+          "points": [
+            {
+              "x": -2,
+              "slope": -4,
+              "behavior": "отрицательная производная"
+            },
+            {
+              "x": 0,
+              "slope": 0,
+              "behavior": "нулевая производная"
+            },
+            {
+              "x": 2,
+              "slope": 4,
+              "behavior": "положительная производная"
+            }
+          ],
+          "annotations": [
+            {
+              "x": -2,
+              "y": 4,
+              "text": "Касательная почти вертикальная, производная большая положительная"
+            },
+            {
+              "x": 0,
+              "y": 0,
+              "text": "Горизонтальная касательная, производная равна нулю"
+            },
+            {
+              "x": 2,
+              "y": 4,
+              "text": "Касательная идёт вниз, производная отрицательная"
+            }
+          ]
+        },
+        "caption": "Связь между скоростью изменения функции и наклоном касательной",
+        "placement": "after_section",
+        "priority": "high"
+      },
+      "llm_meta": {
+        "model": "Qwen/Qwen2.5-7B-Instruct-Turbo",
+        "pass1_decision": {
+          "section_id": 2,
+          "need_visual": true,
+          "visual_type": "function_graph",
+          "reason": "определение производной через наклон касательной"
+        }
+      }
+    },
+    {
+      "plan": {
+        "section_id": 3,
+        "section_title": "Угловой коэффициент прямой",
+        "section_text_preview": "Прямая на графике задаётся формулой:  \n$y = kx + b$, где $k$ — это **угловой коэффициент** (наклон).\n\n🔹 Как найти $k$ по графику?  \nПосмотри на прямоугольный треугольник, который образует касательная ",
+        "need_visual": true,
+        "visual_type": "tangent_line_graph",
+        "pedagogical_goal": "Показать, как вычисляется угловой коэффициент прямой по графику и как определяется его знак",
+        "description": "График прямой с касательной, образующей прямоугольный треугольник с осями, и вычисление угловой коэффициента",
+        "params": {
+          "function": "y = kx + b",
+          "k": "0.5",
+          "triangle_height": 2,
+          "triangle_width": 4,
+          "slope_direction": "вверх слева направо",
+          "slope_sign": "положительный",
+          "horizontal_line_slope": "0",
+          "negative_slope_direction": "вниз"
+        },
+        "caption": "Вычисление угловой коэффициента прямой по графику",
+        "placement": "after_section",
+        "priority": "high"
+      },
+      "llm_meta": {
+        "model": "Qwen/Qwen2.5-7B-Instruct-Turbo",
+        "pass1_decision": {
+          "section_id": 3,
+          "need_visual": true,
+          "visual_type": "tangent_line_graph",
+          "reason": "объяснение углового коэффициента прямой"
+        }
+      }
+    },
+    {
+      "plan": {
+        "section_id": 4,
+        "section_title": "3. ТИПЫ ЗАДАЧ КОТОРЫЕ МОГУТ ПОПАСТЬСЯ",
+        "section_text_preview": "| Тип задачи | Описание | Что нужно уметь |\n|-----------|--------|----------------|\n| 1. Найти значение производной по наклону касательной | Дано: график функции и касательная в одной точке. Нужно най",
+        "need_visual": true,
+        "visual_type": "comparison_chart",
+        "pedagogical_goal": "",
+        "description": "",
+        "params": {},
+        "caption": "",
+        "placement": "after_section",
+        "priority": "high"
+      },
+      "llm_meta": {
+        "model": "Qwen/Qwen2.5-7B-Instruct-Turbo",
+        "pass1_decision": {
+          "section_id": 4,
+          "need_visual": true,
+          "visual_type": "comparison_chart",
+          "reason": "таблица типов задач"
+        }
+      }
+    },
+    {
+      "plan": {
+        "section_id": 5,
+        "section_title": "Тип 1: Найти значение производной по наклону касательной",
+        "section_text_preview": "**Шаг 1:** Найди на графике точку, где проведена касательная.  \n**Шаг 2:** От этой точки проведи в сторону касательной два отрезка:  \n- один — по горизонтали (на 1–2–3 клетки вправо),  \n- второй — по ",
+        "need_visual": true,
+        "visual_type": "step_by_step_diagram",
+        "pedagogical_goal": "",
+        "description": "",
+        "params": {},
+        "caption": "",
+        "placement": "after_section",
+        "priority": "high"
+      },
+      "llm_meta": {
+        "model": "Qwen/Qwen2.5-7B-Instruct-Turbo",
+        "pass1_decision": {
+          "section_id": 5,
+          "need_visual": true,
+          "visual_type": "step_by_step_diagram",
+          "reason": "шаги решения задачи"
+        }
+      }
+    },
+    {
+      "plan": {
+        "section_id": 6,
+        "section_title": "Тип 2: По графику производной найти, где функция возрастает/убывает",
+        "section_text_preview": "**Шаг 1:** Найди на графике $f'(x)$ участки, где она **выше оси $x$** ($f'(x) > 0$).  \n→ На этих участках функция $f(x)$ **возрастает**.  \n**Шаг 2:** Найди участки, где $f'(x) < 0$ (ниже оси).  \n→ Там",
+        "need_visual": true,
+        "visual_type": "step_by_step_diagram",
+        "pedagogical_goal": "Понять и запомнить алгоритм построения графика возрастания и убывания функции по её производной",
+        "description": "Вертикальная цепочка шагов с подробными описаниями и выделением ключевых моментов",
+        "params": {
+          "steps": [
+            {
+              "label": "Найди участки, где $f'(x) > 0$",
+              "detail": "График производной выше оси x"
+            },
+            {
+              "label": "Запиши, где функция возрастает",
+              "detail": "На этих участках $f(x)$ возрастает"
+            },
+            {
+              "label": "Найди участки, где $f'(x) < 0$",
+              "detail": "График производной ниже оси x"
+            },
+            {
+              "label": "Запиши, где функция убывает",
+              "detail": "На этих участках $f(x)$ убывает"
+            },
+            {
+              "label": "Если нужно, посчитай количество участков или точек",
+              "detail": "Подсчитай количество участков возрастания и убывания"
+            }
+          ]
+        },
+        "caption": "Алгоритм построения графика возрастания и убывания функции по её производной",
+        "placement": "after_section",
+        "priority": "high"
+      },
+      "llm_meta": {
+        "model": "Qwen/Qwen2.5-7B-Instruct-Turbo",
+        "pass1_decision": {
+          "section_id": 6,
+          "need_visual": true,
+          "visual_type": "step_by_step_diagram",
+          "reason": "шаги решения задачи"
+        }
+      }
+    },
+    {
+      "plan": {
+        "section_id": 7,
+        "section_title": "Пример 1: Найти значение производной по наклону касательной",
+        "section_text_preview": "**Задача:** На графике функции $y = f(x)$ проведена касательная в точке $x = 2$. Найдите $f'(2)$.\n\n**График:** В точке $x = 2$, $y = 3$. Касательная идёт из точки $(2, 3)$ в точку $(4, 7)$.\n\n**Решение",
+        "need_visual": true,
+        "visual_type": "annotated_example",
+        "pedagogical_goal": "Показать процесс нахождения производной по наклону касательной с пошаговым объяснением",
+        "description": "Пошаговое решение задачи с выделением ключевых преобразований и объяснением каждого шага",
+        "params": {
+          "problem": "Найдите значение производной $f'(2)$ для функции $y = f(x)$ в точке $x = 2$",
+          "steps": [
+            {
+              "expression": "y = 3 при x = 2",
+              "annotation": "Координаты точки касания"
+            },
+            {
+              "expression": "y = 7 при x = 4",
+              "annotation": "Координаты конца отрезка касательной"
+            },
+            {
+              "expression": "\\Delta x = 4 - 2 = 2",
+              "annotation": "Расчёт \\Delta x"
+            },
+            {
+              "expression": "\\Delta y = 7 - 3 = 4",
+              "annotation": "Расчёт \\Delta y"
+            },
+            {
+              "expression": "f'(2) = \\frac{\\Delta y}{\\Delta x} = \\frac{4}{2} = 2",
+              "annotation": "Вычисление производной"
+            }
+          ]
+        },
+        "caption": "Пошаговое решение задачи нахождения производной по наклону касательной",
+        "placement": "after_section",
+        "priority": "high"
+      },
+      "llm_meta": {
+        "model": "Qwen/Qwen2.5-7B-Instruct-Turbo",
+        "pass1_decision": {
+          "section_id": 7,
+          "need_visual": true,
+          "visual_type": "annotated_example",
+          "reason": "пример решения задачи"
+        }
+      }
+    },
+    {
+      "plan": {
+        "section_id": 8,
+        "section_title": "Пример 2: По графику производной найти, где функция возрастает",
+        "section_text_preview": "**Задача:** На рисунке изображён график производной функции $y = f(x)$, определённой на отрезке $[-5; 5]$. Найдите количество целых точек, в которых функция $f(x)$ возрастает.\n\n**График:**  \n- От $x =",
+        "need_visual": true,
+        "visual_type": "outcome_tree",
+        "pedagogical_goal": "Показать все интервалы, где функция возрастает, и выделить целые точки внутри этих интервалов",
+        "description": "Дерево исходов с интервалами возрастания функции и выделенными целыми точками",
+        "params": {
+          "experiment": "анализ графика производной функции",
+          "outcomes": [
+            {
+              "interval": "от -5 до -2",
+              "behavior": "убывает"
+            },
+            {
+              "interval": "от -2 до 1",
+              "behavior": "возрастает"
+            },
+            {
+              "interval": "от 1 до 5",
+              "behavior": "убывает"
+            }
+          ],
+          "favorable": [
+            {
+              "interval": "от -2 до 1",
+              "points": [
+                -1,
+                0
+              ]
+            }
+          ],
+          "total_n": 3,
+          "favorable_m": 2
+        },
+        "caption": "Интервалы возрастания функции и целые точки внутри них",
+        "placement": "after_section",
+        "priority": "high"
+      },
+      "llm_meta": {
+        "model": "Qwen/Qwen2.5-7B-Instruct-Turbo",
+        "pass1_decision": {
+          "section_id": 8,
+          "need_visual": true,
+          "visual_type": "outcome_tree",
+          "reason": "определение участков возрастания и убывания"
+        }
+      }
+    },
+    {
+      "plan": {
+        "section_id": 9,
+        "section_title": "6. ПРАКТИЧЕСКИЕ СОВЕТЫ",
+        "section_text_preview": "- **Начинай с треугольника:** Всегда строишь маленький прямоугольный треугольник от точки до касательной — так проще считать.\n- **Не путай знаки:** Если касательная идёт вниз — ответ отрицательный. Да",
+        "need_visual": false,
+        "visual_type": "none",
+        "pedagogical_goal": "",
+        "description": "",
+        "params": {},
+        "caption": "",
+        "placement": "after_section",
+        "priority": "medium"
+      },
+      "llm_meta": {
+        "model": "Qwen/Qwen2.5-7B-Instruct-Turbo",
+        "pass1_decision": {
+          "section_id": 9,
+          "need_visual": false,
+          "visual_type": "none",
+          "reason": "практические советы"
+        }
+      }
+    },
+    {
+      "plan": {
+        "section_id": 10,
+        "section_title": "Что нужно повторить:",
+        "section_text_preview": "- Что такое угловой коэффициент прямой ($k = \\Delta y / \\Delta x$)\n- Как определять знак наклона (вверх/вниз)\n- Что означает $f'(x) > 0$, $f'(x) < 0$\n- Как найти точки, где производная равна нулю (экс",
+        "need_visual": false,
+        "visual_type": "none",
+        "pedagogical_goal": "",
+        "description": "",
+        "params": {},
+        "caption": "",
+        "placement": "after_section",
+        "priority": "medium"
+      },
+      "llm_meta": {
+        "model": "Qwen/Qwen2.5-7B-Instruct-Turbo",
+        "pass1_decision": {
+          "section_id": 10,
+          "need_visual": false,
+          "visual_type": "none",
+          "reason": "что нужно повторить"
+        }
+      }
+    },
+    {
+      "plan": {
+        "section_id": 11,
+        "section_title": "Рекомендуемые материалы:",
+        "section_text_preview": "- Учебник: Алгебра 10–11, А.Г. Морожкин, §10–12 (производная)\n- Онлайн: сайт \"Решу ЕГЭ\" — раздел \"Графики функций и производных\"\n- Видео: \"Производная и график функции\" на YouTube (каналы: \"Математика",
+        "need_visual": false,
+        "visual_type": "none",
+        "pedagogical_goal": "",
+        "description": "",
+        "params": {},
+        "caption": "",
+        "placement": "after_section",
+        "priority": "medium"
+      },
+      "llm_meta": {
+        "model": "Qwen/Qwen2.5-7B-Instruct-Turbo",
+        "pass1_decision": {
+          "section_id": 11,
+          "need_visual": false,
+          "visual_type": "none",
+          "reason": "рекомендуемые материалы"
+        }
+      }
+    },
+    {
+      "plan": {
+        "section_id": 12,
+        "section_title": "Типичные ловушки:",
+        "section_text_preview": "- Считать, что чем выше график производной, тем больше сама функция.  \n  ❌ Нет! График производной — это **наклон**, а не значение функции.\n- Думать, что в точке максимума производная положительна.  \n",
+        "need_visual": true,
+        "visual_type": "outcome_tree",
+        "pedagogical_goal": "Показать типичные ловушки при работе с производной и их разрешение",
+        "description": "Дерево исходов с ловушками и правильными ответами",
+        "params": {
+          "experiment": "работа с производной",
+          "outcomes": [
+            [
+              "Нет, это наклон"
+            ],
+            [
+              "Нет, производная равна 0"
+            ],
+            [
+              "Не забыть про границы интервала"
+            ]
+          ],
+          "favorable": [
+            [
+              "Наклон"
+            ],
+            [
+              "Производная равна 0"
+            ],
+            [
+              "Запомнить границы интервала"
+            ]
+          ],
+          "total_n": 3,
+          "favorable_m": 3
+        },
+        "caption": "Типичные ловушки при работе с производной и их разрешение",
+        "placement": "after_section",
+        "priority": "high"
+      },
+      "llm_meta": {
+        "model": "Qwen/Qwen2.5-7B-Instruct-Turbo",
+        "pass1_decision": {
+          "section_id": 12,
+          "need_visual": true,
+          "visual_type": "outcome_tree",
+          "reason": "описание типичных ловушек"
+        }
+      }
+    }
+  ]
+}

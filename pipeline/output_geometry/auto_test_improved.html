@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8"/>
+<title>Задание 16 — Трапеция (улучшенный)</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$']], displayMath: [['$$','$$']] },
+  svg: { fontCache: 'global' }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Georgia','PT Serif',serif; background:#faf9f6; color:#2c2c2c; line-height:1.85; }
+  .page-header { background:linear-gradient(135deg,#1a1a2e 0%,#16213e 50%,#0f3460 100%); padding:36px 20px; text-align:center; color:white; }
+  .page-header h1 { font-size:24px; margin-bottom:6px; font-family:sans-serif; }
+  .page-header p { opacity:0.8; font-size:13px; font-family:sans-serif; }
+  .page-header a { color:#81d4fa; text-decoration:none; }
+  .conspect { max-width:740px; margin:0 auto; padding:32px 28px 60px; }
+  .step { animation: fadeIn 0.4s ease; }
+  @keyframes fadeIn { from { opacity:0; transform:translateY(12px); } to { opacity:1; transform:translateY(0); } }
+  .step-header { font-family:-apple-system,sans-serif; font-size:12px; color:#999; text-transform:uppercase; letter-spacing:0.5px; margin-bottom:12px; }
+  .text-block { margin:14px 0; font-size:16.5px; }
+  .text-block p { margin:5px 0; }
+  .text-block h2 { font-size:21px; color:#2c3e50; font-family:sans-serif; }
+  .text-block h3 { font-size:18px; color:#34495e; font-family:sans-serif; }
+  .text-block strong { color:#2c3e50; }
+  .formula { background:#f7f9fc; padding:14px 20px; border-radius:8px; margin:12px 0; text-align:center; border-left:3px solid #2980b9; }
+  .visual-block { margin:22px 0; text-align:center; }
+  .visual-frame { display:inline-block; background:white; border:1px solid #e0e0e0; border-radius:10px; padding:14px 18px; box-shadow:0 2px 10px rgba(0,0,0,0.06); }
+  .visual-frame svg { max-width:100%; height:auto; }
+  .visual-caption { font-family:-apple-system,sans-serif; font-size:13px; color:#777; margin-top:8px; font-style:italic; }
+  .nav { display:flex; justify-content:center; gap:12px; margin:28px 0; }
+  .nav button { font-family:-apple-system,sans-serif; font-size:14px; padding:10px 24px; border:1px solid #ddd; border-radius:8px; background:white; cursor:pointer; transition:all 0.2s; }
+  .nav button:hover:not(:disabled) { background:#2980b9; color:white; border-color:#2980b9; }
+  .nav button:disabled { opacity:0.4; cursor:default; }
+  .progress { display:flex; justify-content:center; gap:6px; margin:16px 0; }
+  .progress .dot { width:10px; height:10px; border-radius:50%; background:#ddd; transition:background 0.3s; }
+  .progress .dot.active { background:#2980b9; }
+  .footer { text-align:center; padding:30px 20px; color:#aaa; font-size:11px; font-family:sans-serif; border-top:1px solid #eee; }
+</style>
+</head>
+<body>
+<div class="page-header">
+  <h1>Задание 16 — Трапеция (улучшенный)</h1>
+  <p>Пошаговое построение — переключайте шаги кнопками или клавишами ←→</p>
+  
+</div>
+<div class="conspect">
+  <div class="progress" id="progress">
+    <div class="dot active" id="dot-0"></div><div class="dot" id="dot-1"></div><div class="dot" id="dot-2"></div><div class="dot" id="dot-3"></div>
+  </div>
+  
+<div class="step" id="step-0" style="display:block">
+  <div class="step-header">Шаг 1 из 4</div>
+  <div class="text-block"><p>Дана трапеция $ABCD$ с основаниями $BC=4$ и $AD=9$, диагоналями $AC=12$ и $BD=5$.</p></div>
+  <div class="visual-block">
+    <div class="visual-frame"><svg xmlns="http://www.w3.org/2000/svg" width="560" height="380" viewBox="0 0 560 380" style="background:white;font-family:sans-serif">
+  <line x1="70.0" y1="325.7" x2="157.5" y2="54.3" stroke="#333" stroke-width="1.5"/>
+  <line x1="157.5" y1="54.3" x2="297.5" y2="54.3" stroke="#2980b9" stroke-width="1.8"/>
+  <line x1="297.5" y1="54.3" x2="385.0" y2="325.7" stroke="#333" stroke-width="1.5"/>
+  <line x1="385.0" y1="325.7" x2="70.0" y2="325.7" stroke="#333" stroke-width="1.5"/>
+  <line x1="70.0" y1="325.7" x2="297.5" y2="54.3" stroke="#e74c3c" stroke-width="1.8"/>
+  <line x1="157.5" y1="54.3" x2="385.0" y2="325.7" stroke="#27ae60" stroke-width="1.8"/>
+  <circle cx="70.0" cy="325.7" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="58.0" y="337.7" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">A</text>
+  <circle cx="157.5" cy="54.3" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="145.5" y="42.3" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">B</text>
+  <circle cx="297.5" cy="54.3" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="305.5" y="42.3" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">C</text>
+  <circle cx="385.0" cy="325.7" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="397.0" y="337.7" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">D</text>
+  <text x="122.5" y="38.0" font-size="12" font-family="sans-serif" fill="#2980b9">BC = 4</text>
+  <text x="105.0" y="309.4" font-size="12" font-family="sans-serif" fill="#333">AD = 9</text>
+  <text x="59.5" y="282.3" font-size="12" font-family="sans-serif" fill="#e74c3c">AC = 12</text>
+  <text x="122.5" y="10.9" font-size="12" font-family="sans-serif" fill="#27ae60">BD = 5</text>
+</svg></div>
+    <div class="visual-caption">Трапеция ABCD</div>
+  </div>
+</div>
+
+<div class="step" id="step-1" style="display:none">
+  <div class="step-header">Шаг 2 из 4</div>
+  <div class="text-block"><p>Проведём $CF \parallel BD$. $BCFD$ — параллелограмм, значит, $DF = BC = 4$, $CF = BD = 5$.</p></div>
+  <div class="visual-block">
+    <div class="visual-frame"><svg xmlns="http://www.w3.org/2000/svg" width="560" height="380" viewBox="0 0 560 380" style="background:white;font-family:sans-serif">
+  <line x1="70.0" y1="325.7" x2="157.5" y2="54.3" stroke="#333" stroke-width="1.5"/>
+  <line x1="157.5" y1="54.3" x2="297.5" y2="54.3" stroke="#2980b9" stroke-width="1.8"/>
+  <line x1="297.5" y1="54.3" x2="385.0" y2="325.7" stroke="#333" stroke-width="1.5"/>
+  <line x1="385.0" y1="325.7" x2="70.0" y2="325.7" stroke="#333" stroke-width="1.5"/>
+  <line x1="70.0" y1="325.7" x2="297.5" y2="54.3" stroke="#e74c3c" stroke-width="1.8"/>
+  <line x1="157.5" y1="54.3" x2="385.0" y2="325.7" stroke="#27ae60" stroke-width="1.8"/>
+  <line x1="297.5" y1="54.3" x2="525.0" y2="325.7" stroke="#8e44ad" stroke-width="1.8"/>
+  <circle cx="70.0" cy="325.7" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="58.0" y="337.7" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">A</text>
+  <circle cx="157.5" cy="54.3" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="145.5" y="42.3" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">B</text>
+  <circle cx="297.5" cy="54.3" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="305.5" y="42.3" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">C</text>
+  <circle cx="385.0" cy="325.7" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="397.0" y="337.7" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">D</text>
+  <circle cx="525.0" cy="325.7" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="537.0" y="337.7" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">F</text>
+  <text x="122.5" y="38.0" font-size="12" font-family="sans-serif" fill="#2980b9">BC = 4</text>
+  <text x="105.0" y="309.4" font-size="12" font-family="sans-serif" fill="#333">AD = 9</text>
+  <text x="59.5" y="282.3" font-size="12" font-family="sans-serif" fill="#e74c3c">AC = 12</text>
+  <text x="122.5" y="10.9" font-size="12" font-family="sans-serif" fill="#27ae60">BD = 5</text>
+  <text x="420.0" y="342.0" font-size="12" font-family="sans-serif" fill="#8e44ad">DF = 4</text>
+  <text x="315.0" y="70.6" font-size="12" font-family="sans-serif" fill="#8e44ad">CF = 5</text>
+</svg></div>
+    <div class="visual-caption">Параллелограмм BCFD</div>
+  </div>
+</div>
+
+<div class="step" id="step-2" style="display:none">
+  <div class="step-header">Шаг 3 из 4</div>
+  <div class="text-block"><p>Треугольник $ACF$ со сторонами $AC = 12$, $CF = 5$, $AF = 9 + 4 = 13$ прямоугольный.</p></div>
+  <div class="visual-block">
+    <div class="visual-frame"><svg xmlns="http://www.w3.org/2000/svg" width="560" height="380" viewBox="0 0 560 380" style="background:white;font-family:sans-serif">
+  <line x1="70.0" y1="325.7" x2="157.5" y2="54.3" stroke="#333" stroke-width="1.5"/>
+  <line x1="157.5" y1="54.3" x2="297.5" y2="54.3" stroke="#2980b9" stroke-width="1.8"/>
+  <line x1="297.5" y1="54.3" x2="385.0" y2="325.7" stroke="#333" stroke-width="1.5"/>
+  <line x1="385.0" y1="325.7" x2="70.0" y2="325.7" stroke="#333" stroke-width="1.5"/>
+  <line x1="70.0" y1="325.7" x2="297.5" y2="54.3" stroke="#e74c3c" stroke-width="1.8"/>
+  <line x1="157.5" y1="54.3" x2="385.0" y2="325.7" stroke="#27ae60" stroke-width="1.8"/>
+  <line x1="297.5" y1="54.3" x2="525.0" y2="325.7" stroke="#8e44ad" stroke-width="1.8"/>
+  <polyline points="289.8,63.5 297.5,72.7 305.2,63.5" fill="none" stroke="#333333" stroke-width="1.2"/>
+  <circle cx="70.0" cy="325.7" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="58.0" y="337.7" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">A</text>
+  <circle cx="157.5" cy="54.3" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="145.5" y="42.3" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">B</text>
+  <circle cx="297.5" cy="54.3" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="305.5" y="42.3" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">C</text>
+  <circle cx="385.0" cy="325.7" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="397.0" y="337.7" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">D</text>
+  <circle cx="525.0" cy="325.7" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="537.0" y="337.7" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">F</text>
+  <text x="122.5" y="38.0" font-size="12" font-family="sans-serif" fill="#2980b9">BC = 4</text>
+  <text x="105.0" y="309.4" font-size="12" font-family="sans-serif" fill="#333">AD = 9</text>
+  <text x="59.5" y="282.3" font-size="12" font-family="sans-serif" fill="#e74c3c">AC = 12</text>
+  <text x="122.5" y="10.9" font-size="12" font-family="sans-serif" fill="#27ae60">BD = 5</text>
+  <text x="420.0" y="342.0" font-size="12" font-family="sans-serif" fill="#8e44ad">DF = 4</text>
+  <text x="315.0" y="70.6" font-size="12" font-family="sans-serif" fill="#8e44ad">CF = 5</text>
+  <text x="122.5" y="342.0" font-size="13" font-family="sans-serif" fill="#e67e22">AF = 13</text>
+</svg></div>
+    <div class="visual-caption">Прямоугольный треугольник ACF</div>
+  </div>
+</div>
+
+<div class="step" id="step-3" style="display:none">
+  <div class="step-header">Шаг 4 из 4</div>
+  <div class="text-block"><p>Значит, $AC$ и $BD$ перпендикулярны, что и требовалось доказать.</p>
+<br/>
+<p>Высота трапеции равна высоте треугольника $ACF$. Обозначим эту высоту $h$.</p>
+<br/>
+<p>$S_{ACF} = \frac{1}{2} \cdot AF \cdot h = \frac{1}{2} \cdot AC \cdot CF$</p>
+<br/>
+<p>$13h = 12 \cdot 5$</p>
+<br/>
+<p>$h = \frac{60}{13}$</p></div>
+  <div class="visual-block">
+    <div class="visual-frame"><svg xmlns="http://www.w3.org/2000/svg" width="560" height="380" viewBox="0 0 560 380" style="background:white;font-family:sans-serif">
+  <line x1="70.0" y1="325.7" x2="157.5" y2="54.3" stroke="#333" stroke-width="1.5"/>
+  <line x1="157.5" y1="54.3" x2="297.5" y2="54.3" stroke="#2980b9" stroke-width="1.8"/>
+  <line x1="297.5" y1="54.3" x2="385.0" y2="325.7" stroke="#333" stroke-width="1.5"/>
+  <line x1="385.0" y1="325.7" x2="70.0" y2="325.7" stroke="#333" stroke-width="1.5"/>
+  <line x1="70.0" y1="325.7" x2="297.5" y2="54.3" stroke="#e74c3c" stroke-width="1.8"/>
+  <line x1="157.5" y1="54.3" x2="385.0" y2="325.7" stroke="#27ae60" stroke-width="1.8"/>
+  <line x1="297.5" y1="54.3" x2="525.0" y2="325.7" stroke="#8e44ad" stroke-width="1.8"/>
+  <polyline points="289.8,63.5 297.5,72.7 305.2,63.5" fill="none" stroke="#333333" stroke-width="1.2"/>
+  <circle cx="70.0" cy="325.7" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="58.0" y="337.7" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">A</text>
+  <circle cx="157.5" cy="54.3" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="145.5" y="42.3" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">B</text>
+  <circle cx="297.5" cy="54.3" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="305.5" y="42.3" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">C</text>
+  <circle cx="385.0" cy="325.7" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="397.0" y="337.7" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">D</text>
+  <circle cx="525.0" cy="325.7" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="537.0" y="337.7" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">F</text>
+  <text x="122.5" y="38.0" font-size="12" font-family="sans-serif" fill="#2980b9">BC = 4</text>
+  <text x="105.0" y="309.4" font-size="12" font-family="sans-serif" fill="#333">AD = 9</text>
+  <text x="59.5" y="282.3" font-size="12" font-family="sans-serif" fill="#e74c3c">AC = 12</text>
+  <text x="122.5" y="10.9" font-size="12" font-family="sans-serif" fill="#27ae60">BD = 5</text>
+  <text x="420.0" y="342.0" font-size="12" font-family="sans-serif" fill="#8e44ad">DF = 4</text>
+  <text x="315.0" y="70.6" font-size="12" font-family="sans-serif" fill="#8e44ad">CF = 5</text>
+  <text x="122.5" y="342.0" font-size="13" font-family="sans-serif" fill="#e67e22">AF = 13</text>
+  <text x="122.5" y="342.0" font-size="13" font-family="sans-serif" fill="#8e44ad">h = 60/13</text>
+</svg></div>
+    <div class="visual-caption">Ответ: h = 60/13</div>
+  </div>
+</div>
+  <div class="nav">
+    <button id="btn-prev" onclick="navigate(-1)" disabled>← Назад</button>
+    <button id="btn-next" onclick="navigate(1)">Далее →</button>
+  </div>
+</div>
+<div class="footer">
+  Автоматическая генерация: LLM-планировщик → StepByStepGeo → Solver → SVG Renderer |
+  4 пошаговых построений
+</div>
+<script>
+let current = 0;
+const total = 4;
+function navigate(dir) {
+  document.getElementById('step-' + current).style.display = 'none';
+  document.getElementById('dot-' + current).classList.remove('active');
+  current = Math.max(0, Math.min(total - 1, current + dir));
+  const el = document.getElementById('step-' + current);
+  el.style.display = 'block';
+  el.style.animation = 'none';
+  el.offsetHeight;
+  el.style.animation = 'fadeIn 0.4s ease';
+  document.getElementById('dot-' + current).classList.add('active');
+  document.getElementById('btn-prev').disabled = (current === 0);
+  document.getElementById('btn-next').disabled = (current === total - 1);
+}
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'ArrowRight' || e.key === ' ') navigate(1);
+  if (e.key === 'ArrowLeft') navigate(-1);
+});
+</script>
+</body></html>

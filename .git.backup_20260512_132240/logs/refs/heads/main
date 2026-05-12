@@ -1,0 +1,7 @@
+0000000000000000000000000000000000000000 bafaead9db7b572f834c46855ebc9ca711b10e9f Александр Низов <nizoff.as@yandex.ru> 1773851553 +0300	commit (initial): Visual planner for EGE conspects: implementation + experiments
+bafaead9db7b572f834c46855ebc9ca711b10e9f bafaead9db7b572f834c46855ebc9ca711b10e9f Александр Низов <nizoff.as@yandex.ru> 1773851667 +0300	Branch: renamed refs/heads/master to refs/heads/main
+bafaead9db7b572f834c46855ebc9ca711b10e9f 5418fe3f433e0a6c6f0e7a0193d5a913f411624b Александр Низов <nizoff.as@yandex.ru> 1773851723 +0300	commit: Rename REPORT.md to README.md
+5418fe3f433e0a6c6f0e7a0193d5a913f411624b 54b59dbf4ac07bf51cd1a23ba84f237f5c1a5d89 Александр Низов <nizoff.as@yandex.ru> 1773851818 +0300	commit: Move task files to conspects/ and docx files to docs/
+54b59dbf4ac07bf51cd1a23ba84f237f5c1a5d89 ae0c426f608bfe49a2897c4b56989307f2189e76 Александр Низов <nizoff.as@yandex.ru> 1774458705 +0300	commit: Visual planner v2: two-pass planning, few-shot prompts, validation
+ae0c426f608bfe49a2897c4b56989307f2189e76 61be982fb62cf2e598c8dd82e1f12cef9c909e56 Александр Низов <nizoff.as@yandex.ru> 1774458712 +0300	pull --rebase origin main (finish): refs/heads/main onto 033d6413c6a823604464d2e45c88e7635b0b57c2
+61be982fb62cf2e598c8dd82e1f12cef9c909e56 8479026c30655cc49b5d3deeb73a8ff2b5ac65cf Александр Низов <nizoff.as@yandex.ru> 1775060493 +0300	commit: Pipeline integration: visual planner + SVG generator

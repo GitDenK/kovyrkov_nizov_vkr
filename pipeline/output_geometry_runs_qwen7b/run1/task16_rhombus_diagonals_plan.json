@@ -1,0 +1,217 @@
+{
+  "title": "Ромб ABCD",
+  "points": {
+    "A": {
+      "x": -8,
+      "y": 0,
+      "z": 0,
+      "label_dx": -12,
+      "label_dy": 12
+    },
+    "B": {
+      "x": -3,
+      "y": 6,
+      "z": 0,
+      "label_dx": -14,
+      "label_dy": 8
+    },
+    "C": {
+      "x": 3,
+      "y": 6,
+      "z": 0,
+      "label_dx": 10,
+      "label_dy": 8
+    },
+    "D": {
+      "x": 8,
+      "y": 0,
+      "z": 0,
+      "label_dx": 8,
+      "label_dy": 12
+    },
+    "O": {
+      "x": 0,
+      "y": 3,
+      "z": 0,
+      "label_dx": 8,
+      "label_dy": 10
+    },
+    "M": {
+      "x": -3,
+      "y": 2.5,
+      "z": 0,
+      "label_dx": -14,
+      "label_dy": 8
+    },
+    "H": {
+      "x": -3,
+      "y": 0,
+      "label_dx": 8,
+      "label_dy": 12,
+      "z": 0
+    }
+  },
+  "faces": [
+    [
+      "A",
+      "B",
+      "C",
+      "D"
+    ]
+  ],
+  "steps": [
+    {
+      "text": "Ромб $ABCD$ с диагоналями $AC=16$ и $BD=12$. $O$ — точка пересечения диагоналей.",
+      "objects": [
+        {
+          "type": "point",
+          "id": "A"
+        },
+        {
+          "type": "point",
+          "id": "B"
+        },
+        {
+          "type": "point",
+          "id": "C"
+        },
+        {
+          "type": "point",
+          "id": "D"
+        },
+        {
+          "type": "point",
+          "id": "O"
+        },
+        {
+          "type": "segment",
+          "id": "s_AC",
+          "from_point": "A",
+          "to_point": "C"
+        },
+        {
+          "type": "segment",
+          "id": "s_BD",
+          "from_point": "B",
+          "to_point": "D"
+        }
+      ],
+      "annotations": [
+        {
+          "type": "label",
+          "id": "lbl_AC",
+          "text": "AC=16",
+          "anchor": "A",
+          "dx": -12,
+          "dy": 12,
+          "color": "#2980b9",
+          "font_size": 12
+        },
+        {
+          "type": "label",
+          "id": "lbl_BD",
+          "text": "BD=12",
+          "anchor": "B",
+          "dx": -14,
+          "dy": 8,
+          "color": "#e74c3c",
+          "font_size": 12
+        }
+      ],
+      "constraints": [],
+      "caption": "Ромб ABCD"
+    },
+    {
+      "text": "На стороне $AB$ взята точка $M$ такая, что $AM=5$. $O$ — точка пересечения диагоналей.",
+      "objects": [
+        {
+          "type": "point",
+          "id": "M",
+          "style": {
+            "fill": "#27ae60",
+            "stroke": "#27ae60"
+          }
+        }
+      ],
+      "annotations": [
+        {
+          "type": "label",
+          "id": "lbl_AM",
+          "text": "AM=5",
+          "anchor": "A",
+          "dx": -12,
+          "dy": 12,
+          "color": "#27ae60",
+          "font_size": 12
+        }
+      ],
+      "constraints": [],
+      "caption": "Точка M"
+    },
+    {
+      "text": "Точка $H$ — проекция точки $M$ на диагональ $BD$.",
+      "objects": [
+        {
+          "type": "point",
+          "id": "H",
+          "style": {
+            "fill": "#e74c3c",
+            "stroke": "#e74c3c"
+          }
+        }
+      ],
+      "annotations": [
+        {
+          "type": "label",
+          "id": "lbl_H",
+          "text": "H",
+          "anchor": "H",
+          "dx": 0,
+          "dy": 0,
+          "color": "#e74c3c",
+          "font_size": 12
+        }
+      ],
+      "constraints": [
+        {
+          "type": "perpendicular",
+          "id": "perp_MH",
+          "point": "M",
+          "line_point1": "B",
+          "line_point2": "D",
+          "foot_id": "H"
+        }
+      ],
+      "caption": "Проекция M на BD"
+    },
+    {
+      "text": "Расстояние от точки $M$ до диагонали $BD$ равно длине отрезка $MH$.",
+      "objects": [
+        {
+          "type": "segment",
+          "id": "s_MH",
+          "from_point": "M",
+          "to_point": "H",
+          "style": {
+            "stroke": "#2980b9",
+            "stroke_width": 2
+          }
+        }
+      ],
+      "annotations": [
+        {
+          "type": "label",
+          "id": "lbl_MH",
+          "text": "MH",
+          "anchor": "M",
+          "dx": -12,
+          "dy": 12,
+          "color": "#2980b9",
+          "font_size": 12
+        }
+      ],
+      "constraints": [],
+      "caption": "Ответ: MH"
+    }
+  ]
+}

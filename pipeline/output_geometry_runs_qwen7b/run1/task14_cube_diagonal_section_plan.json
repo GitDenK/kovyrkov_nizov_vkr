@@ -1,0 +1,257 @@
+{
+  "title": "Сечение куба плоскостью через точки A, M и D1",
+  "points": {
+    "A": {
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "label_dx": -12,
+      "label_dy": 12
+    },
+    "B": {
+      "x": -4,
+      "y": 4,
+      "z": 0,
+      "label_dx": -12,
+      "label_dy": 12
+    },
+    "C": {
+      "x": 4,
+      "y": 4,
+      "z": 0,
+      "label_dx": 12,
+      "label_dy": 12
+    },
+    "D": {
+      "x": 0,
+      "y": 4,
+      "z": 0,
+      "label_dx": -12,
+      "label_dy": 12
+    },
+    "A1": {
+      "x": 0,
+      "y": 4,
+      "z": 4,
+      "label_dx": -12,
+      "label_dy": -12
+    },
+    "B1": {
+      "x": -4,
+      "y": 4,
+      "z": 4,
+      "label_dx": -12,
+      "label_dy": -12
+    },
+    "C1": {
+      "x": 4,
+      "y": 4,
+      "z": 4,
+      "label_dx": 12,
+      "label_dy": -12
+    },
+    "D1": {
+      "x": 0,
+      "y": 4,
+      "z": 4,
+      "label_dx": -12,
+      "label_dy": -12
+    },
+    "M": {
+      "x": 0,
+      "y": 4,
+      "z": 2,
+      "label_dx": -12,
+      "label_dy": -12
+    },
+    "H": {
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "label_dx": -12,
+      "label_dy": 12
+    }
+  },
+  "faces": [
+    [
+      "A",
+      "B",
+      "B1",
+      "A1"
+    ],
+    [
+      "B",
+      "C",
+      "C1",
+      "B1"
+    ],
+    [
+      "C",
+      "D",
+      "D1",
+      "C1"
+    ],
+    [
+      "D",
+      "A",
+      "A1",
+      "D1"
+    ],
+    [
+      "A1",
+      "B1",
+      "C1",
+      "D1"
+    ],
+    [
+      "A",
+      "D",
+      "D1",
+      "A1"
+    ],
+    [
+      "A",
+      "B",
+      "M",
+      "D"
+    ],
+    [
+      "B",
+      "C",
+      "M",
+      "D1"
+    ],
+    [
+      "C",
+      "D",
+      "M",
+      "D1"
+    ],
+    [
+      "A",
+      "M",
+      "D1",
+      "D"
+    ]
+  ],
+  "steps": [
+    {
+      "text": "Куб ABCDA1B1C1D1 с ребром 4. Точка M --- середина ребра CC1.",
+      "objects": [
+        {
+          "type": "point",
+          "id": "A"
+        },
+        {
+          "type": "point",
+          "id": "B"
+        },
+        {
+          "type": "point",
+          "id": "C"
+        },
+        {
+          "type": "point",
+          "id": "D"
+        },
+        {
+          "type": "point",
+          "id": "A1"
+        },
+        {
+          "type": "point",
+          "id": "B1"
+        },
+        {
+          "type": "point",
+          "id": "C1"
+        },
+        {
+          "type": "point",
+          "id": "D1"
+        },
+        {
+          "type": "point",
+          "id": "M"
+        }
+      ],
+      "annotations": [],
+      "constraints": [],
+      "caption": "Куб ABCDA1B1C1D1"
+    },
+    {
+      "text": "Построим сечение плоскостью через точки A, M и D1.",
+      "objects": [
+        {
+          "type": "segment",
+          "id": "s_AM",
+          "from_point": "A",
+          "to_point": "M"
+        },
+        {
+          "type": "segment",
+          "id": "s_MD1",
+          "from_point": "M",
+          "to_point": "D1"
+        }
+      ],
+      "annotations": [],
+      "constraints": [],
+      "caption": "Сечение через точки A, M и D1"
+    },
+    {
+      "text": "Найдем точку H --- проекцию точки D1 на плоскость ABD.",
+      "objects": [
+        {
+          "type": "point",
+          "id": "H"
+        }
+      ],
+      "annotations": [],
+      "constraints": [
+        {
+          "type": "perpendicular",
+          "id": "perp_DH",
+          "point": "D1",
+          "line_point1": "D",
+          "line_point2": "A",
+          "foot_id": "H"
+        }
+      ],
+      "caption": "Проекция D1 на плоскость ABD"
+    },
+    {
+      "text": "Треугольник AHM --- сечение куба.\n\nНайдем площадь треугольника AHM.",
+      "objects": [
+        {
+          "type": "polygon",
+          "id": "tri_AHM",
+          "vertices": [
+            "A",
+            "H",
+            "M"
+          ],
+          "style": {
+            "fill": "rgba(41,128,185,0.08)",
+            "stroke": "#2980b9",
+            "stroke_width": 2
+          }
+        }
+      ],
+      "annotations": [
+        {
+          "type": "label",
+          "id": "lbl_AHM",
+          "text": "AHM",
+          "anchor": "M",
+          "dx": 0.5,
+          "dy": 0.3,
+          "color": "#27ae60",
+          "font_size": 13
+        }
+      ],
+      "constraints": [],
+      "caption": "Треугольник AHM"
+    }
+  ]
+}

@@ -1,0 +1,296 @@
+
+######################################################################
+# RUN 1 / 3
+######################################################################
+[geometry_auto] Planning (Qwen/Qwen2.5-7B-Instruct-Turbo)...
+  Done in 14.6s (5285+1552 tok)
+  Raw length: 4171 chars
+[geometry_auto] Plan validated successfully
+[geometry_auto] Plan saved: pipeline/output_geometry_runs_qwen7b/run1/task16_trapezoid_plan.json
+  3D plan detected (7 points), auto-canvas: x=[-0.1..12.1] y=[2.9..5.1]
+[geometry_auto] Report: pipeline/output_geometry_runs_qwen7b/run1/task16_trapezoid.html
+[geometry_auto] 6 text blocks, 6 visuals
+[geometry_auto] Metrics: wall=14.625s, LLM=14.619s (1 calls, 5285+1552 tok), steps=0.0019s (6)
+[geometry_auto] Metrics saved: pipeline/output_geometry_runs_qwen7b/run1/task16_trapezoid_metrics.json
+[geometry_auto] Planning (Qwen/Qwen2.5-7B-Instruct-Turbo)...
+  Done in 11.9s (5279+1142 tok)
+  Raw length: 2796 chars
+  AUTO-CREATED point 'H' at (-3, 0, 0)
+[geometry_auto] Plan validated successfully
+[geometry_auto] Plan saved: pipeline/output_geometry_runs_qwen7b/run1/task16_rhombus_diagonals_plan.json
+  3D plan detected (7 points), auto-canvas: x=[-0.1..12.1] y=[3.1..4.9]
+[geometry_auto] Report: pipeline/output_geometry_runs_qwen7b/run1/task16_rhombus_diagonals.html
+[geometry_auto] 4 text blocks, 4 visuals
+[geometry_auto] Metrics: wall=11.86s, LLM=11.855s (1 calls, 5279+1142 tok), steps=0.0009s (4)
+[geometry_auto] Metrics saved: pipeline/output_geometry_runs_qwen7b/run1/task16_rhombus_diagonals_metrics.json
+[geometry_auto] Planning (Qwen/Qwen2.5-7B-Instruct-Turbo)...
+  Done in 10.8s (5264+1287 tok)
+  Raw length: 3489 chars
+[geometry_auto] Plan validated successfully
+[geometry_auto] Plan saved: pipeline/output_geometry_runs_qwen7b/run1/task14_pyramid_apex_to_face_plan.json
+  [auto-visibility] Modified 3 edge(s) visibility
+  3D plan detected (7 points), auto-canvas: x=[-0.1..12.1] y=[-0.6..8.6]
+[geometry_auto] Report: pipeline/output_geometry_runs_qwen7b/run1/task14_pyramid_apex_to_face.html
+[geometry_auto] 5 text blocks, 5 visuals
+[geometry_auto] Metrics: wall=10.827s, LLM=10.821s (1 calls, 5264+1287 tok), steps=0.0015s (5)
+[geometry_auto] Metrics saved: pipeline/output_geometry_runs_qwen7b/run1/task14_pyramid_apex_to_face_metrics.json
+[geometry_auto] Planning (Qwen/Qwen2.5-7B-Instruct-Turbo)...
+  Done in 10.7s (5292+1154 tok)
+  Raw length: 2805 chars
+  WARNING: step 3 polygon 'trap' references unknown point 'N'
+[geometry_auto] Retry 1/2: 1 validation issues found, requesting fix...
+[geometry_auto] Planning (Qwen/Qwen2.5-7B-Instruct-Turbo)...
+  Done in 12.9s (6452+1424 tok)
+  Raw length: 4200 chars
+[geometry_auto] Plan validated successfully
+[geometry_auto] Plan saved: pipeline/output_geometry_runs_qwen7b/run1/task14_prism_section_plan.json
+  [auto-visibility] Modified 4 edge(s) visibility
+  3D plan detected (8 points), auto-canvas: x=[-0.1..12.1] y=[-1.2..9.2]
+[geometry_auto] Report: pipeline/output_geometry_runs_qwen7b/run1/task14_prism_section.html
+[geometry_auto] 4 text blocks, 4 visuals
+[geometry_auto] Metrics: wall=23.586s, LLM=23.579s (2 calls, 11744+2578 tok), steps=0.0011s (4)
+[geometry_auto] Metrics saved: pipeline/output_geometry_runs_qwen7b/run1/task14_prism_section_metrics.json
+[geometry_auto] Planning (Qwen/Qwen2.5-7B-Instruct-Turbo)...
+  Done in 10.1s (5289+996 tok)
+  Raw length: 2340 chars
+  [run1/task16_triangle_circumscribed] FAILED: Plan has fewer than 2 steps
+[geometry_auto] Planning (Qwen/Qwen2.5-7B-Instruct-Turbo)...
+  Done in 14.5s (5273+1510 tok)
+  Raw length: 3695 chars
+[geometry_auto] Plan validated successfully
+[geometry_auto] Plan saved: pipeline/output_geometry_runs_qwen7b/run1/task16_parallelogram_diagonals_plan.json
+  [auto-visibility] Modified 4 edge(s) visibility
+  3D plan detected (7 points), auto-canvas: x=[-0.1..12.1] y=[2.9..5.1]
+[geometry_auto] Report: pipeline/output_geometry_runs_qwen7b/run1/task16_parallelogram_diagonals.html
+[geometry_auto] 4 text blocks, 4 visuals
+[geometry_auto] Metrics: wall=14.495s, LLM=14.49s (1 calls, 5273+1510 tok), steps=0.0013s (4)
+[geometry_auto] Metrics saved: pipeline/output_geometry_runs_qwen7b/run1/task16_parallelogram_diagonals_metrics.json
+[geometry_auto] Planning (Qwen/Qwen2.5-7B-Instruct-Turbo)...
+  Done in 12.3s (5285+1236 tok)
+  Raw length: 2982 chars
+  WARNING: step 2 references unknown point 'H'
+  WARNING: step 2 constraint 'perp_DH' references unknown point 'H' in field 'foot_id'
+  WARNING: step 3 polygon 'tri_AHM' references unknown point 'H'
+[geometry_auto] Retry 1/2: 3 validation issues found, requesting fix...
+[geometry_auto] Planning (Qwen/Qwen2.5-7B-Instruct-Turbo)...
+  Done in 13.9s (6561+1474 tok)
+  Raw length: 4262 chars
+[geometry_auto] Plan validated successfully
+[geometry_auto] Plan saved: pipeline/output_geometry_runs_qwen7b/run1/task14_cube_diagonal_section_plan.json
+  [auto-visibility] Modified 2 edge(s) visibility
+  3D plan detected (10 points), auto-canvas: x=[-0.1..12.1] y=[0.1..7.9]
+[geometry_auto] Report: pipeline/output_geometry_runs_qwen7b/run1/task14_cube_diagonal_section.html
+[geometry_auto] 4 text blocks, 4 visuals
+[geometry_auto] Metrics: wall=26.162s, LLM=26.156s (2 calls, 11846+2710 tok), steps=0.0009s (4)
+[geometry_auto] Metrics saved: pipeline/output_geometry_runs_qwen7b/run1/task14_cube_diagonal_section_metrics.json
+[geometry_auto] Planning (Qwen/Qwen2.5-7B-Instruct-Turbo)...
+  Done in 15.2s (5290+1597 tok)
+  Raw length: 4049 chars
+[geometry_auto] Plan validated successfully
+[geometry_auto] Plan saved: pipeline/output_geometry_runs_qwen7b/run1/task14_pyramid_dihedral_angle_plan.json
+  [auto-visibility] Modified 3 edge(s) visibility
+  3D plan detected (8 points), auto-canvas: x=[-0.1..12.1] y=[0.0..8.0]
+[geometry_auto] Report: pipeline/output_geometry_runs_qwen7b/run1/task14_pyramid_dihedral_angle.html
+[geometry_auto] 6 text blocks, 6 visuals
+[geometry_auto] Metrics: wall=15.254s, LLM=15.249s (1 calls, 5290+1597 tok), steps=0.0016s (6)
+[geometry_auto] Metrics saved: pipeline/output_geometry_runs_qwen7b/run1/task14_pyramid_dihedral_angle_metrics.json
+
+######################################################################
+# RUN 2 / 3
+######################################################################
+[geometry_auto] Planning (Qwen/Qwen2.5-7B-Instruct-Turbo)...
+  Done in 16.4s (5285+1713 tok)
+  Raw length: 4518 chars
+[geometry_auto] Plan validated successfully
+[geometry_auto] Plan saved: pipeline/output_geometry_runs_qwen7b/run2/task16_trapezoid_plan.json
+  3D plan detected (7 points), auto-canvas: x=[-0.1..12.1] y=[2.9..5.1]
+[geometry_auto] Report: pipeline/output_geometry_runs_qwen7b/run2/task16_trapezoid.html
+[geometry_auto] 5 text blocks, 5 visuals
+[geometry_auto] Metrics: wall=16.44s, LLM=16.434s (1 calls, 5285+1713 tok), steps=0.0013s (5)
+[geometry_auto] Metrics saved: pipeline/output_geometry_runs_qwen7b/run2/task16_trapezoid_metrics.json
+[geometry_auto] Planning (Qwen/Qwen2.5-7B-Instruct-Turbo)...
+  Done in 10.2s (5279+1098 tok)
+  Raw length: 2686 chars
+  AUTO-CREATED point 'H' at (-3.5, 0, 0)
+[geometry_auto] Plan validated successfully
+[geometry_auto] Plan saved: pipeline/output_geometry_runs_qwen7b/run2/task16_rhombus_diagonals_plan.json
+  3D plan detected (7 points), auto-canvas: x=[-0.1..12.1] y=[3.1..4.9]
+[geometry_auto] Report: pipeline/output_geometry_runs_qwen7b/run2/task16_rhombus_diagonals.html
+[geometry_auto] 4 text blocks, 4 visuals
+[geometry_auto] Metrics: wall=10.234s, LLM=10.23s (1 calls, 5279+1098 tok), steps=0.001s (4)
+[geometry_auto] Metrics saved: pipeline/output_geometry_runs_qwen7b/run2/task16_rhombus_diagonals_metrics.json
+[geometry_auto] Planning (Qwen/Qwen2.5-7B-Instruct-Turbo)...
+  Done in 14.2s (5264+1209 tok)
+  Raw length: 3024 chars
+[geometry_auto] Plan validated successfully
+[geometry_auto] Plan saved: pipeline/output_geometry_runs_qwen7b/run2/task14_pyramid_apex_to_face_plan.json
+  [auto-visibility] Modified 3 edge(s) visibility
+  3D plan detected (7 points), auto-canvas: x=[-0.1..12.1] y=[-1.5..9.5]
+[geometry_auto] Report: pipeline/output_geometry_runs_qwen7b/run2/task14_pyramid_apex_to_face.html
+[geometry_auto] 5 text blocks, 5 visuals
+[geometry_auto] Metrics: wall=14.234s, LLM=14.229s (1 calls, 5264+1209 tok), steps=0.0011s (5)
+[geometry_auto] Metrics saved: pipeline/output_geometry_runs_qwen7b/run2/task14_pyramid_apex_to_face_metrics.json
+[geometry_auto] Planning (Qwen/Qwen2.5-7B-Instruct-Turbo)...
+  Done in 14.0s (5292+1440 tok)
+  Raw length: 3737 chars
+[geometry_auto] Plan validated successfully
+[geometry_auto] Plan saved: pipeline/output_geometry_runs_qwen7b/run2/task14_prism_section_plan.json
+  [auto-visibility] Modified 3 edge(s) visibility
+  3D plan detected (8 points), auto-canvas: x=[-0.1..12.1] y=[-1.2..9.2]
+[geometry_auto] Report: pipeline/output_geometry_runs_qwen7b/run2/task14_prism_section.html
+[geometry_auto] 5 text blocks, 5 visuals
+[geometry_auto] Metrics: wall=14.046s, LLM=14.041s (1 calls, 5292+1440 tok), steps=0.0015s (5)
+[geometry_auto] Metrics saved: pipeline/output_geometry_runs_qwen7b/run2/task14_prism_section_metrics.json
+[geometry_auto] Planning (Qwen/Qwen2.5-7B-Instruct-Turbo)...
+  Done in 9.2s (5289+834 tok)
+  Raw length: 2018 chars
+[geometry_auto] Plan validated successfully
+[geometry_auto] Plan saved: pipeline/output_geometry_runs_qwen7b/run2/task16_triangle_circumscribed_plan.json
+  [auto-visibility] Modified 3 edge(s) visibility
+  3D plan detected (4 points), auto-canvas: x=[-0.1..12.1] y=[3.2..4.8]
+[geometry_auto] Report: pipeline/output_geometry_runs_qwen7b/run2/task16_triangle_circumscribed.html
+[geometry_auto] 2 text blocks, 2 visuals
+[geometry_auto] Metrics: wall=9.189s, LLM=9.185s (1 calls, 5289+834 tok), steps=0.0005s (2)
+[geometry_auto] Metrics saved: pipeline/output_geometry_runs_qwen7b/run2/task16_triangle_circumscribed_metrics.json
+[geometry_auto] Planning (Qwen/Qwen2.5-7B-Instruct-Turbo)...
+  Done in 15.7s (5273+1401 tok)
+  Raw length: 3393 chars
+[geometry_auto] Plan validated successfully
+[geometry_auto] Plan saved: pipeline/output_geometry_runs_qwen7b/run2/task16_parallelogram_diagonals_plan.json
+  [auto-visibility] Modified 4 edge(s) visibility
+  3D plan detected (5 points), auto-canvas: x=[-0.1..12.1] y=[3.5..4.5]
+[geometry_auto] Report: pipeline/output_geometry_runs_qwen7b/run2/task16_parallelogram_diagonals.html
+[geometry_auto] 4 text blocks, 4 visuals
+[geometry_auto] Metrics: wall=15.73s, LLM=15.725s (1 calls, 5273+1401 tok), steps=0.0011s (4)
+[geometry_auto] Metrics saved: pipeline/output_geometry_runs_qwen7b/run2/task16_parallelogram_diagonals_metrics.json
+[geometry_auto] Planning (Qwen/Qwen2.5-7B-Instruct-Turbo)...
+  Done in 18.4s (5285+1348 tok)
+  Raw length: 3596 chars
+  AUTO-CREATED point 'H' at (0, 0, 0)
+[geometry_auto] Plan validated successfully
+[geometry_auto] Plan saved: pipeline/output_geometry_runs_qwen7b/run2/task14_cube_diagonal_section_plan.json
+  3D plan detected (10 points), auto-canvas: x=[-0.1..12.1] y=[0.1..7.9]
+[geometry_auto] Report: pipeline/output_geometry_runs_qwen7b/run2/task14_cube_diagonal_section.html
+[geometry_auto] 6 text blocks, 6 visuals
+[geometry_auto] Metrics: wall=18.439s, LLM=18.432s (1 calls, 5285+1348 tok), steps=0.0016s (6)
+[geometry_auto] Metrics saved: pipeline/output_geometry_runs_qwen7b/run2/task14_cube_diagonal_section_metrics.json
+[geometry_auto] Planning (Qwen/Qwen2.5-7B-Instruct-Turbo)...
+  Done in 13.8s (5290+1471 tok)
+  Raw length: 3705 chars
+[geometry_auto] Plan validated successfully
+[geometry_auto] Plan saved: pipeline/output_geometry_runs_qwen7b/run2/task14_pyramid_dihedral_angle_plan.json
+  [auto-visibility] Modified 5 edge(s) visibility
+  3D plan detected (8 points), auto-canvas: x=[-0.1..12.1] y=[0.0..8.0]
+[geometry_auto] Report: pipeline/output_geometry_runs_qwen7b/run2/task14_pyramid_dihedral_angle.html
+[geometry_auto] 5 text blocks, 5 visuals
+[geometry_auto] Metrics: wall=13.816s, LLM=13.811s (1 calls, 5290+1471 tok), steps=0.001s (5)
+[geometry_auto] Metrics saved: pipeline/output_geometry_runs_qwen7b/run2/task14_pyramid_dihedral_angle_metrics.json
+
+######################################################################
+# RUN 3 / 3
+######################################################################
+[geometry_auto] Planning (Qwen/Qwen2.5-7B-Instruct-Turbo)...
+  Done in 14.9s (5285+1577 tok)
+  Raw length: 4244 chars
+[geometry_auto] Plan validated successfully
+[geometry_auto] Plan saved: pipeline/output_geometry_runs_qwen7b/run3/task16_trapezoid_plan.json
+  3D plan detected (7 points), auto-canvas: x=[-0.1..12.1] y=[2.9..5.1]
+[geometry_auto] Report: pipeline/output_geometry_runs_qwen7b/run3/task16_trapezoid.html
+[geometry_auto] 5 text blocks, 5 visuals
+[geometry_auto] Metrics: wall=14.934s, LLM=14.927s (1 calls, 5285+1577 tok), steps=0.0018s (5)
+[geometry_auto] Metrics saved: pipeline/output_geometry_runs_qwen7b/run3/task16_trapezoid_metrics.json
+[geometry_auto] Planning (Qwen/Qwen2.5-7B-Instruct-Turbo)...
+  Done in 13.6s (5279+1345 tok)
+  Raw length: 3355 chars
+  WARNING: step 2 constraint 'perp_M' references unknown point 'H' in field 'foot_id'
+[geometry_auto] Retry 1/2: 1 validation issues found, requesting fix...
+[geometry_auto] Planning (Qwen/Qwen2.5-7B-Instruct-Turbo)...
+  Done in 13.6s (6598+1608 tok)
+  Raw length: 4909 chars
+[geometry_auto] Plan validated successfully
+[geometry_auto] Plan saved: pipeline/output_geometry_runs_qwen7b/run3/task16_rhombus_diagonals_plan.json
+  [auto-visibility] Modified 4 edge(s) visibility
+  3D plan detected (7 points), auto-canvas: x=[-0.1..12.1] y=[2.7..5.3]
+[geometry_auto] Report: pipeline/output_geometry_runs_qwen7b/run3/task16_rhombus_diagonals.html
+[geometry_auto] 3 text blocks, 3 visuals
+[geometry_auto] Metrics: wall=27.26s, LLM=27.252s (2 calls, 11877+2953 tok), steps=0.0008s (3)
+[geometry_auto] Metrics saved: pipeline/output_geometry_runs_qwen7b/run3/task16_rhombus_diagonals_metrics.json
+[geometry_auto] Planning (Qwen/Qwen2.5-7B-Instruct-Turbo)...
+  Done in 12.4s (5264+1231 tok)
+  Raw length: 3044 chars
+[geometry_auto] Plan validated successfully
+[geometry_auto] Plan saved: pipeline/output_geometry_runs_qwen7b/run3/task14_pyramid_apex_to_face_plan.json
+  [auto-visibility] Modified 3 edge(s) visibility
+  3D plan detected (7 points), auto-canvas: x=[-0.1..12.1] y=[-1.5..9.5]
+[geometry_auto] Report: pipeline/output_geometry_runs_qwen7b/run3/task14_pyramid_apex_to_face.html
+[geometry_auto] 4 text blocks, 4 visuals
+[geometry_auto] Metrics: wall=12.387s, LLM=12.383s (1 calls, 5264+1231 tok), steps=0.0009s (4)
+[geometry_auto] Metrics saved: pipeline/output_geometry_runs_qwen7b/run3/task14_pyramid_apex_to_face_metrics.json
+[geometry_auto] Planning (Qwen/Qwen2.5-7B-Instruct-Turbo)...
+  Done in 15.1s (5292+1621 tok)
+  Raw length: 4286 chars
+  AUTO-CREATED point 'N' at (0, 0, 0)
+[geometry_auto] Plan validated successfully
+[geometry_auto] Plan saved: pipeline/output_geometry_runs_qwen7b/run3/task14_prism_section_plan.json
+  [auto-visibility] Modified 4 edge(s) visibility
+  3D plan detected (8 points), auto-canvas: x=[-0.1..12.1] y=[-1.2..9.2]
+[geometry_auto] Report: pipeline/output_geometry_runs_qwen7b/run3/task14_prism_section.html
+[geometry_auto] 7 text blocks, 7 visuals
+[geometry_auto] Metrics: wall=15.078s, LLM=15.069s (1 calls, 5292+1621 tok), steps=0.0022s (7)
+[geometry_auto] Metrics saved: pipeline/output_geometry_runs_qwen7b/run3/task14_prism_section_metrics.json
+[geometry_auto] Planning (Qwen/Qwen2.5-7B-Instruct-Turbo)...
+  Done in 7.2s (5289+667 tok)
+  Raw length: 1654 chars
+[geometry_auto] Plan validated successfully
+[geometry_auto] Plan saved: pipeline/output_geometry_runs_qwen7b/run3/task16_triangle_circumscribed_plan.json
+  [auto-visibility] Modified 3 edge(s) visibility
+  3D plan detected (4 points), auto-canvas: x=[-0.1..12.1] y=[3.2..4.8]
+[geometry_auto] Report: pipeline/output_geometry_runs_qwen7b/run3/task16_triangle_circumscribed.html
+[geometry_auto] 2 text blocks, 2 visuals
+[geometry_auto] Metrics: wall=7.169s, LLM=7.164s (1 calls, 5289+667 tok), steps=0.0003s (2)
+[geometry_auto] Metrics saved: pipeline/output_geometry_runs_qwen7b/run3/task16_triangle_circumscribed_metrics.json
+[geometry_auto] Planning (Qwen/Qwen2.5-7B-Instruct-Turbo)...
+  Done in 19.4s (5273+1952 tok)
+  Raw length: 4813 chars
+[geometry_auto] Plan validated successfully
+[geometry_auto] Plan saved: pipeline/output_geometry_runs_qwen7b/run3/task16_parallelogram_diagonals_plan.json
+  [auto-visibility] Modified 4 edge(s) visibility
+  3D plan detected (7 points), auto-canvas: x=[-0.1..12.1] y=[2.9..5.1]
+[geometry_auto] Report: pipeline/output_geometry_runs_qwen7b/run3/task16_parallelogram_diagonals.html
+[geometry_auto] 6 text blocks, 6 visuals
+[geometry_auto] Metrics: wall=19.386s, LLM=19.38s (1 calls, 5273+1952 tok), steps=0.0016s (6)
+[geometry_auto] Metrics saved: pipeline/output_geometry_runs_qwen7b/run3/task16_parallelogram_diagonals_metrics.json
+[geometry_auto] Planning (Qwen/Qwen2.5-7B-Instruct-Turbo)...
+  Done in 13.8s (5285+1556 tok)
+  Raw length: 3680 chars
+  WARNING: step 3 polygon 'rect' references unknown point 'H'
+  WARNING: step 3 polygon 'rect' references unknown point 'K'
+[geometry_auto] Retry 1/2: 2 validation issues found, requesting fix...
+[geometry_auto] Planning (Qwen/Qwen2.5-7B-Instruct-Turbo)...
+  Done in 20.1s (6895+1894 tok)
+  Raw length: 5476 chars
+[geometry_auto] Plan validated successfully
+[geometry_auto] Plan saved: pipeline/output_geometry_runs_qwen7b/run3/task14_cube_diagonal_section_plan.json
+  [auto-visibility] Modified 2 edge(s) visibility
+  3D plan detected (11 points), auto-canvas: x=[-0.1..12.1] y=[0.1..7.9]
+[geometry_auto] Report: pipeline/output_geometry_runs_qwen7b/run3/task14_cube_diagonal_section.html
+[geometry_auto] 4 text blocks, 4 visuals
+[geometry_auto] Metrics: wall=33.907s, LLM=33.897s (2 calls, 12180+3450 tok), steps=0.001s (4)
+[geometry_auto] Metrics saved: pipeline/output_geometry_runs_qwen7b/run3/task14_cube_diagonal_section_metrics.json
+[geometry_auto] Planning (Qwen/Qwen2.5-7B-Instruct-Turbo)...
+  Done in 18.5s (5290+1744 tok)
+  Raw length: 4356 chars
+[geometry_auto] Plan validated successfully
+[geometry_auto] Plan saved: pipeline/output_geometry_runs_qwen7b/run3/task14_pyramid_dihedral_angle_plan.json
+  [auto-visibility] Modified 5 edge(s) visibility
+  3D plan detected (8 points), auto-canvas: x=[-0.1..12.1] y=[0.0..8.0]
+[geometry_auto] Report: pipeline/output_geometry_runs_qwen7b/run3/task14_pyramid_dihedral_angle.html
+[geometry_auto] 5 text blocks, 5 visuals
+[geometry_auto] Metrics: wall=18.479s, LLM=18.473s (1 calls, 5290+1744 tok), steps=0.0019s (5)
+[geometry_auto] Metrics saved: pipeline/output_geometry_runs_qwen7b/run3/task14_pyramid_dihedral_angle_metrics.json
+
+======================================================================
+Done. Total wall time: 387.7 s
+Aggregated summary:    pipeline/output_geometry_runs_qwen7b/geometry_variance_summary.json
+Markdown report:       pipeline/output_geometry_runs_qwen7b/geometry_variance_summary.md
+======================================================================

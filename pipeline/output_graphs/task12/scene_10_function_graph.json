@@ -1,0 +1,51 @@
+{
+  "scene_type": "function_plot",
+  "canvas": {
+    "width": 400,
+    "height": 400,
+    "x_min": -3.0,
+    "x_max": 3.0,
+    "y_min": -5.0,
+    "y_max": 5.0
+  },
+  "style": {
+    "theme": "light",
+    "stroke_color": "#333333",
+    "fill_color": "none",
+    "font_size": 13,
+    "font_family": "sans-serif"
+  },
+  "objects": [
+    {
+      "type": "function_curve",
+      "id": "func_main",
+      "expression": "f(x)",
+      "x_min": -2.0,
+      "x_max": 2.0
+    },
+    {
+      "type": "point",
+      "id": "hl_0",
+      "x": 0.0,
+      "y": 0.0,
+      "label": "точка экстремума (0,0)"
+    },
+    {
+      "type": "point",
+      "id": "ann_anchor",
+      "x": 1.4,
+      "y": 0
+    }
+  ],
+  "constraints": [],
+  "annotations": [
+    {
+      "type": "label",
+      "id": "ann_eq",
+      "text": "y = f(x)",
+      "anchor": "ann_anchor",
+      "dx": 0.3,
+      "dy": 0.5
+    }
+  ]
+}

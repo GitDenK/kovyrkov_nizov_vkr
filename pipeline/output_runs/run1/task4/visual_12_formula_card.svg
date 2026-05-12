@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="344">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
+    </marker>
+  </defs>
+  <rect width="900" height="344" fill="white"/>
+  <text x="250" y="44" text-anchor="middle" font-size="17" font-weight="bold" fill="#333">Формула вероятности и пример</text>
+  <line x1="450.0" y1="122.0" x2="170.0" y2="192.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="450.0" y1="122.0" x2="450.0" y2="192.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="450.0" y1="122.0" x2="730.0" y2="192.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <rect x="40.0" y="192.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="170.0" y="220.0" text-anchor="middle" font-size="13" fill="#333">P — вероятность события (0.5)</text>
+  <rect x="320.0" y="192.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="450.0" y="220.0" text-anchor="middle" font-size="13" fill="#333">m — число благоприятных исходов (2)</text>
+  <rect x="600.0" y="192.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="730.0" y="220.0" text-anchor="middle" font-size="13" fill="#333">n — число всех возможных исходов …</text>
+  <rect x="320.0" y="70.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="450.0" y="98.0" text-anchor="middle" font-size="13" fill="#333">$P = \frac{m}{n}$</text>
+</svg>

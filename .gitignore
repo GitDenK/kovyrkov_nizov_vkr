@@ -1,0 +1,7 @@
+__pycache__/
+.DS_Store
+.env
+*.pyc
+artifacts/
+svg-generator/SVG_generator/service/tools/output/
+svg-generator/SVG_generator/service/tests/golden/preview/*.svg

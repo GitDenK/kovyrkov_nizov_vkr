@@ -1,0 +1,116 @@
+{
+  "started_at": "2026-05-08 20:31:30",
+  "model": "meta-llama/Llama-3.3-70B-Instruct-Turbo",
+  "mode": "run",
+  "llm_calls": [
+    {
+      "model": "meta-llama/Llama-3.3-70B-Instruct-Turbo",
+      "role": "plan",
+      "attempt": 1,
+      "tokens_in": 5075,
+      "tokens_out": 1000,
+      "duration_sec": 23.221,
+      "success": true
+    }
+  ],
+  "phases": {
+    "extract_json": {
+      "count": 1,
+      "total_sec": 0.001,
+      "last_sec": 0.001,
+      "extra": [
+        {
+          "chars": 2569
+        }
+      ]
+    },
+    "ensure_canvas_2d": {
+      "count": 1,
+      "total_sec": 0.0,
+      "last_sec": 0.0,
+      "extra": []
+    },
+    "postprocess_plan": {
+      "count": 1,
+      "total_sec": 0.0,
+      "last_sec": 0.0,
+      "extra": []
+    },
+    "validate_plan": {
+      "count": 1,
+      "total_sec": 0.0,
+      "last_sec": 0.0,
+      "extra": []
+    },
+    "validation_round": {
+      "count": 1,
+      "total_sec": 0.0,
+      "last_sec": 0.0,
+      "extra": [
+        {
+          "round_idx": 0,
+          "warnings": 0
+        }
+      ]
+    },
+    "execute_plan": {
+      "count": 1,
+      "total_sec": 0.001,
+      "last_sec": 0.001,
+      "extra": [
+        {
+          "n_points": 6,
+          "n_steps": 3,
+          "is_3d": false
+        }
+      ]
+    },
+    "html_render": {
+      "count": 1,
+      "total_sec": 0.0001,
+      "last_sec": 0.0001,
+      "extra": [
+        {
+          "animated": false
+        }
+      ]
+    }
+  },
+  "steps": [
+    {
+      "step_idx": 0,
+      "duration_sec": 0.0004,
+      "n_objects": 10,
+      "n_annotations": 0,
+      "n_constraints": 0,
+      "has_text": true
+    },
+    {
+      "step_idx": 1,
+      "duration_sec": 0.0002,
+      "n_objects": 0,
+      "n_annotations": 0,
+      "n_constraints": 1,
+      "has_text": true
+    },
+    {
+      "step_idx": 2,
+      "duration_sec": 0.0003,
+      "n_objects": 2,
+      "n_annotations": 1,
+      "n_constraints": 0,
+      "has_text": true
+    }
+  ],
+  "totals": {
+    "wall_sec": 23.226,
+    "llm_calls": 1,
+    "llm_calls_successful": 1,
+    "llm_tokens_in": 5075,
+    "llm_tokens_out": 1000,
+    "llm_sec": 23.221,
+    "phases_sec": 0.0021,
+    "steps_count": 3,
+    "steps_sec": 0.0009
+  }
+}

@@ -1,0 +1,185 @@
+{
+  "started_at": "2026-05-08 21:13:19",
+  "model": "meta-llama/Llama-3.3-70B-Instruct-Turbo",
+  "mode": "run",
+  "llm_calls": [
+    {
+      "model": "meta-llama/Llama-3.3-70B-Instruct-Turbo",
+      "role": "plan",
+      "attempt": 1,
+      "tokens_in": 5058,
+      "tokens_out": 1095,
+      "duration_sec": 21.295,
+      "success": true
+    },
+    {
+      "model": "meta-llama/Llama-3.3-70B-Instruct-Turbo",
+      "role": "fix",
+      "attempt": 1,
+      "tokens_in": 6334,
+      "tokens_out": 1347,
+      "duration_sec": 38.038,
+      "success": true
+    }
+  ],
+  "phases": {
+    "extract_json": {
+      "count": 2,
+      "total_sec": 0.0046,
+      "last_sec": 0.0027,
+      "extra": [
+        {
+          "chars": 2707
+        },
+        {
+          "chars": 4107
+        }
+      ]
+    },
+    "postprocess_plan": {
+      "count": 2,
+      "total_sec": 0.0,
+      "last_sec": 0.0,
+      "extra": []
+    },
+    "validate_plan": {
+      "count": 2,
+      "total_sec": 0.0,
+      "last_sec": 0.0,
+      "extra": []
+    },
+    "validation_round": {
+      "count": 1,
+      "total_sec": 0.0,
+      "last_sec": 0.0,
+      "extra": [
+        {
+          "round_idx": 0,
+          "warnings": 0
+        }
+      ]
+    },
+    "validate_answer_vis": {
+      "count": 2,
+      "total_sec": 0.001,
+      "last_sec": 0.0002,
+      "extra": []
+    },
+    "answer_vis_check": {
+      "count": 2,
+      "total_sec": 0.0,
+      "last_sec": 0.0,
+      "extra": [
+        {
+          "round_idx": 0,
+          "warnings": 1,
+          "expected_types": [
+            "distance"
+          ]
+        },
+        {
+          "round_idx": 99,
+          "warnings": 0,
+          "expected_types": [
+            "distance"
+          ]
+        }
+      ]
+    },
+    "answer_vis_fix_round": {
+      "count": 1,
+      "total_sec": 0.0,
+      "last_sec": 0.0,
+      "extra": [
+        {
+          "round_idx": 1,
+          "accepted": true,
+          "prev_warnings": 1,
+          "new_warnings": 0,
+          "structural_warnings": 0,
+          "reason": "accepted_improvement"
+        }
+      ]
+    },
+    "auto_mark_hidden_edges": {
+      "count": 1,
+      "total_sec": 0.0001,
+      "last_sec": 0.0001,
+      "extra": [
+        {
+          "n_points": 5,
+          "n_faces": 4
+        }
+      ]
+    },
+    "compute_canvas_3d": {
+      "count": 1,
+      "total_sec": 0.0,
+      "last_sec": 0.0,
+      "extra": [
+        {
+          "n_points": 5
+        }
+      ]
+    },
+    "execute_plan": {
+      "count": 1,
+      "total_sec": 0.0011,
+      "last_sec": 0.0011,
+      "extra": [
+        {
+          "n_points": 5,
+          "n_steps": 3,
+          "is_3d": true
+        }
+      ]
+    },
+    "html_render": {
+      "count": 1,
+      "total_sec": 0.0002,
+      "last_sec": 0.0002,
+      "extra": [
+        {
+          "animated": false
+        }
+      ]
+    }
+  },
+  "steps": [
+    {
+      "step_idx": 0,
+      "duration_sec": 0.0004,
+      "n_objects": 10,
+      "n_annotations": 2,
+      "n_constraints": 0,
+      "has_text": true
+    },
+    {
+      "step_idx": 1,
+      "duration_sec": 0.0003,
+      "n_objects": 2,
+      "n_annotations": 1,
+      "n_constraints": 1,
+      "has_text": true
+    },
+    {
+      "step_idx": 2,
+      "duration_sec": 0.0003,
+      "n_objects": 0,
+      "n_annotations": 1,
+      "n_constraints": 0,
+      "has_text": true
+    }
+  ],
+  "totals": {
+    "wall_sec": 59.344,
+    "llm_calls": 2,
+    "llm_calls_successful": 2,
+    "llm_tokens_in": 11392,
+    "llm_tokens_out": 2442,
+    "llm_sec": 59.333,
+    "phases_sec": 0.007,
+    "steps_count": 3,
+    "steps_sec": 0.001
+  }
+}

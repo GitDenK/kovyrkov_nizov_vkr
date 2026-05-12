@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="1718">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
+    </marker>
+  </defs>
+  <rect width="500" height="1718" fill="white"/>
+  <text x="250" y="44" text-anchor="middle" font-size="17" font-weight="bold" fill="#333">Пример решения задачи о бросании нечестной монеты с комментариями о возможных ошибках и правильных действиях</text>
+  <line x1="250.0" y1="154.0" x2="250.0" y2="224.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="276.0" x2="250.0" y2="346.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="398.0" x2="250.0" y2="468.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="520.0" x2="250.0" y2="590.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="642.0" x2="250.0" y2="712.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="764.0" x2="250.0" y2="834.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="886.0" x2="250.0" y2="956.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="1008.0" x2="250.0" y2="1078.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="1130.0" x2="250.0" y2="1200.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="1252.0" x2="250.0" y2="1322.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="1374.0" x2="250.0" y2="1444.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="1496.0" x2="250.0" y2="1566.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <rect x="120.0" y="70.0" width="260" height="84.0" rx="6" fill="#fdebd0" stroke="#e67e22" stroke-width="1.5"/>
+  <text x="250.0" y="114.0" text-anchor="middle" font-size="13" fill="#333">Задача: Рассмотрим задачу о броса…</text>
+  <rect x="120.0" y="346.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="374.0" text-anchor="middle" font-size="13" fill="#333">Допустимая ошибка: не учли, что м…</text>
+  <rect x="120.0" y="590.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="618.0" text-anchor="middle" font-size="13" fill="#333">Правильный подход: учли, что моне…</text>
+  <rect x="120.0" y="834.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="862.0" text-anchor="middle" font-size="13" fill="#333">Допустимая ошибка: не учли, что п…</text>
+  <rect x="120.0" y="1078.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="1106.0" text-anchor="middle" font-size="13" fill="#333">Правильный подход: учли, что поря…</text>
+  <rect x="120.0" y="1322.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="1350.0" text-anchor="middle" font-size="13" fill="#333">Правильный подход: сумма всех бла…</text>
+  <rect x="120.0" y="1566.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="1594.0" text-anchor="middle" font-size="13" fill="#333">Правильный ответ: округление сдел…</text>
+  <rect x="120.0" y="224.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="252.0" text-anchor="middle" font-size="13" fill="#333">$P(Р) = 0.6$</text>
+  <rect x="120.0" y="468.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="496.0" text-anchor="middle" font-size="13" fill="#333">$P(Р) = 0.5$</text>
+  <rect x="120.0" y="712.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="740.0" text-anchor="middle" font-size="13" fill="#333">$P(О, Р) = 0.4 * 0.6$</text>
+  <rect x="120.0" y="956.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="984.0" text-anchor="middle" font-size="13" fill="#333">$P(О, Р) = P(Р, О) = 0.4 * 0.6$</text>
+  <rect x="120.0" y="1200.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="1228.0" text-anchor="middle" font-size="13" fill="#333">$P(О, Р) + P(Р, О) = 2 * 0.4 * 0.6$</text>
+  <rect x="120.0" y="1444.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="1472.0" text-anchor="middle" font-size="13" fill="#333">$P(О, Р) + P(Р, О) = 0.48$</text>
+</svg>

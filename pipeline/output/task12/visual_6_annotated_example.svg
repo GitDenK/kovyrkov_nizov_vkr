@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="2430">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
+    </marker>
+  </defs>
+  <rect width="500" height="2430" fill="white"/>
+  <text x="250" y="44" text-anchor="middle" font-size="17" font-weight="bold" fill="#333">Пошаговое решение задачи нахождения наибольшего значения функции $f(x) = x^2 - 4x + 5$ на отрезке $[0; 3]$</text>
+  <line x1="250.0" y1="134.0" x2="250.0" y2="204.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="256.0" x2="250.0" y2="326.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="378.0" x2="250.0" y2="448.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="500.0" x2="250.0" y2="570.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="622.0" x2="250.0" y2="692.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="744.0" x2="250.0" y2="814.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="866.0" x2="250.0" y2="936.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="988.0" x2="250.0" y2="1058.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="1110.0" x2="250.0" y2="1180.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="1232.0" x2="250.0" y2="1302.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="1354.0" x2="250.0" y2="1424.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="1476.0" x2="250.0" y2="1546.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="1598.0" x2="250.0" y2="1668.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="1720.0" x2="250.0" y2="1790.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="1842.0" x2="250.0" y2="1912.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="1964.0" x2="250.0" y2="2034.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="2086.0" x2="250.0" y2="2156.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="2208.0" x2="250.0" y2="2278.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <rect x="120.0" y="70.0" width="260" height="64.0" rx="6" fill="#fdebd0" stroke="#e67e22" stroke-width="1.5"/>
+  <text x="250.0" y="104.0" text-anchor="middle" font-size="13" fill="#333">Задача: Найти наибольшее значение…</text>
+  <rect x="120.0" y="326.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="354.0" text-anchor="middle" font-size="13" fill="#333">Запишем функцию</text>
+  <rect x="120.0" y="570.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="598.0" text-anchor="middle" font-size="13" fill="#333">Найдем производную функции</text>
+  <rect x="120.0" y="814.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="842.0" text-anchor="middle" font-size="13" fill="#333">Найдем критические точки</text>
+  <rect x="120.0" y="1058.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="1086.0" text-anchor="middle" font-size="13" fill="#333">Решаем уравнение</text>
+  <rect x="120.0" y="1302.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="1330.0" text-anchor="middle" font-size="13" fill="#333">Критическая точка</text>
+  <rect x="120.0" y="1546.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="1574.0" text-anchor="middle" font-size="13" fill="#333">Вычислим значение функции в точке 0</text>
+  <rect x="120.0" y="1790.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="1818.0" text-anchor="middle" font-size="13" fill="#333">Вычислим значение функции в точке 2</text>
+  <rect x="120.0" y="2034.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="2062.0" text-anchor="middle" font-size="13" fill="#333">Вычислим значение функции в точке 3</text>
+  <rect x="120.0" y="2278.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="2306.0" text-anchor="middle" font-size="13" fill="#333">Сравним значения и найдем наиболь…</text>
+  <rect x="120.0" y="204.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="232.0" text-anchor="middle" font-size="13" fill="#333">$f(x) = x^2 - 4x + 5$</text>
+  <rect x="120.0" y="448.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="476.0" text-anchor="middle" font-size="13" fill="#333">$f&#x27;(x) = 2x - 4$</text>
+  <rect x="120.0" y="692.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="720.0" text-anchor="middle" font-size="13" fill="#333">$2x - 4 = 0$</text>
+  <rect x="120.0" y="936.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="964.0" text-anchor="middle" font-size="13" fill="#333">$2x = 4$</text>
+  <rect x="120.0" y="1180.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="1208.0" text-anchor="middle" font-size="13" fill="#333">$x = 2$</text>
+  <rect x="120.0" y="1424.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="1452.0" text-anchor="middle" font-size="13" fill="#333">$f(0) = 0^2 - 4*0 + 5 = 5$</text>
+  <rect x="120.0" y="1668.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="1696.0" text-anchor="middle" font-size="13" fill="#333">$f(2) = 2^2 - 4*2 + 5 = 1$</text>
+  <rect x="120.0" y="1912.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="1940.0" text-anchor="middle" font-size="13" fill="#333">$f(3) = 3^2 - 4*3 + 5 = 2$</text>
+  <rect x="120.0" y="2156.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="2184.0" text-anchor="middle" font-size="13" fill="#333">$Наибольшее значение функции на о…</text>
+</svg>

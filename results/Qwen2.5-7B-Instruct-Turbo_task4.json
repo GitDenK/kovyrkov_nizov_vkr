@@ -1,0 +1,605 @@
+{
+  "model": "Qwen/Qwen2.5-7B-Instruct-Turbo",
+  "total_sections": 22,
+  "sections_analyzed": 20,
+  "visuals_planned": 9,
+  "total_tokens_in": 26686,
+  "total_tokens_out": 2770,
+  "total_time_sec": 122.5,
+  "plans": [
+    {
+      "plan": {
+        "section_id": 0,
+        "section_title": "Вводная часть",
+        "section_text_preview": "Оценка уровня ученика:\n\nНа основе анализа компетенций видно, что уровень знаний по теме «Классическая вероятность» у ученика **очень низкий** — большинство ключевых навыков отсутствуют (вероятность вл",
+        "need_visual": false,
+        "visual_type": "none",
+        "pedagogical_goal": "не требуется визуализация для этой вводной части",
+        "description": "",
+        "params": {},
+        "caption": "",
+        "placement": "",
+        "priority": ""
+      },
+      "llm_meta": {
+        "model": "Qwen/Qwen2.5-7B-Instruct-Turbo",
+        "elapsed_sec": 1.21,
+        "tokens_in": 1630,
+        "tokens_out": 65,
+        "raw_response": "{\n  \"need_visual\": false,\n  \"visual_type\": \"none\",\n  \"pedagogical_goal\": \"не требуется визуализация для этой вводной части\",\n  \"description\": \"\",\n  \"params\": {},\n  \"caption\": \"\",\n  \"placement\": \"\",\n  \"priority\": \"\"\n}"
+      }
+    },
+    {
+      "plan": {
+        "section_id": 1,
+        "section_title": "1. КРАТКОЕ ОПИСАНИЕ ЗАДАНИЯ",
+        "section_text_preview": "Задание №4 ЕГЭ по профильной математике проверяет **умение считать вероятность простого события** по формуле классической вероятности.\n\n- Что проверяет: **понимание равновозможных исходов**, умение сч",
+        "need_visual": false,
+        "visual_type": "none",
+        "pedagogical_goal": "не требуется визуализация для понимания концепции",
+        "description": "",
+        "params": {},
+        "caption": "",
+        "placement": "",
+        "priority": ""
+      },
+      "llm_meta": {
+        "model": "Qwen/Qwen2.5-7B-Instruct-Turbo",
+        "elapsed_sec": 1.28,
+        "tokens_in": 1393,
+        "tokens_out": 66,
+        "raw_response": "{\n  \"need_visual\": false,\n  \"visual_type\": \"none\",\n  \"pedagogical_goal\": \"не требуется визуализация для понимания концепции\",\n  \"description\": \"\",\n  \"params\": {},\n  \"caption\": \"\",\n  \"placement\": \"\",\n  \"priority\": \"\"\n}"
+      }
+    },
+    {
+      "plan": {
+        "section_id": 2,
+        "section_title": "Что такое классическая вероятность?",
+        "section_text_preview": "Классическая вероятность используется, когда **все исходы равновероятны** — то есть **каждый исход одинаково возможен**.\n\nПример: бросок честной монеты — «орёл» и «решка» одинаково вероятны.",
+        "need_visual": true,
+        "visual_type": "outcome_tree",
+        "pedagogical_goal": "показать равновероятные исходы и их количество",
+        "description": "Дерево возможных исходов при бросании честной монеты, включающее два листа: «орёл» и «решка»",
+        "params": {
+          "experiment": "бросок честной монеты",
+          "outcomes": [
+            "орёл",
+            "решка"
+          ],
+          "favorable": [
+            "орёл",
+            "решка"
+          ]
+        },
+        "caption": "Равновероятные исходы при бросании честной монеты",
+        "placement": "before_section",
+        "priority": "high"
+      },
+      "llm_meta": {
+        "model": "Qwen/Qwen2.5-7B-Instruct-Turbo",
+        "elapsed_sec": 2.02,
+        "tokens_in": 1279,
+        "tokens_out": 180,
+        "raw_response": "{\n  \"need_visual\": true,\n  \"visual_type\": \"outcome_tree\",\n  \"pedagogical_goal\": \"показать равновероятные исходы и их количество\",\n  \"description\": \"Дерево возможных исходов при бросании честной монеты, включающее два листа: «орёл» и «решка»\",\n  \"params\": {\n    \"experiment\": \"бросок честной монеты\",\n    \"outcomes\": [\"орёл\", \"решка\"],\n    \"favorable\": [\"орёл\", \"решка\"]\n  },\n  \"caption\": \"Равновероятные исходы при бросании честной монеты\",\n  \"placement\": \"before_section\",\n  \"priority\": \"high\"\n}"
+      }
+    },
+    {
+      "plan": {
+        "section_id": 3,
+        "section_title": "Основные понятия",
+        "section_text_preview": "- **Исход** — один из возможных результатов опыта.\n- **Благоприятный исход** — исход, при котором событие происходит.\n- **Пространство исходов** — полный список всех возможных исходов.",
+        "need_visual": true,
+        "visual_type": "outcome_tree",
+        "pedagogical_goal": "Помочь ученику понять связь между исходами, благоприятными исходами и пространством исходов.",
+        "description": "Дерево, где корень — пространство исходов, ветви — отдельные исходы, и подветви — благоприятные исходы.",
+        "params": {
+          "experiment": "опыт",
+          "outcomes": [
+            "исход1",
+            "исход2",
+            "исход3"
+          ],
+          "favorable": [
+            "исход1",
+            "исход3"
+          ]
+        },
+        "caption": "Пример пространства исходов и благоприятных исходов",
+        "placement": "before_section",
+        "priority": "medium"
+      },
+      "llm_meta": {
+        "model": "Qwen/Qwen2.5-7B-Instruct-Turbo",
+        "elapsed_sec": 2.17,
+        "tokens_in": 1262,
+        "tokens_out": 195,
+        "raw_response": "{\n  \"need_visual\": true,\n  \"visual_type\": \"outcome_tree\",\n  \"pedagogical_goal\": \"Помочь ученику понять связь между исходами, благоприятными исходами и пространством исходов.\",\n  \"description\": \"Дерево, где корень — пространство исходов, ветви — отдельные исходы, и подветви — благоприятные исходы.\",\n  \"params\": {\n    \"experiment\": \"опыт\",\n    \"outcomes\": [\"исход1\", \"исход2\", \"исход3\"],\n    \"favorable\": [\"исход1\", \"исход3\"]\n  },\n  \"caption\": \"Пример пространства исходов и благоприятных исходов\",\n  \"placement\": \"before_section\",\n  \"priority\": \"medium\"\n}"
+      }
+    },
+    {
+      "plan": {
+        "section_id": 4,
+        "section_title": "Формула классической вероятности:",
+        "section_text_preview": "$P = \\frac{m}{n}$\n\nгде:\n- $m$ — число **благоприятных** исходов,\n- $n$ — число **всех возможных** исходов,\n- $P$ — вероятность события (всегда от 0 до 1).\n\n---",
+        "need_visual": true,
+        "visual_type": "formula_card",
+        "pedagogical_goal": "Помочь ученику запомнить и понять формулу классической вероятности и её компоненты",
+        "description": "Формула классической вероятности с пояснениями к каждому компоненту",
+        "params": {
+          "formula_latex": "P = \\frac{m}{n}",
+          "components": {
+            "m": "Число благоприятных исходов",
+            "n": "Число всех возможных исходов",
+            "P": "Вероятность события"
+          }
+        },
+        "caption": "Формула классической вероятности",
+        "placement": "inline",
+        "priority": "high"
+      },
+      "llm_meta": {
+        "model": "Qwen/Qwen2.5-7B-Instruct-Turbo",
+        "elapsed_sec": 2.05,
+        "tokens_in": 1280,
+        "tokens_out": 187,
+        "raw_response": "{\n  \"need_visual\": true,\n  \"visual_type\": \"formula_card\",\n  \"pedagogical_goal\": \"Помочь ученику запомнить и понять формулу классической вероятности и её компоненты\",\n  \"description\": \"Формула классической вероятности с пояснениями к каждому компоненту\",\n  \"params\": {\n    \"formula_latex\": \"P = \\\\frac{m}{n}\",\n    \"components\": {\n      \"m\": \"Число благоприятных исходов\",\n      \"n\": \"Число всех возможных исходов\",\n      \"P\": \"Вероятность события\"\n    }\n  },\n  \"caption\": \"Формула классической вероятности\",\n  \"placement\": \"inline\",\n  \"priority\": \"high\"\n}"
+      }
+    },
+    {
+      "plan": {
+        "section_id": 5,
+        "section_title": "3. ТИПЫ ЗАДАЧ, КОТОРЫЕ МОГУТ ПОПАСТЬСЯ",
+        "section_text_preview": "| Тип задачи | Описание | Особенности |\n|-----------|--------|------------|\n| **Броски монет/кубиков** | Например: «бросили две монеты, найдите вероятность, что выпало два орла». | Малое число исходов",
+        "need_visual": false,
+        "visual_type": "none",
+        "pedagogical_goal": "не требуется дополнительное визуальное представление",
+        "description": "",
+        "params": {},
+        "caption": "",
+        "placement": "",
+        "priority": ""
+      },
+      "llm_meta": {
+        "model": "Qwen/Qwen2.5-7B-Instruct-Turbo",
+        "elapsed_sec": 1.06,
+        "tokens_in": 1505,
+        "tokens_out": 63,
+        "raw_response": "{\n  \"need_visual\": false,\n  \"visual_type\": \"none\",\n  \"pedagogical_goal\": \"не требуется дополнительное визуальное представление\",\n  \"description\": \"\",\n  \"params\": {},\n  \"caption\": \"\",\n  \"placement\": \"\",\n  \"priority\": \"\"\n}"
+      }
+    },
+    {
+      "plan": {
+        "section_id": 6,
+        "section_title": "Пошаговый план:",
+        "section_text_preview": "1. **Определи, что такое \"один исход\"**  \n   Пример: один бросок монеты — исход: «орёл» или «решка». Два броска — исход: пара: (орёл, орёл), (орёл, решка) и т.д.\n\n2. **Найди $n$ — число всех возможных",
+        "need_visual": false,
+        "visual_type": "none",
+        "pedagogical_goal": "",
+        "description": "",
+        "params": {},
+        "caption": "",
+        "placement": "after_section",
+        "priority": "medium"
+      },
+      "llm_meta": {
+        "model": "Qwen/Qwen2.5-7B-Instruct-Turbo",
+        "elapsed_sec": 3.11,
+        "tokens_in": 1528,
+        "tokens_out": 230,
+        "raw_response": "<<EXAMPLE_START>>\n  \"need_visual\": true,\n  \"visual_type\": \"outcome_tree\",\n  \"pedagogical_goal\": \"помочь ученику понять, как перечислять все возможные исходы и находить благоприятные из них\",\n  \"description\": \"Дерево исходов для двух бросков монеты, с разделением на все возможные исходы и благоприятные\",\n  \"params\": {\n    \"experiment\": \"Бросание двух монет\",\n    \"outcomes\": [\n      {\"label\": \"(О, О)\", \"favorable\": true},\n      {\"label\": \"(О, Р)\", \"favorable\": false},\n      {\"label\": \"(Р, О)\", \"favorable\": false},\n      {\"label\": \"(Р, Р)\", \"favorable\": true}\n    ]\n  },\n  \"caption\": \"Дерево исходов для двух бросков монеты\",\n  \"placement\": \"before_section\",\n  \"priority\": \"high\"\n<<EXAMPLE_END>>"
+      }
+    },
+    {
+      "plan": {
+        "section_id": 7,
+        "section_title": "Как избежать ошибок:",
+        "section_text_preview": "- ❌ Не пиши $P = m/n$, если исходы **не равновозможны** (например, если монета нечестная).\n- ❌ Не забывай, что (О, Р) и (Р, О) — **разные исходы**, если порядок важен.\n- ❌ Не округляй слишком рано — д",
+        "need_visual": false,
+        "visual_type": "none",
+        "pedagogical_goal": "не требуется визуализация для этой секции",
+        "description": "",
+        "params": {},
+        "caption": "",
+        "placement": "",
+        "priority": ""
+      },
+      "llm_meta": {
+        "model": "Qwen/Qwen2.5-7B-Instruct-Turbo",
+        "elapsed_sec": 1.15,
+        "tokens_in": 1327,
+        "tokens_out": 63,
+        "raw_response": "{\n  \"need_visual\": false,\n  \"visual_type\": \"none\",\n  \"pedagogical_goal\": \"не требуется визуализация для этой секции\",\n  \"description\": \"\",\n  \"params\": {},\n  \"caption\": \"\",\n  \"placement\": \"\",\n  \"priority\": \"\"\n}"
+      }
+    },
+    {
+      "plan": {
+        "section_id": 8,
+        "section_title": "Пример 1: Бросок двух монет",
+        "section_text_preview": "**Задача:** Бросили две симметричные монеты. Найдите вероятность того, что выпало **ровно один орёл**.",
+        "need_visual": true,
+        "visual_type": "outcome_tree",
+        "pedagogical_goal": "показать все возможные исходы и выделить благоприятные исходы для события «ровно один орёл»",
+        "description": "Дерево возможных исходов при бросании двух монет, с выделением исходов, где выпало ровно один орёл",
+        "params": {
+          "experiment": "бросание двух монет",
+          "outcomes": [
+            "орёл-орёл",
+            "орёл-решка",
+            "решка-орёл",
+            "решка-решка"
+          ],
+          "favorable": [
+            "орёл-решка",
+            "решка-орёл"
+          ]
+        },
+        "caption": "Вероятность выпадения ровно одного орла при бросании двух монет",
+        "placement": "after_section",
+        "priority": "high"
+      },
+      "llm_meta": {
+        "model": "Qwen/Qwen2.5-7B-Instruct-Turbo",
+        "elapsed_sec": 2.51,
+        "tokens_in": 1255,
+        "tokens_out": 226,
+        "raw_response": "{\n  \"need_visual\": true,\n  \"visual_type\": \"outcome_tree\",\n  \"pedagogical_goal\": \"показать все возможные исходы и выделить благоприятные исходы для события «ровно один орёл»\",\n  \"description\": \"Дерево возможных исходов при бросании двух монет, с выделением исходов, где выпало ровно один орёл\",\n  \"params\": {\n    \"experiment\": \"бросание двух монет\",\n    \"outcomes\": [\"орёл-орёл\", \"орёл-решка\", \"решка-орёл\", \"решка-решка\"],\n    \"favorable\": [\"орёл-решка\", \"решка-орёл\"]\n  },\n  \"caption\": \"Вероятность выпадения ровно одного орла при бросании двух монет\",\n  \"placement\": \"after_section\",\n  \"priority\": \"high\"\n}"
+      }
+    },
+    {
+      "plan": {
+        "section_id": 9,
+        "section_title": "Шаг 1: Определим исход",
+        "section_text_preview": "Один исход — результат двух бросков: пара: (первая монета, вторая монета)",
+        "need_visual": true,
+        "visual_type": "outcome_tree",
+        "pedagogical_goal": "показать все возможные исходы двух бросков монет и их количество",
+        "description": "Дерево исходов с узлами для каждой монеты и листьями для всех возможных пар (орел-орел, орел-решка, решка-орел, решка-решка)",
+        "params": {
+          "experiment": "бросок монеты",
+          "outcomes": [
+            "орел-орел",
+            "орел-решка",
+            "решка-орел",
+            "решка-решка"
+          ],
+          "favorable": [
+            "орел-орел",
+            "орел-решка",
+            "решка-орел",
+            "решка-решка"
+          ]
+        },
+        "caption": "Дерево исходов для двух бросков монет",
+        "placement": "before_section",
+        "priority": "high"
+      },
+      "llm_meta": {
+        "model": "Qwen/Qwen2.5-7B-Instruct-Turbo",
+        "elapsed_sec": 2.62,
+        "tokens_in": 1239,
+        "tokens_out": 227,
+        "raw_response": "{\n  \"need_visual\": true,\n  \"visual_type\": \"outcome_tree\",\n  \"pedagogical_goal\": \"показать все возможные исходы двух бросков монет и их количество\",\n  \"description\": \"Дерево исходов с узлами для каждой монеты и листьями для всех возможных пар (орел-орел, орел-решка, решка-орел, решка-решка)\",\n  \"params\": {\n    \"experiment\": \"бросок монеты\",\n    \"outcomes\": [\"орел-орел\", \"орел-решка\", \"решка-орел\", \"решка-решка\"],\n    \"favorable\": [\"орел-орел\", \"орел-решка\", \"решка-орел\", \"решка-решка\"]\n  },\n  \"caption\": \"Дерево исходов для двух бросков монет\",\n  \"placement\": \"before_section\",\n  \"priority\": \"high\"\n}"
+      }
+    },
+    {
+      "plan": {
+        "section_id": 10,
+        "section_title": "Шаг 2: Найдём $n$ — все исходы",
+        "section_text_preview": "Перечислим:\n1. (О, О)\n2. (О, Р)\n3. (Р, О)\n4. (Р, Р)\n\n→ $n = 4$",
+        "need_visual": true,
+        "visual_type": "outcome_tree",
+        "pedagogical_goal": "показать все возможные исходы и их количество",
+        "description": "дерево с двумя ветвями (О и Р) и перечислением всех возможных исходов",
+        "params": {
+          "experiment": "бросание монетки",
+          "outcomes": [
+            "О, О",
+            "О, Р",
+            "Р, О",
+            "Р, Р"
+          ],
+          "favorable": []
+        },
+        "caption": "Все возможные исходы при бросании двух монеток",
+        "placement": "after_section",
+        "priority": "medium"
+      },
+      "llm_meta": {
+        "model": "Qwen/Qwen2.5-7B-Instruct-Turbo",
+        "elapsed_sec": 2.1,
+        "tokens_in": 1255,
+        "tokens_out": 161,
+        "raw_response": "{\n  \"need_visual\": true,\n  \"visual_type\": \"outcome_tree\",\n  \"pedagogical_goal\": \"показать все возможные исходы и их количество\",\n  \"description\": \"дерево с двумя ветвями (О и Р) и перечислением всех возможных исходов\",\n  \"params\": {\n    \"experiment\": \"бросание монетки\",\n    \"outcomes\": [\"О, О\", \"О, Р\", \"Р, О\", \"Р, Р\"],\n    \"favorable\": []\n  },\n  \"caption\": \"Все возможные исходы при бросании двух монеток\",\n  \"placement\": \"after_section\",\n  \"priority\": \"medium\"\n}"
+      }
+    },
+    {
+      "plan": {
+        "section_id": 11,
+        "section_title": "Шаг 3: Найдём $m$ — благоприятные исходы",
+        "section_text_preview": "Нам нужно **ровно один орёл** — то есть один орёл, один решка.\n\nПодходят:\n- (О, Р) — один орёл\n- (Р, О) — один орёл\n\n(О, О) — два орла → не подходит  \n(Р, Р) — нет орлов → не подходит\n\n→ $m = 2$",
+        "need_visual": true,
+        "visual_type": "outcome_tree",
+        "pedagogical_goal": "показать все возможные исходы и выделить благоприятные",
+        "description": "Дерево исходов с монетами, где каждая ветвь соответствует результату бросания монеты (Орёл или Решка), и подчеркивание тех ветвей, где ровно один орёл",
+        "params": {
+          "experiment": "бросание двух монет",
+          "outcomes": [
+            "О, Р",
+            "Р, О",
+            "О, О",
+            "Р, Р"
+          ],
+          "favorable": [
+            "О, Р",
+            "Р, О"
+          ]
+        },
+        "caption": "Вероятность выпадения ровно одного орла при бросании двух монет",
+        "placement": "after_section",
+        "priority": "medium"
+      },
+      "llm_meta": {
+        "model": "Qwen/Qwen2.5-7B-Instruct-Turbo",
+        "elapsed_sec": 2.73,
+        "tokens_in": 1310,
+        "tokens_out": 217,
+        "raw_response": "{\n  \"need_visual\": true,\n  \"visual_type\": \"outcome_tree\",\n  \"pedagogical_goal\": \"показать все возможные исходы и выделить благоприятные\",\n  \"description\": \"Дерево исходов с монетами, где каждая ветвь соответствует результату бросания монеты (Орёл или Решка), и подчеркивание тех ветвей, где ровно один орёл\",\n  \"params\": {\n    \"experiment\": \"бросание двух монет\",\n    \"outcomes\": [\"О, Р\", \"Р, О\", \"О, О\", \"Р, Р\"],\n    \"favorable\": [\"О, Р\", \"Р, О\"]\n  },\n  \"caption\": \"Вероятность выпадения ровно одного орла при бросании двух монет\",\n  \"placement\": \"after_section\",\n  \"priority\": \"medium\"\n}"
+      }
+    },
+    {
+      "plan": {
+        "section_id": 12,
+        "section_title": "Шаг 4: Подставим в формулу",
+        "section_text_preview": "$P = \\frac{m}{n} = \\frac{2}{4} = 0.5$",
+        "need_visual": false,
+        "visual_type": "none",
+        "pedagogical_goal": "не требуется визуализация для понимания простого арифметического примера",
+        "description": "Простое арифметическое преобразование без необходимости визуализации",
+        "params": {},
+        "caption": "",
+        "placement": "",
+        "priority": ""
+      },
+      "llm_meta": {
+        "model": "Qwen/Qwen2.5-7B-Instruct-Turbo",
+        "elapsed_sec": 1.5,
+        "tokens_in": 1234,
+        "tokens_out": 91,
+        "raw_response": "{\n  \"need_visual\": false,\n  \"visual_type\": \"none\",\n  \"pedagogical_goal\": \"не требуется визуализация для понимания простого арифметического примера\",\n  \"description\": \"Простое арифметическое преобразование без необходимости визуализации\",\n  \"params\": {},\n  \"caption\": \"\",\n  \"placement\": \"\",\n  \"priority\": \"\"\n}"
+      }
+    },
+    {
+      "plan": {
+        "section_id": 14,
+        "section_title": "Пример 2: Бросок двух кубиков",
+        "section_text_preview": "**Задача:** Бросили два игральных кубика. Найдите вероятность того, что **сумма выпавших чисел равна 7**.",
+        "need_visual": true,
+        "visual_type": "outcome_tree",
+        "pedagogical_goal": "показать все возможные исходы и выделить благоприятные исходы для суммы 7",
+        "description": "Дерево исходов с броском двух кубиков, где каждая ветвь отображает результаты броска и их суммы, а благоприятные исходы для суммы 7 выделены",
+        "params": {
+          "experiment": "бросок двух кубиков",
+          "outcomes": [
+            {
+              "sum": 2,
+              "favorable": false
+            },
+            {
+              "sum": 3,
+              "favorable": false
+            },
+            {
+              "sum": 4,
+              "favorable": false
+            },
+            {
+              "sum": 5,
+              "favorable": false
+            },
+            {
+              "sum": 6,
+              "favorable": false
+            },
+            {
+              "sum": 7,
+              "favorable": true
+            },
+            {
+              "sum": 8,
+              "favorable": false
+            },
+            {
+              "sum": 9,
+              "favorable": false
+            },
+            {
+              "sum": 10,
+              "favorable": false
+            },
+            {
+              "sum": 11,
+              "favorable": false
+            },
+            {
+              "sum": 12,
+              "favorable": false
+            }
+          ]
+        },
+        "caption": "Дерево исходов для броска двух кубиков с выделением благоприятных исходов для суммы 7",
+        "placement": "inline",
+        "priority": "medium"
+      },
+      "llm_meta": {
+        "model": "Qwen/Qwen2.5-7B-Instruct-Turbo",
+        "elapsed_sec": 3.69,
+        "tokens_in": 1252,
+        "tokens_out": 338,
+        "raw_response": "{\n  \"need_visual\": true,\n  \"visual_type\": \"outcome_tree\",\n  \"pedagogical_goal\": \"показать все возможные исходы и выделить благоприятные исходы для суммы 7\",\n  \"description\": \"Дерево исходов с броском двух кубиков, где каждая ветвь отображает результаты броска и их суммы, а благоприятные исходы для суммы 7 выделены\",\n  \"params\": {\n    \"experiment\": \"бросок двух кубиков\",\n    \"outcomes\": [\n      {\"sum\": 2, \"favorable\": false},\n      {\"sum\": 3, \"favorable\": false},\n      {\"sum\": 4, \"favorable\": false},\n      {\"sum\": 5, \"favorable\": false},\n      {\"sum\": 6, \"favorable\": false},\n      {\"sum\": 7, \"favorable\": true},\n      {\"sum\": 8, \"favorable\": false},\n      {\"sum\": 9, \"favorable\": false},\n      {\"sum\": 10, \"favorable\": false},\n      {\"sum\": 11, \"favorable\": false},\n      {\"sum\": 12, \"favorable\": false}\n    ]\n  },\n  \"caption\": \"Дерево исходов для броска двух кубиков с выделением благоприятных исходов для суммы 7\",\n  \"placement\": \"inline\",\n  \"priority\": \"medium\"\n}"
+      }
+    },
+    {
+      "plan": {
+        "section_id": 15,
+        "section_title": "Шаг 2: Найдём $n$ — все исходы",
+        "section_text_preview": "Каждый кубик — от 1 до 6 → $n = 6 \\times 6 = 36$",
+        "need_visual": false,
+        "visual_type": "none",
+        "pedagogical_goal": "не требуется",
+        "description": "",
+        "params": {},
+        "caption": "",
+        "placement": "",
+        "priority": ""
+      },
+      "llm_meta": {
+        "model": "Qwen/Qwen2.5-7B-Instruct-Turbo",
+        "elapsed_sec": 1.56,
+        "tokens_in": 1243,
+        "tokens_out": 54,
+        "raw_response": "{\n  \"need_visual\": false,\n  \"visual_type\": \"none\",\n  \"pedagogical_goal\": \"не требуется\",\n  \"description\": \"\",\n  \"params\": {},\n  \"caption\": \"\",\n  \"placement\": \"\",\n  \"priority\": \"\"\n}"
+      }
+    },
+    {
+      "plan": {
+        "section_id": 16,
+        "section_title": "Шаг 3: Найдём $m$ — пары, где $a + b = 7$",
+        "section_text_preview": "Переберём:\n- (1, 6) → 1+6=7\n- (2, 5) → 2+5=7\n- (3, 4) → 3+4=7\n- (4, 3) → 4+3=7\n- (5, 2) → 5+2=7\n- (6, 1) → 6+1=7\n\n→ $m = 6$",
+        "need_visual": true,
+        "visual_type": "table",
+        "pedagogical_goal": "показать все пары, где сумма равна 7, и подчеркнуть количество таких пар",
+        "description": "таблица с парами чисел (a, b), где a + b = 7",
+        "params": {
+          "headers": [
+            "a",
+            "b"
+          ],
+          "rows": [
+            [
+              "1",
+              "6"
+            ],
+            [
+              "2",
+              "5"
+            ],
+            [
+              "3",
+              "4"
+            ],
+            [
+              "4",
+              "3"
+            ],
+            [
+              "5",
+              "2"
+            ],
+            [
+              "6",
+              "1"
+            ]
+          ]
+        },
+        "caption": "Пары чисел, где сумма равна 7",
+        "placement": "after_section",
+        "priority": "medium"
+      },
+      "llm_meta": {
+        "model": "Qwen/Qwen2.5-7B-Instruct-Turbo",
+        "elapsed_sec": 2.06,
+        "tokens_in": 1324,
+        "tokens_out": 176,
+        "raw_response": "{\n  \"need_visual\": true,\n  \"visual_type\": \"table\",\n  \"pedagogical_goal\": \"показать все пары, где сумма равна 7, и подчеркнуть количество таких пар\",\n  \"description\": \"таблица с парами чисел (a, b), где a + b = 7\",\n  \"params\": {\n    \"headers\": [\"a\", \"b\"],\n    \"rows\": [\n      [\"1\", \"6\"],\n      [\"2\", \"5\"],\n      [\"3\", \"4\"],\n      [\"4\", \"3\"],\n      [\"5\", \"2\"],\n      [\"6\", \"1\"]\n    ]\n  },\n  \"caption\": \"Пары чисел, где сумма равна 7\",\n  \"placement\": \"after_section\",\n  \"priority\": \"medium\"\n}"
+      }
+    },
+    {
+      "plan": {
+        "section_id": 17,
+        "section_title": "Шаг 4: Подставим",
+        "section_text_preview": "$P = \\frac{6}{36} = 0.166...$\n\nОкруглим до **тысячных**: $0.167$",
+        "need_visual": false,
+        "visual_type": "none",
+        "pedagogical_goal": "не требуется визуальное объяснение",
+        "description": "",
+        "params": {},
+        "caption": "",
+        "placement": "",
+        "priority": ""
+      },
+      "llm_meta": {
+        "model": "Qwen/Qwen2.5-7B-Instruct-Turbo",
+        "elapsed_sec": 1.09,
+        "tokens_in": 1245,
+        "tokens_out": 61,
+        "raw_response": "{\n  \"need_visual\": false,\n  \"visual_type\": \"none\",\n  \"pedagogical_goal\": \"не требуется визуальное объяснение\",\n  \"description\": \"\",\n  \"params\": {},\n  \"caption\": \"\",\n  \"placement\": \"\",\n  \"priority\": \"\"\n}"
+      }
+    },
+    {
+      "plan": {
+        "section_id": 19,
+        "section_title": "6. ПРАКТИЧЕСКИЕ СОВЕТЫ",
+        "section_text_preview": "✅ **Если исходов мало — перечисляй!**  \nНе пытайся сразу считать по формуле. Перебери — так меньше ошибок.\n\n✅ **Используй таблицу или список**  \nДля двух кубиков — удобно составить таблицу 6×6.\n\n✅ **О",
+        "need_visual": false,
+        "visual_type": "none",
+        "pedagogical_goal": "не требуется",
+        "description": "",
+        "params": {},
+        "caption": "",
+        "placement": "",
+        "priority": ""
+      },
+      "llm_meta": {
+        "model": "Qwen/Qwen2.5-7B-Instruct-Turbo",
+        "elapsed_sec": 1.26,
+        "tokens_in": 1421,
+        "tokens_out": 54,
+        "raw_response": "{\n  \"need_visual\": false,\n  \"visual_type\": \"none\",\n  \"pedagogical_goal\": \"не требуется\",\n  \"description\": \"\",\n  \"params\": {},\n  \"caption\": \"\",\n  \"placement\": \"\",\n  \"priority\": \"\"\n}"
+      }
+    },
+    {
+      "plan": {
+        "section_id": 20,
+        "section_title": "Что делать:",
+        "section_text_preview": "1. **Научись делить числа** — например, $3/4 = 0.75$, $1/3 ≈ 0.333$.\n2. **Решай задачи с перебором** — начни с 2 монет, 2 кубиков.\n3. **Запоминай: $P = m/n$ — только если исходы равновозможны.**\n4. **",
+        "need_visual": false,
+        "visual_type": "none",
+        "pedagogical_goal": "",
+        "description": "",
+        "params": {},
+        "caption": "",
+        "placement": "",
+        "priority": ""
+      },
+      "llm_meta": {
+        "model": "Qwen/Qwen2.5-7B-Instruct-Turbo",
+        "elapsed_sec": 0.96,
+        "tokens_in": 1382,
+        "tokens_out": 51,
+        "raw_response": "{\n  \"need_visual\": false,\n  \"visual_type\": \"none\",\n  \"pedagogical_goal\": \"\",\n  \"description\": \"\",\n  \"params\": {},\n  \"caption\": \"\",\n  \"placement\": \"\",\n  \"priority\": \"\"\n}"
+      }
+    },
+    {
+      "plan": {
+        "section_id": 21,
+        "section_title": "Темы для повторения:",
+        "section_text_preview": "- Перебор исходов\n- Дроби и деление\n- Округление до тысячных\n- Простейшие условия: «ровно», «хотя бы»\n\n---\n\n💡 **Главное правило**:  \n> Не бойся писать всё на бумаге. Даже если кажется, что «это очевид",
+        "need_visual": false,
+        "visual_type": "none",
+        "pedagogical_goal": "не требуется визуализация для понимания текста",
+        "description": "",
+        "params": {},
+        "caption": "",
+        "placement": "",
+        "priority": ""
+      },
+      "llm_meta": {
+        "model": "Qwen/Qwen2.5-7B-Instruct-Turbo",
+        "elapsed_sec": 86.37,
+        "tokens_in": 1322,
+        "tokens_out": 65,
+        "raw_response": "{\n  \"need_visual\": false,\n  \"visual_type\": \"none\",\n  \"pedagogical_goal\": \"не требуется визуализация для понимания текста\",\n  \"description\": \"\",\n  \"params\": {},\n  \"caption\": \"\",\n  \"placement\": \"\",\n  \"priority\": \"\"\n}"
+      }
+    }
+  ]
+}

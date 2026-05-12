@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="2174">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
+    </marker>
+  </defs>
+  <rect width="500" height="2174" fill="white"/>
+  <text x="250" y="44" text-anchor="middle" font-size="17" font-weight="bold" fill="#333">Пошаговое решение задачи нахождения точки минимума функции $f(x) = x^2 - 6x + 8$</text>
+  <line x1="250.0" y1="122.0" x2="250.0" y2="192.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="244.0" x2="250.0" y2="314.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="366.0" x2="250.0" y2="436.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="488.0" x2="250.0" y2="558.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="610.0" x2="250.0" y2="680.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="732.0" x2="250.0" y2="802.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="854.0" x2="250.0" y2="924.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="976.0" x2="250.0" y2="1046.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="1098.0" x2="250.0" y2="1168.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="1220.0" x2="250.0" y2="1290.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="1342.0" x2="250.0" y2="1412.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="1464.0" x2="250.0" y2="1534.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="1586.0" x2="250.0" y2="1656.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="1708.0" x2="250.0" y2="1778.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="1830.0" x2="250.0" y2="1900.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="250.0" y1="1952.0" x2="250.0" y2="2022.0" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <rect x="120.0" y="70.0" width="260" height="52.0" rx="6" fill="#fdebd0" stroke="#e67e22" stroke-width="1.5"/>
+  <text x="250.0" y="98.0" text-anchor="middle" font-size="13" fill="#333">Задача: Найти точку минимума функ…</text>
+  <rect x="120.0" y="314.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="342.0" text-anchor="middle" font-size="13" fill="#333">Запишем функцию</text>
+  <rect x="120.0" y="558.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="586.0" text-anchor="middle" font-size="13" fill="#333">Найдем производную</text>
+  <rect x="120.0" y="802.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="830.0" text-anchor="middle" font-size="13" fill="#333">Решим уравнение f&#x27;(x) = 0</text>
+  <rect x="120.0" y="1046.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="1074.0" text-anchor="middle" font-size="13" fill="#333">Перенесем члены</text>
+  <rect x="120.0" y="1290.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="1318.0" text-anchor="middle" font-size="13" fill="#333">Решаем линейное уравнение</text>
+  <rect x="120.0" y="1534.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="1562.0" text-anchor="middle" font-size="13" fill="#333">Найдем вторую производную</text>
+  <rect x="120.0" y="1778.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="1806.0" text-anchor="middle" font-size="13" fill="#333">Проверим знак второй производной</text>
+  <rect x="120.0" y="2022.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="2050.0" text-anchor="middle" font-size="13" fill="#333">Заключаем, что функция имеет мини…</text>
+  <rect x="120.0" y="192.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="220.0" text-anchor="middle" font-size="13" fill="#333">$f(x) = x^2 - 6x + 8$</text>
+  <rect x="120.0" y="436.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="464.0" text-anchor="middle" font-size="13" fill="#333">$f&#x27;(x) = 2x - 6$</text>
+  <rect x="120.0" y="680.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="708.0" text-anchor="middle" font-size="13" fill="#333">$2x - 6 = 0$</text>
+  <rect x="120.0" y="924.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="952.0" text-anchor="middle" font-size="13" fill="#333">$2x = 6$</text>
+  <rect x="120.0" y="1168.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="1196.0" text-anchor="middle" font-size="13" fill="#333">$x = 3$</text>
+  <rect x="120.0" y="1412.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="1440.0" text-anchor="middle" font-size="13" fill="#333">$f&#x27;&#x27;(x) = 2$</text>
+  <rect x="120.0" y="1656.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="1684.0" text-anchor="middle" font-size="13" fill="#333">$f&#x27;&#x27;(3) = 2 &gt; 0$</text>
+  <rect x="120.0" y="1900.0" width="260" height="52.0" rx="6" fill="#f5f5f5" stroke="#333333" stroke-width="1.5"/>
+  <text x="250.0" y="1928.0" text-anchor="middle" font-size="13" fill="#333">$Точка минимума x = 3$</text>
+</svg>

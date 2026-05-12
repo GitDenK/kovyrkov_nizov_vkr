@@ -1,0 +1,348 @@
+{
+  "title": "Правильная четырёхугольная пирамида SABCD",
+  "points": {
+    "A": {
+      "x": -3,
+      "y": 0,
+      "z": 0,
+      "label_dx": -12,
+      "label_dy": 12
+    },
+    "B": {
+      "x": 3,
+      "y": 0,
+      "z": 0,
+      "label_dx": 12,
+      "label_dy": 12
+    },
+    "C": {
+      "x": 3,
+      "y": -6,
+      "z": 0,
+      "label_dx": 12,
+      "label_dy": -12
+    },
+    "D": {
+      "x": -3,
+      "y": -6,
+      "z": 0,
+      "label_dx": -12,
+      "label_dy": -12
+    },
+    "S": {
+      "x": 0,
+      "y": 0,
+      "z": 4,
+      "label_dx": 8,
+      "label_dy": -12
+    },
+    "O": {
+      "x": 0,
+      "y": -3,
+      "z": 0,
+      "label_dx": 8,
+      "label_dy": -12
+    },
+    "M": {
+      "x": 0,
+      "y": -3,
+      "z": 0,
+      "label_dx": 8,
+      "label_dy": -12
+    },
+    "H": {
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "label_dx": 8,
+      "label_dy": -12
+    }
+  },
+  "faces": [
+    [
+      "A",
+      "B",
+      "S"
+    ],
+    [
+      "B",
+      "C",
+      "S"
+    ],
+    [
+      "C",
+      "D",
+      "S"
+    ],
+    [
+      "D",
+      "A",
+      "S"
+    ],
+    [
+      "A",
+      "B",
+      "O"
+    ],
+    [
+      "B",
+      "C",
+      "O"
+    ],
+    [
+      "C",
+      "D",
+      "O"
+    ],
+    [
+      "D",
+      "A",
+      "O"
+    ]
+  ],
+  "steps": [
+    {
+      "text": "Правильная четырёхугольная пирамида $SABCD$ с основанием $ABCD$ и высотой $SO=4$.",
+      "objects": [
+        {
+          "type": "point",
+          "id": "A"
+        },
+        {
+          "type": "point",
+          "id": "B"
+        },
+        {
+          "type": "point",
+          "id": "C"
+        },
+        {
+          "type": "point",
+          "id": "D"
+        },
+        {
+          "type": "point",
+          "id": "S"
+        },
+        {
+          "type": "segment",
+          "id": "s_AB",
+          "from_point": "A",
+          "to_point": "B"
+        },
+        {
+          "type": "segment",
+          "id": "s_BC",
+          "from_point": "B",
+          "to_point": "C"
+        },
+        {
+          "type": "segment",
+          "id": "s_CD",
+          "from_point": "C",
+          "to_point": "D"
+        },
+        {
+          "type": "segment",
+          "id": "s_DA",
+          "from_point": "D",
+          "to_point": "A"
+        },
+        {
+          "type": "segment",
+          "id": "s_SA",
+          "from_point": "S",
+          "to_point": "A"
+        },
+        {
+          "type": "segment",
+          "id": "s_SB",
+          "from_point": "S",
+          "to_point": "B"
+        },
+        {
+          "type": "segment",
+          "id": "s_SC",
+          "from_point": "S",
+          "to_point": "C"
+        },
+        {
+          "type": "segment",
+          "id": "s_SD",
+          "from_point": "S",
+          "to_point": "D"
+        }
+      ],
+      "annotations": [],
+      "constraints": [],
+      "caption": "Пирамида SABCD"
+    },
+    {
+      "text": "Высота $SO=4$, $O$ — центр основания.",
+      "objects": [
+        {
+          "type": "point",
+          "id": "O",
+          "style": {
+            "fill": "#e74c3c",
+            "stroke": "#e74c3c"
+          }
+        },
+        {
+          "type": "segment",
+          "id": "s_SO",
+          "from_point": "S",
+          "to_point": "O",
+          "style": {
+            "stroke": "#e74c3c",
+            "dash": "dashed"
+          }
+        }
+      ],
+      "annotations": [
+        {
+          "type": "label",
+          "id": "lbl_SO",
+          "text": "SO=4",
+          "anchor": "S",
+          "dx": 0.4,
+          "dy": -0.4,
+          "color": "#e74c3c",
+          "font_size": 12
+        }
+      ],
+      "constraints": [],
+      "caption": "Высота SO=4"
+    },
+    {
+      "text": "Найдём координаты $M$ — середины $BC$ и $H$ — проекции $S$ на плоскость основания.",
+      "objects": [
+        {
+          "type": "point",
+          "id": "M",
+          "style": {
+            "fill": "#27ae60",
+            "stroke": "#27ae60"
+          }
+        },
+        {
+          "type": "point",
+          "id": "H",
+          "style": {
+            "fill": "#27ae60",
+            "stroke": "#27ae60"
+          }
+        }
+      ],
+      "annotations": [
+        {
+          "type": "label",
+          "id": "lbl_M",
+          "text": "M",
+          "anchor": "M",
+          "dx": 0.5,
+          "dy": 0.3,
+          "color": "#27ae60",
+          "font_size": 12
+        },
+        {
+          "type": "label",
+          "id": "lbl_H",
+          "text": "H",
+          "anchor": "H",
+          "dx": 0.5,
+          "dy": 0.3,
+          "color": "#27ae60",
+          "font_size": 12
+        }
+      ],
+      "constraints": [
+        {
+          "type": "midpoint",
+          "id": "mid_BC",
+          "segment": "s_BC",
+          "result_id": "M"
+        },
+        {
+          "type": "perpendicular",
+          "id": "perp_SH",
+          "point": "S",
+          "line_point1": "O",
+          "line_point2": "H",
+          "foot_id": "H"
+        }
+      ],
+      "caption": "M и H"
+    },
+    {
+      "text": "Найдём длины $SH$ и $MH$.",
+      "objects": [],
+      "annotations": [],
+      "constraints": [
+        {
+          "type": "length",
+          "id": "len_SH",
+          "segment": "s_SH",
+          "value": 4
+        },
+        {
+          "type": "length",
+          "id": "len_MH",
+          "segment": "s_MH",
+          "value": 3
+        }
+      ],
+      "caption": "Длины SH и MH"
+    },
+    {
+      "text": "Найдём угол $SMH$ как линейный угол двугранного угла при ребре основания $AB$.",
+      "objects": [
+        {
+          "type": "segment",
+          "id": "s_SH",
+          "from_point": "S",
+          "to_point": "H",
+          "style": {
+            "stroke": "#2980b9",
+            "stroke_width": 2
+          }
+        },
+        {
+          "type": "segment",
+          "id": "s_MH",
+          "from_point": "M",
+          "to_point": "H",
+          "style": {
+            "stroke": "#2980b9",
+            "stroke_width": 2
+          }
+        }
+      ],
+      "annotations": [
+        {
+          "type": "label",
+          "id": "lbl_SMH",
+          "text": "α",
+          "anchor": "M",
+          "dx": 0.5,
+          "dy": 0.3,
+          "color": "#e74c3c",
+          "font_size": 13
+        }
+      ],
+      "constraints": [
+        {
+          "type": "angle_arc",
+          "id": "aa_SMH",
+          "vertex": "M",
+          "ray1": "S",
+          "ray2": "H",
+          "radius": 20,
+          "color": "#e74c3c",
+          "label": "α"
+        }
+      ],
+      "caption": "Линейный угол двугранного угла"
+    }
+  ]
+}

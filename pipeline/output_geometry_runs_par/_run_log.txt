@@ -1,0 +1,45 @@
+
+######################################################################
+# RUN 1 / 3
+######################################################################
+[geometry_auto] Planning (meta-llama/Llama-3.3-70B-Instruct-Turbo)...
+  Done in 14.2s (5066+1480 tok)
+  Raw length: 3905 chars
+[geometry_auto] Plan validated successfully
+[geometry_auto] Plan saved: pipeline/output_geometry_runs_par/run1/task16_parallelogram_diagonals_plan.json
+[geometry_auto] Report: pipeline/output_geometry_runs_par/run1/task16_parallelogram_diagonals.html
+[geometry_auto] 4 text blocks, 4 visuals
+[geometry_auto] Metrics: wall=14.237s, LLM=14.23s (1 calls, 5066+1480 tok), steps=0.0011s (4)
+[geometry_auto] Metrics saved: pipeline/output_geometry_runs_par/run1/task16_parallelogram_diagonals_metrics.json
+
+######################################################################
+# RUN 2 / 3
+######################################################################
+[geometry_auto] Planning (meta-llama/Llama-3.3-70B-Instruct-Turbo)...
+  Done in 20.6s (5066+2164 tok)
+  Raw length: 6274 chars
+[geometry_auto] Plan validated successfully
+[geometry_auto] Plan saved: pipeline/output_geometry_runs_par/run2/task16_parallelogram_diagonals_plan.json
+[geometry_auto] Report: pipeline/output_geometry_runs_par/run2/task16_parallelogram_diagonals.html
+[geometry_auto] 4 text blocks, 4 visuals
+[geometry_auto] Metrics: wall=20.616s, LLM=20.608s (1 calls, 5066+2164 tok), steps=0.0012s (4)
+[geometry_auto] Metrics saved: pipeline/output_geometry_runs_par/run2/task16_parallelogram_diagonals_metrics.json
+
+######################################################################
+# RUN 3 / 3
+######################################################################
+[geometry_auto] Planning (meta-llama/Llama-3.3-70B-Instruct-Turbo)...
+  Done in 15.4s (5066+2028 tok)
+  Raw length: 6412 chars
+[geometry_auto] Plan validated successfully
+[geometry_auto] Plan saved: pipeline/output_geometry_runs_par/run3/task16_parallelogram_diagonals_plan.json
+[geometry_auto] Report: pipeline/output_geometry_runs_par/run3/task16_parallelogram_diagonals.html
+[geometry_auto] 4 text blocks, 4 visuals
+[geometry_auto] Metrics: wall=15.447s, LLM=15.441s (1 calls, 5066+2028 tok), steps=0.0011s (4)
+[geometry_auto] Metrics saved: pipeline/output_geometry_runs_par/run3/task16_parallelogram_diagonals_metrics.json
+
+======================================================================
+Done. Total wall time: 50.3 s
+Aggregated summary:    pipeline/output_geometry_runs_par/geometry_variance_summary.json
+Markdown report:       pipeline/output_geometry_runs_par/geometry_variance_summary.md
+======================================================================

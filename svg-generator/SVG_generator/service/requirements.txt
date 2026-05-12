@@ -1,0 +1,12 @@
+fastapi>=0.111.0
+uvicorn[standard]>=0.30.0
+pydantic>=2.7.0
+pydantic-settings>=2.0.0
+sympy>=1.12
+numpy>=1.26
+matplotlib>=3.8
+ziamath>=0.13
+openai>=1.0.0
+instructor>=1.0.0
+pytest>=8.0
+pytest-asyncio>=0.23

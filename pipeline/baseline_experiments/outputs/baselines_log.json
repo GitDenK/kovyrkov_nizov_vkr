@@ -1,0 +1,18 @@
+{
+  "problem_ru": "В трапеции ABCD основания BC = 4 и AD = 9, диагонали AC = 12 и BD = 5. а) Докажите, что диагонали трапеции перпендикулярны. б) Найдите высоту трапеции.",
+  "problem_en": "Trapezoid ABCD with parallel bases BC = 4 and AD = 9. Diagonals AC = 12 and BD = 5 are drawn inside. a) Prove the diagonals are perpendicular. b) Find the trapezoid height.",
+  "direct_svg": {
+    "model": "meta-llama/Llama-3.3-70B-Instruct-Turbo",
+    "system_prompt": "Ты эксперт по SVG. По формулировке задачи ниже сгенерируй полный корректный SVG-код, изображающий геометрический чертёж задачи. В чертеже должны быть подписаны вершины буквами и указаны числовые длины сторон и диагоналей. Используй разумные размеры (например, width=600, height=400, viewBox=\"0 0 600 400\"). Выведи ТОЛЬКО SVG-код, без markdown-обёрток и без пояснений.",
+    "elapsed_s": 13.5,
+    "raw_length_chars": 1236,
+    "svg_length_chars": 1236
+  },
+  "t2i": {
+    "model": "black-forest-labs/FLUX.1-schnell",
+    "prompt": "A clean black-on-white geometric textbook diagram of a trapezoid ABCD with parallel bases BC and AD where BC is shorter. Vertices labeled with letters A, B, C, D in capital letters. Both diagonals AC and BD are drawn inside and intersect. Side lengths are labeled: BC = 4, AD = 9, AC = 12, BD = 5. Plain white background, thin black lines, no shading, no color.",
+    "elapsed_s": 7.09,
+    "png_size_bytes": 39914
+  },
+  "timestamp": "2026-05-12 12:42:22"
+}
