@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8"/>
+<title>Задание 16 ЕГЭ — Трапеция (демо для диплома, 4 шага)</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$']], displayMath: [['$$','$$']] },
+  svg: { fontCache: 'global' }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Georgia', 'PT Serif', serif;
+    background: #faf9f6;
+    color: #2c2c2c;
+    line-height: 1.7;
+  }
+
+  .page-header {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    padding: 28px 20px;
+    text-align: center;
+    color: white;
+  }
+  .page-header h1 { font-size: 22px; margin-bottom: 4px; font-family: sans-serif; }
+  .page-header p { opacity: 0.8; font-size: 12px; font-family: sans-serif; }
+
+  .conspect {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 24px 28px 36px;
+  }
+
+  .text-block {
+    margin: 10px 0;
+    font-size: 16px;
+  }
+  .text-block p { margin: 4px 0; }
+  .text-block h2 { font-size: 20px; color: #2c3e50; font-family: sans-serif; margin-bottom: 4px; }
+  .text-block h3 { font-size: 17px; color: #34495e; font-family: sans-serif; margin: 16px 0 4px; }
+  .text-block strong { color: #2c3e50; }
+  .text-block .step-label { color: #2980b9; font-weight: bold; font-family: sans-serif; }
+
+  .formula {
+    background: #f7f9fc;
+    padding: 8px 16px;
+    border-radius: 6px;
+    margin: 6px 0;
+    text-align: center;
+    border-left: 3px solid #2980b9;
+    font-size: 15px;
+  }
+
+  .visual-block {
+    margin: 14px 0 18px;
+    text-align: center;
+  }
+  .visual-frame {
+    display: inline-block;
+    background: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 12px 16px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+  }
+  .visual-frame svg { max-width: 100%; height: auto; }
+  .visual-caption {
+    font-family: -apple-system, sans-serif;
+    font-size: 12px;
+    color: #777;
+    margin-top: 6px;
+    font-style: italic;
+  }
+
+  .footer {
+    text-align: center;
+    padding: 20px 20px;
+    color: #aaa;
+    font-size: 11px;
+    font-family: sans-serif;
+    border-top: 1px solid #eee;
+  }
+</style>
+</head>
+<body>
+
+<div class="page-header">
+  <h1>Задание 16 ЕГЭ по математике. Планиметрия</h1>
+  <p>Пошаговое решение задачи о трапеции с перпендикулярными диагоналями</p>
+</div>
+
+<div class="conspect">
+
+<div class="text-block">
+  <h2>Условие</h2>
+  <p>Основания трапеции равны 4 и 9, а её диагонали равны 5 и 12.</p>
+  <p><strong>а)</strong> Докажите, что диагонали трапеции перпендикулярны.</p>
+  <p><strong>б)</strong> Найдите высоту трапеции.</p>
+
+  <h3>Решение</h3>
+  <p>Пусть $BC = 4$, $AD = 9$, $AC = 12$, $BD = 5$.</p>
+
+  <p><span class="step-label">Шаг 1.</span> Построим трапецию $ABCD$ и проведём диагонали $AC$ и $BD$ с указанием их длин.</p>
+</div>
+
+<div class="visual-block">
+  <div class="visual-frame"><svg xmlns="http://www.w3.org/2000/svg" width="560" height="380" viewBox="0 0 560 380" style="background:white;font-family:sans-serif">
+  <line x1="52.5" y1="289.1" x2="140.0" y2="82.6" stroke="#333333" stroke-width="1.5"/>
+  <line x1="140.0" y1="82.6" x2="280.0" y2="82.6" stroke="#333333" stroke-width="1.5"/>
+  <line x1="280.0" y1="82.6" x2="367.5" y2="289.1" stroke="#333333" stroke-width="1.5"/>
+  <line x1="52.5" y1="289.1" x2="367.5" y2="289.1" stroke="#333333" stroke-width="1.5"/>
+  <line x1="52.5" y1="289.1" x2="280.0" y2="82.6" stroke="#2980b9" stroke-width="1.8"/>
+  <line x1="140.0" y1="82.6" x2="367.5" y2="289.1" stroke="#e74c3c" stroke-width="1.8"/>
+  <circle cx="52.5" cy="289.1" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="40.5" y="303.1" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">A</text>
+  <circle cx="140.0" cy="82.6" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="134.0" y="68.6" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">B</text>
+  <circle cx="280.0" cy="82.6" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="286.0" y="68.6" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">C</text>
+  <circle cx="367.5" cy="289.1" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="371.5" y="303.1" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">D</text>
+  <circle cx="210.0" cy="146.2" r="3" stroke="#333" fill="#333" stroke-width="1"/>
+  <text x="199.5" y="70.2" font-size="13" font-family="sans-serif" fill="#333">4</text>
+  <text x="192.5" y="305.7" font-size="13" font-family="sans-serif" fill="#333">9</text>
+  <text x="84.0" y="231.3" font-size="12" font-family="sans-serif" fill="#2980b9">AC = 12</text>
+  <text x="206.5" y="123.9" font-size="12" font-family="sans-serif" fill="#e74c3c">BD = 5</text>
+</svg></div>
+  <div class="visual-caption">Шаг 1: разметка вершин и контур трапеции $ABCD$ с известными длинами оснований и диагоналей.</div>
+</div>
+
+<div class="text-block">
+  <p><span class="step-label">Шаг 2.</span> В условии видна пифагорова тройка $5, 12, 13$. Чтобы получить треугольник с такими сторонами, проведём $CF \parallel BD$. Тогда $BCFD$ — параллелограмм, и</p>
+  <div class="formula">$DF = BC = 4, \qquad CF = BD = 5.$</div>
+  <p>Отсюда $AF = AD + DF = 9 + 4 = 13.$</p>
+</div>
+
+<div class="visual-block">
+  <div class="visual-frame"><svg xmlns="http://www.w3.org/2000/svg" width="560" height="380" viewBox="0 0 560 380" style="background:white;font-family:sans-serif">
+  <line x1="52.5" y1="289.1" x2="140.0" y2="82.6" stroke="#333333" stroke-width="1.5"/>
+  <line x1="140.0" y1="82.6" x2="280.0" y2="82.6" stroke="#333333" stroke-width="1.5"/>
+  <line x1="280.0" y1="82.6" x2="367.5" y2="289.1" stroke="#333333" stroke-width="1.5"/>
+  <line x1="52.5" y1="289.1" x2="367.5" y2="289.1" stroke="#333333" stroke-width="1.5"/>
+  <line x1="52.5" y1="289.1" x2="280.0" y2="82.6" stroke="#2980b9" stroke-width="1.8"/>
+  <line x1="140.0" y1="82.6" x2="367.5" y2="289.1" stroke="#e74c3c" stroke-width="1.8"/>
+  <line x1="367.5" y1="289.1" x2="507.5" y2="289.1" stroke="#333333" stroke-width="1.5" stroke-dasharray="8,4"/>
+  <line x1="280.0" y1="82.6" x2="507.5" y2="289.1" stroke="#e67e22" stroke-width="1.8"/>
+  <circle cx="52.5" cy="289.1" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="40.5" y="303.1" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">A</text>
+  <circle cx="140.0" cy="82.6" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="134.0" y="68.6" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">B</text>
+  <circle cx="280.0" cy="82.6" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="286.0" y="68.6" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">C</text>
+  <circle cx="367.5" cy="289.1" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="371.5" y="303.1" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">D</text>
+  <circle cx="210.0" cy="146.2" r="3" stroke="#333" fill="#333" stroke-width="1"/>
+  <circle cx="507.5" cy="289.1" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="515.5" y="303.1" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">F</text>
+  <text x="199.5" y="70.2" font-size="13" font-family="sans-serif" fill="#333">4</text>
+  <text x="192.5" y="305.7" font-size="13" font-family="sans-serif" fill="#333">9</text>
+  <text x="84.0" y="231.3" font-size="12" font-family="sans-serif" fill="#2980b9">AC = 12</text>
+  <text x="206.5" y="123.9" font-size="12" font-family="sans-serif" fill="#e74c3c">BD = 5</text>
+  <text x="402.5" y="280.9" font-size="12" font-family="sans-serif" fill="#666">DF = 4</text>
+</svg></div>
+  <div class="visual-caption">Шаг 2: построение вспомогательного отрезка $CF \parallel BD$ через ограничение parallel_lines.</div>
+</div>
+
+<div class="text-block">
+  <p><span class="step-label">Шаг 3.</span> В треугольнике $ACF$ имеем стороны $AC = 12$, $CF = 5$, $AF = 13$. Проверяем теорему, обратную теореме Пифагора:</p>
+  <div class="formula">$AC^2 + CF^2 = 144 + 25 = 169 = 13^2 = AF^2.$</div>
+  <p>Значит, $\angle ACF = 90^\circ$. Так как $CF \parallel BD$, то и $AC \perp BD$ — диагонали трапеции перпендикулярны. <strong>Часть а) доказана.</strong></p>
+</div>
+
+<div class="visual-block">
+  <div class="visual-frame"><svg xmlns="http://www.w3.org/2000/svg" width="560" height="380" viewBox="0 0 560 380" style="background:white;font-family:sans-serif">
+  <line x1="52.5" y1="289.1" x2="140.0" y2="82.6" stroke="#333333" stroke-width="1.5"/>
+  <line x1="140.0" y1="82.6" x2="280.0" y2="82.6" stroke="#333333" stroke-width="1.5"/>
+  <line x1="280.0" y1="82.6" x2="367.5" y2="289.1" stroke="#333333" stroke-width="1.5"/>
+  <line x1="52.5" y1="289.1" x2="367.5" y2="289.1" stroke="#333333" stroke-width="1.5"/>
+  <line x1="52.5" y1="289.1" x2="280.0" y2="82.6" stroke="#2980b9" stroke-width="1.8"/>
+  <line x1="140.0" y1="82.6" x2="367.5" y2="289.1" stroke="#e74c3c" stroke-width="1.8"/>
+  <line x1="367.5" y1="289.1" x2="507.5" y2="289.1" stroke="#333333" stroke-width="1.5" stroke-dasharray="8,4"/>
+  <line x1="280.0" y1="82.6" x2="507.5" y2="289.1" stroke="#e67e22" stroke-width="1.8"/>
+  <line x1="52.5" y1="289.1" x2="507.5" y2="289.1" stroke="#8e44ad" stroke-width="1.8"/>
+  <polyline points="271.1,90.7 280.0,98.7 288.9,90.7" fill="none" stroke="#333333" stroke-width="1.2"/>
+  <circle cx="52.5" cy="289.1" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="40.5" y="303.1" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">A</text>
+  <circle cx="140.0" cy="82.6" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="134.0" y="68.6" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">B</text>
+  <circle cx="280.0" cy="82.6" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="286.0" y="68.6" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">C</text>
+  <circle cx="367.5" cy="289.1" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="371.5" y="303.1" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">D</text>
+  <circle cx="210.0" cy="146.2" r="3" stroke="#333" fill="#333" stroke-width="1"/>
+  <circle cx="507.5" cy="289.1" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="515.5" y="303.1" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">F</text>
+  <text x="199.5" y="70.2" font-size="13" font-family="sans-serif" fill="#333">4</text>
+  <text x="192.5" y="305.7" font-size="13" font-family="sans-serif" fill="#333">9</text>
+  <text x="84.0" y="231.3" font-size="12" font-family="sans-serif" fill="#2980b9">AC = 12</text>
+  <text x="206.5" y="123.9" font-size="12" font-family="sans-serif" fill="#e74c3c">BD = 5</text>
+  <text x="402.5" y="280.9" font-size="12" font-family="sans-serif" fill="#666">DF = 4</text>
+  <text x="245.0" y="309.8" font-size="12" font-family="sans-serif" fill="#8e44ad">AF = 13</text>
+  <text x="343.0" y="132.2" font-size="12" font-family="sans-serif" fill="#e67e22">CF = 5</text>
+  <text x="276.5" y="152.8" font-size="13" font-family="sans-serif" fill="#e74c3c">90°</text>
+</svg></div>
+  <div class="visual-caption">Шаг 3: маркер прямого угла в треугольнике $ACF$, полученный из проверки пифагоровой тройки 5–12–13.</div>
+</div>
+
+<div class="text-block">
+  <p><span class="step-label">Шаг 4.</span> Высота трапеции равна высоте $h = CH$ треугольника $ACF$, опущенной из $C$ на $AF$. Площадь треугольника $ACF$ можно вычислить двумя способами:</p>
+  <div class="formula">$S_{ACF} = \dfrac{1}{2} \cdot AF \cdot h = \dfrac{1}{2} \cdot AC \cdot CF.$</div>
+  <p>Подставляя $AF = 13$, $AC = 12$, $CF = 5$, получаем $13 h = 60$ и</p>
+  <div class="formula">$h = \dfrac{60}{13} \approx 4{,}62.$</div>
+</div>
+
+<div class="visual-block">
+  <div class="visual-frame"><svg xmlns="http://www.w3.org/2000/svg" width="560" height="380" viewBox="0 0 560 380" style="background:white;font-family:sans-serif">
+  <line x1="52.5" y1="289.1" x2="140.0" y2="82.6" stroke="#333333" stroke-width="1.5"/>
+  <line x1="140.0" y1="82.6" x2="280.0" y2="82.6" stroke="#333333" stroke-width="1.5"/>
+  <line x1="280.0" y1="82.6" x2="367.5" y2="289.1" stroke="#333333" stroke-width="1.5"/>
+  <line x1="52.5" y1="289.1" x2="367.5" y2="289.1" stroke="#333333" stroke-width="1.5"/>
+  <line x1="52.5" y1="289.1" x2="280.0" y2="82.6" stroke="#2980b9" stroke-width="1.8"/>
+  <line x1="140.0" y1="82.6" x2="367.5" y2="289.1" stroke="#e74c3c" stroke-width="1.8"/>
+  <line x1="367.5" y1="289.1" x2="507.5" y2="289.1" stroke="#333333" stroke-width="1.5" stroke-dasharray="8,4"/>
+  <line x1="280.0" y1="82.6" x2="507.5" y2="289.1" stroke="#e67e22" stroke-width="1.8"/>
+  <line x1="52.5" y1="289.1" x2="507.5" y2="289.1" stroke="#8e44ad" stroke-width="1.8"/>
+  <line x1="280.0" y1="82.6" x2="280.0" y2="289.1" stroke="#27ae60" stroke-width="1.8" stroke-dasharray="8,4"/>
+  <polyline points="271.1,90.7 280.0,98.7 288.9,90.7" fill="none" stroke="#333333" stroke-width="1.2"/>
+  <polyline points="268.0,289.1 268.0,277.1 280.0,277.1" fill="none" stroke="#333333" stroke-width="1.2"/>
+  <circle cx="52.5" cy="289.1" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="40.5" y="303.1" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">A</text>
+  <circle cx="140.0" cy="82.6" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="134.0" y="68.6" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">B</text>
+  <circle cx="280.0" cy="82.6" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="286.0" y="68.6" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">C</text>
+  <circle cx="367.5" cy="289.1" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="371.5" y="303.1" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">D</text>
+  <circle cx="210.0" cy="146.2" r="3" stroke="#333" fill="#333" stroke-width="1"/>
+  <circle cx="507.5" cy="289.1" r="4" stroke="#333333" fill="#333333" stroke-width="1"/>
+  <text x="515.5" y="303.1" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">F</text>
+  <circle cx="280.0" cy="289.1" r="4" stroke="#27ae60" fill="#27ae60" stroke-width="1"/>
+  <text x="284.0" y="303.1" font-size="15" font-family="sans-serif" font-weight="bold" fill="#333333">H</text>
+  <text x="199.5" y="70.2" font-size="13" font-family="sans-serif" fill="#333">4</text>
+  <text x="192.5" y="305.7" font-size="13" font-family="sans-serif" fill="#333">9</text>
+  <text x="84.0" y="231.3" font-size="12" font-family="sans-serif" fill="#2980b9">AC = 12</text>
+  <text x="206.5" y="123.9" font-size="12" font-family="sans-serif" fill="#e74c3c">BD = 5</text>
+  <text x="402.5" y="280.9" font-size="12" font-family="sans-serif" fill="#666">DF = 4</text>
+  <text x="245.0" y="309.8" font-size="12" font-family="sans-serif" fill="#8e44ad">AF = 13</text>
+  <text x="343.0" y="132.2" font-size="12" font-family="sans-serif" fill="#e67e22">CF = 5</text>
+  <text x="276.5" y="152.8" font-size="13" font-family="sans-serif" fill="#e74c3c">90°</text>
+  <text x="288.8" y="136.3" font-size="15" font-family="sans-serif" fill="#27ae60">h</text>
+  <text x="332.5" y="243.7" font-size="14" font-family="sans-serif" fill="#27ae60">h = 60/13 ≈ 4,62</text>
+</svg></div>
+  <div class="visual-caption">Шаг 4: высота трапеции построена ограничением perpendicular как объект, а не только как числовая подпись.</div>
+</div>
+
+</div>
+<div class="footer">
+  Сгенерировано конвейером: Планировщик визуалов → Конвертер → Решатель ограничений → SVG-рендерер. 4 пошаговых построения соответствуют рис. 3.2 диплома.
+</div>
+</body>
+</html>
