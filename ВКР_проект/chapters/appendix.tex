@@ -70,7 +70,42 @@
 \addcontentsline{toc}{section}{Приложение В. Примеры работы системы}
 
 % ───────────────────────────────────────────────────────────
-\subsection*{В.1. Пример пошагового разбора геометрической задачи}
+\subsection*{В.1. Примеры SVG-иллюстраций, сгенерированных системой}
+% ───────────────────────────────────────────────────────────
+
+На рис.~\ref{fig:app:svgexamples} приведены три типа иллюстраций,
+которые система создаёт по текстовому запросу из конспекта:
+график функции, геометрический чертёж и блок"=диаграмма.
+
+\begin{figure}[htbp]
+    \centering
+    \begin{subfigure}[t]{0.32\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{svg_example_function_plot_parabola}
+        \caption{График параболы $y = x^2$ на отрезке $[-3,\,3]$.}
+        \label{fig:app:svg:parabola}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.32\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{svg_example_geometry}
+        \caption{Прямоугольный треугольник с катетами~3 и~4.}
+        \label{fig:app:svg:triangle}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.32\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{svg_example_diagram}
+        \caption{Схема связи тригонометрических функций.}
+        \label{fig:app:svg:diagram}
+    \end{subfigure}
+    \caption{Примеры трёх типов иллюстраций, генерируемых конвейером.
+             Слева направо: \texttt{function\_plot}, \texttt{geometry}, \texttt{diagram}.}
+    \label{fig:app:svgexamples}
+\end{figure}
+
+% ───────────────────────────────────────────────────────────
+\subsection*{В.2. Пример пошагового разбора геометрической задачи}
 % ───────────────────────────────────────────────────────────
 
 На рис.~\ref{fig:app:geonotes} показан пример полного пошагового разбора
@@ -88,7 +123,7 @@
 \end{figure}
 
 % ───────────────────────────────────────────────────────────
-\subsection*{В.2. Пример неудачной генерации изображения базовой линией}
+\subsection*{В.3. Пример неудачной генерации изображения базовой линией}
 % ───────────────────────────────────────────────────────────
 
 На рис.~\ref{fig:app:badbaseline} приведён характерный пример выхода модели
