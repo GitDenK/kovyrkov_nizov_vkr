@@ -152,7 +152,7 @@ text"=to"=image на геометрической задаче, использу
 (трапеция с перпендикулярными диагоналями). На вход системе подаётся
 только текст задачи в том виде, в котором он встречается в обычном
 учебном материале (формулировка, два пункта~а и~б; см.
-\texttt{examples/task16\_trapezoid\_repro/input/task16.md} в репозитории
+\codett{examples/task16\_trapezoid\_repro/input/task16.md} в репозитории
 проекта). Дальнейший пайплайн отрабатывает автоматически: двухступенчатое
 обращение к языковой модели Llama-3.3-70B-Instruct-Turbo формирует
 структурированный план визуализации в формате JSON (точки, объекты и
@@ -178,14 +178,14 @@ HTML-страницу, в которой условие задачи, пошаг
 порождающим их текстом.
 
 Соответствующие воспроизводимые артефакты собраны в каталоге
-\texttt{examples/task16\_trapezoid\_repro/} репозитория проекта
-(см.~приложение~А) и включают: формулировку задачи (\texttt{input/task16.md}),
+\codett{examples/task16\_trapezoid\_repro/} репозитория проекта
+(см.~приложение~А) и включают: формулировку задачи (\codett{input/task16.md}),
 сохранённый план визуализации, полученный от языковой модели
-(\texttt{expected/auto\_task16\_plan.json}), HTML\nobreakdash-эталон с
-четырьмя шагами (\texttt{expected/task16\_trapezoid\_4steps.html}) и два
+(\codett{expected/auto\_task16\_plan.json}), HTML\nobreakdash-эталон с
+четырьмя шагами (\codett{expected/task16\_trapezoid\_4steps.html}) и два
 сценария воспроизведения --- офлайн (без обращения к языковой модели,
-\texttt{scripts/run\_offline.sh}) и онлайн (полный прогон геометрической
-ветки через Together~AI, \texttt{scripts/run\_online.sh}). README в
+\codett{scripts/run\_offline.sh}) и онлайн (полный прогон геометрической
+ветки через Together~AI, \codett{scripts/run\_online.sh}). README в
 корне каталога содержит подробные инструкции по сравнению полученного
 выхода с эталоном.
 

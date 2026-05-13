@@ -37,6 +37,19 @@ maxbibnames=99
 \counterwithin{table}{section}
 \counterwithin{figure}{section}
 
+\setlength{\emergencystretch}{3em} % небольшая «амнистия» при наборе абзацев,
+                                   % чтобы редкие длинные \texttt не выходили за поля
+% \codett{...} — \texttt{...} с разрешёнными точками разрыва после каждого
+% символа аргумента; использовать для длинных кодовых имён, путей и
+% идентификаторов моделей. Реализация: рекурсивный обход токенов с
+% вставкой \allowbreak после каждого, что корректно работает в том числе
+% для экранированных служебных команд (\_, \%, \textbackslash и пр.).
+\makeatletter
+\def\codett@end{\codett@end}
+\newcommand{\codett}[1]{\texttt{\codett@loop#1\codett@end}}
+\def\codett@loop#1{\ifx\codett@end#1\else#1\allowbreak\expandafter\codett@loop\fi}
+\makeatother
+
 \graphicspath{{graphics/}}%путь к рисункам
 
 \makeatletter
