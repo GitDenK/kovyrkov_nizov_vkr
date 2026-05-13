@@ -1,0 +1,31 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: vkr-pipeline
+spec:
+  backoffLimit: 1
+  template:
+    spec:
+      restartPolicy: Never
+      containers:
+        - name: pipeline
+          image: docker.io/your-dockerhub-user/vkr-pipeline:latest
+          imagePullPolicy: IfNotPresent
+          env:
+            - name: TOGETHER_API_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: vkr-pipeline-secrets
+                  key: TOGETHER_API_KEY
+          args:
+            - conspect
+            - --all
+            - --output-dir
+            - /app/output
+          volumeMounts:
+            - name: output
+              mountPath: /app/output
+      volumes:
+        - name: output
+          persistentVolumeClaim:
+            claimName: vkr-pipeline-output

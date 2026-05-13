@@ -1,0 +1,16 @@
+.git
+.git.backup_*
+__pycache__/
+*.pyc
+.DS_Store
+.env
+
+pipeline/output/
+pipeline/output_geometry/
+pipeline/output_geometry_runs/
+results/
+artifacts/
+
+*.ipynb
+*.pdf
+ВКР_проект/
