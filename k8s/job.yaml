@@ -9,7 +9,7 @@ spec:
       restartPolicy: Never
       containers:
         - name: pipeline
-          image: docker.io/your-dockerhub-user/vkr-pipeline:latest
+          image: <IMAGE_NAME>
           imagePullPolicy: IfNotPresent
           env:
             - name: TOGETHER_API_KEY
